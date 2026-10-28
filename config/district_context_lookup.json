@@ -1,0 +1,266 @@
+{
+  "Adilabad": {
+    "district_population_density_2011": 169,
+    "district_urban_population_pct": 22.1,
+    "district_projected_density_fy24": 184.24,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.648,
+    "discom_utility_data_available_flag": 0
+  },
+  "Bhadradri Kothagudem": {
+    "district_population_density_2011": 143,
+    "district_urban_population_pct": 21.8,
+    "district_projected_density_fy24": 155.44,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.635,
+    "discom_utility_data_available_flag": 0
+  },
+  "Hyderabad": {
+    "district_population_density_2011": 18172,
+    "district_urban_population_pct": 100.0,
+    "district_projected_density_fy24": 19767.2,
+    "district_nh_crossing_count": 5,
+    "district_ev_penetration_rate": 5.05,
+    "discom_utility_data_available_flag": 1
+  },
+  "Jagitial": {
+    "district_population_density_2011": 407,
+    "district_urban_population_pct": 18.5,
+    "district_projected_density_fy24": 443.13,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.492,
+    "discom_utility_data_available_flag": 0
+  },
+  "Jangaon": {
+    "district_population_density_2011": 259,
+    "district_urban_population_pct": 14.2,
+    "district_projected_density_fy24": 281.58,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.303,
+    "discom_utility_data_available_flag": 0
+  },
+  "Jayashankar Bhupalapally": {
+    "district_population_density_2011": 112,
+    "district_urban_population_pct": 11.0,
+    "district_projected_density_fy24": 121.39,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.164,
+    "discom_utility_data_available_flag": 0
+  },
+  "Jogulamba Gadwal": {
+    "district_population_density_2011": 208,
+    "district_urban_population_pct": 15.8,
+    "district_projected_density_fy24": 226.54,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.373,
+    "discom_utility_data_available_flag": 1
+  },
+  "Kamareddy": {
+    "district_population_density_2011": 266,
+    "district_urban_population_pct": 15.4,
+    "district_projected_density_fy24": 289.79,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.356,
+    "discom_utility_data_available_flag": 0
+  },
+  "Karimnagar": {
+    "district_population_density_2011": 423,
+    "district_urban_population_pct": 32.5,
+    "district_projected_density_fy24": 459.86,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 2.102,
+    "discom_utility_data_available_flag": 0
+  },
+  "Khammam": {
+    "district_population_density_2011": 315,
+    "district_urban_population_pct": 29.1,
+    "district_projected_density_fy24": 342.39,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.954,
+    "discom_utility_data_available_flag": 0
+  },
+  "Kumurambheem Asifabad": {
+    "district_population_density_2011": 120,
+    "district_urban_population_pct": 11.3,
+    "district_projected_density_fy24": 130.43,
+    "district_nh_crossing_count": 0,
+    "district_ev_penetration_rate": 1.176,
+    "discom_utility_data_available_flag": 0
+  },
+  "Mahabubabad": {
+    "district_population_density_2011": 269,
+    "district_urban_population_pct": 10.5,
+    "district_projected_density_fy24": 292.96,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.142,
+    "discom_utility_data_available_flag": 0
+  },
+  "Mahabubnagar": {
+    "district_population_density_2011": 442,
+    "district_urban_population_pct": 18.5,
+    "district_projected_density_fy24": 481.19,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.491,
+    "discom_utility_data_available_flag": 1
+  },
+  "Mancherial": {
+    "district_population_density_2011": 199,
+    "district_urban_population_pct": 28.2,
+    "district_projected_density_fy24": 216.65,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.915,
+    "discom_utility_data_available_flag": 0
+  },
+  "Medak": {
+    "district_population_density_2011": 280,
+    "district_urban_population_pct": 12.9,
+    "district_projected_density_fy24": 304.67,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.247,
+    "discom_utility_data_available_flag": 0
+  },
+  "Medchal-Malkajgiri": {
+    "district_population_density_2011": 2220,
+    "district_urban_population_pct": 78.5,
+    "district_projected_density_fy24": 2415.17,
+    "district_nh_crossing_count": 3,
+    "district_ev_penetration_rate": 4.111,
+    "discom_utility_data_available_flag": 1
+  },
+  "Mulugu": {
+    "district_population_density_2011": 81,
+    "district_urban_population_pct": 6.8,
+    "district_projected_density_fy24": 88.13,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 0.98,
+    "discom_utility_data_available_flag": 0
+  },
+  "Nagarkurnool": {
+    "district_population_density_2011": 140,
+    "district_urban_population_pct": 10.5,
+    "district_projected_density_fy24": 151.86,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.142,
+    "discom_utility_data_available_flag": 1
+  },
+  "Nalgonda": {
+    "district_population_density_2011": 346,
+    "district_urban_population_pct": 17.8,
+    "district_projected_density_fy24": 376.01,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.461,
+    "discom_utility_data_available_flag": 1
+  },
+  "Narayanpet": {
+    "district_population_density_2011": 178,
+    "district_urban_population_pct": 11.2,
+    "district_projected_density_fy24": 193.1,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.174,
+    "discom_utility_data_available_flag": 0
+  },
+  "Nirmal": {
+    "district_population_density_2011": 199,
+    "district_urban_population_pct": 16.2,
+    "district_projected_density_fy24": 216.59,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.39,
+    "discom_utility_data_available_flag": 0
+  },
+  "Nizamabad": {
+    "district_population_density_2011": 366,
+    "district_urban_population_pct": 27.5,
+    "district_projected_density_fy24": 398.54,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.884,
+    "discom_utility_data_available_flag": 0
+  },
+  "Peddapalli": {
+    "district_population_density_2011": 423,
+    "district_urban_population_pct": 30.1,
+    "district_projected_density_fy24": 460.68,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.997,
+    "discom_utility_data_available_flag": 0
+  },
+  "Rajanna Sircilla": {
+    "district_population_density_2011": 300,
+    "district_urban_population_pct": 17.8,
+    "district_projected_density_fy24": 326.89,
+    "district_nh_crossing_count": 0,
+    "district_ev_penetration_rate": 1.46,
+    "discom_utility_data_available_flag": 0
+  },
+  "Ranga Reddy": {
+    "district_population_density_2011": 424,
+    "district_urban_population_pct": 68.0,
+    "district_projected_density_fy24": 461.58,
+    "district_nh_crossing_count": 4,
+    "district_ev_penetration_rate": 3.652,
+    "discom_utility_data_available_flag": 1
+  },
+  "Sangareddy": {
+    "district_population_density_2011": 342,
+    "district_urban_population_pct": 22.4,
+    "district_projected_density_fy24": 372.25,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.662,
+    "discom_utility_data_available_flag": 1
+  },
+  "Siddipet": {
+    "district_population_density_2011": 280,
+    "district_urban_population_pct": 15.9,
+    "district_projected_density_fy24": 304.96,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.378,
+    "discom_utility_data_available_flag": 0
+  },
+  "Suryapet": {
+    "district_population_density_2011": 308,
+    "district_urban_population_pct": 16.2,
+    "district_projected_density_fy24": 334.57,
+    "district_nh_crossing_count": 3,
+    "district_ev_penetration_rate": 1.391,
+    "discom_utility_data_available_flag": 1
+  },
+  "Vikarabad": {
+    "district_population_density_2011": 274,
+    "district_urban_population_pct": 11.7,
+    "district_projected_density_fy24": 297.85,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.195,
+    "discom_utility_data_available_flag": 0
+  },
+  "Wanaparthy": {
+    "district_population_density_2011": 268,
+    "district_urban_population_pct": 15.5,
+    "district_projected_density_fy24": 291.91,
+    "district_nh_crossing_count": 1,
+    "district_ev_penetration_rate": 1.36,
+    "discom_utility_data_available_flag": 1
+  },
+  "Warangal Rural": {
+    "district_population_density_2011": 330,
+    "district_urban_population_pct": 8.2,
+    "district_projected_density_fy24": 359.36,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.041,
+    "discom_utility_data_available_flag": 0
+  },
+  "Warangal Urban": {
+    "district_population_density_2011": 829,
+    "district_urban_population_pct": 67.2,
+    "district_projected_density_fy24": 901.64,
+    "district_nh_crossing_count": 3,
+    "district_ev_penetration_rate": 3.617,
+    "discom_utility_data_available_flag": 0
+  },
+  "Yadadri Bhuvanagiri": {
+    "district_population_density_2011": 239,
+    "district_urban_population_pct": 12.0,
+    "district_projected_density_fy24": 260.23,
+    "district_nh_crossing_count": 2,
+    "district_ev_penetration_rate": 1.207,
+    "discom_utility_data_available_flag": 1
+  }
+}

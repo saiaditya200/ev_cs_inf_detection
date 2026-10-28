@@ -1,0 +1,8 @@
+{
+  "active_model_role": "production",
+  "model_id": "PRODUCTION_BASELINE_RF",
+  "model_path": "models/final_deployment_model.joblib",
+  "metadata_path": "models/final_deployment_metadata.json",
+  "threshold_path": "models/final_deployment_threshold.json",
+  "feature_manifest": "models/feature_manifest.json"
+}

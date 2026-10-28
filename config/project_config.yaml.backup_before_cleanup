@@ -1,0 +1,158 @@
+project:
+  title: Explainable AI Framework for Smart EV Charging Infrastructure Planning
+  type: B.Tech Major Project
+  focus_state: Telangana
+  focus_country: India
+  created_date: '2026-09-25'
+station_schema:
+- station_id
+- station_name
+- state
+- district
+- city
+- latitude
+- longitude
+- pincode
+- location_type
+- charger_type
+- connector_type
+- number_of_chargers
+- charging_power_kw
+- station_capacity
+- availability_status
+- operator
+- 24x7_availability
+- road_type
+- highway_name
+- distance_to_highway_km
+- distance_to_city_center_km
+- traffic_density
+- nearby_poi_count
+- parking_availability
+- data_timestamp
+field_sources:
+  google_places_api:
+  - station_name
+  - latitude
+  - longitude
+  - charger_type
+  - connector_type
+  - number_of_chargers
+  - charging_power_kw
+  - operator
+  - nearby_poi_count
+  - parking_availability
+  government_data:
+  - state
+  - district
+  - city
+  - pincode
+  - availability_status
+  - 24x7_availability
+  gis_derived:
+  - station_id
+  - location_type
+  - road_type
+  - highway_name
+  - distance_to_highway_km
+  - distance_to_city_center_km
+  - traffic_density
+  - station_capacity
+  - data_timestamp
+ml:
+  models:
+  - RandomForest
+  - XGBoost
+  - LightGBM
+  evaluation_metrics:
+  - MAE
+  - RMSE
+  - R2
+  explainability:
+  - SHAP
+  - CounterfactualExplanations
+eips:
+  components:
+  - demand_score
+  - infrastructure_gap_score
+  - accessibility_score
+  - grid_readiness_score
+  - spatial_suitability_score
+data_sources:
+  primary: OpenChargeMap API (free, CC BY 4.0)
+  secondary: OSM Overpass API (free, ODbL)
+  notes: "Google Places API requires billing \u2014 switched to free alternatives"
+  final_master_dataset:
+    file: data/final/FINAL_PROJECT_DATASET.csv
+    data_dictionary: data/final/FINAL_PROJECT_DATA_DICTIONARY.csv
+    integrity_report: reports/phase8_8_final_dataset_integrity_report.md
+    rows: 166
+    columns: 78
+    sha256: a1999524323860397e7255b5ff7884d7f77394b09abd69a168a306bf7eae9788
+    frozen: true
+    primary_ml_target: fast_charging_flag
+    target_distribution:
+      class_1_dc_fast: 131
+      class_0_ac_level: 23
+      unknown_na: 12
+      total: 166
+  preprocessed_dataset:
+    file: data/processed/telangana_ev_preprocessed.csv
+    rows: 166
+    columns: 78
+    sha256: 606d96246d6fa485b00bb9a5a496cd24a6b7418530ffa549b38793652c4ec7e0
+  modeling_matrix:
+    file: data/processed/fast_charging_modeling_matrix.csv
+    rows: 154
+    total_columns: 24
+    metadata_columns:
+    - station_id
+    - district
+    certified_predictors_count: 21
+    target: fast_charging_flag
+    target_distribution:
+      class_1_dc_fast: 131
+      class_0_ac_level: 23
+    imbalance_ratio: 5.7
+    held_out_unlabeled: 12
+    sha256: fc32c75635fe2e763ec174e491a897adc691539fba0be655f06b9d58bca79783
+  feature_manifest:
+    file: reports/phase9_feature_manifest.csv
+    total_fields: 78
+    sha256: 030054b58d24d63011407eeb90ee44a151e816295f0a7795a7df07af25d874d6
+  spatial_splits:
+    file: data/processed/phase10_spatial_splits.csv
+    rows: 154
+    n_splits: 5
+    grouping_variable: district
+    random_state: 42
+    outer_test_fold: 3
+    outer_test_stations: 35
+    outer_train_stations: 119
+    district_overlap: 0
+    sha256: 27423b8a5d084fe09e4dcd037f376b11c5c7acf904ccd243d0e85dfcafe624e5
+    final_split_assignments:
+      file: data/processed/phase10_final_split_assignments.csv
+      rows: 154
+      outer_test_file: data/processed/phase10_outer_test.csv
+      outer_test_stations: 35
+      outer_test_districts: 8
+      outer_test_class_0: 9
+      outer_test_class_1: 26
+      development_file: data/processed/phase10_development.csv
+      development_stations: 119
+      development_districts: 25
+      development_class_0: 14
+      development_class_1: 105
+      development_cv_method: GroupKFold(n_splits=4)
+      district_overlap: 0
+      sha256: 2fda0c0a16feea5bf998c8f11ff91f3f23cb011d41e2b1b4e53add453127e581
+  district_audit:
+    file: reports/phase10_district_class_distribution.csv
+    districts_count: 33
+    sha256: af1a21035d2862a34cddcf3f8bec4ac2bd57cd0f7f4ea02831b032fcfffbd686
+phases:
+  total: 20
+  current: 10.1
+  status: Phase 10.1 - Final Spatial Evaluation Protocol Correction COMPLETE
+  master_dataset: data/final/FINAL_PROJECT_DATASET.csv

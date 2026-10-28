@@ -1,0 +1,81 @@
+{
+  "state": "Telangana",
+  "state_code": "TS",
+  "bounding_box": {
+    "south": 15.80,
+    "north": 19.92,
+    "west": 77.15,
+    "east": 80.95
+  },
+  "center": {
+    "latitude": 17.90,
+    "longitude": 79.05
+  },
+  "districts": [
+    {"name": "Adilabad", "lat": 19.67, "lng": 78.53},
+    {"name": "Bhadradri Kothagudem", "lat": 17.55, "lng": 80.62},
+    {"name": "Hanumakonda", "lat": 17.98, "lng": 79.58},
+    {"name": "Hyderabad", "lat": 17.38, "lng": 78.49},
+    {"name": "Jagitial", "lat": 18.79, "lng": 78.91},
+    {"name": "Jangaon", "lat": 17.73, "lng": 79.15},
+    {"name": "Jayashankar Bhupalpally", "lat": 18.43, "lng": 79.87},
+    {"name": "Jogulamba Gadwal", "lat": 16.23, "lng": 77.80},
+    {"name": "Kamareddy", "lat": 18.32, "lng": 78.34},
+    {"name": "Karimnagar", "lat": 18.44, "lng": 79.13},
+    {"name": "Khammam", "lat": 17.25, "lng": 80.15},
+    {"name": "Kumurambheem Asifabad", "lat": 19.36, "lng": 79.28},
+    {"name": "Mahabubabad", "lat": 17.60, "lng": 80.00},
+    {"name": "Mahabubnagar", "lat": 16.74, "lng": 78.00},
+    {"name": "Mancherial", "lat": 18.87, "lng": 79.44},
+    {"name": "Medak", "lat": 18.05, "lng": 78.26},
+    {"name": "Medchal-Malkajgiri", "lat": 17.63, "lng": 78.48},
+    {"name": "Mulugu", "lat": 18.19, "lng": 80.07},
+    {"name": "Nagarkurnool", "lat": 16.48, "lng": 78.31},
+    {"name": "Nalgonda", "lat": 17.05, "lng": 79.27},
+    {"name": "Narayanpet", "lat": 16.74, "lng": 77.50},
+    {"name": "Nirmal", "lat": 19.10, "lng": 78.34},
+    {"name": "Nizamabad", "lat": 18.67, "lng": 78.09},
+    {"name": "Peddapalli", "lat": 18.62, "lng": 79.38},
+    {"name": "Rajanna Sircilla", "lat": 18.38, "lng": 78.84},
+    {"name": "Ranga Reddy", "lat": 17.32, "lng": 78.32},
+    {"name": "Sangareddy", "lat": 17.63, "lng": 78.09},
+    {"name": "Siddipet", "lat": 18.10, "lng": 78.85},
+    {"name": "Suryapet", "lat": 17.14, "lng": 79.64},
+    {"name": "Vikarabad", "lat": 17.34, "lng": 77.90},
+    {"name": "Wanaparthy", "lat": 16.36, "lng": 78.06},
+    {"name": "Warangal", "lat": 17.97, "lng": 79.60},
+    {"name": "Yadadri Bhuvanagiri", "lat": 17.59, "lng": 78.96}
+  ],
+  "major_cities": [
+    {"name": "Hyderabad", "lat": 17.385, "lng": 78.487, "search_radius_km": 40},
+    {"name": "Warangal", "lat": 17.978, "lng": 79.600, "search_radius_km": 25},
+    {"name": "Nizamabad", "lat": 18.672, "lng": 78.094, "search_radius_km": 25},
+    {"name": "Karimnagar", "lat": 18.436, "lng": 79.132, "search_radius_km": 25},
+    {"name": "Khammam", "lat": 17.247, "lng": 80.151, "search_radius_km": 25},
+    {"name": "Mahabubnagar", "lat": 16.737, "lng": 78.003, "search_radius_km": 25},
+    {"name": "Nalgonda", "lat": 17.050, "lng": 79.267, "search_radius_km": 25},
+    {"name": "Adilabad", "lat": 19.667, "lng": 78.532, "search_radius_km": 25},
+    {"name": "Secunderabad", "lat": 17.434, "lng": 78.502, "search_radius_km": 20},
+    {"name": "Ramagundam", "lat": 18.755, "lng": 79.474, "search_radius_km": 20},
+    {"name": "Suryapet", "lat": 17.140, "lng": 79.637, "search_radius_km": 20},
+    {"name": "Siddipet", "lat": 18.102, "lng": 78.852, "search_radius_km": 20},
+    {"name": "Miryalaguda", "lat": 16.874, "lng": 79.562, "search_radius_km": 20},
+    {"name": "Mancherial", "lat": 18.871, "lng": 79.443, "search_radius_km": 20},
+    {"name": "Sangareddy", "lat": 17.629, "lng": 78.087, "search_radius_km": 20}
+  ],
+  "ocm_api": {
+    "base_url": "https://api.openchargemap.io/v3/poi/",
+    "max_results_per_call": 500,
+    "rate_limit_seconds": 2.0,
+    "retry_max": 3,
+    "retry_backoff_seconds": 5
+  },
+  "osm_overpass": {
+    "base_url": "https://overpass-api.de/api/interpreter",
+    "timeout_seconds": 90
+  },
+  "deduplication": {
+    "coordinate_threshold_meters": 150,
+    "name_similarity_threshold": 0.65
+  }
+}

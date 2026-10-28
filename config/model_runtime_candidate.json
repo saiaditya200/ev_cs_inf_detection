@@ -1,0 +1,8 @@
+{
+  "active_model_role": "candidate",
+  "model_id": "JOINT_RF_0257",
+  "model_path": "models/joint_rf_0257_deployment_candidate.joblib",
+  "metadata_path": "models/joint_rf_0257_deployment_metadata.json",
+  "threshold_path": "models/joint_rf_0257_deployment_threshold.json",
+  "feature_manifest": "models/feature_manifest.json"
+}
