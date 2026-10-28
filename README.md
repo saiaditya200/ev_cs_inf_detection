@@ -19,6 +19,7 @@ A lightweight, spatial-aware, and interpretable electric vehicle infrastructure 
 - [District Planning (EIPS Framework)](#district-planning-eips-framework)
 - [Model Comparison](#model-comparison)
 - [Project Structure](#project-structure)
+- [Base Paper](#base-paper)
 - [Theoretical Foundation](#theoretical-foundation)
 - [Technical Details](#technical-details)
 - [Reproducing Results](#reproducing-results)
@@ -507,6 +508,31 @@ ev_cs_inf_detection/
 
 ---
 
+## Base Paper
+
+- **Title:** *Machine learning-based multivariate forecasting of electric vehicle charging station demand*
+- **Journal:** *Electronics Letters*, 2024
+- **DOI:** [`10.1049/ell2.70104`](https://doi.org/10.1049/ell2.70104)
+- **Methodology:** Comparative evaluation of 9 deep and machine learning architectures (GRU, LSTM, CNN, Random Forest, XGBoost, CatBoost) for temporal charging energy ($\text{kWh}$) forecasting.
+- **Reported Best Model:** Gated Recurrent Unit (GRU) with $\text{RMSE} \approx 0.00297$ and $\text{MAE} \approx 0.00266$.
+
+### Key Differences from Base Paper
+
+| Dimension | Base Paper (*Electronics Letters*, 2024) | Our Implemented Framework |
+| :--- | :--- | :--- |
+| **Primary Research Focus** | Isolated temporal charging load forecasting ($\text{kWh}_t$) | Spatially aware, explainable infrastructure planning & decision support |
+| **Problem Formulation** | Time-series regression | Spatial Classification (Station) + MCDA Decision Synthesis (District) |
+| **Supervised Target** | Continuous future charging energy ($\text{kWh}$) | Observable Physical Ground Truth: `fast_charging_flag` (DC Fast vs AC Slow) |
+| **Dataset Source** | Single time-series foreign/standard dataset | Harmonized multi-source Telangana repository (BEE, OSM, VAHAN, TGSPDCL) |
+| **Target Leakage Control**| Standard time lags (assumes station is operational) | **Leakage Quarantine Gate**: Bars all internal hardware specifications |
+| **Spatial Generalization**| Random temporal / train-test split | **District-Grouped Spatial Partitioning** (Zero district overlap) |
+| **Deployed Architecture** | Comparative research survey of 9 black-box models | **Single Champion Model**: Tuned Random Forest ($\tau^* = 0.76$) |
+| **Explainability (XAI)** | None (Unexplained black-box models) | **TreeSHAP** ($O(TLD^2)$ attributions) + **Actionable Counterfactuals** |
+| **Strategic Planning** | None (predictive only) | **EIPS Framework** via **AHP-weighted TOPSIS** across 33 districts |
+| **Deployment** | Offline benchmark script | **Full-Stack Production System**: Flask REST API + Leaflet/Folium GIS App |
+
+---
+
 ## Theoretical Foundation
 
 ### Spatial Autocorrelation & Tobler's First Law
@@ -613,13 +639,80 @@ Top 3 TreeSHAP Attributions:
 
 ## References
 
-1. **TreeSHAP:** Lundberg, S.M., Erion, G., Chen, H., et al. "From Local Explanations to Global Understanding with Explainable AI for Trees." *Nature Machine Intelligence*, 2, 56–67 (2020).
-2. **Analytic Hierarchy Process (AHP):** Saaty, T.L. *The Analytic Hierarchy Process: Planning, Priority Setting, Resource Allocation.* McGraw-Hill, New York (1980).
-3. **TOPSIS Method:** Hwang, C.L., Yoon, K. *Multiple Attribute Decision Making: Methods and Applications.* Springer-Verlag, Berlin (1981).
-4. **Spatial Cross-Validation:** Roberts, D.R., et al. "Cross-validation strategies for data with temporal, spatial, or hierarchical structure." *Ecography*, 40(8), 913–929 (2017).
-5. **OpenStreetMap Data:** OpenStreetMap Contributors. "Planet dump retrieved from https://planet.openstreetmap.org" (2024).
-6. **BEE EV Portal:** Bureau of Energy Efficiency, Ministry of Power, Government of India. "National EV Charging Infrastructure Registry" (2024).
-7. **VAHAN Fleet Dashboard:** Ministry of Road Transport and Highways (MoRTH), Government of India. "Vehicle Registration Data Portal" (2024).
+### 1. Base Paper & Foundational Machine Learning Literature
+
+1. **Base Paper:** "Machine learning-based multivariate forecasting of electric vehicle charging station demand." *Electronics Letters*, vol. 60, no. 5, 2024. DOI: [`10.1049/ell2.70104`](https://doi.org/10.1049/ell2.70104).
+2. **Random Forests:** Breiman, L. "Random Forests." *Machine Learning*, vol. 45, no. 1, pp. 5–32, 2001. DOI: [`10.1023/A:1010933404324`](https://doi.org/10.1023/A:1010933404324).
+3. **XGBoost:** Chen, T., and Guestrin, C. "XGBoost: A Scalable Tree Boosting System." In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16)*, pp. 785–794, 2016. DOI: [`10.1145/2939672.2939785`](https://doi.org/10.1145/2939672.2939785).
+4. **LightGBM:** Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., and Liu, T.Y. "LightGBM: A Highly Efficient Gradient Boosting Decision Tree." *Advances in Neural Information Processing Systems (NeurIPS 2017)*, vol. 30, pp. 3146–3154, 2017.
+5. **Hyperparameter Optimization (Optuna):** Akiba, T., Sano, S., Yanase, T., Ohta, T., and Koyama, M. "Optuna: A Next-generation Hyperparameter Optimization Framework." In *Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (KDD '19)*, pp. 2623–2631, 2019. DOI: [`10.1145/3292500.3330701`](https://doi.org/10.1145/3292500.3330701).
+6. **Cost-Sensitive Learning:** Elkan, C. "The Foundations of Cost-Sensitive Learning." In *Proceedings of the 17th International Joint Conference on Artificial Intelligence (IJCAI '01)*, vol. 2, pp. 973–978, 2001.
+7. **Precision-Recall Metrics under Imbalance:** Davis, J., and Goadrich, M. "The Relationship Between Precision-Recall and ROC Curves." In *Proceedings of the 23rd International Conference on Machine Learning (ICML '06)*, pp. 233–240, 2006. DOI: [`10.1145/1143844.1143874`](https://doi.org/10.1145/1143844.1143874).
+
+### 2. Spatial Data Science, Geographic Independence & Autocorrelation
+
+8. **Tobler's First Law of Geography:** Tobler, W.R. "A Computer Movie Simulating Urban Growth in the Detroit Region." *Economic Geography*, vol. 46, no. sup1, pp. 234–240, 1970. DOI: [`10.2307/143141`](https://doi.org/10.2307/143141).
+9. **Spatial Cross-Validation & Hierarchical Structure:** Roberts, D.R., Bahn, V., Ciuti, S., Boyce, M.S., Elith, J., Guillera-Arroita, G., Hauenstein, S., Lahoz-Monfort, J.J., Schröder, B., Thuiller, W., Warton, D.I., Wintle, B.A., Hartig, F., and Dormann, C.F. "Cross-validation strategies for data with temporal, spatial, or hierarchical structure." *Ecography*, vol. 40, no. 8, pp. 913–929, 2017. DOI: [`10.1111/ecog.02881`](https://doi.org/10.1111/ecog.02881).
+10. **Target-Oriented Validation for Spatial ML:** Meyer, H., Reudenbach, C., Hengl, T., Katurji, M., and Nauss, T. "Improving performance of spatio-temporal machine learning models using forward feature selection and target-oriented validation." *Environmental Modelling & Software*, vol. 101, pp. 1–9, 2018. DOI: [`10.1016/j.envsoft.2017.12.001`](https://doi.org/10.1016/j.envsoft.2017.12.001).
+11. **Spatial Autocorrelation Metric:** Moran, P.A.P. "Notes on Continuous Stochastic Phenomena." *Biometrika*, vol. 37, no. 1/2, pp. 17–23, 1950. DOI: [`10.2307/2332142`](https://doi.org/10.2307/2332142).
+12. **Foundations of Geographic Information Science:** Goodchild, M.F. "Geographical Information Science." *International Journal of Geographical Information Systems*, vol. 6, no. 1, pp. 31–45, 1992. DOI: [`10.1080/02693799208901893`](https://doi.org/10.1080/02693799208901893).
+
+### 3. Explainable Artificial Intelligence (XAI) & Actionable Counterfactuals
+
+13. **TreeSHAP Formulation:** Lundberg, S.M., Erion, G., Chen, H., DeGrave, A.J., Prutkin, J.M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., and Lee, S.I. "From Local Explanations to Global Understanding with Explainable AI for Trees." *Nature Machine Intelligence*, vol. 2, no. 1, pp. 56–67, 2020. DOI: [`10.1038/s42256-019-0138-9`](https://doi.org/10.1038/s42256-019-0138-9).
+14. **Unified Feature Attribution (SHAP):** Lundberg, S.M., and Lee, S.I. "A Unified Approach to Interpreting Model Predictions." In *Advances in Neural Information Processing Systems (NeurIPS 2017)*, vol. 30, pp. 4765–4774, 2017.
+15. **Axiomatic Cooperative Game Theory:** Shapley, L.S. "A Value for n-Person Games." *Contributions to the Theory of Games*, vol. 2, no. 28, pp. 307–317, Princeton University Press, 1953.
+16. **Counterfactual Explanations:** Wachter, S., Mittelstadt, B., and Russell, C. "Counterfactual Explanations Without Opening the Black Box: Automated Decisions and the GDPR." *Harvard Journal of Law & Technology*, vol. 31, no. 2, pp. 841–887, 2018.
+17. **Actionable Recourse:** Ustun, B., Spangher, A., and Liu, Y. "Actionable Recourse in Linear Classification." In *Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* '19)*, pp. 10–19, 2019. DOI: [`10.1145/3287560.3287566`](https://doi.org/10.1145/3287560.3287566).
+
+### 4. Multi-Criteria Decision Analysis (MCDA), AHP & TOPSIS
+
+18. **The Analytic Hierarchy Process (AHP):** Saaty, T.L. *The Analytic Hierarchy Process: Planning, Priority Setting, Resource Allocation.* McGraw-Hill International Book Co., New York, 1980. ISBN: 0-07-054371-2.
+19. **AHP Consistency Ratios & Eigenvector Foundations:** Saaty, T.L. "How to Make a Decision: The Analytic Hierarchy Process." *Interfaces*, vol. 24, no. 6, pp. 19–43, 1994. DOI: [`10.1287/inte.24.6.19`](https://doi.org/10.1287/inte.24.6.19).
+20. **TOPSIS Formulation:** Hwang, C.L., and Yoon, K. *Multiple Attribute Decision Making: Methods and Applications: A State-of-the-Art Survey.* Lecture Notes in Economics and Mathematical Systems, vol. 186. Springer-Verlag, Berlin Heidelberg, 1981. DOI: [`10.1007/978-3-642-48318-9`](https://doi.org/10.1007/978-3-642-48318-9).
+21. **Information Diversity Index (Shannon Entropy):** Shannon, C.E. "A Mathematical Theory of Communication." *Bell System Technical Journal*, vol. 27, no. 3, pp. 379–423, 1948. DOI: [`10.1002/j.1538-7305.1948.tb01338.x`](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x).
+22. **Multi-Objective Infrastructure Trade-Offs:** Keeney, R.L., and Raiffa, H. *Decisions with Multiple Objectives: Preferences and Value Tradeoffs.* Cambridge University Press, 1993.
+
+### 5. Official Government Registries, Acts, Policies & Technical Standards
+
+23. **Bureau of Energy Efficiency (BEE):** "National EV Public Charging Infrastructure Deployment Guidelines, Standards and Database." Ministry of Power, Government of India, 2022 (revised 2024). URL: [`https://beeindia.gov.in`](https://beeindia.gov.in).
+24. **Bureau of Indian Standards (BIS) — IS 17017:**
+    - *IS 17017 (Part 1): 2018* — Electric Vehicle Conductive Charging System, Part 1: General Requirements.
+    - *IS 17017 (Part 2 / Sec 1–3): 2020* — Plugs, Socket-outlets, Vehicle Connectors and Inlets.
+    - *IS 17017 (Part 21 & 23): 2021* — Electric Vehicle Conductive Charging System: DC Electric Vehicle Charging Station Requirements.
+25. **Ministry of Power (MoP), Government of India:** "Charging Infrastructure for Electric Vehicles — Revised Consolidated Guidelines and Standards." Issued under Section 3 of the Electricity Act, 2003 (Act No. 36 of 2003), New Delhi, 2022 (amended 2024).
+26. **Ministry of Heavy Industries (MHI):** "Scheme for Faster Adoption and Manufacturing of (Hybrid &) Electric Vehicles in India (FAME Phase-II)." Gazette of India, Notification S.O. 1300(E), 2019–2024; and "PM Electric Drive Revolution in Innovative Vehicle Enhancement (PM E-DRIVE) Scheme," 2024. Dashboard URL: [`https://dash.heavyindustries.gov.in`](https://dash.heavyindustries.gov.in).
+27. **Ministry of Road Transport and Highways (MoRTH):** "VAHAN 4.0: Centralized National Register of Motor Vehicles Portal." Parivahan Sewa Analytics, Government of India, 2018–2026. Dashboard URL: [`https://analytics.parivahan.gov.in`](https://analytics.parivahan.gov.in).
+28. **Government of Telangana — EV & ESS Policy:** "Telangana Electric Vehicle and Energy Storage Systems Policy 2020–2030." Department of Information Technology, Electronics & Communications and Department of Industries & Commerce, Government of Telangana, Hyderabad, 2020.
+29. **Government of Telangana — Road Tax & Registration Exemption:** "Order for 100% Exemption of Road Tax and Registration Fees for Electric Vehicles." Transport, Roads and Buildings Department, Government of Telangana, Notification G.O.Ms.No. 42, issued November 2024.
+30. **Office of the Registrar General & Census Commissioner of India (RGI):** "Census of India 2011: Primary Census Abstract (PCA) and Administrative Reorganization Gazettes." Ministry of Home Affairs, Government of India, New Delhi. URL: [`https://censusindia.gov.in`](https://censusindia.gov.in).
+31. **National Commission on Population (NCP):** "Report of the Technical Group on Population Projections for India and States 2011–2036." Ministry of Health and Family Welfare, Government of India, New Delhi, 2020.
+32. **National Highways Authority of India (NHAI):** "National Highway Infrastructure and Corridor Development Records across Telangana (NH-44, NH-65, NH-163, NH-765, NH-161, NH-167)." Ministry of Road Transport and Highways, New Delhi, 2024. URL: [`https://nhai.gov.in`](https://nhai.gov.in).
+33. **Central Electricity Authority (CEA):** "Growth of Electricity Sector in India from 1947 to 2024" and "State-Wise Monthly Power Supply Position and Energy Requirement Reports." Ministry of Power, New Delhi, 2024. URL: [`https://cea.nic.in`](https://cea.nic.in).
+34. **Telangana State Southern Power Distribution Company Limited (TGSPDCL):** "Commercial Low-Tension (LT) and High-Tension (HT) EV Charging Tariff Ledger, Section-Wise Monthly Energy Billed Data." Hyderabad, Telangana, 2023–2024. URL: [`https://www.tssouthernpower.com`](https://www.tssouthernpower.com).
+35. **NITI Aayog:** "Handbook of Electric Vehicle Charging Infrastructure Implementation." National Institution for Transforming India, Government of India, New Delhi, 2021. URL: [`https://www.niti.gov.in`](https://www.niti.gov.in).
+
+### 6. Geospatial Databases, Cartographic Sources & Web APIs
+
+36. **OpenChargeMap (OCM):** "OpenChargeMap Global Public Registry of Electric Vehicle Charging Locations." Community Open Data API v3, 2024. URL: [`https://openchargemap.org`](https://openchargemap.org).
+37. **OpenStreetMap (OSM):** OpenStreetMap Contributors. "Planet OSM Spatial Database Extract and Overpass Query API." Open Data Commons Open Database License (ODbL), 2024. URL: [`https://www.openstreetmap.org`](https://www.openstreetmap.org).
+38. **Geofabrik GmbH:** "OpenStreetMap Regional GIS Shapefile and Protocolbuffer Binary Format (PBF) Extracts for Southern India and Telangana." Karlsruhe, Germany, 2024. URL: [`https://download.geofabrik.de/asia/india.html`](https://download.geofabrik.de/asia/india.html).
+39. **Natural Earth:** "Natural Earth Public Domain Vector Map Dataset: 1:10m Cultural and Physical Administrative Boundaries." 2024. URL: [`https://www.naturalearthdata.com`](https://www.naturalearthdata.com).
+
+### 7. Scientific Computing, Machine Learning & Geospatial Software Toolkits
+
+40. **Scikit-Learn:** Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., and Duchesnay, E. "Scikit-learn: Machine Learning in Python." *Journal of Machine Learning Research (JMLR)*, vol. 12, pp. 2825–2830, 2011.
+41. **SHAP Python Library:** Lundberg, S.M. "SHAP (SHapley Additive exPlanations): Interpretable Machine Learning Toolkit." Python Package Version 0.42+, 2023. GitHub: [`https://github.com/shap/shap`](https://github.com/shap/shap).
+42. **GeoPandas:** Jordahl, K., Bossche, J.V., Fleischmann, M., Wasserman, J., McBride, J., Gerard, J., Tratner, J., Perry, M., Badaracco, A.G., Farmer, C., Hjelle, G.A., Snow, A.D., Cochran, M., Gillies, S., Culbertson, L., Bartos, M., Eubank, N., maxalbert, Bilogur, A., Rey, S., Ren, C., Arribas-Bel, D., Wasser, L., Wolf, L.J., Journois, M., Wilson, J., Greenhall, A., Holdgraf, C., Filipe, and Leblanc, F. "geopandas/geopandas: v0.12.0." Zenodo, 2022. DOI: [`10.5281/zenodo.7025819`](https://doi.org/10.5281/zenodo.7025819).
+43. **Shapely:** Gillies, S., van der Wel, C., Van den Bossche, J., et al. "Shapely: Manipulation and Analysis of Geometric Objects." Python Package, 2023. GitHub: [`https://github.com/shapely/shapely`](https://github.com/shapely/shapely).
+44. **Folium:** Python Visualization Community. "Folium: Python Data, Leaflet.js Maps." Python Package Version 0.14+, 2023. URL: [`https://python-visualization.github.io/folium/`](https://python-visualization.github.io/folium/).
+45. **Leaflet.js:** Agafonkin, V. "Leaflet: An Open-Source JavaScript Library for Mobile-Friendly Interactive Maps." Version 1.9+, 2023. URL: [`https://leafletjs.com/`](https://leafletjs.com/).
+46. **Flask:** Ronacher, A., and the Pallets Team. "Flask: A Lightweight WSGI Web Application Framework." Version 2.3+, 2023. URL: [`https://flask.palletsprojects.com/`](https://flask.palletsprojects.com/).
+47. **SciPy:** Virtanen, P., Gommers, R., Oliphant, T.E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., van der Walt, S.J., Brett, M., Wilson, J., Millman, K.J., Mayorov, N., Nelson, A.R.J., Jones, E., Kern, R., Larson, E., Carey, C.J., Polat, İ., Feng, Y., Moore, E.W., VanderPlas, J., Laxalde, D., Perktold, J., Cimrman, R., Henriksen, I., Quintero, E.A., Harris, C.R., Archibald, A.M., Ribeiro, A.H., Pedregosa, F., van Mulbregt, P., and SciPy 1.0 Contributors. "SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python." *Nature Methods*, vol. 17, pp. 261–272, 2020. DOI: [`10.1038/s41592-019-0686-2`](https://doi.org/10.1038/s41592-019-0686-2).
+48. **NumPy:** Harris, C.R., Millman, K.J., van der Walt, S.J., Gommers, R., Virtanen, P., Cournapeau, D., Wieser, E., Taylor, J., Berg, S., Smith, N.J., Kern, R., Picus, M., Hoyer, S., van Kerkwijk, M.H., Brett, M., Haldane, A., del Río, J.F., Wiebe, M., Peterson, P., Gérard-Marchant, P., Sheppard, K., Reddy, T., Weckesser, W., Abbasi, H., Gohlke, C., and Oliphant, T.E. "Array Programming with NumPy." *Nature*, vol. 585, pp. 357–362, 2020. DOI: [`10.1038/s41586-020-2649-2`](https://doi.org/10.1038/s41586-020-2649-2).
+49. **Pandas:** McKinney, W. "Data Structures for Statistical Computing in Python." In *Proceedings of the 9th Python in Science Conference (SciPy 2010)*, pp. 56–61, 2010. DOI: [`10.25080/Majora-92bf1922-00a`](https://doi.org/10.25080/Majora-92bf1922-00a).
+50. **Matplotlib:** Hunter, J.D. "Matplotlib: A 2D Graphics Environment." *Computing in Science & Engineering*, vol. 9, no. 3, pp. 90–95, 2007. DOI: [`10.1109/MCSE.2007.55`](https://doi.org/10.1109/MCSE.2007.55).
+51. **Seaborn:** Waskom, M.L. "Seaborn: Statistical Data Visualization." *Journal of Open Source Software (JOSS)*, vol. 6, no. 60, p. 3021, 2021. DOI: [`10.21105/joss.03021`](https://doi.org/10.21105/joss.03021).
 
 ---
 
