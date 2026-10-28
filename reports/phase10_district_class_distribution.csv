@@ -1,0 +1,34 @@
+district,station_count,class_0_count,class_1_count,class_0_percentage,class_1_percentage
+Hyderabad,45,6,39,13.3,86.7
+Karimnagar,10,2,8,20.0,80.0
+Warangal Urban,10,2,8,20.0,80.0
+Medchal-Malkajgiri,8,1,7,12.5,87.5
+Ranga Reddy,7,0,7,0.0,100.0
+Sangareddy,5,2,3,40.0,60.0
+Mahabubnagar,4,0,4,0.0,100.0
+Nalgonda,4,0,4,0.0,100.0
+Nizamabad,4,0,4,0.0,100.0
+Suryapet,4,0,4,0.0,100.0
+Bhadradri Kothagudem,3,0,3,0.0,100.0
+Jagitial,3,2,1,66.7,33.3
+Jogulamba Gadwal,3,0,3,0.0,100.0
+Khammam,3,0,3,0.0,100.0
+Mancherial,3,2,1,66.7,33.3
+Medak,3,1,2,33.3,66.7
+Nagarkurnool,3,1,2,33.3,66.7
+Peddapalli,3,0,3,0.0,100.0
+Siddipet,3,1,2,33.3,66.7
+Vikarabad,3,1,2,33.3,66.7
+Wanaparthy,3,0,3,0.0,100.0
+Yadadri Bhuvanagiri,3,0,3,0.0,100.0
+Jangaon,2,0,2,0.0,100.0
+Kumurambheem Asifabad,2,0,2,0.0,100.0
+Mahabubabad,2,1,1,50.0,50.0
+Narayanpet,2,0,2,0.0,100.0
+Rajanna Sircilla,2,0,2,0.0,100.0
+Warangal Rural,2,1,1,50.0,50.0
+Adilabad,1,0,1,0.0,100.0
+Jayashankar Bhupalapally,1,0,1,0.0,100.0
+Kamareddy,1,0,1,0.0,100.0
+Mulugu,1,0,1,0.0,100.0
+Nirmal,1,0,1,0.0,100.0
