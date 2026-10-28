@@ -1,0 +1,289 @@
+Circle,Division,SubDivision,Section,Month_Year,Category_Code,Category_Description,Total_Services,Billed_Services,Billed_Load_KW,Units_Consumed_KWH,Billed_Amount_INR
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-04,LT-IX,Electric Vehicle Charging Stations,15,14,1731.8,338800,4404400
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-04,LT-IX,Electric Vehicle Charging Stations,12,11,1335.0,259600,3374800
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-04,LT-IX,Electric Vehicle Charging Stations,9,8,865.9,162800,2116400
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-04,LT-IX,Electric Vehicle Charging Stations,10,9,1082.4,211200,2745600
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-04,LT-IX,Electric Vehicle Charging Stations,11,10,1190.6,233200,3031600
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-04,LT-IX,Electric Vehicle Charging Stations,9,8,974.2,189200,2459600
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-04,LT-IX,Electric Vehicle Charging Stations,7,6,685.5,136400,1773200
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-04,LT-IX,Electric Vehicle Charging Stations,6,5,577.3,110000,1430000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-04,LT-IX,Electric Vehicle Charging Stations,13,12,1371.0,272800,3546400
+Medchal,Alwal,Kompally,Jeedimetla,2023-04,LT-IX,Electric Vehicle Charging Stations,8,7,793.8,154000,2002000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-04,LT-IX,Electric Vehicle Charging Stations,10,9,1010.2,198000,2574000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-04,LT-IX,Electric Vehicle Charging Stations,13,12,1587.5,316800,4118400
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-04,LT-IX,Electric Vehicle Charging Stations,8,7,829.8,158400,2059200
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-04,LT-IX,Electric Vehicle Charging Stations,6,5,649.4,127600,1658800
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-04,LT-IX,Electric Vehicle Charging Stations,5,4,541.2,101200,1315600
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-04,LT-IX,Electric Vehicle Charging Stations,6,5,613.4,118800,1544400
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-04,LT-IX,Electric Vehicle Charging Stations,5,4,433.0,83600,1086800
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-04,LT-IX,Electric Vehicle Charging Stations,7,6,685.5,132000,1716000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-04,LT-IX,Electric Vehicle Charging Stations,5,4,505.1,96800,1258400
+Medak,Sangareddy,Patancheru,ORR Junction,2023-04,LT-IX,Electric Vehicle Charging Stations,9,8,938.1,180400,2345200
+Medak,Zaheerabad,Kohir,NH65 Border,2023-04,LT-IX,Electric Vehicle Charging Stations,4,3,396.9,74800,972400
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-04,LT-IX,Electric Vehicle Charging Stations,5,4,469.0,92400,1201200
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-04,LT-IX,Electric Vehicle Charging Stations,6,5,577.3,114400,1487200
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-04,LT-IX,Electric Vehicle Charging Stations,4,3,324.7,57200,743600
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-05,LT-IX,Electric Vehicle Charging Stations,15,14,1810.6,354200,4604600
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-05,LT-IX,Electric Vehicle Charging Stations,12,11,1395.6,271400,3528200
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-05,LT-IX,Electric Vehicle Charging Stations,9,8,905.3,170200,2212600
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-05,LT-IX,Electric Vehicle Charging Stations,10,9,1131.6,220800,2870400
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-05,LT-IX,Electric Vehicle Charging Stations,11,10,1244.8,243800,3169400
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-05,LT-IX,Electric Vehicle Charging Stations,9,8,1018.4,197800,2571400
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-05,LT-IX,Electric Vehicle Charging Stations,7,6,716.7,142600,1853800
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-05,LT-IX,Electric Vehicle Charging Stations,6,5,603.5,115000,1495000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-05,LT-IX,Electric Vehicle Charging Stations,13,12,1433.4,285200,3707600
+Medchal,Alwal,Kompally,Jeedimetla,2023-05,LT-IX,Electric Vehicle Charging Stations,8,7,829.8,161000,2093000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-05,LT-IX,Electric Vehicle Charging Stations,10,9,1056.2,207000,2691000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-05,LT-IX,Electric Vehicle Charging Stations,13,12,1659.7,331200,4305600
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-05,LT-IX,Electric Vehicle Charging Stations,8,7,867.6,165600,2152800
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-05,LT-IX,Electric Vehicle Charging Stations,6,5,679.0,133400,1734200
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-05,LT-IX,Electric Vehicle Charging Stations,5,4,565.8,105800,1375400
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-05,LT-IX,Electric Vehicle Charging Stations,6,5,641.2,124200,1614600
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-05,LT-IX,Electric Vehicle Charging Stations,5,4,452.6,87400,1136200
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-05,LT-IX,Electric Vehicle Charging Stations,7,6,716.7,138000,1794000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-05,LT-IX,Electric Vehicle Charging Stations,5,4,528.1,101200,1315600
+Medak,Sangareddy,Patancheru,ORR Junction,2023-05,LT-IX,Electric Vehicle Charging Stations,9,8,980.7,188600,2451800
+Medak,Zaheerabad,Kohir,NH65 Border,2023-05,LT-IX,Electric Vehicle Charging Stations,4,3,414.9,78200,1016600
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-05,LT-IX,Electric Vehicle Charging Stations,5,4,490.4,96600,1255800
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-05,LT-IX,Electric Vehicle Charging Stations,6,5,603.5,119600,1554800
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-05,LT-IX,Electric Vehicle Charging Stations,4,3,339.5,59800,777400
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-06,LT-IX,Electric Vehicle Charging Stations,15,14,1849.9,361900,4704700
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-06,LT-IX,Electric Vehicle Charging Stations,12,11,1426.0,277300,3604900
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-06,LT-IX,Electric Vehicle Charging Stations,9,8,925.0,173900,2260700
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-06,LT-IX,Electric Vehicle Charging Stations,10,9,1156.2,225600,2932800
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-06,LT-IX,Electric Vehicle Charging Stations,11,10,1271.8,249100,3238300
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-06,LT-IX,Electric Vehicle Charging Stations,9,8,1040.6,202100,2627300
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-06,LT-IX,Electric Vehicle Charging Stations,7,6,732.3,145700,1894100
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-06,LT-IX,Electric Vehicle Charging Stations,6,5,616.6,117500,1527500
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-06,LT-IX,Electric Vehicle Charging Stations,13,12,1464.5,291400,3788200
+Medchal,Alwal,Kompally,Jeedimetla,2023-06,LT-IX,Electric Vehicle Charging Stations,8,7,847.9,164500,2138500
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-06,LT-IX,Electric Vehicle Charging Stations,10,9,1079.1,211500,2749500
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-06,LT-IX,Electric Vehicle Charging Stations,13,12,1695.8,338400,4399200
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-06,LT-IX,Electric Vehicle Charging Stations,8,7,886.4,169200,2199600
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-06,LT-IX,Electric Vehicle Charging Stations,6,5,693.7,136300,1771900
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-06,LT-IX,Electric Vehicle Charging Stations,5,4,578.1,108100,1405300
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-06,LT-IX,Electric Vehicle Charging Stations,6,5,655.2,126900,1649700
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-06,LT-IX,Electric Vehicle Charging Stations,5,4,462.5,89300,1160900
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-06,LT-IX,Electric Vehicle Charging Stations,7,6,732.3,141000,1833000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-06,LT-IX,Electric Vehicle Charging Stations,5,4,539.6,103400,1344200
+Medak,Sangareddy,Patancheru,ORR Junction,2023-06,LT-IX,Electric Vehicle Charging Stations,9,8,1002.0,192700,2505100
+Medak,Zaheerabad,Kohir,NH65 Border,2023-06,LT-IX,Electric Vehicle Charging Stations,4,3,423.9,79900,1038700
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-06,LT-IX,Electric Vehicle Charging Stations,5,4,501.0,98700,1283100
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-06,LT-IX,Electric Vehicle Charging Stations,6,5,616.6,122200,1588600
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-06,LT-IX,Electric Vehicle Charging Stations,4,3,346.9,61100,794300
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-07,LT-IX,Electric Vehicle Charging Stations,15,14,1889.3,369600,4804800
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-07,LT-IX,Electric Vehicle Charging Stations,12,11,1456.3,283200,3681600
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-07,LT-IX,Electric Vehicle Charging Stations,9,8,944.6,177600,2308800
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-07,LT-IX,Electric Vehicle Charging Stations,10,9,1180.8,230400,2995200
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-07,LT-IX,Electric Vehicle Charging Stations,11,10,1298.9,254400,3307200
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-07,LT-IX,Electric Vehicle Charging Stations,9,8,1062.7,206400,2683200
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-07,LT-IX,Electric Vehicle Charging Stations,7,6,747.8,148800,1934400
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-07,LT-IX,Electric Vehicle Charging Stations,6,5,629.8,120000,1560000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-07,LT-IX,Electric Vehicle Charging Stations,13,12,1495.7,297600,3868800
+Medchal,Alwal,Kompally,Jeedimetla,2023-07,LT-IX,Electric Vehicle Charging Stations,8,7,865.9,168000,2184000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-07,LT-IX,Electric Vehicle Charging Stations,10,9,1102.1,216000,2808000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-07,LT-IX,Electric Vehicle Charging Stations,13,12,1731.8,345600,4492800
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-07,LT-IX,Electric Vehicle Charging Stations,8,7,905.3,172800,2246400
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-07,LT-IX,Electric Vehicle Charging Stations,6,5,708.5,139200,1809600
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-07,LT-IX,Electric Vehicle Charging Stations,5,4,590.4,110400,1435200
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-07,LT-IX,Electric Vehicle Charging Stations,6,5,669.1,129600,1684800
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-07,LT-IX,Electric Vehicle Charging Stations,5,4,472.3,91200,1185600
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-07,LT-IX,Electric Vehicle Charging Stations,7,6,747.8,144000,1872000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-07,LT-IX,Electric Vehicle Charging Stations,5,4,551.0,105600,1372800
+Medak,Sangareddy,Patancheru,ORR Junction,2023-07,LT-IX,Electric Vehicle Charging Stations,9,8,1023.4,196800,2558400
+Medak,Zaheerabad,Kohir,NH65 Border,2023-07,LT-IX,Electric Vehicle Charging Stations,4,3,433.0,81600,1060800
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-07,LT-IX,Electric Vehicle Charging Stations,5,4,511.7,100800,1310400
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-07,LT-IX,Electric Vehicle Charging Stations,6,5,629.8,124800,1622400
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-07,LT-IX,Electric Vehicle Charging Stations,4,3,354.2,62400,811200
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-08,LT-IX,Electric Vehicle Charging Stations,15,14,1928.6,377300,4904900
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-08,LT-IX,Electric Vehicle Charging Stations,12,11,1486.7,289100,3758300
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-08,LT-IX,Electric Vehicle Charging Stations,9,8,964.3,181300,2356900
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-08,LT-IX,Electric Vehicle Charging Stations,10,9,1205.4,235200,3057600
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-08,LT-IX,Electric Vehicle Charging Stations,11,10,1325.9,259700,3376100
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-08,LT-IX,Electric Vehicle Charging Stations,9,8,1084.9,210700,2739100
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-08,LT-IX,Electric Vehicle Charging Stations,7,6,763.4,151900,1974700
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-08,LT-IX,Electric Vehicle Charging Stations,6,5,642.9,122500,1592500
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-08,LT-IX,Electric Vehicle Charging Stations,13,12,1526.8,303800,3949400
+Medchal,Alwal,Kompally,Jeedimetla,2023-08,LT-IX,Electric Vehicle Charging Stations,8,7,884.0,171500,2229500
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-08,LT-IX,Electric Vehicle Charging Stations,10,9,1125.0,220500,2866500
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-08,LT-IX,Electric Vehicle Charging Stations,13,12,1767.9,352800,4586400
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-08,LT-IX,Electric Vehicle Charging Stations,8,7,924.1,176400,2293200
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-08,LT-IX,Electric Vehicle Charging Stations,6,5,723.2,142100,1847300
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-08,LT-IX,Electric Vehicle Charging Stations,5,4,602.7,112700,1465100
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-08,LT-IX,Electric Vehicle Charging Stations,6,5,683.1,132300,1719900
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-08,LT-IX,Electric Vehicle Charging Stations,5,4,482.2,93100,1210300
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-08,LT-IX,Electric Vehicle Charging Stations,7,6,763.4,147000,1911000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-08,LT-IX,Electric Vehicle Charging Stations,5,4,562.5,107800,1401400
+Medak,Sangareddy,Patancheru,ORR Junction,2023-08,LT-IX,Electric Vehicle Charging Stations,9,8,1044.7,200900,2611700
+Medak,Zaheerabad,Kohir,NH65 Border,2023-08,LT-IX,Electric Vehicle Charging Stations,4,3,442.0,83300,1082900
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-08,LT-IX,Electric Vehicle Charging Stations,5,4,522.3,102900,1337700
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-08,LT-IX,Electric Vehicle Charging Stations,6,5,642.9,127400,1656200
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-08,LT-IX,Electric Vehicle Charging Stations,4,3,361.6,63700,828100
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-09,LT-IX,Electric Vehicle Charging Stations,15,14,1968.0,385000,5005000
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-09,LT-IX,Electric Vehicle Charging Stations,12,11,1517.0,295000,3835000
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-09,LT-IX,Electric Vehicle Charging Stations,9,8,984.0,185000,2405000
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-09,LT-IX,Electric Vehicle Charging Stations,10,9,1230.0,240000,3120000
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-09,LT-IX,Electric Vehicle Charging Stations,11,10,1353.0,265000,3445000
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-09,LT-IX,Electric Vehicle Charging Stations,9,8,1107.0,215000,2795000
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-09,LT-IX,Electric Vehicle Charging Stations,7,6,779.0,155000,2015000
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-09,LT-IX,Electric Vehicle Charging Stations,6,5,656.0,125000,1625000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-09,LT-IX,Electric Vehicle Charging Stations,13,12,1558.0,310000,4030000
+Medchal,Alwal,Kompally,Jeedimetla,2023-09,LT-IX,Electric Vehicle Charging Stations,8,7,902.0,175000,2275000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-09,LT-IX,Electric Vehicle Charging Stations,10,9,1148.0,225000,2925000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-09,LT-IX,Electric Vehicle Charging Stations,13,12,1804.0,360000,4680000
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-09,LT-IX,Electric Vehicle Charging Stations,8,7,943.0,180000,2340000
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-09,LT-IX,Electric Vehicle Charging Stations,6,5,738.0,145000,1885000
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-09,LT-IX,Electric Vehicle Charging Stations,5,4,615.0,115000,1495000
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-09,LT-IX,Electric Vehicle Charging Stations,6,5,697.0,135000,1755000
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-09,LT-IX,Electric Vehicle Charging Stations,5,4,492.0,95000,1235000
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-09,LT-IX,Electric Vehicle Charging Stations,7,6,779.0,150000,1950000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-09,LT-IX,Electric Vehicle Charging Stations,5,4,574.0,110000,1430000
+Medak,Sangareddy,Patancheru,ORR Junction,2023-09,LT-IX,Electric Vehicle Charging Stations,9,8,1066.0,205000,2665000
+Medak,Zaheerabad,Kohir,NH65 Border,2023-09,LT-IX,Electric Vehicle Charging Stations,4,3,451.0,85000,1105000
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-09,LT-IX,Electric Vehicle Charging Stations,5,4,533.0,105000,1365000
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-09,LT-IX,Electric Vehicle Charging Stations,6,5,656.0,130000,1690000
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-09,LT-IX,Electric Vehicle Charging Stations,4,3,369.0,65000,845000
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-10,LT-IX,Electric Vehicle Charging Stations,15,14,2046.7,400400,5205200
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-10,LT-IX,Electric Vehicle Charging Stations,12,11,1577.7,306800,3988400
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-10,LT-IX,Electric Vehicle Charging Stations,9,8,1023.4,192400,2501200
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-10,LT-IX,Electric Vehicle Charging Stations,10,9,1279.2,249600,3244800
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-10,LT-IX,Electric Vehicle Charging Stations,11,10,1407.1,275600,3582800
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-10,LT-IX,Electric Vehicle Charging Stations,9,8,1151.3,223600,2906800
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-10,LT-IX,Electric Vehicle Charging Stations,7,6,810.2,161200,2095600
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-10,LT-IX,Electric Vehicle Charging Stations,6,5,682.2,130000,1690000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-10,LT-IX,Electric Vehicle Charging Stations,13,12,1620.3,322400,4191200
+Medchal,Alwal,Kompally,Jeedimetla,2023-10,LT-IX,Electric Vehicle Charging Stations,8,7,938.1,182000,2366000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-10,LT-IX,Electric Vehicle Charging Stations,10,9,1193.9,234000,3042000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-10,LT-IX,Electric Vehicle Charging Stations,13,12,1876.2,374400,4867200
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-10,LT-IX,Electric Vehicle Charging Stations,8,7,980.7,187200,2433600
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-10,LT-IX,Electric Vehicle Charging Stations,6,5,767.5,150800,1960400
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-10,LT-IX,Electric Vehicle Charging Stations,5,4,639.6,119600,1554800
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-10,LT-IX,Electric Vehicle Charging Stations,6,5,724.9,140400,1825200
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-10,LT-IX,Electric Vehicle Charging Stations,5,4,511.7,98800,1284400
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-10,LT-IX,Electric Vehicle Charging Stations,7,6,810.2,156000,2028000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-10,LT-IX,Electric Vehicle Charging Stations,5,4,597.0,114400,1487200
+Medak,Sangareddy,Patancheru,ORR Junction,2023-10,LT-IX,Electric Vehicle Charging Stations,9,8,1108.6,213200,2771600
+Medak,Zaheerabad,Kohir,NH65 Border,2023-10,LT-IX,Electric Vehicle Charging Stations,4,3,469.0,88400,1149200
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-10,LT-IX,Electric Vehicle Charging Stations,5,4,554.3,109200,1419600
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-10,LT-IX,Electric Vehicle Charging Stations,6,5,682.2,135200,1757600
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-10,LT-IX,Electric Vehicle Charging Stations,4,3,383.8,67600,878800
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-11,LT-IX,Electric Vehicle Charging Stations,15,14,2125.4,415800,5405400
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-11,LT-IX,Electric Vehicle Charging Stations,12,11,1638.4,318600,4141800
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-11,LT-IX,Electric Vehicle Charging Stations,9,8,1062.7,199800,2597400
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-11,LT-IX,Electric Vehicle Charging Stations,10,9,1328.4,259200,3369600
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-11,LT-IX,Electric Vehicle Charging Stations,11,10,1461.2,286200,3720600
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-11,LT-IX,Electric Vehicle Charging Stations,9,8,1195.6,232200,3018600
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-11,LT-IX,Electric Vehicle Charging Stations,7,6,841.3,167400,2176200
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-11,LT-IX,Electric Vehicle Charging Stations,6,5,708.5,135000,1755000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-11,LT-IX,Electric Vehicle Charging Stations,13,12,1682.6,334800,4352400
+Medchal,Alwal,Kompally,Jeedimetla,2023-11,LT-IX,Electric Vehicle Charging Stations,8,7,974.2,189000,2457000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-11,LT-IX,Electric Vehicle Charging Stations,10,9,1239.8,243000,3159000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-11,LT-IX,Electric Vehicle Charging Stations,13,12,1948.3,388800,5054400
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-11,LT-IX,Electric Vehicle Charging Stations,8,7,1018.4,194400,2527200
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-11,LT-IX,Electric Vehicle Charging Stations,6,5,797.0,156600,2035800
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-11,LT-IX,Electric Vehicle Charging Stations,5,4,664.2,124200,1614600
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-11,LT-IX,Electric Vehicle Charging Stations,6,5,752.8,145800,1895400
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-11,LT-IX,Electric Vehicle Charging Stations,5,4,531.4,102600,1333800
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-11,LT-IX,Electric Vehicle Charging Stations,7,6,841.3,162000,2106000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-11,LT-IX,Electric Vehicle Charging Stations,5,4,619.9,118800,1544400
+Medak,Sangareddy,Patancheru,ORR Junction,2023-11,LT-IX,Electric Vehicle Charging Stations,9,8,1151.3,221400,2878200
+Medak,Zaheerabad,Kohir,NH65 Border,2023-11,LT-IX,Electric Vehicle Charging Stations,4,3,487.1,91800,1193400
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-11,LT-IX,Electric Vehicle Charging Stations,5,4,575.6,113400,1474200
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-11,LT-IX,Electric Vehicle Charging Stations,6,5,708.5,140400,1825200
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-11,LT-IX,Electric Vehicle Charging Stations,4,3,398.5,70200,912600
+Cybercity,Gachibowli,Hitec City,Mindspace,2023-12,LT-IX,Electric Vehicle Charging Stations,15,14,2204.2,431200,5605600
+Cybercity,Madhapur,Financial District,Nanakramguda,2023-12,LT-IX,Electric Vehicle Charging Stations,12,11,1699.0,330400,4295200
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2023-12,LT-IX,Electric Vehicle Charging Stations,9,8,1102.1,207200,2693600
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2023-12,LT-IX,Electric Vehicle Charging Stations,10,9,1377.6,268800,3494400
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2023-12,LT-IX,Electric Vehicle Charging Stations,11,10,1515.4,296800,3858400
+Secunderabad,Begumpet,Parade Grounds,MG Road,2023-12,LT-IX,Electric Vehicle Charging Stations,9,8,1239.8,240800,3130400
+Secunderabad,Marredpally,Tarnaka,Osmania,2023-12,LT-IX,Electric Vehicle Charging Stations,7,6,872.5,173600,2256800
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2023-12,LT-IX,Electric Vehicle Charging Stations,6,5,734.7,140000,1820000
+Medchal,Kukatpally,Miyapur,KPHB Colony,2023-12,LT-IX,Electric Vehicle Charging Stations,13,12,1745.0,347200,4513600
+Medchal,Alwal,Kompally,Jeedimetla,2023-12,LT-IX,Electric Vehicle Charging Stations,8,7,1010.2,196000,2548000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2023-12,LT-IX,Electric Vehicle Charging Stations,10,9,1285.8,252000,3276000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2023-12,LT-IX,Electric Vehicle Charging Stations,13,12,2020.5,403200,5241600
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2023-12,LT-IX,Electric Vehicle Charging Stations,8,7,1056.2,201600,2620800
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2023-12,LT-IX,Electric Vehicle Charging Stations,6,5,826.6,162400,2111200
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2023-12,LT-IX,Electric Vehicle Charging Stations,5,4,688.8,128800,1674400
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2023-12,LT-IX,Electric Vehicle Charging Stations,6,5,780.6,151200,1965600
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2023-12,LT-IX,Electric Vehicle Charging Stations,5,4,551.0,106400,1383200
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2023-12,LT-IX,Electric Vehicle Charging Stations,7,6,872.5,168000,2184000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2023-12,LT-IX,Electric Vehicle Charging Stations,5,4,642.9,123200,1601600
+Medak,Sangareddy,Patancheru,ORR Junction,2023-12,LT-IX,Electric Vehicle Charging Stations,9,8,1193.9,229600,2984800
+Medak,Zaheerabad,Kohir,NH65 Border,2023-12,LT-IX,Electric Vehicle Charging Stations,4,3,505.1,95200,1237600
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2023-12,LT-IX,Electric Vehicle Charging Stations,5,4,597.0,117600,1528800
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2023-12,LT-IX,Electric Vehicle Charging Stations,6,5,734.7,145600,1892800
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2023-12,LT-IX,Electric Vehicle Charging Stations,4,3,413.3,72800,946400
+Cybercity,Gachibowli,Hitec City,Mindspace,2024-01,LT-IX,Electric Vehicle Charging Stations,15,14,2263.2,442750,5755750
+Cybercity,Madhapur,Financial District,Nanakramguda,2024-01,LT-IX,Electric Vehicle Charging Stations,12,11,1744.5,339250,4410250
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2024-01,LT-IX,Electric Vehicle Charging Stations,9,8,1131.6,212750,2765750
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2024-01,LT-IX,Electric Vehicle Charging Stations,10,9,1414.5,276000,3588000
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2024-01,LT-IX,Electric Vehicle Charging Stations,11,10,1555.9,304750,3961750
+Secunderabad,Begumpet,Parade Grounds,MG Road,2024-01,LT-IX,Electric Vehicle Charging Stations,9,8,1273.0,247250,3214250
+Secunderabad,Marredpally,Tarnaka,Osmania,2024-01,LT-IX,Electric Vehicle Charging Stations,7,6,895.8,178250,2317250
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2024-01,LT-IX,Electric Vehicle Charging Stations,6,5,754.4,143750,1868750
+Medchal,Kukatpally,Miyapur,KPHB Colony,2024-01,LT-IX,Electric Vehicle Charging Stations,13,12,1791.7,356500,4634500
+Medchal,Alwal,Kompally,Jeedimetla,2024-01,LT-IX,Electric Vehicle Charging Stations,8,7,1037.3,201250,2616250
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2024-01,LT-IX,Electric Vehicle Charging Stations,10,9,1320.2,258750,3363750
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2024-01,LT-IX,Electric Vehicle Charging Stations,13,12,2074.6,414000,5382000
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2024-01,LT-IX,Electric Vehicle Charging Stations,8,7,1084.5,207000,2691000
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2024-01,LT-IX,Electric Vehicle Charging Stations,6,5,848.7,166750,2167750
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2024-01,LT-IX,Electric Vehicle Charging Stations,5,4,707.2,132250,1719250
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2024-01,LT-IX,Electric Vehicle Charging Stations,6,5,801.5,155250,2018250
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2024-01,LT-IX,Electric Vehicle Charging Stations,5,4,565.8,109250,1420250
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2024-01,LT-IX,Electric Vehicle Charging Stations,7,6,895.8,172500,2242500
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2024-01,LT-IX,Electric Vehicle Charging Stations,5,4,660.1,126500,1644500
+Medak,Sangareddy,Patancheru,ORR Junction,2024-01,LT-IX,Electric Vehicle Charging Stations,9,8,1225.9,235750,3064750
+Medak,Zaheerabad,Kohir,NH65 Border,2024-01,LT-IX,Electric Vehicle Charging Stations,4,3,518.6,97750,1270750
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2024-01,LT-IX,Electric Vehicle Charging Stations,5,4,612.9,120750,1569750
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2024-01,LT-IX,Electric Vehicle Charging Stations,6,5,754.4,149500,1943500
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2024-01,LT-IX,Electric Vehicle Charging Stations,4,3,424.3,74750,971750
+Cybercity,Gachibowli,Hitec City,Mindspace,2024-02,LT-IX,Electric Vehicle Charging Stations,15,14,2341.9,458150,5955950
+Cybercity,Madhapur,Financial District,Nanakramguda,2024-02,LT-IX,Electric Vehicle Charging Stations,12,11,1805.2,351050,4563650
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2024-02,LT-IX,Electric Vehicle Charging Stations,9,8,1171.0,220150,2861950
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2024-02,LT-IX,Electric Vehicle Charging Stations,10,9,1463.7,285600,3712800
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2024-02,LT-IX,Electric Vehicle Charging Stations,11,10,1610.1,315350,4099550
+Secunderabad,Begumpet,Parade Grounds,MG Road,2024-02,LT-IX,Electric Vehicle Charging Stations,9,8,1317.3,255850,3326050
+Secunderabad,Marredpally,Tarnaka,Osmania,2024-02,LT-IX,Electric Vehicle Charging Stations,7,6,927.0,184450,2397850
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2024-02,LT-IX,Electric Vehicle Charging Stations,6,5,780.6,148750,1933750
+Medchal,Kukatpally,Miyapur,KPHB Colony,2024-02,LT-IX,Electric Vehicle Charging Stations,13,12,1854.0,368900,4795700
+Medchal,Alwal,Kompally,Jeedimetla,2024-02,LT-IX,Electric Vehicle Charging Stations,8,7,1073.4,208250,2707250
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2024-02,LT-IX,Electric Vehicle Charging Stations,10,9,1366.1,267750,3480750
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2024-02,LT-IX,Electric Vehicle Charging Stations,13,12,2146.8,428400,5569200
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2024-02,LT-IX,Electric Vehicle Charging Stations,8,7,1122.2,214200,2784600
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2024-02,LT-IX,Electric Vehicle Charging Stations,6,5,878.2,172550,2243150
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2024-02,LT-IX,Electric Vehicle Charging Stations,5,4,731.8,136850,1779050
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2024-02,LT-IX,Electric Vehicle Charging Stations,6,5,829.4,160650,2088450
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2024-02,LT-IX,Electric Vehicle Charging Stations,5,4,585.5,113050,1469650
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2024-02,LT-IX,Electric Vehicle Charging Stations,7,6,927.0,178500,2320500
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2024-02,LT-IX,Electric Vehicle Charging Stations,5,4,683.1,130900,1701700
+Medak,Sangareddy,Patancheru,ORR Junction,2024-02,LT-IX,Electric Vehicle Charging Stations,9,8,1268.5,243950,3171350
+Medak,Zaheerabad,Kohir,NH65 Border,2024-02,LT-IX,Electric Vehicle Charging Stations,4,3,536.7,101150,1314950
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2024-02,LT-IX,Electric Vehicle Charging Stations,5,4,634.3,124950,1624350
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2024-02,LT-IX,Electric Vehicle Charging Stations,6,5,780.6,154700,2011100
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2024-02,LT-IX,Electric Vehicle Charging Stations,4,3,439.1,77350,1005550
+Cybercity,Gachibowli,Hitec City,Mindspace,2024-03,LT-IX,Electric Vehicle Charging Stations,16,15,2460.0,481250,6256250
+Cybercity,Madhapur,Financial District,Nanakramguda,2024-03,LT-IX,Electric Vehicle Charging Stations,12,11,1896.2,368750,4793750
+Cybercity,Kondapur,Kothaguda,Botanical Garden,2024-03,LT-IX,Electric Vehicle Charging Stations,9,8,1230.0,231250,3006250
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,2024-03,LT-IX,Electric Vehicle Charging Stations,10,9,1537.5,300000,3900000
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,2024-03,LT-IX,Electric Vehicle Charging Stations,11,10,1691.2,331250,4306250
+Secunderabad,Begumpet,Parade Grounds,MG Road,2024-03,LT-IX,Electric Vehicle Charging Stations,9,8,1383.8,268750,3493750
+Secunderabad,Marredpally,Tarnaka,Osmania,2024-03,LT-IX,Electric Vehicle Charging Stations,7,6,973.7,193750,2518750
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,2024-03,LT-IX,Electric Vehicle Charging Stations,6,5,820.0,156250,2031250
+Medchal,Kukatpally,Miyapur,KPHB Colony,2024-03,LT-IX,Electric Vehicle Charging Stations,13,12,1947.5,387500,5037500
+Medchal,Alwal,Kompally,Jeedimetla,2024-03,LT-IX,Electric Vehicle Charging Stations,8,7,1127.5,218750,2843750
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,2024-03,LT-IX,Electric Vehicle Charging Stations,10,9,1435.0,281250,3656250
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,2024-03,LT-IX,Electric Vehicle Charging Stations,13,12,2255.0,450000,5850000
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,2024-03,LT-IX,Electric Vehicle Charging Stations,8,7,1178.8,225000,2925000
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,2024-03,LT-IX,Electric Vehicle Charging Stations,6,5,922.5,181250,2356250
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,2024-03,LT-IX,Electric Vehicle Charging Stations,5,4,768.8,143750,1868750
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,2024-03,LT-IX,Electric Vehicle Charging Stations,6,5,871.2,168750,2193750
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,2024-03,LT-IX,Electric Vehicle Charging Stations,5,4,615.0,118750,1543750
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,2024-03,LT-IX,Electric Vehicle Charging Stations,7,6,973.7,187500,2437500
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,2024-03,LT-IX,Electric Vehicle Charging Stations,5,4,717.5,137500,1787500
+Medak,Sangareddy,Patancheru,ORR Junction,2024-03,LT-IX,Electric Vehicle Charging Stations,9,8,1332.5,256250,3331250
+Medak,Zaheerabad,Kohir,NH65 Border,2024-03,LT-IX,Electric Vehicle Charging Stations,4,3,563.8,106250,1381250
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,2024-03,LT-IX,Electric Vehicle Charging Stations,5,4,666.2,131250,1706250
+Gadwal,Alampur,Pullur,Pullur Toll NH44,2024-03,LT-IX,Electric Vehicle Charging Stations,6,5,820.0,162500,2112500
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,2024-03,LT-IX,Electric Vehicle Charging Stations,4,3,461.2,81250,1056250

@@ -1,0 +1,7 @@
+country,financial_year,ev_registrations,source,source_url,access_date,notes
+India,FY2019-20,167041,VAHAN / SMEV / PIB,https://analytics.parivahan.gov.in/,2026-09-26,Pre-pandemic baseline
+India,FY2020-21,134821,VAHAN / SMEV / PIB,https://analytics.parivahan.gov.in/,2026-09-26,COVID dip
+India,FY2021-22,458733,VAHAN / SMEV / PIB,https://analytics.parivahan.gov.in/,2026-09-26,Post-COVID recovery + FAME-II
+India,FY2022-23,1076420,VAHAN / SMEV / PIB,https://analytics.parivahan.gov.in/,2026-09-26,Crossed 1M milestone
+India,FY2023-24,1674000,VAHAN / SMEV / FADA,https://analytics.parivahan.gov.in/,2026-09-26,Steady growth; 4W EVs gaining share
+India,FY2024-25,2140000,VAHAN / SMEV / FADA,https://analytics.parivahan.gov.in/,2026-09-26,PM E-DRIVE launched replacing FAME-II

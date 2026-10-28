@@ -1,0 +1,6 @@
+state,scheme,stations_sanctioned,stations_installed,year,source,source_url,notes
+Telangana,FAME-II (Cities),138,85,2024,MHI FAME Dashboard / PIB,https://dash.heavyindustries.gov.in/,Hyderabad + Warangal + smaller cities; installation ongoing
+Telangana,FAME-II (Highways),46,30,2024,MHI FAME Dashboard / PIB,https://dash.heavyindustries.gov.in/,"NH 44, NH 65 corridor stations"
+India,FAME-II (Total),7432,4704,2024,MHI FAME Dashboard / PIB,https://dash.heavyindustries.gov.in/,2877 cities + 1576 highways + subsequent additions; 63% installation rate
+Telangana,PM E-DRIVE,0,0,2025-26,MHI / PIB,https://pib.gov.in/,Scheme announced Oct 2024; Telangana allocation pending notification
+India,PM E-DRIVE,14028,0,2025-26,MHI / PIB,https://pib.gov.in/,National target; Rs 2000 cr budget; implementation beginning

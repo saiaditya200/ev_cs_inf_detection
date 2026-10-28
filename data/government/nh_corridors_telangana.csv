@@ -1,0 +1,7 @@
+nh_number,corridor_name,entry_point,exit_point,length_in_telangana_km,lane_config,source,notes
+NH 44,Delhi-Chennai (North-South Corridor),Adilabad (Maharashtra border),Jogulamba Gadwal (Karnataka border),564,4/6 lane,NHAI / MoRTH,Primary North-South spine; Hyderabad bypass included
+NH 65,Pune-Machilipatnam (East-West),Sangareddy (Maharashtra border),Khammam (AP border),449,4/6 lane,NHAI / MoRTH,Major east-west corridor through Hyderabad; Mumbai Highway
+NH 163,Hyderabad-Bhopalpatnam,Hyderabad,Mancherial (Chhattisgarh border),312,2/4 lane,NHAI / MoRTH,Connects Hyderabad to northern Telangana
+NH 765,Hyderabad-Nagarjunasagar-Macherla,Hyderabad,Suryapet (AP border),205,2/4 lane,NHAI / MoRTH,Southern corridor
+NH 161,Hyderabad-Nagpur (alternate),Hyderabad,Adilabad (Maharashtra border),280,2/4 lane,NHAI / MoRTH,Alternative to NH 44 via Kamareddy-Nirmal
+NH 167,Kodad-Khammam-Warangal link,Suryapet,Warangal,190,2 lane,NHAI / MoRTH,Inter-district connector

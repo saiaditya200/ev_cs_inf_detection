@@ -1,0 +1,49 @@
+{
+  "station_master_rows": 25,
+  "district_year_rows": 231,
+  "state_year_rows": 7,
+  "integrated_dataset_rows": 25,
+  "row_count_integrity": "PASSED",
+  "station_id_unique": true,
+  "district_year_key_unique": true,
+  "state_year_key_unique": true,
+  "primary_key_uniqueness": "PASSED",
+  "unmatched_districts_count": 0,
+  "unmatched_districts_list": [],
+  "district_matching": "PASSED (100% matched, 0 unmatched)",
+  "cartesian_explosion_detected": false,
+  "cartesian_integrity": "PASSED (No row multiplication)",
+  "leakage_checks": [
+    {
+      "check": "State cumulative EV stock monotonicity over time",
+      "result": "PASSED"
+    },
+    {
+      "check": "Station contemporaneous alignment to observation year 2026",
+      "result": "PASSED"
+    },
+    {
+      "check": "District temporal projections strictly strictly non-decreasing without back-casting",
+      "result": "PASSED"
+    }
+  ],
+  "target_column_name": "demand_proxy",
+  "target_naming_rule": "PASSED (Rule strictly followed: no column named 'charging_demand')",
+  "demand_proxy_summary": {
+    "count": 25,
+    "mean": 2.4515,
+    "std": 5.2612,
+    "min": 0.0115,
+    "median": 0.7199,
+    "max": 20.8561,
+    "null_count": 0
+  },
+  "demand_proxy_sanity": "PASSED (Continuous, non-negative, zero missing)",
+  "district_replication_distribution": {
+    "9": 9,
+    "2": 8,
+    "1": 4,
+    "4": 4
+  },
+  "state_replication_factor": 25
+}

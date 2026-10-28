@@ -1,0 +1,19 @@
+dataset_file,field_name,data_type,unit,description,source_authority,temporal_coverage,geographic_level,notes
+ev_registrations_telangana.csv,state,string,,State name,VAHAN/MoRTH,FY2019-20 to FY2025-26,state,
+ev_registrations_telangana.csv,financial_year,string,,Indian financial year (Apr-Mar),VAHAN/MoRTH,FY2019-20 to FY2025-26,state,Format: FYyyyy-yy
+ev_registrations_telangana.csv,ev_registrations,integer,count,Number of new EV registrations in the period,VAHAN/MoRTH,FY2019-20 to FY2025-26,state,"Within-period new registrations, not cumulative stock"
+ev_registrations_telangana.csv,ev_category_dominant,string,,Dominant EV vehicle category in the period,VAHAN/MoRTH,FY2019-20 to FY2025-26,state,2W=Two-Wheeler; 4W=Four-Wheeler
+population_telangana_districts.csv,district,string,,District name (post-2016 reorganization),Census 2011 / Telangana Statistical Abstract,2011,district,33 districts
+population_telangana_districts.csv,population_census_2011,integer,persons,Total population per Census 2011,Census of India,2011,district,Re-mapped to current 33 districts
+population_telangana_districts.csv,area_sq_km,integer,sq km,Geographic area,Telangana Statistical Abstract,2016+,district,
+population_telangana_districts.csv,population_density_per_sq_km,integer,persons/sq km,Population density,Derived (population/area),2011,district,
+population_telangana_districts.csv,urban_population_pct,float,percent,Percentage of population living in urban areas,Census 2011,2011,district,Key predictor for EV adoption
+electricity_telangana.csv,per_capita_consumption_kwh,integer,kWh,Annual per capita electricity consumption,CEA General Review,FY2019-20 to FY2023-24,state,
+electricity_telangana.csv,total_consumption_mu,integer,MU (million units),Total electricity consumed in the state,CEA General Review,FY2019-20 to FY2023-24,state,1 MU = 1 GWh
+electricity_telangana.csv,installed_capacity_mw,integer,MW,Total installed power generation capacity,CEA General Review,FY2019-20 to FY2023-24,state,
+highway_infrastructure_telangana.csv,metric,string,,Infrastructure metric name,MoRTH/NHAI,2024-25,state,
+highway_infrastructure_telangana.csv,value,numeric,varies,Metric value,MoRTH/NHAI,2024-25,state,
+ev_charging_infrastructure_fame.csv,stations_sanctioned,integer,count,Number of charging stations sanctioned under scheme,MHI,2024,state,
+ev_charging_infrastructure_fame.csv,stations_installed,integer,count,Number of charging stations actually installed,MHI,2024,state,Lag between sanction and installation typical
+ev_policy_milestones.csv,policy_name,string,,Name of policy/scheme/guideline,Various,2019 to 2026,state/national,
+ev_policy_milestones.csv,effective_date,date,YYYY-MM-DD,Date policy became effective,Various,2019 to 2026,state/national,

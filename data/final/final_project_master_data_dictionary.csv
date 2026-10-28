@@ -1,0 +1,71 @@
+column_order,column_name,granularity,data_type,unit,source_category,non_null_count,missing_count,missing_pct,missing_treatment
+1,station_id,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+2,station_name,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+3,state,district/state administrative,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+4,district,district/state administrative,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+5,city,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),162,4,2.4,Preserved from source; unrecorded values as NA
+6,latitude,station,float64,decimal degrees,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+7,longitude,station,float64,decimal degrees,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+8,pincode,station,float64,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),13,153,92.2,Preserved from source; unrecorded values as NA
+9,location_type,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),141,25,15.1,Preserved from source; unrecorded values as NA
+10,charger_type,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),154,12,7.2,Preserved from source; unrecorded values as NA
+11,connector_type,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),152,14,8.4,Preserved from source; unrecorded values as NA
+12,number_of_chargers,station,float64,count,Core 25 Attribute (Phase 8.5 Frozen Baseline),161,5,3.0,Preserved from source; unrecorded values as NA
+13,charging_power_kw,station,float64,kW,Core 25 Attribute (Phase 8.5 Frozen Baseline),154,12,7.2,Preserved from source; unrecorded values as NA
+14,station_capacity,station,float64,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),154,12,7.2,Preserved from source; unrecorded values as NA
+15,availability_status,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+16,operator,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),154,12,7.2,Preserved from source; unrecorded values as NA
+17,24x7_availability,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),141,25,15.1,Preserved from source; unrecorded values as NA
+18,road_type,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+19,highway_name,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+20,distance_to_highway_km,station,float64,km,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+21,distance_to_city_center_km,station,float64,km,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+22,traffic_density,station,float64,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),0,166,100.0,Preserved from source; unrecorded values as NA
+23,nearby_poi_count,station,int64,count,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+24,parking_availability,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),141,25,15.1,Preserved from source; unrecorded values as NA
+25,data_timestamp,station,object,categorical/string,Core 25 Attribute (Phase 8.5 Frozen Baseline),166,0,0.0,Preserved from source; unrecorded values as NA
+26,highway_proximity_score,station spatial / GIS,float64,"index [0, 1]",OpenStreetMap Overpass Road Network & POI Graph,166,0,0.0,Computed geometrically via Haversine / Overpass query
+27,city_center_proximity_score,station spatial / GIS,float64,"index [0, 1]",OpenStreetMap Overpass Road Network & POI Graph,166,0,0.0,Computed geometrically via Haversine / Overpass query
+28,poi_diversity_index,station spatial / GIS,float64,"index [0, 1]",OpenStreetMap Overpass Road Network & POI Graph,166,0,0.0,Computed geometrically via Haversine / Overpass query
+29,distance_to_major_road_km,station spatial / GIS,float64,km,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+30,nearest_major_road_type,station spatial / GIS,object,categorical/CRS,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+31,nearest_road_distance_m,station spatial / GIS,float64,meters,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+32,poi_fuel_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+33,poi_parking_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+34,poi_food_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+35,poi_shopping_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+36,poi_healthcare_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+37,poi_lodging_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+38,poi_transport_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+39,poi_financial_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+40,poi_commercial_count,station spatial / GIS,float64,count,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+41,gis_search_radius_m,station spatial / GIS,float64,categorical/CRS,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+42,gis_projection_crs,station spatial / GIS,object,categorical/CRS,OpenStreetMap Overpass Road Network & POI Graph,25,141,84.9,Computed geometrically via Haversine / Overpass query
+43,nearest_highway_name_osm,station spatial / GIS,object,categorical/CRS,OpenStreetMap Overpass Road Network & POI Graph,11,155,93.4,Computed geometrically via Haversine / Overpass query
+44,fast_charging_flag,station,int64,"binary target (1=DC Fast, 0=AC Level 1/2)",Direct Hardware Specification (DC Fast >= 50kW),166,0,0.0,Binary target; non-null for all classified hardware
+45,operational_completeness_pct,station metadata,float64,metadata,Pipeline Provenance & Audit Metadata,166,0,0.0,Preserved audit information
+46,source_registry,station metadata,object,metadata,Pipeline Provenance & Audit Metadata,166,0,0.0,Preserved audit information
+47,source_registry_id,station metadata,object,metadata,Pipeline Provenance & Audit Metadata,166,0,0.0,Preserved audit information
+48,expansion_batch,station metadata,object,metadata,Pipeline Provenance & Audit Metadata,166,0,0.0,Preserved audit information
+49,district_population_census_2011,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+50,district_area_sq_km,district contextual (FY2023-24),int64,sq km,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+51,district_population_density_2011,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+52,district_urban_population_pct,district contextual (FY2023-24),float64,percentage/ratio,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+53,district_urban_tier,district contextual (FY2023-24),object,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+54,district_projected_population_fy24,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+55,district_projected_density_fy24,district contextual (FY2023-24),float64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+56,district_nh_crossing_count,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+57,district_nh_routes,district contextual (FY2023-24),object,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),162,4,2.4,Joined via district key; NA where utility data not covered in district
+58,district_ev_registrations_fy24,district contextual (FY2023-24),int64,percentage/ratio,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+59,district_cumulative_evs_fy24,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+60,district_ev_penetration_rate_fy24,district contextual (FY2023-24),float64,percentage/ratio,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+61,district_total_stations,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+62,district_fast_stations,district contextual (FY2023-24),int64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+63,district_fast_charger_ratio,district contextual (FY2023-24),float64,percentage/ratio,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+64,district_total_capacity_kw,district contextual (FY2023-24),float64,kW,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+65,district_station_density_per_1000_sqkm,district contextual (FY2023-24),float64,sq km,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+66,district_station_density_per_lakh_pop,district contextual (FY2023-24),float64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+67,district_measured_discom_ev_kwh_fy24,district contextual (FY2023-24),float64,kWh,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),97,69,41.6,Joined via district key; NA where utility data not covered in district
+68,district_measured_discom_connections_fy24,district contextual (FY2023-24),float64,count/integer,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),97,69,41.6,Joined via district key; NA where utility data not covered in district
+69,district_ev_to_charger_ratio,district contextual (FY2023-24),float64,percentage/ratio,Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district
+70,discom_utility_data_available_flag,district contextual (FY2023-24),int32,binary (0/1),Official Government Registry (Census 2011 / VAHAN / TGSPDCL),166,0,0.0,Joined via district key; NA where utility data not covered in district

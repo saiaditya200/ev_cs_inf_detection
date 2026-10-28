@@ -1,0 +1,6 @@
+state,metric,value,unit,year,source,notes
+Telangana,nh_total_length,4983,km,2024-25,MoRTH / NHAI / PIB,Growth from 2511 km (2014) to 4983 km; ~98% increase
+Telangana,nh_count,20,number,2024-25,MoRTH / NHAI,"Major NHs: NH-44, NH-65, NH-163, NH-765, NH-161, NH-167"
+Telangana,sh_total_length,3927,km,2024-25,Telangana R&B Department,State Highways maintained by R&B Dept
+Telangana,total_road_network,28684,km,2024-25,MoRTH Basic Road Statistics,NH + SH + MDR combined
+India,nh_total_length,146145,km,2024-25,MoRTH / NHAI,National total; Telangana share = 3.4%

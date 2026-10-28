@@ -1,0 +1,11 @@
+state,financial_year,per_capita_consumption_kwh,total_consumption_mu,installed_capacity_mw,source,notes
+Telangana,FY2019-20,1985,68940,16422,CEA General Review 2020 / CEA Dashboard,Pre-pandemic levels
+Telangana,FY2020-21,2010,70850,17100,CEA General Review 2021,Slight dip in industrial consumption
+Telangana,FY2021-22,2215,79400,17965,CEA General Review 2022,Recovery; agricultural pump-sets dominate
+Telangana,FY2022-23,2365,86200,18750,CEA General Review 2023,Growing IT/pharma load
+Telangana,FY2023-24,2508,93700,19854,CEA General Review 2024 / CEA Dashboard,Highest per capita among southern states
+India,FY2019-20,1208,1389000,370106,CEA General Review 2020,
+India,FY2020-21,1204,1381000,382153,CEA General Review 2021,
+India,FY2021-22,1320,1530000,399467,CEA General Review 2022,
+India,FY2022-23,1411,1674000,421750,CEA General Review 2023,
+India,FY2023-24,1496,1785000,442850,CEA General Review 2024,

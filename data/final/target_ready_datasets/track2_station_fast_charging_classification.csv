@@ -1,0 +1,167 @@
+station_id,station_name,district,district_key,city,latitude,longitude,road_type,highway_name,distance_to_highway_km,distance_to_city_center_km,highway_proximity_score,city_center_proximity_score,nearby_poi_count,poi_diversity_index,fast_charging_flag
+TS-HYD-0001,Fortum Mahindra,Hyderabad,hyderabad,Hyderabad,17.44366,78.46395,residential,NH 65,2.11,7.6,0.3215,0.1163,44,0.7138,0
+TS-MED-0001,Bharat Charge Ev Charging Station,Medchal-Malkajgiri,medchal_malkajgiri,Hyderabad,17.5365276,78.3930837,residential,NH 65,4.21,13.89,0.1919,0.0672,22,0.7769,1
+TS-HYD-0002,Blaze Fast Charger For 2 Ev Wheeler,Hyderabad,hyderabad,Lb Nagar,17.340475789422385,78.54539549782817,residential,NH 65,0.87,7.34,0.5348,0.1199,38,0.7673,0
+TS-HYD-0003,MobiLane CRVRGROWA-EV CHARGING STATION - 2,Hyderabad,hyderabad,Hyderabad,17.46563933,78.40803289,residential,NH 65,1.86,12.9,0.3497,0.0719,2,0.0,0
+TS-HYD-0004,Amplify Mobility,Hyderabad,hyderabad,Hyderabad,17.4249236,78.4219657,residential,NH 65,2.67,8.78,0.2725,0.1022,79,0.7294,0
+TS-HYD-0005,Tellus Power,Hyderabad,hyderabad,Hyderabad,17.4133616071295,78.4265966206543,residential,NH 163,1.91,7.68,0.3436,0.1152,17,0.8235,0
+TS-NAL-0001,MobiLane SSKATPGCS,Nalgonda,nalgonda,Manguru,17.17050039,79.35476073,residential,NH 65,0.03,16.15,0.9709,0.0583,0,0.0,0
+TS-HYD-0006,Fortum Mahindra,Hyderabad,hyderabad,Hyderabad,17.36334,78.4337,residential,NH 163,2.01,6.26,0.3322,0.1377,27,0.7627,0
+TS-RAN-0001,SASS EV charging station⛽,Ranga Reddy,ranga_reddy,Nallagandla,17.46701200951925,78.30910573683411,residential,NH 65,3.23,16.39,0.2364,0.0575,8,0.7188,1
+TS-SAN-0001,May Fair Marketing Office,Sangareddy,sangareddy,,17.483787,78.215093,residential,NH 65,6.47,20.98,0.1339,0.0455,0,0.0,0
+TS-SAN-0002,May Fair Green Mark Project,Sangareddy,sangareddy,,17.484253,78.212304,residential,NH 65,6.53,20.75,0.1328,0.046,0,0.0,0
+TS-HYD-0007,"Anand Nagar, Hyderabad",Hyderabad,hyderabad,Hyderabad,17.0,78.56117774292846,unclassified,NH 765,6.22,42.93,0.1385,0.0228,0,0.0,1
+TS-NIZ-0001,Sri Sai Kanchetty Family Restaurant,Nizamabad,nizamabad,Dichpally,18.63217083834048,78.20817022692324,service,NH 44,0.03,13.14,0.9709,0.0707,0,0.0,1
+TS-SUR-0001,Narketpally - Addanki - Medarametla Road,Suryapet,suryapet,MIRYALGUDA,16.890620274310365,79.56120562803494,trunk,NH 167,3.23,28.97,0.2364,0.0334,0,0.0,1
+TS-NIZ-0002,JIO-BP Pulse,Nizamabad,nizamabad,Armoor,18.82290770769148,78.32172267909633,unclassified,NH 44,0.06,29.74,0.9434,0.0325,0,0.0,1
+TS-MAH-0001,Driftnation Food Court NH44,Mahabubnagar,mahabubnagar,,16.81475506843826,78.14840023044755,service,NH 44,0.06,17.85,0.9434,0.0531,0,0.0,1
+TS-JOG-0001,NH44,Jogulamba Gadwal,jogulamba_gadwal,,15.886334147441591,78.01636638843978,trunk,NH 44,0.05,44.66,0.9524,0.0219,1,0.0,1
+TS-KHA-0001,BMW,Khammam,khammam,Khammam,16.511133,80.6192659,residential,NH 65,0.2,96.14,0.8333,0.0103,120,0.7426,0
+TS-HYD-0008,Unknown OSM Station,Hyderabad,hyderabad,Hyderabad,17.3649588,78.4749286,residential,NH 765,0.03,2.31,0.9709,0.3021,81,0.7243,0
+TS-KHA-0002,VoltronEV,Khammam,khammam,Khammam,16.5580075,80.5667983,trunk,NH 65,0.03,88.81,0.9709,0.0111,4,0.625,0
+TS-HYD-0009,TGRedCo,Hyderabad,hyderabad,Hyderabad,17.4943813,78.3499994,trunk,NH 65,0.04,19.55,0.9615,0.0487,72,0.7562,0
+TS-KHA-0003,Unknown OSM Station,Khammam,khammam,Khammam,16.5094737,80.7204214,secondary,NH 65,3.97,102.29,0.2012,0.0097,354,0.4542,0
+TS-SUR-0002,Unknown OSM Station,Suryapet,suryapet,Suryapet,17.1658504,79.5216444,trunk,NH 65,0.09,12.9,0.9174,0.0719,1,0.0,0
+TS-KHA-0004,Ather Grid,Khammam,khammam,Khammam,16.5071595,80.6158933,trunk,NH 65,0.0,96.33,1.0,0.0103,45,0.803,0
+TS-RAN-0002,FreshBus Charging Point,Ranga Reddy,ranga_reddy,Ranga Reddy,17.40474957142857,78.33329995714287,secondary,NH 163,5.63,9.53,0.1508,0.095,6,0.6111,0
+TS-GOV-0026,Miyapur Metro Station,Hyderabad,hyderabad,Miyapur,17.4968,78.3614,trunk,NH 65,0.02,18.2,0.9804,0.0521,35,0.5,1
+TS-GOV-0027,JNTU College Metro Station,Hyderabad,hyderabad,Kukatpally,17.4981,78.3887,trunk,NH 65,0.09,16.32,0.9174,0.0577,35,0.5,1
+TS-GOV-0028,KPHB Colony Metro Station,Hyderabad,hyderabad,KPHB,17.493,78.4015,trunk,NH 65,0.1,15.03,0.9091,0.0624,35,0.5,1
+TS-GOV-0029,Kukatpally Metro Station,Hyderabad,hyderabad,Kukatpally,17.4849,78.4138,trunk,NH 65,0.18,13.54,0.8475,0.0688,34,0.5,1
+TS-GOV-0030,Balanagar Metro Station,Medchal-Malkajgiri,medchal_malkajgiri,Balanagar,17.4727,78.4357,trunk,NH 65,0.92,9.15,0.5208,0.0985,31,0.5,0
+TS-GOV-0031,Moosapet Metro Station,Hyderabad,hyderabad,Moosapet,17.4646,78.4419,trunk,NH 65,1.15,10.05,0.4651,0.0905,30,0.5,1
+TS-GOV-0032,Bharat Nagar Metro Station,Hyderabad,hyderabad,Bharat Nagar,17.458,78.4452,trunk,NH 65,1.17,9.23,0.4608,0.0978,30,0.5,1
+TS-GOV-0033,Erragadda Metro Station,Hyderabad,hyderabad,Erragadda,17.4532,78.4485,trunk,NH 65,1.24,8.6,0.4464,0.1042,30,0.5,1
+TS-GOV-0034,ESI Hospital Metro Station,Hyderabad,hyderabad,SR Nagar,17.4439,78.4465,trunk,NH 65,0.57,7.82,0.6369,0.1134,33,0.5,1
+TS-GOV-0035,SR Nagar Metro Station,Hyderabad,hyderabad,SR Nagar,17.441,78.448,trunk,NH 65,0.57,7.46,0.6369,0.1182,33,0.5,1
+TS-GOV-0036,Ameerpet Interchange Metro,Hyderabad,hyderabad,Ameerpet,17.4355,78.4482,trunk,NH 65,0.32,6.94,0.7576,0.1259,34,0.5,1
+TS-GOV-0037,Punjagutta Metro Station,Hyderabad,hyderabad,Punjagutta,17.4262,78.4519,trunk,NH 65,0.08,5.88,0.9259,0.1453,35,0.5,1
+TS-GOV-0038,Irrum Manzil Metro Station,Hyderabad,hyderabad,Khairatabad,17.4184,78.4552,trunk,NH 65,0.73,5.0,0.578,0.1667,32,0.5,1
+TS-GOV-0039,Khairatabad Metro Station,Hyderabad,hyderabad,Khairatabad,17.4124,78.4601,trunk,NH 65,0.1,4.15,0.9091,0.1942,35,0.5,1
+TS-GOV-0040,Lakdi-ka-pul Metro Station,Hyderabad,hyderabad,Lakdi-ka-pul,17.4045,78.4646,trunk,NH 65,0.05,3.19,0.9524,0.2387,35,0.5,1
+TS-GOV-0041,Assembly Metro Station,Hyderabad,hyderabad,Nampally,17.3995,78.4705,trunk,NH 44,0.02,2.36,0.9804,0.2976,35,0.5,0
+TS-GOV-0042,Nampally Railway Station Metro,Hyderabad,hyderabad,Nampally,17.392,78.4715,trunk,NH 44,0.16,1.79,0.8621,0.3584,34,0.5,1
+TS-GOV-0043,Gandhi Bhavan Metro Station,Hyderabad,hyderabad,MJ Market,17.3872,78.4746,primary,NH 65,0.17,1.31,0.8547,0.4329,34,0.5,1
+TS-GOV-0044,MGBS Central Interchange,Hyderabad,hyderabad,Gowliguda,17.3789,78.4815,trunk,NH 65,0.08,0.87,0.9259,0.5348,35,0.5,1
+TS-GOV-0045,Malakpet Metro Station,Hyderabad,hyderabad,Malakpet,17.3732,78.4952,trunk,NH 65,0.39,1.59,0.7194,0.3861,33,0.5,1
+TS-GOV-0046,Dilsukhnagar Metro Station,Hyderabad,hyderabad,Dilsukhnagar,17.3688,78.5246,trunk,NH 65,0.06,4.41,0.9434,0.1848,35,0.5,1
+TS-GOV-0047,Chaitanyapuri Metro Station,Hyderabad,hyderabad,Chaitanyapuri,17.365,78.5372,trunk,NH 65,0.39,5.8,0.7194,0.1471,33,0.5,1
+TS-GOV-0048,Victoria Memorial Metro,Hyderabad,hyderabad,Kothapet,17.3592,78.5468,trunk,NH 65,0.8,6.99,0.5556,0.1252,32,0.5,1
+TS-GOV-0049,LB Nagar Terminal Metro,Hyderabad,hyderabad,LB Nagar,17.3458,78.5522,trunk,NH 65,0.0,8.2,1.0,0.1087,35,0.5,1
+TS-GOV-0050,Nagole Metro Terminal,Medchal-Malkajgiri,medchal_malkajgiri,Nagole,17.3768,78.5684,trunk,NH 65,1.11,16.82,0.4739,0.0561,31,0.5,1
+TS-GOV-0051,Uppal Metro Station,Medchal-Malkajgiri,medchal_malkajgiri,Uppal,17.3985,78.5582,trunk,NH 65,0.18,14.18,0.8475,0.0659,34,0.5,1
+TS-GOV-0052,Stadium Metro Station,Medchal-Malkajgiri,medchal_malkajgiri,Uppal,17.4045,78.551,trunk,NH 163,0.38,13.29,0.7246,0.07,33,0.5,1
+TS-GOV-0053,NGRI Metro Station,Hyderabad,hyderabad,Habsiguda,17.4112,78.5445,trunk,NH 163,1.11,6.79,0.4739,0.1284,31,0.5,0
+TS-GOV-0054,Habsiguda Metro Station,Hyderabad,hyderabad,Habsiguda,17.418,78.5392,trunk,NH 163,1.94,6.67,0.3401,0.1304,27,0.5,1
+TS-GOV-0055,Tarnaka Metro Station,Hyderabad,hyderabad,Tarnaka,17.4285,78.5312,trunk,NH 163,3.27,6.76,0.2342,0.1289,22,0.5,1
+TS-GOV-0056,Mettuguda Metro Station,Hyderabad,hyderabad,Mettuguda,17.4362,78.5205,trunk,NH 44,3.38,6.73,0.2283,0.1294,21,0.5,1
+TS-GOV-0057,Secunderabad East Metro,Hyderabad,hyderabad,Secunderabad,17.4398,78.5034,trunk,NH 44,1.57,6.35,0.3891,0.1361,29,0.5,1
+TS-GOV-0058,Parade Ground Interchange,Hyderabad,hyderabad,Secunderabad,17.4435,78.4982,trunk,NH 44,1.13,6.62,0.4695,0.1312,30,0.5,1
+TS-GOV-0059,Begumpet Metro Station,Hyderabad,hyderabad,Begumpet,17.4412,78.4682,trunk,NH 44,1.99,6.55,0.3344,0.1325,27,0.5,1
+TS-GOV-0060,Prakash Nagar Metro,Hyderabad,hyderabad,Begumpet,17.4445,78.4602,trunk,NH 65,1.91,7.19,0.3436,0.1221,27,0.5,1
+TS-GOV-0061,Rasoolpura Metro Station,Hyderabad,hyderabad,Rasoolpura,17.4478,78.4725,trunk,NH 44,1.15,7.14,0.4651,0.1229,30,0.5,1
+TS-GOV-0062,Hitec City Metro Station,Ranga Reddy,ranga_reddy,Madhapur,17.4468,78.3789,motorway,NH 65,1.71,13.74,0.369,0.0678,28,0.5,1
+TS-GOV-0063,Durgam Cheruvu Metro,Ranga Reddy,ranga_reddy,Madhapur,17.4392,78.3845,motorway,NH 65,2.18,12.73,0.3145,0.0728,26,0.5,1
+TS-GOV-0064,Madhapur Metro Station,Ranga Reddy,ranga_reddy,Madhapur,17.4345,78.3962,motorway,NH 65,3.45,11.83,0.2247,0.0779,21,0.5,1
+TS-GOV-0065,Peddamma Gudi Metro,Hyderabad,hyderabad,Jubilee Hills,17.432,78.4068,trunk,NH 65,3.75,9.96,0.2105,0.0912,20,0.5,1
+TS-GOV-0066,Jubilee Hills Check Post,Hyderabad,hyderabad,Jubilee Hills,17.4285,78.4145,trunk,NH 65,3.23,9.06,0.2364,0.0994,22,0.5,1
+TS-GOV-0067,Road No 5 Jubilee Hills,Hyderabad,hyderabad,Jubilee Hills,17.4312,78.4215,trunk,NH 65,2.43,8.62,0.2915,0.104,25,0.5,1
+TS-GOV-0068,Yousufguda Metro Station,Hyderabad,hyderabad,Yousufguda,17.4378,78.4289,trunk,NH 65,1.4,8.49,0.4167,0.1054,29,0.5,1
+TS-GOV-0069,Madhura Nagar Metro,Hyderabad,hyderabad,Yousufguda,17.4365,78.4382,trunk,NH 65,0.57,7.7,0.6369,0.1149,33,0.5,0
+TS-GOV-0070,TSRTC Jubilee Bus Station JBS,Hyderabad,hyderabad,Secunderabad,17.4498,78.4985,trunk,NH 44,1.17,7.31,0.4608,0.1203,30,0.5,1
+TS-GOV-0071,TSRTC Mehdipatnam Depot,Hyderabad,hyderabad,Mehdipatnam,17.3912,78.4412,motorway,NH 65,0.43,4.88,0.6993,0.1701,33,0.5,1
+TS-GOV-0072,TSRTC Koti Bus Terminal,Hyderabad,hyderabad,Koti,17.3845,78.4842,trunk,NH 65,0.44,0.27,0.6944,0.7874,33,0.5,1
+TS-GOV-0073,TSRTC Rathifile Secunderabad,Hyderabad,hyderabad,Secunderabad,17.4345,78.5015,trunk,NH 44,1.38,5.72,0.4202,0.1488,29,0.5,1
+TS-GOV-0074,TSRTC ECIL Crossroads Hub,Medchal-Malkajgiri,medchal_malkajgiri,ECIL,17.4812,78.5615,trunk,NH 44,8.54,6.88,0.1048,0.1269,5,0.5,1
+TS-GOV-0075,TSRTC Ibrahimpatnam Depot,Ranga Reddy,ranga_reddy,Ibrahimpatnam,17.1952,78.6482,motorway,NH 65,7.31,27.9,0.1203,0.0346,6,0.5,1
+TS-GOV-0076,Kazipet Railway Station Plaza,Warangal Urban,warangal_urban,Kazipet,17.9782,79.5245,primary,NH 65,3.84,7.43,0.2066,0.1186,20,0.5,1
+TS-GOV-0077,Warangal Main Bus Station,Warangal Urban,warangal_urban,Warangal,17.9625,79.6012,trunk,NH 65,0.09,1.03,0.9174,0.4926,35,0.5,1
+TS-GOV-0078,Hanamkonda Bus Station Hub,Warangal Urban,warangal_urban,Hanamkonda,18.0085,79.5612,trunk,NH 65,0.2,5.61,0.8333,0.1513,34,0.5,1
+TS-GOV-0079,Kakatiya University Campus,Warangal Urban,warangal_urban,Hanamkonda,18.0215,79.5442,trunk,NH 65,0.51,7.88,0.6623,0.1126,33,0.5,0
+TS-GOV-0080,Warangal Collectorate Complex,Warangal Urban,warangal_urban,Subedari,18.0012,79.5545,primary,NH 65,0.37,5.52,0.7299,0.1534,34,0.5,1
+TS-GOV-0081,Waddepally Lake Charging Station,Warangal Urban,warangal_urban,Waddepally,17.9945,79.5312,primary,NH 65,2.48,7.24,0.2874,0.1214,25,0.5,1
+TS-GOV-0082,Hunter Road Commercial Hub,Warangal Urban,warangal_urban,Hunter Road,17.9712,79.5825,trunk,NH 65,1.54,1.25,0.3937,0.4444,29,0.5,1
+TS-GOV-0083,Fort Warangal Public Parking,Warangal Urban,warangal_urban,Fort Warangal,17.9542,79.6152,trunk,NH 65,1.51,2.77,0.3984,0.2653,29,0.5,0
+TS-GOV-0084,MGM Hospital EV Station,Warangal Urban,warangal_urban,Warangal,17.9815,79.5982,trunk,NH 65,0.78,1.47,0.5618,0.4049,32,0.5,1
+TS-GOV-0085,Naimnagar Crossroads Plaza,Warangal Urban,warangal_urban,Naimnagar,18.0145,79.5712,trunk,NH 65,0.81,5.62,0.5525,0.1511,32,0.5,1
+TS-GOV-0086,Parkal TSRTC Bus Station Hub,Warangal Rural,warangal_rural,Parkal,18.1985,79.7112,trunk,NH 65,0.96,26.99,0.5102,0.0357,31,0.5,1
+TS-GOV-0087,Narsampet Municipal EV Plaza,Warangal Rural,warangal_rural,Narsampet,17.9245,79.8912,trunk,NH 65,0.71,31.42,0.5848,0.0308,32,0.5,0
+TS-GOV-0088,Karimnagar Bus Station Terminal,Karimnagar,karimnagar,Karimnagar,18.4325,79.1312,trunk,NH 65,1.16,0.72,0.463,0.5814,30,0.5,1
+TS-GOV-0089,Karimnagar Collectorate Hub,Karimnagar,karimnagar,Collectorate,18.4412,79.1245,trunk,NH 65,0.35,0.54,0.7407,0.6494,34,0.5,1
+TS-GOV-0090,Court Road Public Charger,Karimnagar,karimnagar,Court Road,18.4385,79.1285,trunk,NH 65,0.54,0.03,0.6494,0.9709,33,0.5,0
+TS-GOV-0091,Kothapalli Municipal Charging,Karimnagar,karimnagar,Kothapalli,18.4512,79.0982,trunk,NH 65,2.04,3.52,0.3289,0.2212,27,0.5,1
+TS-GOV-0092,Karimnagar Housing Board Hub,Karimnagar,karimnagar,Housing Board,18.4215,79.1412,trunk,NH 65,0.7,2.31,0.5882,0.3021,32,0.5,1
+TS-GOV-0093,Mankammathota EV Plaza,Karimnagar,karimnagar,Mankammathota,18.4285,79.1352,trunk,NH 65,1.36,1.31,0.4237,0.4329,30,0.5,1
+TS-GOV-0094,Mukarampura Commercial Station,Karimnagar,karimnagar,Mukarampura,18.4352,79.1215,trunk,NH 65,1.07,0.86,0.4831,0.5376,31,0.5,1
+TS-GOV-0095,Kashmirgadda Public Parking,Karimnagar,karimnagar,Kashmirgadda,18.4462,79.1385,trunk,NH 65,0.54,1.33,0.6494,0.4292,33,0.5,0
+TS-GOV-0096,Ramnagar Highway Junction,Karimnagar,karimnagar,Ramnagar,18.4582,79.1142,trunk,NH 65,0.19,2.67,0.8403,0.2725,34,0.5,1
+TS-GOV-0097,Clock Tower Karimnagar Hub,Karimnagar,karimnagar,Clock Tower,18.4368,79.1305,trunk,NH 65,0.68,0.27,0.5952,0.7874,32,0.5,1
+TS-GOV-0098,NH44 Shadnagar Highway Plaza,Ranga Reddy,ranga_reddy,Shadnagar,17.0682,78.2045,primary,NH 65,0.1,37.81,0.9091,0.0258,35,0.5,1
+TS-GOV-0099,NH44 Jadcherla Travel Hub,Mahabubnagar,mahabubnagar,Jadcherla,16.7645,78.1412,trunk,NH 167,0.2,14.76,0.8333,0.0635,34,0.5,1
+TS-GOV-0100,NH44 Kothakota Highway Station,Wanaparthy,wanaparthy,Kothakota,16.3812,77.9345,trunk,NH 44,0.33,13.82,0.7519,0.0675,34,0.5,1
+TS-GOV-0101,NH44 Pebbair Corridor Plaza,Wanaparthy,wanaparthy,Pebbair,16.2085,77.9012,trunk,NH 44,6.36,24.26,0.1359,0.0396,10,0.5,1
+TS-GOV-0102,NH44 Alampur Toll EV Hub,Jogulamba Gadwal,jogulamba_gadwal,Alampur,15.9312,78.0215,trunk,NH 44,0.19,41.09,0.8403,0.0238,34,0.5,1
+TS-GOV-0103,NH44 Medchal Bypass Plaza,Medchal-Malkajgiri,medchal_malkajgiri,Medchal,17.6312,78.4815,trunk,NH 44,0.34,13.03,0.7463,0.0713,34,0.5,1
+TS-GOV-0104,NH44 Toopran Corridor Station,Medak,medak,Toopran,17.8542,78.4712,trunk,NH 44,0.42,30.64,0.7042,0.0316,33,0.5,1
+TS-GOV-0105,NH44 Kamareddy Bypass Hub,Kamareddy,kamareddy,Kamareddy,18.3145,78.3412,primary,NH 65,0.47,1.0,0.6803,0.5,33,0.5,1
+TS-GOV-0106,NH44 Dichpally Highway Station,Nizamabad,nizamabad,Dichpally,18.6185,78.2145,trunk,NH 44,0.89,14.03,0.5291,0.0665,31,0.5,1
+TS-GOV-0107,NH44 Armoor Corridor Plaza,Nizamabad,nizamabad,Armoor,18.7942,78.2815,trunk,NH 65,0.96,23.93,0.5102,0.0401,31,0.5,1
+TS-GOV-0108,NH44 Nirmal Bypass EV Station,Nirmal,nirmal,Nirmal,19.0845,78.3312,trunk,NH 65,1.49,1.86,0.4016,0.3497,29,0.5,1
+TS-GOV-0109,NH44 Adilabad Highway Gateway,Adilabad,adilabad,Adilabad,19.6512,78.5215,primary,NH 65,0.12,1.81,0.8929,0.3559,35,0.5,1
+TS-GOV-0110,NH65 Zaheerabad Corridor Hub,Sangareddy,sangareddy,Zaheerabad,17.6745,77.6012,trunk,NH 65,1.81,51.3,0.3559,0.0191,28,0.5,1
+TS-GOV-0111,NH65 Sangareddy Bypass Plaza,Sangareddy,sangareddy,Sangareddy,17.6285,78.0945,trunk,NH 161,3.75,1.71,0.2105,0.369,20,0.5,1
+TS-GOV-0112,NH65 Patancheru Toll EV Hub,Sangareddy,sangareddy,Patancheru,17.5285,78.2612,trunk,NH 65,0.15,21.52,0.8696,0.0444,34,0.5,1
+TS-GOV-0113,NH65 Choutuppal Corridor Station,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,Choutuppal,17.2512,78.9045,trunk,NH 65,2.74,28.97,0.2674,0.0334,24,0.5,1
+TS-GOV-0114,NH65 Narketpally Plaza Hub,Nalgonda,nalgonda,Narketpally,17.1845,79.2012,trunk,NH 65,0.07,15.8,0.9346,0.0595,35,0.5,1
+TS-GOV-0115,NH65 Nakrekal Highway Station,Nalgonda,nalgonda,Nakrekal,17.1645,79.4312,secondary,NH 65,0.49,20.98,0.6711,0.0455,33,0.5,1
+TS-GOV-0116,NH65 Suryapet Bypass Superhub,Suryapet,suryapet,Suryapet,17.1512,79.6145,trunk,NH 65,0.56,1.29,0.641,0.4367,33,0.5,1
+TS-GOV-0117,NH65 Munagala Highway Plaza,Suryapet,suryapet,Munagala,17.0612,79.8215,trunk,NH 65,0.1,22.93,0.9091,0.0418,35,0.5,1
+TS-GOV-0118,NH65 Kodad Corridor Terminal,Suryapet,suryapet,Kodad,16.9945,79.9612,secondary,NH 65,0.55,39.52,0.6452,0.0247,33,0.5,1
+TS-GOV-0119,NH163 Ghatkesar Corridor Hub,Medchal-Malkajgiri,medchal_malkajgiri,Ghatkesar,17.4485,78.6812,secondary,NH 65,0.62,19.83,0.6173,0.048,33,0.5,1
+TS-GOV-0120,NH163 Bhongir Highway Station,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,Bhongir,17.5112,78.8912,trunk,NH 161,0.79,0.24,0.5587,0.8065,32,0.5,1
+TS-GOV-0121,NH163 Alair Corridor Hub,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,Alair,17.6312,79.0345,trunk,NH 163,0.19,20.4,0.8403,0.0467,34,0.5,1
+TS-GOV-0122,NH163 Jangaon Bypass Plaza,Jangaon,jangaon,Jangaon,17.7285,79.1612,trunk,NH 65,1.01,0.65,0.4975,0.6061,31,0.5,1
+TS-GOV-0123,NH163 Station Ghanpur Hub,Jangaon,jangaon,Station Ghanpur,17.8445,79.3512,trunk,NH 163,0.86,24.53,0.5376,0.0392,32,0.5,1
+TS-GOV-0124,NH163 Mulugu Highway Gateway,Mulugu,mulugu,Mulugu,18.1912,79.9445,trunk,NH 163,0.05,0.31,0.9524,0.7634,35,0.5,1
+TS-GOV-0125,NH163 Bhupalpally Corridor Station,Jayashankar Bhupalapally,jayashankar_bhupalapally,Bhupalpally,18.4285,79.8612,trunk,NH 65,0.19,0.69,0.8403,0.5917,34,0.5,1
+TS-GOV-0126,NH765 Kadthal Corridor Plaza,Ranga Reddy,ranga_reddy,Kadthal,17.0812,78.5845,trunk,NH 765,11.63,32.51,0.0792,0.0298,5,0.5,1
+TS-GOV-0127,NH765 Kalwakurthy EV Station,Nagarkurnool,nagarkurnool,Kalwakurthy,16.6712,78.4912,trunk,NH 765,4.18,26.66,0.1931,0.0362,18,0.5,1
+TS-GOV-0128,NH765 Dindi Highway Hub,Nalgonda,nalgonda,Dindi,16.5812,78.9545,trunk,NH 167,12.68,62.64,0.0731,0.0157,5,0.5,1
+TS-GOV-0129,NH167 Mahabubnagar Link Plaza,Mahabubnagar,mahabubnagar,Mahabubnagar,16.7412,78.0145,trunk,NH 167,1.32,1.44,0.431,0.4098,30,0.5,1
+TS-GOV-0130,NH167 Jadcherla Link Station,Mahabubnagar,mahabubnagar,Jadcherla,16.7712,78.1345,trunk,NH 167,0.32,14.17,0.7576,0.0659,34,0.5,1
+TS-GOV-0131,NH167 Miryalguda Transit Hub,Nalgonda,nalgonda,Miryalguda,16.8712,79.5612,trunk,NH 65,1.23,37.41,0.4484,0.026,30,0.5,1
+TS-GOV-0132,Siddipet Integrated Collectorate,Siddipet,siddipet,Siddipet,18.1045,78.8512,trunk,NH 65,1.86,0.31,0.3497,0.7634,28,0.5,1
+TS-GOV-0133,Gajwel Municipal EV Hub,Siddipet,siddipet,Gajwel,17.8512,78.6812,trunk,NH 161,0.64,33.21,0.6098,0.0292,32,0.5,1
+TS-GOV-0134,Pragnapur Commercial Station,Siddipet,siddipet,Pragnapur,17.8345,78.7012,trunk,NH 161,0.16,33.73,0.8621,0.0288,34,0.5,0
+TS-GOV-0135,Mancherial Town Station Hub,Mancherial,mancherial,Mancherial,18.8712,79.4612,trunk,NH 65,0.88,0.46,0.5319,0.6849,31,0.5,1
+TS-GOV-0136,Bellampalli Municipal Station,Mancherial,mancherial,Bellampalli,19.0612,79.4912,trunk,NH 65,1.39,21.68,0.4184,0.0441,29,0.5,0
+TS-GOV-0137,Mandamarri Public Charger,Mancherial,mancherial,Mandamarri,18.9812,79.4812,trunk,NH 65,2.08,12.73,0.3247,0.0728,27,0.5,0
+TS-GOV-0138,Peddapalli Bus Station Plaza,Peddapalli,peddapalli,Peddapalli,18.6185,79.3812,trunk,NH 65,0.41,0.27,0.7092,0.7874,33,0.5,1
+TS-GOV-0139,Ramagundam NTPC Gateway,Peddapalli,peddapalli,Ramagundam,18.7612,79.5112,trunk,NH 65,0.04,21.1,0.9615,0.0452,35,0.5,1
+TS-GOV-0140,Godavarikhani Bus Station Hub,Peddapalli,peddapalli,Godavarikhani,18.7512,79.5212,trunk,NH 65,1.49,20.98,0.4016,0.0455,29,0.5,1
+TS-GOV-0141,Jagtial Collectorate Complex,Jagitial,jagitial,Jagitial,18.7985,78.9112,trunk,NH 65,0.38,0.37,0.7246,0.7299,33,0.5,1
+TS-GOV-0142,Korutla Bus Stand EV Station,Jagitial,jagitial,Korutla,18.8212,78.7112,trunk,NH 65,0.53,21.54,0.6536,0.0444,33,0.5,0
+TS-GOV-0143,Metpally Municipal Charger,Jagitial,jagitial,Metpally,18.8312,78.5812,trunk,NH 65,0.85,35.26,0.5405,0.0276,32,0.5,0
+TS-GOV-0144,Sircilla Textile Park EV Hub,Rajanna Sircilla,rajanna_sircilla,Sircilla,18.3885,78.8012,trunk,NH 65,2.11,0.5,0.3215,0.6667,27,0.5,1
+TS-GOV-0145,Vemulawada Temple Parking,Rajanna Sircilla,rajanna_sircilla,Vemulawada,18.4685,78.8685,trunk,NH 65,10.79,11.68,0.0848,0.0789,5,0.5,1
+TS-GOV-0146,Medak Church Public Parking,Medak,medak,Medak,18.0485,78.2612,trunk,NH 765,0.33,0.35,0.7519,0.7407,34,0.5,1
+TS-GOV-0147,Narsapur Forest Academy Hub,Medak,medak,Narsapur,17.7412,78.2812,trunk,NH 765,0.1,33.98,0.9091,0.0286,35,0.5,0
+TS-GOV-0148,Vikarabad Ananthagiri Hills Hub,Vikarabad,vikarabad,Vikarabad,17.3385,77.9012,trunk,NH 163,10.25,0.45,0.0889,0.6897,5,0.5,1
+TS-GOV-0149,Tandur Bus Station Charger,Vikarabad,vikarabad,Tandur,17.2585,77.5812,trunk,NH 167,0.67,35.43,0.5988,0.0274,32,0.5,1
+TS-GOV-0150,Pargi Municipal EV Station,Vikarabad,vikarabad,Pargi,17.1812,77.8812,trunk,NH 163,0.49,17.44,0.6711,0.0542,33,0.5,0
+TS-GOV-0151,Narayanpet Municipal Hub,Narayanpet,narayanpet,Narayanpet,16.7385,77.4985,trunk,NH 167,23.15,0.6,0.0414,0.625,5,0.5,1
+TS-GOV-0152,Makthal Highway Link Station,Narayanpet,narayanpet,Makthal,16.5012,77.5112,trunk,NH 167,0.37,25.84,0.7299,0.0373,34,0.5,1
+TS-GOV-0153,Wanaparthy Collectorate Complex,Wanaparthy,wanaparthy,Wanaparthy,16.3685,78.0612,trunk,NH 44,12.35,0.71,0.0749,0.5848,5,0.5,1
+TS-GOV-0154,Gadwal Fort Public Charging,Jogulamba Gadwal,jogulamba_gadwal,Gadwal,16.2385,77.8012,trunk,NH 44,15.15,0.59,0.0619,0.6289,5,0.5,1
+TS-GOV-0155,Nagarkurnool Bus Stand Plaza,Nagarkurnool,nagarkurnool,Nagarkurnool,16.4885,78.3312,trunk,NH 167,0.96,0.36,0.5102,0.7353,31,0.5,1
+TS-GOV-0156,Achampet Forest Gateway Station,Nagarkurnool,nagarkurnool,Achampet,16.3985,78.6712,trunk,NH 765,5.16,37.37,0.1623,0.0261,14,0.5,0
+TS-GOV-0157,Mahabubabad Town Collectorate,Mahabubabad,mahabubabad,Mahabubabad,17.6012,80.0012,trunk,NH 65,0.29,0.4,0.7752,0.7143,34,0.5,1
+TS-GOV-0158,Thorrur Commercial EV Station,Mahabubabad,mahabubabad,Thorrur,17.5385,79.7312,trunk,NH 65,1.64,29.66,0.3788,0.0326,28,0.5,0
+TS-GOV-0159,Khammam Collectorate Complex,Khammam,khammam,Khammam,17.2512,80.1545,trunk,NH 65,0.92,0.54,0.5208,0.6494,31,0.5,1
+TS-GOV-0160,Wyra Highway Link Plaza,Khammam,khammam,Wyra,17.1985,80.3512,trunk,NH 65,0.05,21.9,0.9524,0.0437,35,0.5,1
+TS-GOV-0161,Sathupally Coal Corridor Station,Khammam,khammam,Sathupally,17.2112,80.8312,trunk,NH 65,0.09,72.31,0.9174,0.0136,35,0.5,1
+TS-GOV-0162,Kothagudem Mining Hub Charger,Bhadradri Kothagudem,bhadradri_kothagudem,Kothagudem,17.5585,80.6145,trunk,NH 65,0.38,0.62,0.7246,0.6173,33,0.5,1
+TS-GOV-0163,Palwancha Industrial EV Hub,Bhadradri Kothagudem,bhadradri_kothagudem,Palwancha,17.6012,80.7012,trunk,NH 65,0.5,10.12,0.6667,0.0899,33,0.5,1
+TS-GOV-0164,Bhadrachalam Temple Pilgrimage,Bhadradri Kothagudem,bhadradri_kothagudem,Bhadrachalam,17.6712,80.8912,trunk,NH 65,0.11,31.61,0.9009,0.0307,35,0.5,1
+TS-GOV-0165,Asifabad District Headquarters,Kumurambheem Asifabad,kumurambheem_asifabad,Asifabad,19.3685,79.2845,primary,NH 65,1.19,0.84,0.4566,0.5435,30,0.5,1
+TS-GOV-0166,Kagaznagar Railway Gateway Hub,Kumurambheem Asifabad,kumurambheem_asifabad,Kagaznagar,19.3385,79.4812,trunk,NH 65,9.63,20.35,0.0941,0.0468,5,0.5,1

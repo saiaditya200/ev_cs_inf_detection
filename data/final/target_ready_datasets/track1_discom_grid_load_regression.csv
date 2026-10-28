@@ -1,0 +1,289 @@
+discom_circle,discom_division,discom_subdivision,discom_section,district,district_key,billing_month,billing_year,financial_year,sanctioned_ev_connections,billed_ev_connections,contracted_load_kw,billed_peak_load_kw,measured_electricity_consumed_kwh
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-04,2023,FY2023-24,15,14,2400.0,1731.8,338800
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-04,2023,FY2023-24,12,11,1850.0,1335.0,259600
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-04,2023,FY2023-24,9,8,1200.0,865.9,162800
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-04,2023,FY2023-24,10,9,1500.0,1082.4,211200
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-04,2023,FY2023-24,11,10,1650.0,1190.6,233200
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-04,2023,FY2023-24,9,8,1350.0,974.2,189200
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-04,2023,FY2023-24,7,6,950.0,685.5,136400
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-04,2023,FY2023-24,6,5,800.0,577.3,110000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-04,2023,FY2023-24,13,12,1900.0,1371.0,272800
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-04,2023,FY2023-24,8,7,1100.0,793.8,154000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-04,2023,FY2023-24,10,9,1400.0,1010.2,198000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-04,2023,FY2023-24,13,12,2200.0,1587.5,316800
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-04,2023,FY2023-24,8,7,1150.0,829.8,158400
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-04,2023,FY2023-24,6,5,900.0,649.4,127600
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-04,2023,FY2023-24,5,4,750.0,541.2,101200
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-04,2023,FY2023-24,6,5,850.0,613.4,118800
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-04,2023,FY2023-24,5,4,600.0,433.0,83600
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-04,2023,FY2023-24,7,6,950.0,685.5,132000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-04,2023,FY2023-24,5,4,700.0,505.1,96800
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-04,2023,FY2023-24,9,8,1300.0,938.1,180400
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-04,2023,FY2023-24,4,3,550.0,396.9,74800
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-04,2023,FY2023-24,5,4,650.0,469.0,92400
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-04,2023,FY2023-24,6,5,800.0,577.3,114400
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-04,2023,FY2023-24,4,3,450.0,324.7,57200
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-05,2023,FY2023-24,15,14,2400.0,1810.6,354200
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-05,2023,FY2023-24,12,11,1850.0,1395.6,271400
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-05,2023,FY2023-24,9,8,1200.0,905.3,170200
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-05,2023,FY2023-24,10,9,1500.0,1131.6,220800
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-05,2023,FY2023-24,11,10,1650.0,1244.8,243800
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-05,2023,FY2023-24,9,8,1350.0,1018.4,197800
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-05,2023,FY2023-24,7,6,950.0,716.7,142600
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-05,2023,FY2023-24,6,5,800.0,603.5,115000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-05,2023,FY2023-24,13,12,1900.0,1433.4,285200
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-05,2023,FY2023-24,8,7,1100.0,829.8,161000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-05,2023,FY2023-24,10,9,1400.0,1056.2,207000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-05,2023,FY2023-24,13,12,2200.0,1659.7,331200
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-05,2023,FY2023-24,8,7,1150.0,867.6,165600
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-05,2023,FY2023-24,6,5,900.0,679.0,133400
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-05,2023,FY2023-24,5,4,750.0,565.8,105800
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-05,2023,FY2023-24,6,5,850.0,641.2,124200
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-05,2023,FY2023-24,5,4,600.0,452.6,87400
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-05,2023,FY2023-24,7,6,950.0,716.7,138000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-05,2023,FY2023-24,5,4,700.0,528.1,101200
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-05,2023,FY2023-24,9,8,1300.0,980.7,188600
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-05,2023,FY2023-24,4,3,550.0,414.9,78200
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-05,2023,FY2023-24,5,4,650.0,490.4,96600
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-05,2023,FY2023-24,6,5,800.0,603.5,119600
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-05,2023,FY2023-24,4,3,450.0,339.5,59800
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-06,2023,FY2023-24,15,14,2400.0,1849.9,361900
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-06,2023,FY2023-24,12,11,1850.0,1426.0,277300
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-06,2023,FY2023-24,9,8,1200.0,925.0,173900
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-06,2023,FY2023-24,10,9,1500.0,1156.2,225600
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-06,2023,FY2023-24,11,10,1650.0,1271.8,249100
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-06,2023,FY2023-24,9,8,1350.0,1040.6,202100
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-06,2023,FY2023-24,7,6,950.0,732.3,145700
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-06,2023,FY2023-24,6,5,800.0,616.6,117500
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-06,2023,FY2023-24,13,12,1900.0,1464.5,291400
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-06,2023,FY2023-24,8,7,1100.0,847.9,164500
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-06,2023,FY2023-24,10,9,1400.0,1079.1,211500
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-06,2023,FY2023-24,13,12,2200.0,1695.8,338400
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-06,2023,FY2023-24,8,7,1150.0,886.4,169200
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-06,2023,FY2023-24,6,5,900.0,693.7,136300
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-06,2023,FY2023-24,5,4,750.0,578.1,108100
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-06,2023,FY2023-24,6,5,850.0,655.2,126900
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-06,2023,FY2023-24,5,4,600.0,462.5,89300
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-06,2023,FY2023-24,7,6,950.0,732.3,141000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-06,2023,FY2023-24,5,4,700.0,539.6,103400
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-06,2023,FY2023-24,9,8,1300.0,1002.0,192700
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-06,2023,FY2023-24,4,3,550.0,423.9,79900
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-06,2023,FY2023-24,5,4,650.0,501.0,98700
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-06,2023,FY2023-24,6,5,800.0,616.6,122200
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-06,2023,FY2023-24,4,3,450.0,346.9,61100
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-07,2023,FY2023-24,15,14,2400.0,1889.3,369600
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-07,2023,FY2023-24,12,11,1850.0,1456.3,283200
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-07,2023,FY2023-24,9,8,1200.0,944.6,177600
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-07,2023,FY2023-24,10,9,1500.0,1180.8,230400
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-07,2023,FY2023-24,11,10,1650.0,1298.9,254400
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-07,2023,FY2023-24,9,8,1350.0,1062.7,206400
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-07,2023,FY2023-24,7,6,950.0,747.8,148800
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-07,2023,FY2023-24,6,5,800.0,629.8,120000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-07,2023,FY2023-24,13,12,1900.0,1495.7,297600
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-07,2023,FY2023-24,8,7,1100.0,865.9,168000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-07,2023,FY2023-24,10,9,1400.0,1102.1,216000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-07,2023,FY2023-24,13,12,2200.0,1731.8,345600
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-07,2023,FY2023-24,8,7,1150.0,905.3,172800
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-07,2023,FY2023-24,6,5,900.0,708.5,139200
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-07,2023,FY2023-24,5,4,750.0,590.4,110400
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-07,2023,FY2023-24,6,5,850.0,669.1,129600
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-07,2023,FY2023-24,5,4,600.0,472.3,91200
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-07,2023,FY2023-24,7,6,950.0,747.8,144000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-07,2023,FY2023-24,5,4,700.0,551.0,105600
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-07,2023,FY2023-24,9,8,1300.0,1023.4,196800
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-07,2023,FY2023-24,4,3,550.0,433.0,81600
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-07,2023,FY2023-24,5,4,650.0,511.7,100800
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-07,2023,FY2023-24,6,5,800.0,629.8,124800
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-07,2023,FY2023-24,4,3,450.0,354.2,62400
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-08,2023,FY2023-24,15,14,2400.0,1928.6,377300
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-08,2023,FY2023-24,12,11,1850.0,1486.7,289100
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-08,2023,FY2023-24,9,8,1200.0,964.3,181300
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-08,2023,FY2023-24,10,9,1500.0,1205.4,235200
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-08,2023,FY2023-24,11,10,1650.0,1325.9,259700
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-08,2023,FY2023-24,9,8,1350.0,1084.9,210700
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-08,2023,FY2023-24,7,6,950.0,763.4,151900
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-08,2023,FY2023-24,6,5,800.0,642.9,122500
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-08,2023,FY2023-24,13,12,1900.0,1526.8,303800
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-08,2023,FY2023-24,8,7,1100.0,884.0,171500
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-08,2023,FY2023-24,10,9,1400.0,1125.0,220500
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-08,2023,FY2023-24,13,12,2200.0,1767.9,352800
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-08,2023,FY2023-24,8,7,1150.0,924.1,176400
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-08,2023,FY2023-24,6,5,900.0,723.2,142100
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-08,2023,FY2023-24,5,4,750.0,602.7,112700
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-08,2023,FY2023-24,6,5,850.0,683.1,132300
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-08,2023,FY2023-24,5,4,600.0,482.2,93100
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-08,2023,FY2023-24,7,6,950.0,763.4,147000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-08,2023,FY2023-24,5,4,700.0,562.5,107800
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-08,2023,FY2023-24,9,8,1300.0,1044.7,200900
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-08,2023,FY2023-24,4,3,550.0,442.0,83300
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-08,2023,FY2023-24,5,4,650.0,522.3,102900
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-08,2023,FY2023-24,6,5,800.0,642.9,127400
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-08,2023,FY2023-24,4,3,450.0,361.6,63700
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-09,2023,FY2023-24,15,14,2400.0,1968.0,385000
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-09,2023,FY2023-24,12,11,1850.0,1517.0,295000
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-09,2023,FY2023-24,9,8,1200.0,984.0,185000
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-09,2023,FY2023-24,10,9,1500.0,1230.0,240000
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-09,2023,FY2023-24,11,10,1650.0,1353.0,265000
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-09,2023,FY2023-24,9,8,1350.0,1107.0,215000
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-09,2023,FY2023-24,7,6,950.0,779.0,155000
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-09,2023,FY2023-24,6,5,800.0,656.0,125000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-09,2023,FY2023-24,13,12,1900.0,1558.0,310000
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-09,2023,FY2023-24,8,7,1100.0,902.0,175000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-09,2023,FY2023-24,10,9,1400.0,1148.0,225000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-09,2023,FY2023-24,13,12,2200.0,1804.0,360000
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-09,2023,FY2023-24,8,7,1150.0,943.0,180000
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-09,2023,FY2023-24,6,5,900.0,738.0,145000
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-09,2023,FY2023-24,5,4,750.0,615.0,115000
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-09,2023,FY2023-24,6,5,850.0,697.0,135000
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-09,2023,FY2023-24,5,4,600.0,492.0,95000
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-09,2023,FY2023-24,7,6,950.0,779.0,150000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-09,2023,FY2023-24,5,4,700.0,574.0,110000
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-09,2023,FY2023-24,9,8,1300.0,1066.0,205000
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-09,2023,FY2023-24,4,3,550.0,451.0,85000
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-09,2023,FY2023-24,5,4,650.0,533.0,105000
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-09,2023,FY2023-24,6,5,800.0,656.0,130000
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-09,2023,FY2023-24,4,3,450.0,369.0,65000
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-10,2023,FY2023-24,15,14,2400.0,2046.7,400400
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-10,2023,FY2023-24,12,11,1850.0,1577.7,306800
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-10,2023,FY2023-24,9,8,1200.0,1023.4,192400
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-10,2023,FY2023-24,10,9,1500.0,1279.2,249600
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-10,2023,FY2023-24,11,10,1650.0,1407.1,275600
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-10,2023,FY2023-24,9,8,1350.0,1151.3,223600
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-10,2023,FY2023-24,7,6,950.0,810.2,161200
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-10,2023,FY2023-24,6,5,800.0,682.2,130000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-10,2023,FY2023-24,13,12,1900.0,1620.3,322400
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-10,2023,FY2023-24,8,7,1100.0,938.1,182000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-10,2023,FY2023-24,10,9,1400.0,1193.9,234000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-10,2023,FY2023-24,13,12,2200.0,1876.2,374400
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-10,2023,FY2023-24,8,7,1150.0,980.7,187200
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-10,2023,FY2023-24,6,5,900.0,767.5,150800
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-10,2023,FY2023-24,5,4,750.0,639.6,119600
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-10,2023,FY2023-24,6,5,850.0,724.9,140400
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-10,2023,FY2023-24,5,4,600.0,511.7,98800
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-10,2023,FY2023-24,7,6,950.0,810.2,156000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-10,2023,FY2023-24,5,4,700.0,597.0,114400
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-10,2023,FY2023-24,9,8,1300.0,1108.6,213200
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-10,2023,FY2023-24,4,3,550.0,469.0,88400
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-10,2023,FY2023-24,5,4,650.0,554.3,109200
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-10,2023,FY2023-24,6,5,800.0,682.2,135200
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-10,2023,FY2023-24,4,3,450.0,383.8,67600
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-11,2023,FY2023-24,15,14,2400.0,2125.4,415800
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-11,2023,FY2023-24,12,11,1850.0,1638.4,318600
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-11,2023,FY2023-24,9,8,1200.0,1062.7,199800
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-11,2023,FY2023-24,10,9,1500.0,1328.4,259200
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-11,2023,FY2023-24,11,10,1650.0,1461.2,286200
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-11,2023,FY2023-24,9,8,1350.0,1195.6,232200
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-11,2023,FY2023-24,7,6,950.0,841.3,167400
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-11,2023,FY2023-24,6,5,800.0,708.5,135000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-11,2023,FY2023-24,13,12,1900.0,1682.6,334800
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-11,2023,FY2023-24,8,7,1100.0,974.2,189000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-11,2023,FY2023-24,10,9,1400.0,1239.8,243000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-11,2023,FY2023-24,13,12,2200.0,1948.3,388800
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-11,2023,FY2023-24,8,7,1150.0,1018.4,194400
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-11,2023,FY2023-24,6,5,900.0,797.0,156600
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-11,2023,FY2023-24,5,4,750.0,664.2,124200
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-11,2023,FY2023-24,6,5,850.0,752.8,145800
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-11,2023,FY2023-24,5,4,600.0,531.4,102600
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-11,2023,FY2023-24,7,6,950.0,841.3,162000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-11,2023,FY2023-24,5,4,700.0,619.9,118800
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-11,2023,FY2023-24,9,8,1300.0,1151.3,221400
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-11,2023,FY2023-24,4,3,550.0,487.1,91800
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-11,2023,FY2023-24,5,4,650.0,575.6,113400
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-11,2023,FY2023-24,6,5,800.0,708.5,140400
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-11,2023,FY2023-24,4,3,450.0,398.5,70200
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2023-12,2023,FY2023-24,15,14,2400.0,2204.2,431200
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2023-12,2023,FY2023-24,12,11,1850.0,1699.0,330400
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2023-12,2023,FY2023-24,9,8,1200.0,1102.1,207200
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2023-12,2023,FY2023-24,10,9,1500.0,1377.6,268800
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2023-12,2023,FY2023-24,11,10,1650.0,1515.4,296800
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2023-12,2023,FY2023-24,9,8,1350.0,1239.8,240800
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2023-12,2023,FY2023-24,7,6,950.0,872.5,173600
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2023-12,2023,FY2023-24,6,5,800.0,734.7,140000
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2023-12,2023,FY2023-24,13,12,1900.0,1745.0,347200
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2023-12,2023,FY2023-24,8,7,1100.0,1010.2,196000
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2023-12,2023,FY2023-24,10,9,1400.0,1285.8,252000
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2023-12,2023,FY2023-24,13,12,2200.0,2020.5,403200
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2023-12,2023,FY2023-24,8,7,1150.0,1056.2,201600
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2023-12,2023,FY2023-24,6,5,900.0,826.6,162400
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2023-12,2023,FY2023-24,5,4,750.0,688.8,128800
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2023-12,2023,FY2023-24,6,5,850.0,780.6,151200
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2023-12,2023,FY2023-24,5,4,600.0,551.0,106400
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2023-12,2023,FY2023-24,7,6,950.0,872.5,168000
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2023-12,2023,FY2023-24,5,4,700.0,642.9,123200
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2023-12,2023,FY2023-24,9,8,1300.0,1193.9,229600
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2023-12,2023,FY2023-24,4,3,550.0,505.1,95200
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2023-12,2023,FY2023-24,5,4,650.0,597.0,117600
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2023-12,2023,FY2023-24,6,5,800.0,734.7,145600
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2023-12,2023,FY2023-24,4,3,450.0,413.3,72800
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2024-01,2024,FY2023-24,15,14,2400.0,2263.2,442750
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2024-01,2024,FY2023-24,12,11,1850.0,1744.5,339250
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2024-01,2024,FY2023-24,9,8,1200.0,1131.6,212750
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2024-01,2024,FY2023-24,10,9,1500.0,1414.5,276000
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2024-01,2024,FY2023-24,11,10,1650.0,1555.9,304750
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2024-01,2024,FY2023-24,9,8,1350.0,1273.0,247250
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2024-01,2024,FY2023-24,7,6,950.0,895.8,178250
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2024-01,2024,FY2023-24,6,5,800.0,754.4,143750
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2024-01,2024,FY2023-24,13,12,1900.0,1791.7,356500
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2024-01,2024,FY2023-24,8,7,1100.0,1037.3,201250
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2024-01,2024,FY2023-24,10,9,1400.0,1320.2,258750
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2024-01,2024,FY2023-24,13,12,2200.0,2074.6,414000
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2024-01,2024,FY2023-24,8,7,1150.0,1084.5,207000
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2024-01,2024,FY2023-24,6,5,900.0,848.7,166750
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2024-01,2024,FY2023-24,5,4,750.0,707.2,132250
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2024-01,2024,FY2023-24,6,5,850.0,801.5,155250
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2024-01,2024,FY2023-24,5,4,600.0,565.8,109250
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2024-01,2024,FY2023-24,7,6,950.0,895.8,172500
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2024-01,2024,FY2023-24,5,4,700.0,660.1,126500
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2024-01,2024,FY2023-24,9,8,1300.0,1225.9,235750
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2024-01,2024,FY2023-24,4,3,550.0,518.6,97750
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2024-01,2024,FY2023-24,5,4,650.0,612.9,120750
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2024-01,2024,FY2023-24,6,5,800.0,754.4,149500
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2024-01,2024,FY2023-24,4,3,450.0,424.3,74750
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2024-02,2024,FY2023-24,15,14,2400.0,2341.9,458150
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2024-02,2024,FY2023-24,12,11,1850.0,1805.2,351050
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2024-02,2024,FY2023-24,9,8,1200.0,1171.0,220150
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2024-02,2024,FY2023-24,10,9,1500.0,1463.7,285600
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2024-02,2024,FY2023-24,11,10,1650.0,1610.1,315350
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2024-02,2024,FY2023-24,9,8,1350.0,1317.3,255850
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2024-02,2024,FY2023-24,7,6,950.0,927.0,184450
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2024-02,2024,FY2023-24,6,5,800.0,780.6,148750
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2024-02,2024,FY2023-24,13,12,1900.0,1854.0,368900
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2024-02,2024,FY2023-24,8,7,1100.0,1073.4,208250
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2024-02,2024,FY2023-24,10,9,1400.0,1366.1,267750
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2024-02,2024,FY2023-24,13,12,2200.0,2146.8,428400
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2024-02,2024,FY2023-24,8,7,1150.0,1122.2,214200
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2024-02,2024,FY2023-24,6,5,900.0,878.2,172550
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2024-02,2024,FY2023-24,5,4,750.0,731.8,136850
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2024-02,2024,FY2023-24,6,5,850.0,829.4,160650
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2024-02,2024,FY2023-24,5,4,600.0,585.5,113050
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2024-02,2024,FY2023-24,7,6,950.0,927.0,178500
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2024-02,2024,FY2023-24,5,4,700.0,683.1,130900
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2024-02,2024,FY2023-24,9,8,1300.0,1268.5,243950
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2024-02,2024,FY2023-24,4,3,550.0,536.7,101150
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2024-02,2024,FY2023-24,5,4,650.0,634.3,124950
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2024-02,2024,FY2023-24,6,5,800.0,780.6,154700
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2024-02,2024,FY2023-24,4,3,450.0,439.1,77350
+Cybercity,Gachibowli,Hitec City,Mindspace,Hyderabad,hyderabad,2024-03,2024,FY2023-24,16,15,2400.0,2460.0,481250
+Cybercity,Madhapur,Financial District,Nanakramguda,Ranga Reddy,ranga_reddy,2024-03,2024,FY2023-24,12,11,1850.0,1896.2,368750
+Cybercity,Kondapur,Kothaguda,Botanical Garden,Ranga Reddy,ranga_reddy,2024-03,2024,FY2023-24,9,8,1200.0,1230.0,231250
+Hyderabad Central,Ameerpet,Punjagutta,Somajiguda,Hyderabad,hyderabad,2024-03,2024,FY2023-24,10,9,1500.0,1537.5,300000
+Hyderabad Central,Khairatabad,Banjara Hills,Road No 12,Hyderabad,hyderabad,2024-03,2024,FY2023-24,11,10,1650.0,1691.2,331250
+Secunderabad,Begumpet,Parade Grounds,MG Road,Hyderabad,hyderabad,2024-03,2024,FY2023-24,9,8,1350.0,1383.8,268750
+Secunderabad,Marredpally,Tarnaka,Osmania,Hyderabad,hyderabad,2024-03,2024,FY2023-24,7,6,950.0,973.7,193750
+Hyderabad South,Charminar,Falaknuma,Chandrayangutta,Hyderabad,hyderabad,2024-03,2024,FY2023-24,6,5,800.0,820.0,156250
+Medchal,Kukatpally,Miyapur,KPHB Colony,Medchal-Malkajgiri,medchal_malkajgiri,2024-03,2024,FY2023-24,13,12,1900.0,1947.5,387500
+Medchal,Alwal,Kompally,Jeedimetla,Medchal-Malkajgiri,medchal_malkajgiri,2024-03,2024,FY2023-24,8,7,1100.0,1127.5,218750
+Saroornagar,LB Nagar,Dilsukhnagar,Hayathnagar,Ranga Reddy,ranga_reddy,2024-03,2024,FY2023-24,10,9,1400.0,1435.0,281250
+Rajendranagar,Shamshabad,Airport Zone,GMR Aero,Ranga Reddy,ranga_reddy,2024-03,2024,FY2023-24,13,12,2200.0,2255.0,450000
+Habsiguda,Uppal,Ghatkesar,Pocharam IT,Medchal-Malkajgiri,medchal_malkajgiri,2024-03,2024,FY2023-24,8,7,1150.0,1178.8,225000
+Mahabubnagar,Jadcherla,NH44 Highway Plaza,Kaverammapeta,Mahabubnagar,mahabubnagar,2024-03,2024,FY2023-24,6,5,900.0,922.5,181250
+Mahabubnagar,Mahabubnagar Town,Bhoothpur,Bhoothpur NH44,Mahabubnagar,mahabubnagar,2024-03,2024,FY2023-24,5,4,750.0,768.8,143750
+Nalgonda,Narketpally,Choutuppal,Panthangi Toll NH65,Yadadri Bhuvanagiri,yadadri_bhuvanagiri,2024-03,2024,FY2023-24,6,5,850.0,871.2,168750
+Nalgonda,Nalgonda Town,Nakrekal,Nakrekal NH65,Nalgonda,nalgonda,2024-03,2024,FY2023-24,5,4,600.0,615.0,118750
+Suryapet,Suryapet Town,Suryapet Bypass,NH65 Hub,Suryapet,suryapet,2024-03,2024,FY2023-24,7,6,950.0,973.7,187500
+Suryapet,Kodad,Munagala,Komarabanda Toll NH65,Suryapet,suryapet,2024-03,2024,FY2023-24,5,4,700.0,717.5,137500
+Medak,Sangareddy,Patancheru,ORR Junction,Sangareddy,sangareddy,2024-03,2024,FY2023-24,9,8,1300.0,1332.5,256250
+Medak,Zaheerabad,Kohir,NH65 Border,Sangareddy,sangareddy,2024-03,2024,FY2023-24,4,3,550.0,563.8,106250
+Wanaparthy,Kothakota,Pebbair,Pebbair NH44,Wanaparthy,wanaparthy,2024-03,2024,FY2023-24,5,4,650.0,666.2,131250
+Gadwal,Alampur,Pullur,Pullur Toll NH44,Jogulamba Gadwal,jogulamba_gadwal,2024-03,2024,FY2023-24,6,5,800.0,820.0,162500
+Nagarkurnool,Kalwakurthy,Dindi,NH765 Corridor,Nagarkurnool,nagarkurnool,2024-03,2024,FY2023-24,4,3,450.0,461.2,81250

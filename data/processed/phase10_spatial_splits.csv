@@ -1,0 +1,155 @@
+station_id,district,fast_charging_flag,fold_id,split_role
+TS-MED-0001,Medchal-Malkajgiri,1,0,train
+TS-HYD-0002,Hyderabad,0,0,train
+TS-HYD-0003,Hyderabad,0,0,train
+TS-HYD-0005,Hyderabad,0,0,train
+TS-RAN-0001,Ranga Reddy,1,4,train
+TS-SAN-0001,Sangareddy,0,1,train
+TS-SAN-0002,Sangareddy,0,1,train
+TS-HYD-0007,Hyderabad,1,0,train
+TS-NIZ-0001,Nizamabad,1,0,train
+TS-SUR-0001,Suryapet,1,4,train
+TS-NIZ-0002,Nizamabad,1,0,train
+TS-MAH-0001,Mahabubnagar,1,1,train
+TS-JOG-0001,Jogulamba Gadwal,1,1,train
+TS-GOV-0026,Hyderabad,1,0,train
+TS-GOV-0027,Hyderabad,1,0,train
+TS-GOV-0028,Hyderabad,1,0,train
+TS-GOV-0029,Hyderabad,1,0,train
+TS-GOV-0030,Medchal-Malkajgiri,0,0,train
+TS-GOV-0031,Hyderabad,1,0,train
+TS-GOV-0032,Hyderabad,1,0,train
+TS-GOV-0033,Hyderabad,1,0,train
+TS-GOV-0034,Hyderabad,1,0,train
+TS-GOV-0035,Hyderabad,1,0,train
+TS-GOV-0036,Hyderabad,1,0,train
+TS-GOV-0037,Hyderabad,1,0,train
+TS-GOV-0038,Hyderabad,1,0,train
+TS-GOV-0039,Hyderabad,1,0,train
+TS-GOV-0040,Hyderabad,1,0,train
+TS-GOV-0041,Hyderabad,0,0,train
+TS-GOV-0042,Hyderabad,1,0,train
+TS-GOV-0043,Hyderabad,1,0,train
+TS-GOV-0044,Hyderabad,1,0,train
+TS-GOV-0045,Hyderabad,1,0,train
+TS-GOV-0046,Hyderabad,1,0,train
+TS-GOV-0047,Hyderabad,1,0,train
+TS-GOV-0048,Hyderabad,1,0,train
+TS-GOV-0049,Hyderabad,1,0,train
+TS-GOV-0050,Medchal-Malkajgiri,1,0,train
+TS-GOV-0051,Medchal-Malkajgiri,1,0,train
+TS-GOV-0052,Medchal-Malkajgiri,1,0,train
+TS-GOV-0053,Hyderabad,0,0,train
+TS-GOV-0054,Hyderabad,1,0,train
+TS-GOV-0055,Hyderabad,1,0,train
+TS-GOV-0056,Hyderabad,1,0,train
+TS-GOV-0057,Hyderabad,1,0,train
+TS-GOV-0058,Hyderabad,1,0,train
+TS-GOV-0059,Hyderabad,1,0,train
+TS-GOV-0060,Hyderabad,1,0,train
+TS-GOV-0061,Hyderabad,1,0,train
+TS-GOV-0062,Ranga Reddy,1,4,train
+TS-GOV-0063,Ranga Reddy,1,4,train
+TS-GOV-0064,Ranga Reddy,1,4,train
+TS-GOV-0065,Hyderabad,1,0,train
+TS-GOV-0066,Hyderabad,1,0,train
+TS-GOV-0067,Hyderabad,1,0,train
+TS-GOV-0068,Hyderabad,1,0,train
+TS-GOV-0069,Hyderabad,0,0,train
+TS-GOV-0070,Hyderabad,1,0,train
+TS-GOV-0071,Hyderabad,1,0,train
+TS-GOV-0072,Hyderabad,1,0,train
+TS-GOV-0073,Hyderabad,1,0,train
+TS-GOV-0074,Medchal-Malkajgiri,1,0,train
+TS-GOV-0075,Ranga Reddy,1,4,train
+TS-GOV-0076,Warangal Urban,1,3,test
+TS-GOV-0077,Warangal Urban,1,3,test
+TS-GOV-0078,Warangal Urban,1,3,test
+TS-GOV-0079,Warangal Urban,0,3,test
+TS-GOV-0080,Warangal Urban,1,3,test
+TS-GOV-0081,Warangal Urban,1,3,test
+TS-GOV-0082,Warangal Urban,1,3,test
+TS-GOV-0083,Warangal Urban,0,3,test
+TS-GOV-0084,Warangal Urban,1,3,test
+TS-GOV-0085,Warangal Urban,1,3,test
+TS-GOV-0086,Warangal Rural,1,3,test
+TS-GOV-0087,Warangal Rural,0,3,test
+TS-GOV-0088,Karimnagar,1,3,test
+TS-GOV-0089,Karimnagar,1,3,test
+TS-GOV-0090,Karimnagar,0,3,test
+TS-GOV-0091,Karimnagar,1,3,test
+TS-GOV-0092,Karimnagar,1,3,test
+TS-GOV-0093,Karimnagar,1,3,test
+TS-GOV-0094,Karimnagar,1,3,test
+TS-GOV-0095,Karimnagar,0,3,test
+TS-GOV-0096,Karimnagar,1,3,test
+TS-GOV-0097,Karimnagar,1,3,test
+TS-GOV-0098,Ranga Reddy,1,4,train
+TS-GOV-0099,Mahabubnagar,1,1,train
+TS-GOV-0100,Wanaparthy,1,4,train
+TS-GOV-0101,Wanaparthy,1,4,train
+TS-GOV-0102,Jogulamba Gadwal,1,1,train
+TS-GOV-0103,Medchal-Malkajgiri,1,0,train
+TS-GOV-0104,Medak,1,3,test
+TS-GOV-0105,Kamareddy,1,0,train
+TS-GOV-0106,Nizamabad,1,0,train
+TS-GOV-0107,Nizamabad,1,0,train
+TS-GOV-0108,Nirmal,1,1,train
+TS-GOV-0109,Adilabad,1,1,train
+TS-GOV-0110,Sangareddy,1,1,train
+TS-GOV-0111,Sangareddy,1,1,train
+TS-GOV-0112,Sangareddy,1,1,train
+TS-GOV-0113,Yadadri Bhuvanagiri,1,0,train
+TS-GOV-0114,Nalgonda,1,1,train
+TS-GOV-0115,Nalgonda,1,1,train
+TS-GOV-0116,Suryapet,1,4,train
+TS-GOV-0117,Suryapet,1,4,train
+TS-GOV-0118,Suryapet,1,4,train
+TS-GOV-0119,Medchal-Malkajgiri,1,0,train
+TS-GOV-0120,Yadadri Bhuvanagiri,1,0,train
+TS-GOV-0121,Yadadri Bhuvanagiri,1,0,train
+TS-GOV-0122,Jangaon,1,4,train
+TS-GOV-0123,Jangaon,1,4,train
+TS-GOV-0124,Mulugu,1,3,test
+TS-GOV-0125,Jayashankar Bhupalapally,1,0,train
+TS-GOV-0126,Ranga Reddy,1,4,train
+TS-GOV-0127,Nagarkurnool,1,2,train
+TS-GOV-0128,Nalgonda,1,1,train
+TS-GOV-0129,Mahabubnagar,1,1,train
+TS-GOV-0130,Mahabubnagar,1,1,train
+TS-GOV-0131,Nalgonda,1,1,train
+TS-GOV-0132,Siddipet,1,0,train
+TS-GOV-0133,Siddipet,1,0,train
+TS-GOV-0134,Siddipet,0,0,train
+TS-GOV-0135,Mancherial,1,0,train
+TS-GOV-0136,Mancherial,0,0,train
+TS-GOV-0137,Mancherial,0,0,train
+TS-GOV-0138,Peddapalli,1,4,train
+TS-GOV-0139,Peddapalli,1,4,train
+TS-GOV-0140,Peddapalli,1,4,train
+TS-GOV-0141,Jagitial,1,3,test
+TS-GOV-0142,Jagitial,0,3,test
+TS-GOV-0143,Jagitial,0,3,test
+TS-GOV-0144,Rajanna Sircilla,1,4,train
+TS-GOV-0145,Rajanna Sircilla,1,4,train
+TS-GOV-0146,Medak,1,3,test
+TS-GOV-0147,Medak,0,3,test
+TS-GOV-0148,Vikarabad,1,3,test
+TS-GOV-0149,Vikarabad,1,3,test
+TS-GOV-0150,Vikarabad,0,3,test
+TS-GOV-0151,Narayanpet,1,4,train
+TS-GOV-0152,Narayanpet,1,4,train
+TS-GOV-0153,Wanaparthy,1,4,train
+TS-GOV-0154,Jogulamba Gadwal,1,1,train
+TS-GOV-0155,Nagarkurnool,1,2,train
+TS-GOV-0156,Nagarkurnool,0,2,train
+TS-GOV-0157,Mahabubabad,1,4,train
+TS-GOV-0158,Mahabubabad,0,4,train
+TS-GOV-0159,Khammam,1,1,train
+TS-GOV-0160,Khammam,1,1,train
+TS-GOV-0161,Khammam,1,1,train
+TS-GOV-0162,Bhadradri Kothagudem,1,3,test
+TS-GOV-0163,Bhadradri Kothagudem,1,3,test
+TS-GOV-0164,Bhadradri Kothagudem,1,3,test
+TS-GOV-0165,Kumurambheem Asifabad,1,4,train
+TS-GOV-0166,Kumurambheem Asifabad,1,4,train
