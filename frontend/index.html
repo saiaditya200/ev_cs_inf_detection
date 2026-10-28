@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable AI Framework for Smart EV Charging Infrastructure Planning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand-group">
+                <div class="brand-logo">
+                    <span class="bolt-icon">⚡</span>
+                </div>
+                <div>
+                    <h1 class="brand-title">Explainable AI Framework for Smart EV Charging Infrastructure Planning</h1>
+                    <div class="brand-meta">
+                        <span class="badge badge-primary">B.Tech Major Project</span>
+                        <span class="badge badge-success">Telangana State (33 Districts)</span>
+                        <span class="badge badge-info" id="model-status-badge">Model: Random Forest</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav-tabs" id="nav-tabs">
+                <button class="nav-tab active" data-tab="overview">
+                    <span class="tab-icon">📊</span> Overview
+                </button>
+                <button class="nav-tab" data-tab="predict">
+                    <span class="tab-icon">🔍</span> Station Prediction
+                </button>
+                <button class="nav-tab" data-tab="models">
+                    <span class="tab-icon">🎯</span> Model Evaluation
+                </button>
+                <button class="nav-tab" data-tab="xai">
+                    <span class="tab-icon">💡</span> Explainability (SHAP)
+                </button>
+                <button class="nav-tab" data-tab="planning">
+                    <span class="tab-icon">📈</span> EIPS Planning
+                </button>
+                <button class="nav-tab" data-tab="gis">
+                    <span class="tab-icon">🗺️</span> GIS Map
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- 1. OVERVIEW / EXECUTIVE DASHBOARD -->
+        <section class="tab-pane active" id="pane-overview">
+            <div class="section-header">
+                <h2>Executive Planning & Infrastructure Dashboard</h2>
+                <p class="section-desc">Comprehensive monitoring of observed infrastructure, spatial modeling, and
+                    regional priority tiers across Telangana.</p>
+            </div>
+
+            <!-- KPI Metric Cards Grid -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon icon-blue">🏢</div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Observed Stations</span>
+                        <h3 class="kpi-value" id="kpi-stations">--</h3>
+                        <span class="kpi-sub"><span id="kpi-fast-count">--</span> DC Fast • <span
+                                id="kpi-slow-count">--</span> AC Slow • <span id="kpi-unknown-count">--</span>
+                            Unknown</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon icon-green">🏛️</div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Administrative Districts</span>
+                        <h3 class="kpi-value" id="kpi-districts">--</h3>
+                        <span class="kpi-sub">All <span id="kpi-district-count-inline">--</span> districts
+                            represented</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon icon-amber">⚡</div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">DISCOM Grid Energy</span>
+                        <h3 class="kpi-value" id="kpi-energy">-- <small>GWh</small></h3>
+                        <span class="kpi-sub">FY2023-24 Measured TGSPDCL Context</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon icon-purple">🎯</div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Champion Outer-Test PR-AUC</span>
+                        <h3 class="kpi-value" id="kpi-prauc">--</h3>
+                        <span class="kpi-sub">Spatial GroupKFold Champion</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon icon-red">🚨</div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Tier 1 High Priority</span>
+                        <h3 class="kpi-value" id="kpi-tier1">-- <small>Districts</small></h3>
+                        <span class="kpi-sub">Top 10 EIPS Prioritized Corridors</span>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon icon-cyan">🛡️</div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Certified Predictors</span>
+                        <h3 class="kpi-value" id="kpi-features">--</h3>
+                        <span class="kpi-sub">Strict Leakage Control Gate Enforced</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overview Two-Column Layout -->
+            <div class="grid-two-col">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>Methodological Architecture & Three Tracks</h3>
+                        <span class="badge badge-primary">Policy Alignment</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="track-item">
+                            <div class="track-badge badge-blue">Track A</div>
+                            <div>
+                                <h4>Observed Station-Level Classification</h4>
+                                <p>Learns DC Fast infrastructure suitability (>= 50kW vs AC Slow) using 21 non-leaky
+                                    spatial, road, and demographic features. Evaluated with district-held-out outer
+                                    testing.</p>
+                            </div>
+                        </div>
+                        <div class="track-item">
+                            <div class="track-badge badge-amber">Track B</div>
+                            <div>
+                                <h4>Macro-Level District EV Adoption Context</h4>
+                                <p>Ingests official VAHAN annual registrations across FY18-FY24 panel. Quantifies
+                                    district penetration per 1,000 population without circular station-level demand
+                                    proxy.</p>
+                            </div>
+                        </div>
+                        <div class="track-item">
+                            <div class="track-badge badge-green">Track C</div>
+                            <div>
+                                <h4>Grid Capacity & Throughput Context</h4>
+                                <p>Uses observed TGSPDCL electricity context where available; the application does not
+                                    disaggregate DISCOM energy to individual stations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>Telangana Spatial Infrastructure Summary</h3>
+                        <button class="btn btn-sm btn-outline" onclick="switchTab('gis')">View Full GIS Map</button>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/gis_spatial_distribution.png" alt="GIS Distribution"
+                            class="preview-img clickable" onclick="openModal(this.src)">
+                        <p class="caption">Spatial distribution of collected/verified charging station records across
+                            Telangana with district EIPS priority context.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. STATION PREDICTION & ANALYSIS -->
+        <!-- 2. STATION PREDICTION & ANALYSIS -->
+        <section class="tab-pane" id="pane-predict">
+            <div class="section-header">
+                <h2>Station Classification & Decision Inference</h2>
+                <p class="section-desc">Evaluate prospective planning sites or verified existing EV charging station records across Telangana. Generates real-time infrastructure classification, local TreeSHAP attributions, model-based counterfactual planning scenarios, and regional EIPS context.</p>
+            </div>
+
+            <!-- Station Inference Mode Selector -->
+            <div class="glass-card mb-20 mode-selection-banner">
+                <div class="mode-header">
+                    <span class="mode-title-label">Station Inference Mode</span>
+                    <span class="mode-desc-label">Choose evaluation workflow: simulate a prospective planning scenario or perform inference on an existing verified station record from the frozen master dataset.</span>
+                </div>
+                <div class="mode-toggle-group">
+                    <button type="button" class="btn btn-mode active" id="mode-btn-prospective">
+                        <span class="mode-icon">📍</span>
+                        <span class="mode-text">
+                            <strong>Prospective Site</strong>
+                            <small>User-defined planning scenario — not an observed station record</small>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-mode" id="mode-btn-existing">
+                        <span class="mode-icon">🏢</span>
+                        <span class="mode-text">
+                            <strong>Existing Station Record</strong>
+                            <small>Verified station record from FINAL_PROJECT_DATASET.csv</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-two-col">
+                <!-- Prediction Input Form -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <div class="title-with-subtitle">
+                            <h3 id="form-mode-title">Prospective Candidate Attributes</h3>
+                            <span class="mode-indicator-pill" id="mode-indicator-pill">Input Mode: Prospective Site</span>
+                        </div>
+                        <div class="btn-group" id="prospective-shortcuts">
+                            <button type="button" class="btn btn-sm btn-secondary" id="btn-prefill-corridor" title="Load illustrative prospective planning scenario">Prospective Corridor Site</button>
+                        </div>
+                    </div>
+
+                    <!-- Existing Station Selector (Visible only in Existing Station Mode) -->
+                    <div id="existing-station-container" class="existing-station-picker" style="display: none;">
+                        <div class="form-group mb-12">
+                            <label for="existing-station-select" class="picker-label">
+                                <strong>Select Existing Station</strong>
+                                <span class="text-muted">(166 verified records from data/final/FINAL_PROJECT_DATASET.csv)</span>
+                            </label>
+                            <select id="existing-station-select" class="form-control select-searchable">
+                                <option value="">-- Loading verified station records... --</option>
+                            </select>
+                        </div>
+                        <div class="demo-stations-row">
+                            <span class="demo-label">Quick Demo Stations:</span>
+                            <button type="button" class="btn btn-xs btn-outline-cyan" id="btn-demo-medchal">TS-MED-0001 (Observed: DC Fast)</button>
+                            <button type="button" class="btn btn-xs btn-outline-amber" id="btn-demo-hyd">TS-HYD-0003 (Observed: AC Slow)</button>
+                        </div>
+                        <div class="sanitization-notice">
+                            <span class="notice-icon">🛡️</span>
+                            <span><strong>Leakage Prevention:</strong> Pre-prediction site predictors only. Target infrastructure fields (power, charger type, connectors) are strictly omitted from model input.</span>
+                        </div>
+                    </div>
+
+                    <div id="prospective-note-container" class="prospective-notice">
+                        <span class="notice-icon">ℹ️</span>
+                        <span><strong>User-defined planning scenario:</strong> Not an observed station record. Simulates physical site characteristics for infrastructure classification.</span>
+                    </div>
+
+                    <form id="prediction-form" class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="st-id">Station Identifier</label>
+                                <input type="text" id="st-id" class="form-control" value="TS_SAMPLE_PROSPECTIVE_01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="st-district">District</label>
+                                <select id="st-district" class="form-control" required></select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="st-lat">Latitude (°N)</label>
+                                <input type="number" id="st-lat" class="form-control" step="0.000001" value="17.6320" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="st-lon">Longitude (°E)</label>
+                                <input type="number" id="st-lon" class="form-control" step="0.000001" value="78.5610" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="st-road">Adjacent Road Type</label>
+                                <select id="st-road" class="form-control">
+                                    <option value="primary" selected>Primary Arterial Road</option>
+                                    <option value="motorway">Motorway / Expressway</option>
+                                    <option value="trunk">Trunk Highway</option>
+                                    <option value="secondary">Secondary Connector</option>
+                                    <option value="residential">Residential Road</option>
+                                    <option value="service">Service Road</option>
+                                    <option value="unclassified">Unclassified</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="st-hwy-dist">Distance to Highway (km)</label>
+                                <input type="number" id="st-hwy-dist" class="form-control" step="0.01" value="0.85" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="st-city-dist">Distance to City Center (km)</label>
+                                <input type="number" id="st-city-dist" class="form-control" step="0.01" value="6.2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="st-poi-count">Nearby POI Count</label>
+                                <input type="number" id="st-poi-count" class="form-control" step="1" value="9" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="st-poi-div">POI Diversity Index (0-1)</label>
+                                <input type="number" id="st-poi-div" class="form-control" step="0.01" min="0" max="1" value="0.78" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="st-station-name">Site Name / Location Description</label>
+                                <input type="text" id="st-station-name" class="form-control" value="Illustrative Medchal Commercial Corridor Site" required>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-predict">
+                                <span class="spinner" id="predict-spinner" style="display:none;"></span>
+                                Run Station Inference & XAI
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Prediction Results Display (Compact 4-Card Stack) -->
+                <div class="results-column-container" id="prediction-results-area">
+                    <div class="glass-card" id="res-empty-state-card">
+                        <div class="card-header">
+                            <h3>Inference & Explainability Results</h3>
+                            <span class="badge" id="res-badge-ready">Ready</span>
+                        </div>
+                        <div class="card-body text-center" id="res-empty-state">
+                            <div class="empty-state-icon">⚡</div>
+                            <h4>Awaiting Candidate Input</h4>
+                            <p>Configure station attributes on the left or select an existing verified station, then click <strong>"Run Station Inference & XAI"</strong>.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 Compact Vertical Cards (Shown upon successful inference) -->
+                    <div id="res-content" style="display:none;" class="compact-result-stack">
+
+                        <!-- CARD 1: MODEL INFERENCE & OBSERVED DATASET REFERENCE -->
+                        <div class="glass-card result-compact-card" id="card-model-inference">
+                            <div class="card-header-compact">
+                                <div class="header-left">
+                                    <span class="header-tag">CARD 1</span>
+                                    <h4>MODEL INFERENCE</h4>
+                                </div>
+                                <span class="badge badge-sm badge-primary" id="res-status-badge">Inference Complete</span>
+                            </div>
+                            <div class="card-body-compact">
+                                <!-- Model Probability Grid -->
+                                <div class="inference-stats-grid">
+                                    <div class="stat-box">
+                                        <span class="stat-label">P(DC Fast Infrastructure)</span>
+                                        <span class="stat-value text-cyan" id="res-p-fast">--%</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-label">P(AC / Non-Fast Infrastructure)</span>
+                                        <span class="stat-value text-muted" id="res-p-slow">--%</span>
+                                    </div>
+                                    <div class="stat-box highlight-threshold">
+                                        <span class="stat-label">Frozen Decision Threshold</span>
+                                        <span class="stat-value text-amber">76.0%</span>
+                                    </div>
+                                </div>
+
+                                <!-- Probability Meter with 76% threshold line -->
+                                <div class="meter-wrapper mt-10">
+                                    <div class="meter-bar-track">
+                                        <div class="meter-threshold-marker" style="left: 76%;" title="Frozen Decision Threshold = 76.0%">
+                                            <span class="marker-flag">76.0%</span>
+                                        </div>
+                                        <div class="meter-bar-fill" id="res-meter-fill" style="width: 0%;"></div>
+                                    </div>
+                                    <div class="meter-scale-labels">
+                                        <span>0% (AC Slow)</span>
+                                        <span class="scale-mid">Frozen Threshold: 76.0%</span>
+                                        <span>100% (DC Fast)</span>
+                                    </div>
+                                </div>
+
+                                <!-- Predicted Class Box -->
+                                <div class="pred-class-banner" id="pred-class-banner">
+                                    <div class="pred-class-header">
+                                        <span class="pred-class-sub">PREDICTED CLASS (P &ge; 76.0%):</span>
+                                        <span class="pred-class-conf">Confidence: <b id="res-pred-confidence">--%</b></span>
+                                    </div>
+                                    <h3 class="pred-class-title" id="res-class-name">--</h3>
+                                </div>
+
+                                <!-- SECTION 2: OBSERVED DATASET REFERENCE -->
+                                <div class="observed-reference-subcard mt-12" id="observed-reference-subcard">
+                                    <div class="observed-ref-header">
+                                        <span class="observed-ref-title">OBSERVED DATASET REFERENCE</span>
+                                        <span class="observed-badge" id="res-observed-badge">--</span>
+                                    </div>
+                                    <p class="observed-note" id="res-observed-note">
+                                        Observed label from the verified station record. Not used as a model input.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: WHY? — LOCAL TREESHAP -->
+                        <div class="glass-card result-compact-card" id="card-why-shap">
+                            <div class="card-header-compact">
+                                <div class="header-left">
+                                    <span class="header-tag">CARD 2</span>
+                                    <h4>WHY? — LOCAL TREESHAP</h4>
+                                </div>
+                            </div>
+                            <div class="card-body-compact">
+                                <p class="xai-caption">Local TreeSHAP factors influencing this station's DC Fast infrastructure classification.</p>
+                                
+                                <div class="shap-columns-grid">
+                                    <div class="shap-col">
+                                        <span class="driver-col-title text-success">+ Positive Factors (Favors DC Fast)</span>
+                                        <div id="res-positive-drivers" class="driver-items-list"></div>
+                                    </div>
+                                    <div class="shap-col">
+                                        <span class="driver-col-title text-danger">- Negative Factors (Favors AC / Non-Fast)</span>
+                                        <div id="res-negative-drivers" class="driver-items-list"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: WHAT-IF PLANNING -->
+                        <div class="glass-card result-compact-card" id="card-what-if">
+                            <div class="card-header-compact">
+                                <div class="header-left">
+                                    <span class="header-tag">CARD 3</span>
+                                    <h4>WHAT-IF PLANNING</h4>
+                                </div>
+                                <span class="badge badge-sm badge-secondary">Model-based planning scenario</span>
+                            </div>
+                            <div class="card-body-compact">
+                                <div class="cf-disclaimer">
+                                    <span class="disclaimer-icon">💡</span>
+                                    <span>Counterfactual changes are model simulations, not causal guarantees. Evaluated against frozen threshold P(DC Fast) &ge; 76.0%.</span>
+                                </div>
+                                <div id="res-cf-simulation-content" class="cf-sim-container mt-10">
+                                    <!-- Populated dynamically: Current P, Changed lever, Original, New, Resulting Prob, Threshold Crossed -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 4: REGIONAL DISTRICT PLANNING CONTEXT -->
+                        <div class="glass-card result-compact-card" id="card-regional-context">
+                            <div class="card-header-compact">
+                                <div class="header-left">
+                                    <span class="header-tag">CARD 4</span>
+                                    <h4>REGIONAL DISTRICT PLANNING CONTEXT</h4>
+                                </div>
+                                <span class="badge badge-sm badge-outline-cyan">EIPS Planning Model</span>
+                            </div>
+                            <div class="card-body-compact">
+                                <div class="regional-details-grid-compact">
+                                    <div class="reg-stat-cell">
+                                        <span class="reg-label">District</span>
+                                        <span class="reg-val" id="res-dist-name">--</span>
+                                    </div>
+                                    <div class="reg-stat-cell">
+                                        <span class="reg-label">EIPS Score</span>
+                                        <span class="reg-val text-cyan" id="res-dist-eips">--</span>
+                                    </div>
+                                    <div class="reg-stat-cell">
+                                        <span class="reg-label">EIPS Rank</span>
+                                        <span class="reg-val" id="res-dist-rank">--</span>
+                                    </div>
+                                    <div class="reg-stat-cell">
+                                        <span class="reg-label">Priority Tier</span>
+                                        <span class="reg-val" id="res-dist-tier">--</span>
+                                    </div>
+                                    <div class="reg-stat-cell">
+                                        <span class="reg-label">Infrastructure Gap</span>
+                                        <span class="reg-val text-amber" id="res-dist-gap">--</span>
+                                    </div>
+                                    <div class="reg-stat-cell">
+                                        <span class="reg-label">Existing Fast Stations</span>
+                                        <span class="reg-val" id="res-dist-fast-stns">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MODEL PERFORMANCE & BENCHMARKS -->
+        <section class="tab-pane" id="pane-models">
+            <div class="section-header">
+                <h2>Spatial Machine Learning Evaluation & Benchmarking</h2>
+                <p class="section-desc">Performance of Random Forest, XGBoost, and LightGBM across 4-fold GroupKFold
+                    development and quarantined outer test districts.</p>
+            </div>
+
+            <!-- Metrics Table Card -->
+            <div class="glass-card mb-20">
+                <div class="card-header">
+                    <h3>Model Comparison Table</h3>
+                    <span class="badge badge-success">District-Held-Out Outer Test</span>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="data-table" id="models-table">
+                            <thead>
+                                <tr>
+                                    <th>Model Name</th>
+                                    <th>Development CV PR-AUC</th>
+                                    <th>Outer Test PR-AUC</th>
+                                    <th>Outer Test ROC-AUC</th>
+                                    <th>Outer Accuracy</th>
+                                    <th>Balanced Accuracy</th>
+                                    <th>Macro F1</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="models-table-body">
+                                <tr>
+                                    <td colspan="8" class="text-center">Loading model metrics...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Evaluation Visualizations Grid -->
+            <div class="grid-three-col">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h4>Confusion Matrix (Outer Test)</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/confusion_matrix.png" alt="Confusion Matrix"
+                            class="preview-img clickable" onclick="openModal(this.src)">
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h4>Precision-Recall Curves</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/pr_curves.png" alt="PR Curves" class="preview-img clickable"
+                            onclick="openModal(this.src)">
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h4>ROC Curves Comparison</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/roc_curves.png" alt="ROC Curves" class="preview-img clickable"
+                            onclick="openModal(this.src)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EXPLAINABLE AI (SHAP & COUNTERFACTUALS) -->
+        <section class="tab-pane" id="pane-xai">
+            <div class="section-header">
+                <h2>Explainable AI: TreeSHAP & Actionable Counterfactuals</h2>
+                <p class="section-desc">Transparent feature attribution and constraint-respecting recommendations for
+                    transitioning charging sites to DC Fast suitability.</p>
+            </div>
+
+            <div class="grid-two-col mb-20">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>Global TreeSHAP Feature Ranking</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/shap_summary_bar.png" alt="SHAP Bar" class="preview-img clickable"
+                            onclick="openModal(this.src)">
+                        <p class="caption">Top non-leaky exogenous features ranked by mean absolute SHAP value impact on
+                            DC Fast suitability.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>SHAP Value Distributions (Beeswarm)</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/shap_beeswarm.png" alt="SHAP Beeswarm" class="preview-img clickable"
+                            onclick="openModal(this.src)">
+                        <p class="caption">Value distribution showing directional influence of spatial features on
+                            fast-charging likelihood.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Counterfactual Analysis Table & Visualization -->
+            <div class="grid-two-col">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>Actionable Counterfactual Probability Elevation</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/counterfactual_comparison.png" alt="Counterfactual Plot"
+                            class="preview-img clickable" onclick="openModal(this.src)">
+                        <p class="caption">Model-based site scenarios evaluated against the frozen decision threshold;
+                            scenarios are planning simulations, not causal guarantees.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>Counterfactual Transition Records</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="data-table" id="cf-table">
+                                <thead>
+                                    <tr>
+                                        <th>Station ID</th>
+                                        <th>District</th>
+                                        <th>Original P</th>
+                                        <th>Target P</th>
+                                        <th>Actionable Guidance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cf-table-body">
+                                    <tr>
+                                        <td colspan="5" class="text-center">Loading counterfactual records...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PLANNING & EIPS PRIORITIZATION -->
+        <section class="tab-pane" id="pane-planning">
+            <div class="section-header">
+                <h2>Multi-Criteria Planning & EIPS Framework</h2>
+                <p class="section-desc">AHP-weighted TOPSIS multi-criteria prioritization synthesizing EV adoption
+                    context, infrastructure deficit gap, corridor accessibility, grid readiness, and spatial
+                    suitability.</p>
+            </div>
+
+            <!-- AHP Weights & Visualizations -->
+            <div class="grid-two-col mb-20">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>EIPS District Prioritization (AHP-TOPSIS)</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/eips_district_rankings.png" alt="EIPS Rankings"
+                            class="preview-img clickable" onclick="openModal(this.src)">
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>Multi-Criteria Component Decomposition</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="/results/figures/eips_component_breakdown.png" alt="Component Breakdown"
+                            class="preview-img clickable" onclick="openModal(this.src)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 33 District EIPS Rankings Table -->
+            <div class="glass-card">
+                <div class="card-header">
+                    <h3>Telangana 33 Districts EIPS Ranking Table</h3>
+                    <div class="filter-group">
+                        <input type="text" id="planning-search" class="form-control form-control-sm"
+                            placeholder="Search district...">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="data-table" id="planning-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>District</th>
+                                    <th>EIPS Score</th>
+                                    <th>Priority Tier</th>
+                                    <th>EV Penetration</th>
+                                    <th>Infra Gap Index</th>
+                                    <th>Fast Stations</th>
+                                    <th>NH Crossings</th>
+                                    <th>Planning Narrative</th>
+                                </tr>
+                            </thead>
+                            <tbody id="planning-table-body">
+                                <tr>
+                                    <td colspan="9" class="text-center">Loading planning rankings...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. INTERACTIVE GIS PLANNING MAP -->
+        <section class="tab-pane" id="pane-gis">
+            <div class="section-header">
+                <h2>Interactive Geospatial Planning Map</h2>
+                <p class="section-desc">Interactive GIS dashboard displaying 166 verified charging stations, DC
+                    Fast/Slow infrastructure distribution, and district EIPS priority corridors.</p>
+            </div>
+
+            <div class="glass-card gis-map-card">
+                <div class="card-header">
+                    <h3>Telangana EV Infrastructure GIS Portal</h3>
+                    <a href="/results/gis/interactive_planning_map.html" target="_blank"
+                        class="btn btn-sm btn-primary">Open in New Window ↗</a>
+                </div>
+                <div class="card-body p-0">
+                    <iframe src="/results/gis/interactive_planning_map.html" class="gis-iframe"
+                        title="Interactive EV Charging Infrastructure Map"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Enlarged Figure Inspection -->
+    <div id="image-modal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <!-- App Footer -->
+    <footer class="app-footer">
+        <p>Explainable AI Framework for Smart EV Charging Infrastructure Planning • B.Tech Major Project • Real
+            Certified Datasets & Scientific Pipeline</p>
+    </footer>
+
+    <script src="script.js?v=36"></script>
+</body>
+
+</html>
