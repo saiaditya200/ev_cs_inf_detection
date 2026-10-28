@@ -1,0 +1,23 @@
+================================================================================
+ACTIONABLE COUNTERFACTUAL EXPLANATION SUMMARY REPORT
+================================================================================
+
+Selected model: RandomForestClassifier
+Frozen decision threshold: 0.76
+Total evaluated sites: 21
+Feasible counterfactuals: 8 (38.1%)
+Actionable levers: Highway distance, City-center distance, POI count, POI diversity
+Immutable attributes: Coordinates, Road-type indicators, District context
+Derived features: Highway and city-center proximity recomputed deterministically
+
+Sample Feasible Transitions:
+  Station TS-GOV-0087 (Warangal Rural): P(Fast) 0.56 -> 0.76
+    Actions: Highway distance: 0.71 km -> 0.43 km; City-center distance: 31.42 km -> 21.99 km; Nearby POI count: 32 -> 34
+  Station TS-GOV-0090 (Karimnagar): P(Fast) 0.72 -> 0.79
+    Actions: City-center distance: 0.03 km -> 0.36 km; Nearby POI count: 33 -> 34
+  Station TS-GOV-0133 (Siddipet): P(Fast) 0.73 -> 0.76
+    Actions: Highway distance: 0.64 km -> 0.51 km; City-center distance: 33.21 km -> 28.23 km; Nearby POI count: 32 -> 33
+  Station TS-GOV-0134 (Siddipet): P(Fast) 0.69 -> 0.78
+    Actions: City-center distance: 33.73 km -> 31.71 km; Nearby POI count: 34 -> 35
+  Station TS-GOV-0142 (Jagitial): P(Fast) 0.58 -> 0.76
+    Actions: Highway distance: 0.53 km -> 0.32 km; City-center distance: 21.54 km -> 15.08 km; Nearby POI count: 33 -> 35

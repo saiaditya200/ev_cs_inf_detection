@@ -1,0 +1,60 @@
+================================================================================
+FINAL RECONCILIATION STATUS & GO/NO-GO AUDIT
+Project: Explainable AI Framework for Smart EV Charging Infrastructure Planning
+Timestamp: 2026-09-28T01:25:44.222193
+================================================================================
+
+A. ARE THE EXISTING AC SIGNAL METRICS INTERNALLY CONSISTENT?
+   PARTIALLY. The underlying CSV outputs (ac_signal_model_comparison.csv,
+   ac_signal_feature_blocks.csv, ac_signal_outer_test.csv) were internally
+   consistent with one another, but the written text report (ac_signal_enrichment_report.txt)
+   contained transcription discrepancies from earlier Pareto experiments.
+
+B. WHICH EXISTING REPORTS CONTAIN INCORRECT NUMBERS?
+   1. ac_signal_enrichment_report.txt:
+      - Claimed Contract A + Block 1 had a minimum fold DC recall of 77.3% at T=0.830.
+        CORRECTION: The actual minimum fold DC recall at T=0.830 was 51.28% (failing stability).
+      - Conflated peak balanced accuracy threshold (T=0.830) with candidate threshold (T=0.740).
+      - Overstated theoretical claims ("irreducible Bayes error floor", "proven linear non-separability").
+
+C. WHAT IS THE CORRECTED DEVELOPMENT RESULT?
+   - Contract A Random Forest (Baseline @ T=0.740):
+     Bal Acc = 68.81% | AC Recall = 50.00% (7/14) | DC Recall = 87.62% (92/105) | PR-AUC = 0.9028
+   - Contract A + Block 1 Random Forest (Site Context @ T=0.740):
+     Bal Acc = 69.76% | AC Recall = 50.00% (7/14) | DC Recall = 89.52% (94/105) | PR-AUC = 0.9085
+   - Peak Threshold-Optimized Result (T=0.815 for Contract A, T=0.830 for Block 1):
+     Contract A peak Bal Acc = 64.05% vs Block 1 peak Bal Acc = 63.10%.
+
+D. WHAT IS THE CORRECTED FOLD-STABILITY RESULT?
+   - At peak threshold T=0.830: Contract A + Block 1 is UNSTABLE (min DC recall = 51.28%).
+   - At candidate threshold T=0.740: Contract A + Block 1 is STABLE across all 4 folds:
+     Fold 1: AC=50.0%, DC=89.7%
+     Fold 2: AC=33.3%, DC=90.9%
+     Fold 3: AC=33.3%, DC=90.9%
+     Fold 4: AC=100.0%, DC=86.4%
+     Mean AC = 54.17%, Min DC = 86.36%.
+
+E. WHAT IS THE CORRECTED OUTER-TEST RESULT?
+   - Current Bakeoff Best RF (Benchmark @ 0.755) : Bal Acc = 60.90% | AC Recall = 33.33% (3/9) | DC Recall = 88.46% (23/26) | Macro F1 = 0.6182
+   - Contract A Random Forest (@ 0.740)          : Bal Acc = 57.26% | AC Recall = 22.22% (2/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.5749
+   - Contract A + Block 1 RF (@ 0.740)           : Bal Acc = 57.26% | AC Recall = 22.22% (2/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.5749
+   - Contract A + Block 4 RF (@ 0.740)           : Bal Acc = 59.19% | AC Recall = 22.22% (2/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.5977
+   - RF_0039_ClassWeight_None (@ 0.720)          : Bal Acc = 64.74% | AC Recall = 33.33% (3/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.6694
+
+F. WHAT IS THE DEFENSIBLE SPATIAL-COVARIATE-SHIFT CONCLUSION?
+   Spatial covariate shift was observed between the development and held-out districts.
+   Outer-test AC stations physically mimic development DC Fast stations along trunk roads
+   (100% of outer AC on trunk roads) and government campuses (88.9%). The tested exogenous
+   spatial feature space was insufficient to reliably distinguish AC Slow from DC Fast under
+   this distribution.
+
+G. DOES ANY FEATURE BLOCK JUSTIFY CHANGING PRODUCTION?
+   NO. None of the feature blocks improved outer-test AC detection beyond the established
+   benchmarks (all achieved 22.22% AC recall vs 33.33% for Bakeoff Best RF).
+
+H. IS PRODUCTION STILL FROZEN?
+   YES. 100% FROZEN AND UNTOUCHED.
+   - models/final_deployment_model.joblib: UNCHANGED
+   - models/final_deployment_metadata.json: UNCHANGED
+   - models/final_deployment_threshold.json: UNCHANGED
+================================================================================

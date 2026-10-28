@@ -1,0 +1,22 @@
+feature_order,feature_name,feature_group,data_source,allowed_for_inference,leakage_status
+1,latitude,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+2,longitude,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+3,distance_to_highway_km,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+4,distance_to_city_center_km,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+5,nearby_poi_count,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+6,highway_proximity_score,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+7,city_center_proximity_score,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+8,poi_diversity_index,Spatial/GIS,OpenStreetMap / Geocoding / Spatial Analysis,YES,EXOGENOUS_NON_LEAKY
+9,road_type_motorway,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+10,road_type_primary,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+11,road_type_residential,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+12,road_type_secondary,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+13,road_type_service,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+14,road_type_trunk,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+15,road_type_unclassified,Road topology,OpenStreetMap Highway Tag One-Hot Encoding,YES,EXOGENOUS_NON_LEAKY
+16,district_population_density_2011,District context,Census 2011 / DES Telangana / TGSPDCL Lookup,YES,EXOGENOUS_NON_LEAKY
+17,district_urban_population_pct,District context,Census 2011 / DES Telangana / TGSPDCL Lookup,YES,EXOGENOUS_NON_LEAKY
+18,district_projected_density_fy24,District context,Census 2011 / DES Telangana / TGSPDCL Lookup,YES,EXOGENOUS_NON_LEAKY
+19,district_nh_crossing_count,District context,Census 2011 / DES Telangana / TGSPDCL Lookup,YES,EXOGENOUS_NON_LEAKY
+20,district_ev_penetration_rate,District context,Census 2011 / DES Telangana / TGSPDCL Lookup,YES,EXOGENOUS_NON_LEAKY
+21,discom_utility_data_available_flag,District context,Census 2011 / DES Telangana / TGSPDCL Lookup,YES,EXOGENOUS_NON_LEAKY

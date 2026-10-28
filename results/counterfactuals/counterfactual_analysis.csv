@@ -1,0 +1,22 @@
+station_id,district,original_prob_fast,counterfactual_prob_fast,probability_gain,decision_threshold,normalized_cost,original_distance_to_highway_km,counterfactual_distance_to_highway_km,original_distance_to_city_center_km,counterfactual_distance_to_city_center_km,original_nearby_poi_count,counterfactual_nearby_poi_count,original_poi_diversity_index,counterfactual_poi_diversity_index,counterfactual_highway_proximity_score,counterfactual_city_center_proximity_score,actionable_modifications,search_status
+TS-MED-0001,Medchal-Malkajgiri,0.5303,0.5303,0.0,0.76,,4.21,,13.89,,22.0,,0.7769,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-HYD-0002,Hyderabad,0.3999,0.3999,0.0,0.76,,0.87,,7.34,,38.0,,0.7673,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-HYD-0003,Hyderabad,0.3799,0.3799,0.0,0.76,,1.86,,12.9,,2.0,,0.0,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-HYD-0005,Hyderabad,0.3898,0.3898,0.0,0.76,,1.91,,7.68,,17.0,,0.8235,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-RAN-0001,Ranga Reddy,0.5573,0.5573,0.0,0.76,,3.23,,16.39,,8.0,,0.7188,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-SAN-0001,Sangareddy,0.396,0.396,0.0,0.76,,6.47,,20.98,,0.0,,0.0,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-SAN-0002,Sangareddy,0.4016,0.4016,0.0,0.76,,6.53,,20.75,,0.0,,0.0,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-GOV-0086,Warangal Rural,0.7264,0.7264,0.0,0.76,,0.96,,26.99,,31.0,,0.5,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-GOV-0087,Warangal Rural,0.5617,0.762,0.2003,0.76,0.9869,0.71,0.426,31.42,21.994,32.0,34.0,0.5,0.5,0.701262,0.04349,Highway distance: 0.71 km -> 0.43 km; City-center distance: 31.42 km -> 21.99 km; Nearby POI count: 32 -> 34,Feasible
+TS-GOV-0090,Karimnagar,0.7206,0.7887,0.0681,0.76,0.128,0.54,0.5184,0.03,0.3565,33.0,34.0,0.5,0.5,0.658588,0.737191,City-center distance: 0.03 km -> 0.36 km; Nearby POI count: 33 -> 34,Feasible
+TS-GOV-0133,Siddipet,0.7343,0.7601,0.0258,0.76,0.5092,0.64,0.512,33.21,28.2285,32.0,33.0,0.5,0.5,0.661376,0.034213,Highway distance: 0.64 km -> 0.51 km; City-center distance: 33.21 km -> 28.23 km; Nearby POI count: 32 -> 33,Feasible
+TS-GOV-0134,Siddipet,0.6927,0.779,0.0863,0.76,0.2521,0.16,0.1472,33.73,31.7062,34.0,35.0,0.5,0.5,0.871688,0.030575,City-center distance: 33.73 km -> 31.71 km; Nearby POI count: 34 -> 35,Feasible
+TS-GOV-0136,Mancherial,0.6148,0.6148,0.0,0.76,,1.39,,21.68,,29.0,,0.5,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-GOV-0137,Mancherial,0.687,0.687,0.0,0.76,,2.08,,12.73,,27.0,,0.5,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-GOV-0142,Jagitial,0.5848,0.7634,0.1786,0.76,0.7429,0.53,0.318,21.54,15.078,33.0,35.0,0.5,0.5,0.758725,0.062197,Highway distance: 0.53 km -> 0.32 km; City-center distance: 21.54 km -> 15.08 km; Nearby POI count: 33 -> 35,Feasible
+TS-GOV-0143,Jagitial,0.5182,0.5182,0.0,0.76,,0.85,,35.26,,32.0,,0.5,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-GOV-0147,Medak,0.6773,0.7672,0.0899,0.76,0.1549,0.1,0.092,33.98,31.9412,35.0,35.0,0.5,0.5,0.915751,0.030357,City-center distance: 33.98 km -> 31.94 km,Feasible
+TS-GOV-0149,Vikarabad,0.7322,0.7923,0.0601,0.76,0.7645,0.67,0.4958,35.43,28.5211,32.0,34.0,0.5,0.5,0.668539,0.033874,Highway distance: 0.67 km -> 0.50 km; City-center distance: 35.43 km -> 28.52 km; Nearby POI count: 32 -> 34,Feasible
+TS-GOV-0156,Nagarkurnool,0.6237,0.7766,0.1529,0.76,1.6768,5.16,3.096,37.37,26.159,14.0,16.0,0.5,0.5,0.244141,0.03682,Highway distance: 5.16 km -> 3.10 km; City-center distance: 37.37 km -> 26.16 km; Nearby POI count: 14 -> 16,Feasible
+TS-GOV-0158,Mahabubabad,0.5848,0.5848,0.0,0.76,,1.64,,29.66,,28.0,,0.5,,,,No feasible transition found within the defined local search space,High Spatial Constraint
+TS-GOV-0166,Kumurambheem Asifabad,0.7337,0.7337,0.0,0.76,,9.63,,20.35,,5.0,,0.5,,,,No feasible transition found within the defined local search space,High Spatial Constraint

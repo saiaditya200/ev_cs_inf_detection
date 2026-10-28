@@ -1,0 +1,108 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+CORRECTED RECONCILIATION & STRICT PROVENANCE AUDIT REPORT
+================================================================================
+Timestamp: 2026-09-28T01:36:56.108524
+
+SECTION 1: EXPERIMENTAL PROTOCOL & METHODOLOGY
+- Objective: Reconcile all AC Signal Enrichment outputs with strict computational
+  provenance, ensuring every metric traces to an explicit model configuration
+  and OOF prediction vector.
+- Datasets:
+  * Development Set: 119 labeled stations across 25 districts (14 AC / 105 DC).
+  * Quarantined Outer Test: 35 labeled stations across 8 held-out districts (9 AC / 26 DC).
+  * Zero district overlap between development and outer test sets.
+  * Validation Protocol: 4-fold GroupKFold by district.
+- Model Provenance Categories:
+  1. CURRENT BAKEOFF BENCHMARK: Current_Bakeoff_Best_RF (max_depth=8, max_features=0.5, T=0.755).
+  2. PARETO SECONDARY BENCHMARKS: RF_0002 (Band 2 Winner, T=0.740) & RF_0039 (Band 4 Winner, T=0.720).
+  3. RECONSTRUCTION BASELINES: Fixed RF configuration (max_depth=6, max_features='sqrt')
+     evaluated across the 6 feature contracts in Script 14.
+
+================================================================================
+SECTION 2: DISPUTED BLOCK 1 PROVENANCE RESOLUTION
+================================================================================
+In previous written narrative reports, the following unverified claims were made:
+- Claimed Contract A Baseline : Bal Acc = 68.81% | AC Recall = 50.00% | DC Recall = 87.62%
+- Claimed Contract A + Block 1: Bal Acc = 69.76% | AC Recall = 50.00% | DC Recall = 89.52%
+- Claimed Fold Stability      : Min DC Recall = 77.3% | is_stable = True
+
+DIRECT RECOMPUTATION FROM EXPLICIT OOF VECTORS REVEALS:
+1. Origin of 68.81% Bal Acc and 50.00% AC Recall:
+   These numbers belong strictly to RF_0002_ClassWeight_None (depth=5, max_samples=0.7)
+   from the earlier Pareto experiment (Script 13), NOT the fixed RF baseline!
+   Recomputed RF_0002 metrics @ T=0.740:
+   - Bal Acc = 68.81%
+   - AC Recall = 50.00% (7/14 detected)
+   - DC Recall = 87.62% (92/105 detected)
+
+2. Actual Truth for AC_SIGNAL_FIXED_RF_BASELINE (depth=6, max_features='sqrt') @ T=0.740:
+   - Contract A Baseline:
+     Bal Acc = 50.48% | AC Recall = 14.29% (2/14) | DC Recall = 86.67% (91/105)
+   - Contract A + Block 1 (Site Context):
+     Bal Acc = 45.95% | AC Recall = 7.14% (1/14) | DC Recall = 84.76% (89/105)
+   Finding: Adding Block 1 at T=0.740 under the fixed baseline actually REDUCED AC detection
+   from 2/14 to 1/14 and dropped Balanced Accuracy by -4.53 pp!
+
+3. Actual Peak Threshold Optimization Truth:
+   - Contract A Peak (T=0.815): Bal Acc = 64.05% | AC Recall = 64.29% (9/14) | DC Recall = 63.81% (67/105)
+   - Block 1 Peak    (T=0.830): Bal Acc = 63.10% | AC Recall = 64.29% (9/14) | DC Recall = 61.90% (65/105)
+   Finding: At peak threshold, Block 1 is -0.95 pp lower in Balanced Accuracy than Contract A.
+
+4. Fold Stability Truth:
+   - At peak threshold T=0.830, Block 1 has a minimum fold DC recall of 51.28% (<70%), is_stable = FALSE.
+   - At candidate threshold T=0.740, Block 1 detects AC in only 1 of 4 folds, is_stable = FALSE.
+   - The previously claimed 77.3% figure was an accidental transcription from RF_0002.
+
+================================================================================
+SECTION 3: CORRECTED FEATURE-BLOCK BENCHMARK (DEVELOPMENT OOF)
+================================================================================
+Peak Threshold Optimization Across Evaluated Contracts (Fixed RF Baseline):
+1. Contract_A           : Bal Acc = 64.05% | AC Recall = 64.29% | DC Recall = 63.81% (T = 0.815)
+2. Contract_A + Block 4 : Bal Acc = 63.33% | AC Recall = 57.14% | DC Recall = 69.52% (T = 0.790)
+3. Contract_A + Block 1 : Bal Acc = 63.10% | AC Recall = 64.29% | DC Recall = 61.90% (T = 0.830)
+4. Contract_A + Block 2 : Bal Acc = 63.10% | AC Recall = 64.29% | DC Recall = 61.90% (T = 0.840)
+5. Contract_A + All Blks: Bal Acc = 60.95% | AC Recall = 57.14% | DC Recall = 64.76% (T = 0.810)
+
+================================================================================
+SECTION 4: QUARANTINED OUTER-TEST BENCHMARK (35 STATIONS / 8 DISTRICTS)
+================================================================================
+- Current Bakeoff Best RF (Benchmark)   : Bal Acc = 60.90% | AC Recall = 33.33% (3/9) | DC Recall = 88.46% (23/26) | Macro F1 = 0.6182 | Acc = 74.29%
+- RF_0039_ClassWeight_None (Band 4)     : Bal Acc = 64.74% | AC Recall = 33.33% (3/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.6694 | Acc = 80.00%
+- RF_0002_ClassWeight_None (Band 2)     : Bal Acc = 51.71% | AC Recall = 11.11% (1/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.4971 | Acc = 71.43%
+- Fixed Baseline Contract A (T=0.740)   : Bal Acc = 57.26% | AC Recall = 22.22% (2/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.5749 | Acc = 74.29%
+- Fixed Baseline Contract A+Block1 (T=0.740): Bal Acc = 57.26% | AC Recall = 22.22% (2/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.5749 | Acc = 74.29%
+- Fixed Baseline Contract A+Block4 (T=0.740): Bal Acc = 59.19% | AC Recall = 22.22% (2/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.5977 | Acc = 77.14%
+- Fixed Baseline Contract A+All_Blocks (T=0.740): Bal Acc = 59.19% | AC Recall = 22.22% (2/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.5977 | Acc = 77.14%
+
+================================================================================
+SECTION 5: AC ERROR ANALYSIS (CURRENT BAKEOFF BEST RF)
+================================================================================
+Detailed Profile of the 9 Outer-Test AC Slow Stations:
+- Trunk Road Proportion         : 100.0% (9 out of 9 stations)
+- Government Office Proportion  :  88.9% (8 out of 9 stations)
+- Mean Distance to Highway      :  0.64 km
+- Mean Distance to City Center  : 16.85 km
+- Mean Nearby POI Count         :  32.6
+- Mean Predicted P(DC) Missed   : 0.954 (n=6)
+- Mean Predicted P(DC) Detected : 0.669 (n=3)
+
+Defensible Findings on Spatial Covariate Shift:
+1. Spatial covariate shift was observed between the development and held-out districts.
+2. In development, AC Slow stations were primarily located in residential zones (35.71%).
+3. In held-out districts, 100% of actual AC stations were deployed along trunk highways,
+   and 88.9% were at Government Offices with dense commercial POIs.
+4. Because outer-test AC stations physically mimic the spatial footprint of DC fast hubs,
+   purely spatial exogenous models assign them elevated DC probabilities (mean P(DC) = 0.954),
+   leading to false-positive classification.
+
+================================================================================
+SECTION 6: SCIENTIFIC LIMITATIONS & PRODUCTION GOVERNANCE
+================================================================================
+- The tested exogenous spatial feature space was insufficient to reliably distinguish AC Slow from
+  DC Fast under the observed held-out distribution.
+- Electrical/site-level variables may provide additional discriminatory information and represent
+  a future data-enrichment direction.
+- Production deployment model: models/final_deployment_model.joblib remains 100% frozen.
+- Production candidate must NOT be changed.
+================================================================================

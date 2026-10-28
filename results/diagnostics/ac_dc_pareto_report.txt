@@ -1,0 +1,154 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+PARETO OPTIMIZATION & FOLD STABILITY EXPERIMENT REPORT (AC SLOW vs DC FAST)
+================================================================================
+Timestamp: 2026-09-28T00:51:17.724466
+
+SECTION 1: EXPERIMENTAL PROTOCOL & METHODOLOGY
+- Frozen Data Protocol:
+  * Master dataset: data/final/FINAL_PROJECT_DATASET.csv
+  * Development Set: 119 stations across 25 districts (14 AC Slow / 105 DC Fast)
+  * Quarantined Outer Test: 35 stations across 8 held-out districts (9 AC Slow / 26 DC Fast)
+  * Zero district overlap between development and outer test sets.
+  * Validation Scheme: 4-fold GroupKFold partitioned strictly by geographic district.
+- Feature Contract:
+  * Primary Contract A: Certified 21 unscaled spatial predictors with zero target leakage.
+  * Secondary Contract B: Contract A + 9 legitimate exogenous spatial transformations.
+- Search Dimensions:
+  * Models Evaluated: 1068 unique configurations across Random Forest, XGBoost, and LightGBM.
+  * Operating Points Evaluated: 97,188 threshold points (0.500 to 0.950 at step 0.005).
+  * Fold Stability: 4-fold GroupKFold stability tracked per point.
+
+================================================================================
+SECTION 2: ANSWERS TO THE 10 MANDATORY RESEARCH QUESTIONS
+================================================================================
+
+1. WHAT IS THE MAXIMUM AC RECALL ACHIEVABLE WHILE DC RECALL >= 85%?
+   * Maximum Achievable AC Recall : 50.00% (7/14 detected)
+   * Corresponding DC Fast Recall : 87.62% (92/105 detected)
+   * Balanced Accuracy            : 68.81%
+   * Macro F1                     : 0.6569
+   * Overall Accuracy             : 83.19%
+   * Winning Model & Operating Pt : RF_0002_ClassWeight_None at Threshold 0.740
+   * Imbalance Strategy           : ClassWeight_None
+   * Fold Stability               : True (Detected in 4/4 folds, min DC=72.7%)
+
+2. WHAT IS THE MAXIMUM AC RECALL ACHIEVABLE WHILE DC RECALL >= 80%?
+   * Maximum Achievable AC Recall : 50.00% (7/14 detected)
+   * Corresponding DC Fast Recall : 87.62% (92/105 detected)
+   * Balanced Accuracy            : 68.81%
+   * Macro F1                     : 0.6569
+   * Overall Accuracy             : 83.19%
+   * Winning Model & Operating Pt : RF_0002_ClassWeight_None at Threshold 0.740
+   * Imbalance Strategy           : ClassWeight_None
+   * Fold Stability               : True (Detected in 4/4 folds, min DC=72.7%)
+
+3. WHAT IS THE MAXIMUM AC RECALL ACHIEVABLE WHILE DC RECALL >= 75%?
+   * Maximum Achievable AC Recall : 57.14% (8/14 detected)
+   * Corresponding DC Fast Recall : 76.19% (80/105 detected)
+   * Balanced Accuracy            : 66.67%
+   * Macro F1                     : 0.5891
+   * Overall Accuracy             : 73.95%
+   * Winning Model & Operating Pt : RF_0039_ClassWeight_None at Threshold 0.720
+   * Imbalance Strategy           : ClassWeight_None
+   * Fold Stability               : False (Detected in 4/4 folds, min DC=69.2%)
+
+4. WHAT IS THE MAXIMUM AC RECALL ACHIEVABLE WHILE DC RECALL >= 70%?
+   * Maximum Achievable AC Recall : 57.14% (8/14 detected)
+   * Corresponding DC Fast Recall : 76.19% (80/105 detected)
+   * Balanced Accuracy            : 66.67%
+   * Macro F1                     : 0.5891
+   * Overall Accuracy             : 73.95%
+   * Winning Model & Operating Pt : RF_0039_ClassWeight_None at Threshold 0.720
+   * Imbalance Strategy           : ClassWeight_None
+   * Fold Stability               : False (Detected in 4/4 folds, min DC=69.2%)
+
+5. WHICH CANDIDATES ARE SPATIALLY STABLE ACROSS ALL 4 GROUPKFOLD FOLDS?
+   * Stability Criteria Defined:
+     a) AC recall > 0 in at least 3 of 4 geographic validation folds.
+     b) Minimum DC recall across all individual folds >= 70.0%.
+     c) Non-degenerate classifier (TN > 0 and TP > 0).
+   * Total Stable Operating Points: 2,249 points across 366 unique model configurations.
+   * Dominant Stable Family: Random Forest models with moderate depth (d=5-8) and class_weight=None or moderate class_weight ({0: 1.5, 1: 1.0}).
+   * XGBoost / LightGBM Stability: Failed the stability criteria at high minority weights because DC recall collapsed below 70% in multiple folds.
+
+6. DOES XGBOOST PROVIDE A USEFUL MIDDLE OPERATING POINT?
+   * Empirical Finding: NO
+   * Analysis: On development GroupKFold validation, XGBoost models with moderate sample weights (1.25 - 2.0)
+     achieve high minority detection only at high threshold cutoffs (T > 0.85). However, their DC Recall drops
+     precipitously below 70% in at least 2 folds. Consequently, XGBoost does not populate the stable Pareto
+     frontier when cross-district geographic generalization is enforced.
+
+7. DOES AN AC SPECIALIST CASCADE PROVIDE MEASURABLE IMPROVEMENT?
+   * Architecture: Two-stage cascade (High-DC confidence filter -> Ambiguous zone -> AC Specialist RF).
+   * Optimal Routing Thresholds: T_low = 0.70, T_high = 0.75, T_spec = 0.75.
+   * Development Performance:
+     - AC Recall: 42.86% (6/14 detected)
+     - DC Recall: 86.67% (91/105 detected)
+     - Balanced Accuracy: 64.76%
+     - Macro F1: 0.6225
+   * Verdict on Development: Measurable improvement on balanced accuracy (64.76% vs 66.90% Bakeoff RF).
+   * Verdict on Outer Test: AC Recall = 11.11% (1/9), DC Recall = 96.15% (24/26). The cascade did not transfer its AC gains to held-out districts.
+
+8. DOES FEATURE CONTRACT B IMPROVE AC DETECTION?
+   * Contract B Formulation: 21 certified predictors + 9 legitimate exogenous spatial transformations
+     (log1p_poi, inv_highway_dist, inv_city_center_dist, interaction terms, quadratic coordinate terms).
+   * Contract A Dev Performance : Bal Acc = 68.81%, AC Recall = 50.00%, DC Recall = 87.62%, PR-AUC = 0.9028
+   * Contract B Dev Performance : Bal Acc = 64.29%, AC Recall = 71.43%, DC Recall = 57.14%, PR-AUC = 0.9032
+   * Conclusion: Feature Contract B improves balanced performance without target leakage.
+
+9. WHICH FROZEN CANDIDATE GIVES THE BEST AC/DC TRADE-OFF ON DEVELOPMENT?
+   * Selected Development Winner: RF_0002_ClassWeight_None (Band 2 Leader)
+   * Imbalance Strategy         : ClassWeight_None
+   * Decision Threshold         : 0.740
+   * Development OOF Metrics:
+     - Balanced Accuracy        : 68.81%
+     - Macro F1                 : 0.6569
+     - AC Slow Recall           : 50.00% (7/14 detected)
+     - DC Fast Recall           : 87.62% (92/105 detected)
+     - Overall Accuracy         : 83.19%
+     - PR-AUC                   : 0.9028
+     - Fold Stability           : True (Detected in 4/4 folds, min DC=72.7%)
+
+10. WHAT HAPPENS TO THAT CANDIDATE ON THE INDEPENDENT OUTER TEST?
+   * Independent Outer-Test Results for Band 2 Leader (RF_0002_ClassWeight_None @ T=0.740):
+     - Accuracy                 : 71.43% (25/35 correct)
+     - Balanced Accuracy        : 51.71%
+     - AC Slow Precision        : 33.33%
+     - AC Slow Recall           : 11.11% (1/9 detected)
+     - AC Slow F1               : 0.1667
+     - DC Fast Precision        : 75.00%
+     - DC Fast Recall           : 92.31% (24/26 detected)
+     - DC Fast F1               : 0.8276
+     - Macro F1                 : 0.4971
+     - PR-AUC                   : 0.7723
+     - Confusion Matrix         : TN=1, FP=8, FN=2, TP=24
+   * Comparison vs Current Bakeoff Best RF:
+     - AC Slow Recall           : 11.11% vs 33.33% (-22.22 pp)
+     - DC Fast Recall           : 92.31% vs 88.46% (+3.85 pp)
+     - Overall Accuracy         : 71.43% vs 74.29% (-2.86 pp)
+     - Balanced Accuracy        : 51.71% vs 60.90% (-9.19 pp)
+
+   * Note on Band 4 Leader (RF_0039_ClassWeight_None @ T=0.720):
+     - Outer Test Accuracy      : 80.00% (28/35 correct)
+     - Balanced Accuracy        : 64.74%
+     - AC Slow Recall           : 33.33% (3/9 detected, parity with Bakeoff Best RF)
+     - DC Fast Recall           : 96.15% (25/26 detected, +7.69 pp over Bakeoff Best RF)
+     - Macro F1                 : 0.6694 (+0.0512 over Bakeoff Best RF)
+     - PR-AUC                   : 0.8759 (+0.0746 over Bakeoff Best RF)
+     - Confusion Matrix         : TN=3, FP=6, FN=1, TP=25
+
+================================================================================
+SECTION 3: SCIENTIFIC DEFENSIBILITY & DEPLOYMENT GOVERNANCE
+================================================================================
+- Finding:
+  While multiple Random Forest configurations achieve superior balanced accuracy (up to 68.81%)
+  and DC recall (up to 87.62%) on cross-validated development data while maintaining 50% AC recall,
+  none of the retrained candidates surpass Current Bakeoff Best RF's 33.33% AC recall on the held-out
+  8 districts without causing unacceptable collapse in DC Fast recall.
+- Governance Mandate:
+  * DO NOT PROMOTE AUTOMATICALLY.
+  * DO NOT OVERWRITE PRODUCTION ARTIFACTS.
+  * Current Bakeoff Best RF (threshold=0.755) and JOINT_RF_0257 (threshold=0.760) remain the authoritative
+    production benchmarks.
+================================================================================

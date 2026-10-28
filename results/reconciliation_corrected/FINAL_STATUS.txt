@@ -1,0 +1,58 @@
+================================================================================
+FINAL STATUS: CORRECTED RECONCILIATION & GOVERNANCE AUDIT
+Project: Explainable AI Framework for Smart EV Charging Infrastructure Planning
+Timestamp: 2026-09-28T01:36:56.111903
+================================================================================
+
+A. ARE THE EXISTING AC SIGNAL METRICS INTERNALLY CONSISTENT?
+   NO. Prior written narrative reports mixed metrics from historical tuned candidate
+   RF_0002 (Band 2 winner) with a fixed RF baseline (depth=6, max_features='sqrt').
+   This caused claimed development metrics (68.81% Bal Acc, 50.00% AC recall)
+   to directly contradict the fixed baseline's actual fold predictions.
+
+B. WHICH EXISTING REPORTS CONTAIN INCORRECT NUMBERS?
+   - results/diagnostics/ac_signal_enrichment_report.txt:
+     1. Attributed RF_0002 metrics (68.81% Bal Acc, 50.00% AC recall, 87.62% DC recall)
+        to the fixed RF baseline.
+     2. Stated Block 1 improved Bal Acc to 69.76% (hallucinated/unverified).
+     3. Stated Block 1 min fold DC recall was 77.3% (transcription from RF_0002).
+   All replaced by results/reconciliation_corrected/CORRECTED_RECONCILIATION_REPORT.txt.
+
+C. WHAT IS THE CORRECTED DEVELOPMENT RESULT?
+   - Fixed RF Baseline Contract A @ T=0.740:
+     Bal Acc = 50.48% | AC Recall = 14.29% (2/14) | DC Recall = 86.67% (91/105)
+   - Fixed RF Baseline Block 1 @ T=0.740:
+     Bal Acc = 45.95% | AC Recall = 7.14% (1/14) | DC Recall = 84.76% (89/105)
+   - Historical Tuned RF_0002 @ T=0.740:
+     Bal Acc = 68.81% | AC Recall = 50.00% (7/14) | DC Recall = 87.62% (92/105)
+
+D. WHAT IS THE CORRECTED FOLD-STABILITY RESULT?
+   - Fixed RF Baseline Block 1 is UNSTABLE across all thresholds:
+     * At peak threshold T=0.830: Min DC recall = 51.28% (< 70% threshold).
+     * At candidate threshold T=0.740: AC detected in only 1 of 4 folds.
+   - Historical Tuned RF_0002 is STABLE:
+     * Min DC recall = 72.73% | AC detected in 4 of 4 folds.
+
+E. WHAT IS THE CORRECTED OUTER-TEST RESULT?
+   - Current Bakeoff Best RF (Benchmark @ 0.755) : Bal Acc = 60.90% | AC Recall = 33.33% (3/9) | DC Recall = 88.46% (23/26) | Macro F1 = 0.6182
+   - RF_0039_ClassWeight_None (Band 4 @ 0.720)   : Bal Acc = 64.74% | AC Recall = 33.33% (3/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.6694
+   - RF_0002_ClassWeight_None (Band 2 @ 0.740)   : Bal Acc = 51.71% | AC Recall = 11.11% (1/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.4971
+   - All Fixed Site-Context RF Baselines (@ 0.740): Bal Acc = 57.26%--59.19% | AC Recall = 22.22% (2/9) | DC Recall = 92.31%--96.15%
+
+F. WHAT IS THE DEFENSIBLE SPATIAL-COVARIATE-SHIFT CONCLUSION?
+   Spatial covariate shift was observed between the development and held-out districts.
+   Outer-test AC stations physically mimic development DC Fast stations along trunk roads
+   (100% of outer AC on trunk roads) and government campuses (88.9%). The tested exogenous
+   spatial feature space was insufficient to reliably distinguish AC Slow from DC Fast under
+   this distribution.
+
+G. DOES ANY FEATURE BLOCK JUSTIFY CHANGING PRODUCTION?
+   NO. None of the feature blocks improved outer-test AC detection beyond the established
+   benchmarks (all achieved 22.22% AC recall vs 33.33% for Bakeoff Best RF).
+
+H. IS PRODUCTION STILL FROZEN?
+   YES. 100% FROZEN AND UNTOUCHED.
+   - models/final_deployment_model.joblib: UNCHANGED
+   - models/final_deployment_metadata.json: UNCHANGED
+   - models/final_deployment_threshold.json: UNCHANGED
+================================================================================

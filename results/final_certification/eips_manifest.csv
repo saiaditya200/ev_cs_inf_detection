@@ -1,0 +1,8 @@
+criterion,weight,source,role,synthesis_method,ahp_cr,consistency_status,certified_statement,status
+C1 EV Adoption Context,0.2565,District Context Registry / Vahan,Macro Planning Criterion,,,,,
+C2 Infrastructure Gap,0.3449,District Fast Charger Deficit vs EV Base,Macro Planning Criterion,,,,,
+C3 Corridor Importance,0.1329,National Highway Crossings & Connectivity,Macro Planning Criterion,,,,,
+C4 Grid Context,0.1329,DISCOM Section Monthly Context,Macro Planning Criterion,,,,,
+C5 Spatial Suitability,0.1329,Aggregated Spatial & Urbanization Index,Macro Planning Criterion,,,,,
+,,,Multi-Criteria Prioritization,AHP -> TOPSIS -> EIPS,0.000891,CONSISTENT (CR < 0.10),,
+,,,Governance,,,,EIPS identifies districts with higher relative planning priority for investigation and potential infrastructure expansion. It does not prescribe an exact station location or exact station count.,FROZEN

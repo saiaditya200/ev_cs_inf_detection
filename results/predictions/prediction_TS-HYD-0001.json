@@ -1,0 +1,278 @@
+{
+  "status": "success",
+  "project": "Explainable AI Framework for Smart EV Charging Infrastructure Planning",
+  "step": 8,
+  "station_id": "TS-HYD-0001",
+  "station_name": "Fortum Mahindra",
+  "input_mode": "existing_frozen_station",
+  "coordinates": {
+    "latitude": 17.44366,
+    "longitude": 78.46395
+  },
+  "district": "Hyderabad",
+  "road_type": "residential",
+  "model": {
+    "name": "Random_Forest",
+    "runtime_class": "RandomForestClassifier",
+    "feature_count": 21,
+    "decision_threshold": 0.76,
+    "scaling": false
+  },
+  "prediction": {
+    "class_label": 0,
+    "classification": "AC Slow/Medium Charging (< 50kW)",
+    "probability_dc_fast": 0.4461,
+    "probability_ac_slow": 0.5539,
+    "predicted_class_probability": 0.5539,
+    "threshold_applied": 0.76
+  },
+  "feature_vector": {
+    "latitude": 17.44366,
+    "longitude": 78.46395,
+    "distance_to_highway_km": 2.11,
+    "distance_to_city_center_km": 7.6,
+    "nearby_poi_count": 44.0,
+    "highway_proximity_score": 0.321543,
+    "city_center_proximity_score": 0.116279,
+    "poi_diversity_index": 0.7138,
+    "road_type_motorway": 0.0,
+    "road_type_primary": 0.0,
+    "road_type_residential": 1.0,
+    "road_type_secondary": 0.0,
+    "road_type_service": 0.0,
+    "road_type_trunk": 0.0,
+    "road_type_unclassified": 0.0,
+    "district_population_density_2011": 18172.0,
+    "district_urban_population_pct": 100.0,
+    "district_projected_density_fy24": 19767.2,
+    "district_nh_crossing_count": 5.0,
+    "district_ev_penetration_rate": 5.05,
+    "discom_utility_data_available_flag": 1.0
+  },
+  "explainable_ai": {
+    "target_interpretation": "Observed fast-charging infrastructure classification; not station-level charging demand/utilization.",
+    "top_positive_drivers": [
+      {
+        "feature": "latitude",
+        "value": 17.4437,
+        "shap_impact": 0.007829
+      },
+      {
+        "feature": "nearby_poi_count",
+        "value": 44.0,
+        "shap_impact": 0.005669
+      },
+      {
+        "feature": "discom_utility_data_available_flag",
+        "value": 1.0,
+        "shap_impact": 0.005045
+      }
+    ],
+    "top_negative_drivers": [
+      {
+        "feature": "road_type_residential",
+        "value": 1.0,
+        "shap_impact": -0.362181
+      },
+      {
+        "feature": "poi_diversity_index",
+        "value": 0.7138,
+        "shap_impact": -0.024705
+      },
+      {
+        "feature": "city_center_proximity_score",
+        "value": 0.1163,
+        "shap_impact": -0.012604
+      }
+    ],
+    "all_local_attributions": [
+      {
+        "feature": "latitude",
+        "value": 17.4437,
+        "shap_impact": 0.007829
+      },
+      {
+        "feature": "longitude",
+        "value": 78.4639,
+        "shap_impact": 0.001534
+      },
+      {
+        "feature": "distance_to_highway_km",
+        "value": 2.11,
+        "shap_impact": -0.004141
+      },
+      {
+        "feature": "distance_to_city_center_km",
+        "value": 7.6,
+        "shap_impact": -0.004841
+      },
+      {
+        "feature": "nearby_poi_count",
+        "value": 44.0,
+        "shap_impact": 0.005669
+      },
+      {
+        "feature": "highway_proximity_score",
+        "value": 0.3215,
+        "shap_impact": -0.007624
+      },
+      {
+        "feature": "city_center_proximity_score",
+        "value": 0.1163,
+        "shap_impact": -0.012604
+      },
+      {
+        "feature": "poi_diversity_index",
+        "value": 0.7138,
+        "shap_impact": -0.024705
+      },
+      {
+        "feature": "road_type_motorway",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_primary",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_residential",
+        "value": 1.0,
+        "shap_impact": -0.362181
+      },
+      {
+        "feature": "road_type_secondary",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_service",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_trunk",
+        "value": 0.0,
+        "shap_impact": -0.002461
+      },
+      {
+        "feature": "road_type_unclassified",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "district_population_density_2011",
+        "value": 18172.0,
+        "shap_impact": -0.000291
+      },
+      {
+        "feature": "district_urban_population_pct",
+        "value": 100.0,
+        "shap_impact": 0.000151
+      },
+      {
+        "feature": "district_projected_density_fy24",
+        "value": 19767.2,
+        "shap_impact": -0.003513
+      },
+      {
+        "feature": "district_nh_crossing_count",
+        "value": 5.0,
+        "shap_impact": 0.0003
+      },
+      {
+        "feature": "district_ev_penetration_rate",
+        "value": 5.05,
+        "shap_impact": -0.000902
+      },
+      {
+        "feature": "discom_utility_data_available_flag",
+        "value": 1.0,
+        "shap_impact": 0.005045
+      }
+    ]
+  },
+  "actionable_counterfactual": {
+    "status": "scenarios_generated",
+    "target_probability": 0.76,
+    "candidate_count": 31,
+    "best_scenario": {
+      "changed_lever": "distance_to_city_center_km",
+      "new_value": 0.5,
+      "change_magnitude": 7.1,
+      "probability_dc_fast": 0.5008208904034476,
+      "crosses_threshold": false
+    },
+    "scenarios": [
+      {
+        "changed_lever": "distance_to_city_center_km",
+        "new_value": 0.5,
+        "change_magnitude": 7.1,
+        "probability_dc_fast": 0.5008208904034476,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "distance_to_city_center_km",
+        "new_value": 1.0,
+        "change_magnitude": 6.6,
+        "probability_dc_fast": 0.5008208904034475,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "distance_to_city_center_km",
+        "new_value": 2.0,
+        "change_magnitude": 5.6,
+        "probability_dc_fast": 0.49419984345255696,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "distance_to_city_center_km",
+        "new_value": 5.0,
+        "change_magnitude": 2.5999999999999996,
+        "probability_dc_fast": 0.4838296178295682,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "distance_to_city_center_km",
+        "new_value": 3.0,
+        "change_magnitude": 4.6,
+        "probability_dc_fast": 0.4838296178295682,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "poi_diversity_index",
+        "new_value": 0.5,
+        "change_magnitude": 0.2138,
+        "probability_dc_fast": 0.47422278101728765,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "distance_to_city_center_km",
+        "new_value": 0.0,
+        "change_magnitude": 7.6,
+        "probability_dc_fast": 0.46996085017118566,
+        "crosses_threshold": false
+      },
+      {
+        "changed_lever": "distance_to_highway_km",
+        "new_value": 3.0,
+        "change_magnitude": 0.8900000000000001,
+        "probability_dc_fast": 0.46915867715442017,
+        "crosses_threshold": false
+      }
+    ],
+    "interpretation": "These scenarios show how the trained model responds to feasible changes in approved site-selection levers. They are model-based counterfactual simulations, not causal guarantees."
+  },
+  "regional_planning_context": {
+    "district": "Hyderabad",
+    "eips_rank": 4,
+    "eips_score": 52.78,
+    "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+    "infrastructure_gap_index": 0.1262,
+    "ev_penetration_rate": 5.05,
+    "existing_fast_stations": 39,
+    "planning_narrative": "Rank #4; EIPS 52.78/100. FY2023-24 EV penetration 5.050 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 10098.4/year. Infrastructure Gap 0.1262 with 39 fast stations; NH crossings 5; spatial suitability 0.3146; grid score 1.0000 (Observed TGSPDCL district throughput evidence)"
+  },
+  "methodological_note": "EIPS is a district-level planning score. District EV penetration and grid context are used as contextual planning information and are not converted into station-level demand."
+}

@@ -1,0 +1,10 @@
+variable_name,exclusion_reason,description,status
+charger_type,Target proxy,Direct hardware classification of charging mode,STRICTLY_EXCLUDED
+charging_power_kw,Target formulation,Direct continuous kW power definition of fast charging,STRICTLY_EXCLUDED
+station_capacity,Equipment specification,Hardware charging capacity rating,STRICTLY_EXCLUDED
+connector_type,Equipment specification,"Hardware connector standard (CCS2, Type 2, etc.)",STRICTLY_EXCLUDED
+number_of_chargers,Equipment specification,Hardware charger bay count,STRICTLY_EXCLUDED
+operator,Commercial identity,Operator brand identity (non-spatial),STRICTLY_EXCLUDED
+district_fast_stations,Target aggregate leakage,Aggregated regional fast charging count,STRICTLY_EXCLUDED
+district_fast_charger_ratio,Target aggregate leakage,Aggregated regional fast charging ratio,STRICTLY_EXCLUDED
+traffic_density,Unmeasured variable,Empirical sensor data unavailable across 33 districts; not fabricated,STRICTLY_EXCLUDED

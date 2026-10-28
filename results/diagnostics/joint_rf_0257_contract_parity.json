@@ -1,0 +1,60 @@
+{
+  "contract_check_timestamp": "2026-09-27T21:48:52.466625",
+  "predictor_count_parity": {
+    "production_predictors": 21,
+    "candidate_predictors": 21,
+    "match": true
+  },
+  "predictor_ordering_parity": {
+    "match": true
+  },
+  "target_definition_parity": {
+    "production_target": "fast_charging_flag (1=DC Fast >=50kW, 0=AC Slow <50kW)",
+    "candidate_target": "fast_charging_flag (1=DC Fast >=50kW, 0=AC Slow <50kW)",
+    "match": true
+  },
+  "threshold_parity": {
+    "production_threshold": 0.76,
+    "candidate_threshold": 0.76,
+    "match": true
+  },
+  "scaling_parity": {
+    "production_scaling": false,
+    "candidate_scaling": false,
+    "match": true
+  },
+  "feature_construction_logic": {
+    "road_type_one_hot_encoding": "7 valid categories: motorway, primary, residential, secondary, service, trunk, unclassified",
+    "proximity_score_formulas": "1.0 / (1.0 + distance_km)",
+    "district_context_enrichment": "6 census/penetration/grid flags from district_context_lookup.json",
+    "match": true
+  },
+  "intended_hyperparameter_differences": {
+    "max_depth": {
+      "production": 3,
+      "candidate": 6,
+      "intended_change": "3 -> 6"
+    },
+    "min_samples_split": {
+      "production": 2,
+      "candidate": 7,
+      "intended_change": "2 -> 7"
+    },
+    "min_samples_leaf": {
+      "production": 2,
+      "candidate": 1,
+      "intended_change": "2 -> 1"
+    },
+    "n_estimators": {
+      "production": 250,
+      "candidate": 250,
+      "match": true
+    },
+    "max_features": {
+      "production": 0.5,
+      "candidate": 0.5,
+      "match": true
+    }
+  },
+  "parity_audit_verdict": "FULL_PARITY_VERIFIED"
+}

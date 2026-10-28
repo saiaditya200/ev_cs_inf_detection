@@ -1,0 +1,13 @@
+feature,importance
+latitude,0.11981614798100916
+city_center_proximity_score,0.11944633346372667
+distance_to_city_center_km,0.11097230112423613
+road_type_residential,0.10521139783954275
+distance_to_highway_km,0.0991701885064852
+highway_proximity_score,0.0881106795230399
+longitude,0.08175730012142673
+nearby_poi_count,0.054068724761503165
+district_projected_density_fy24,0.0504157026774082
+district_ev_penetration_rate,0.04814489012621376
+district_population_density_2011,0.03976670193253401
+district_urban_population_pct,0.025653656102965675

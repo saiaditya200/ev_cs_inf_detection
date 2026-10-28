@@ -1,0 +1,326 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+CANDIDATE CERTIFICATION & READ-ONLY DEPLOYMENT AUDIT REPORT
+================================================================================
+Candidate Model Evaluated : JOINT_RF_0257
+Target Architecture       : Random Forest (n_estimators=250, max_depth=6, min_samples_split=7,
+                            min_samples_leaf=1, max_features=0.5, criterion='gini', bootstrap=True)
+Decision Threshold        : 0.76
+Predictor Contract        : Exactly 21 Certified Non-Leaky Exogenous Spatial Predictors
+Audit Protocol Execution  : Read-Only Verification on Available Development/Outer-Test Protocol
+Current Deployment State  : Current Production Model Remains Frozen; Candidate Prepared Separately
+Report Timestamp          : 2026-09-27T20:47:30
+================================================================================
+
+EXPLICIT GOVERNANCE STATEMENT:
+"Candidate deployment prepared separately; current production deployment remains frozen."
+
+--------------------------------------------------------------------------------
+1. ARTIFACT INTEGRITY AUDIT
+--------------------------------------------------------------------------------
+All authoritative candidate and diagnostic artifacts from the second-generation
+joint optimization search were verified in place and validated for structural
+integrity:
+
+- models/joint_primary_candidate.joblib         : Verified (397,865 bytes)
+- models/joint_secondary_candidate.joblib       : Verified (362,361 bytes)
+- models/joint_macro_candidate.joblib           : Verified (397,865 bytes)
+- results/diagnostics/joint_cost_sensitive_search.csv : Verified (9,432,601 bytes, 30,628 evaluations)
+- results/diagnostics/joint_baseline_vs_candidates.csv : Verified (1,459 bytes)
+- results/diagnostics/joint_outer_test_results.csv     : Verified (1,548 bytes)
+- results/diagnostics/joint_top_balanced.csv           : Verified (8,726 bytes)
+- results/diagnostics/joint_top_accuracy.csv           : Verified (8,990 bytes)
+- results/diagnostics/joint_top_macro.csv              : Verified (8,726 bytes)
+- results/diagnostics/joint_pareto.csv                 : Verified (34,716 bytes)
+- results/diagnostics/joint_cost_sensitive_report.txt  : Verified (14,795 bytes)
+
+Parameter Verification for JOINT_RF_0257:
+- model_family          : Random_Forest (RandomForestClassifier)
+- n_estimators          : 250 (int)
+- max_depth             : 6 (int)
+- min_samples_split     : 7 (int)
+- min_samples_leaf      : 1 (int)
+- max_features          : 0.5 (numeric float, verified isinstance float: True; NOT string '0.5')
+- criterion             : 'gini'
+- bootstrap             : True
+- class_weight          : None (w0=1.0)
+- threshold             : 0.76
+- feature_subset        : A_all_21
+
+Saved estimator was loaded via joblib and confirmed to execute predictions successfully.
+
+--------------------------------------------------------------------------------
+2. DATA AND FEATURE CONTRACT AUDIT
+--------------------------------------------------------------------------------
+The candidate model strictly consumes exactly the 21 certified predictors:
+ 1. latitude
+ 2. longitude
+ 3. distance_to_highway_km
+ 4. distance_to_city_center_km
+ 5. nearby_poi_count
+ 6. highway_proximity_score
+ 7. city_center_proximity_score
+ 8. poi_diversity_index
+ 9. road_type_motorway
+10. road_type_primary
+11. road_type_residential
+12. road_type_secondary
+13. road_type_service
+14. road_type_trunk
+15. road_type_unclassified
+16. district_population_density_2011
+17. district_urban_population_pct
+18. district_projected_density_fy24
+19. district_nh_crossing_count
+20. district_ev_penetration_rate
+21. discom_utility_data_available_flag
+
+Contract Parameters:
+- Target column         : fast_charging_flag (Binary: 1 = DC Fast >= 50kW, 0 = AC Slow < 50kW)
+- Grouping column       : district
+- Preprocessing scaling : False (Tree models operate directly on unscaled physical units)
+- Scaler requirement   : Verified that no StandardScaler or other scaler artifact is required
+
+Leakage Quarantine Verification:
+Verified that the following current-infrastructure and target-derived fields are
+strictly quarantined and excluded from model inputs:
+- charger_type
+- charging_power_kw
+- station_capacity
+- connector_type
+- number_of_chargers
+- operator
+- district_fast_stations
+- district_fast_charger_ratio
+- traffic_density
+
+--------------------------------------------------------------------------------
+3. MODEL REPRODUCTION CHECK (DEVELOPMENT SCOPE ONLY)
+--------------------------------------------------------------------------------
+Protocol Verification using strictly phase10_development.csv:
+- Scope                 : 119 development stations across 25 administrative districts
+- Class distribution    : Class 0 (AC Slow) = 14, Class 1 (DC Fast) = 105
+- Validation scheme     : 4-Fold GroupKFold strictly grouped by district
+- District overlap      : Zero district overlap across all 4 cross-validation folds
+- phase10_outer_test.csv: Intentionally NOT accessed during this reproduction stage
+
+Reproduced Out-Of-Fold (OOF) Metrics (Threshold = 0.76):
+- Accuracy              : 79.83% (95/119) [Exact match with stored candidate metadata]
+- Balanced Accuracy     : 66.90% [Exact match: 0.669048]
+- Class 0 (AC) Recall   : 50.00% (7/14) [Exact match: 0.500000]
+- Class 1 (DC) Recall   : 83.81% (88/105) [Exact match: 0.838095]
+- Class 0 F1            : 0.3684 [Exact match: 0.368421]
+- Class 1 F1            : 0.8800 [Exact match: 0.880000]
+- Macro F1              : 0.6242 [Exact match: 0.624211]
+- PR-AUC                : 0.8988 [Exact match: 0.898806]
+- ROC-AUC               : 0.5806 [Exact match: 0.580612]
+- Recall Gap            : 33.81% (|83.81% - 50.00%|)
+- Confusion Matrix      : TN=7, FP=7, FN=17, TP=88
+
+Status: 100% exact reproduction confirmed on the development protocol.
+
+--------------------------------------------------------------------------------
+4. OUTER-TEST PROVENANCE AUDIT
+--------------------------------------------------------------------------------
+Verified the existing independent benchmark stored in results/diagnostics/joint_outer_test_results.csv.
+No new outer-test experiment, re-tuning, or model selection was performed.
+
+Outer-Test Quarantine Verification:
+- Station count         : Exactly 35 stations
+- District count        : Exactly 8 held-out administrative districts
+- Class balance         : 26 Class 1 (DC Fast), 9 Class 0 (AC Slow)
+- Spatial isolation     : Zero district overlap between the 25 development districts
+                          and the 8 held-out outer-test districts
+
+Stored Performance Comparison on Spatially Held-Out Districts:
+Metric                   Current Production Model    Candidate JOINT_RF_0257    Net Change
+Decision Threshold       0.76                        0.76                       +0.00
+Accuracy                 71.43% (25/35)              74.29% (26/35)             +2.86 pp
+Balanced Accuracy        51.71%                      57.26%                     +5.56 pp
+Class 0 (AC) Recall      11.11% (1/9)                22.22% (2/9)               +11.11 pp (Doubled)
+Class 1 (DC) Recall      92.31% (24/26)              92.31% (24/26)             0.00 pp (Preserved)
+Class 0 F1               0.1667                      0.3077                     +0.1410
+Class 1 F1               0.8276                      0.8421                     +0.0145
+Macro F1                 0.4971                      0.5749                     +0.0778
+PR-AUC                   0.7320                      0.8092                     +0.0772
+ROC-AUC                  0.5043                      0.5897                     +0.0855
+Recall Gap               81.20%                      70.09%                     -11.11 pp (Narrowed)
+Confusion Matrix         TN=1, FP=8, FN=2, TP=24     TN=2, FP=7, FN=2, TP=24    +1 TN, -1 FP
+
+Methodological Note:
+Outer-test benchmarking used the frozen 119-station development training scope,
+while the future deployment candidate, if approved, is retrained on all 154
+labeled stations.
+
+--------------------------------------------------------------------------------
+5. SHAP EXPLAINABILITY COMPATIBILITY
+--------------------------------------------------------------------------------
+TreeSHAP compatibility was tested using TreeExplainer over the candidate model.
+All artifacts were saved under the isolated directory results/xai/joint_rf_0257/:
+
+Created Files:
+- results/xai/joint_rf_0257/joint_rf_0257_shap_feature_importance.csv
+- results/xai/joint_rf_0257/joint_rf_0257_station_shap_values.csv
+- results/xai/joint_rf_0257/joint_rf_0257_shap_beeswarm.png
+- results/xai/joint_rf_0257/joint_rf_0257_shap_local_TS_MED_0001.png
+
+Top Global SHAP Drivers (Mean |SHAP| Attribution on P(DC Fast) — Recomputed Authoritative CSV):
+  1. road_type_residential               : Mean |SHAP| = 0.044424 (25.37%)
+  2. latitude                            : Mean |SHAP| = 0.020446 (11.68%)
+  3. nearby_poi_count                    : Mean |SHAP| = 0.011236 (6.42%)
+  4. longitude                           : Mean |SHAP| = 0.010994 (6.28%)
+  5. distance_to_city_center_km          : Mean |SHAP| = 0.010607 (6.06%)
+  6. city_center_proximity_score         : Mean |SHAP| = 0.010605 (6.06%)
+  7. poi_diversity_index                 : Mean |SHAP| = 0.010412 (5.95%)
+  8. highway_proximity_score             : Mean |SHAP| = 0.009836 (5.62%)
+  9. district_urban_population_pct       : Mean |SHAP| = 0.009772 (5.58%)
+ 10. distance_to_highway_km              : Mean |SHAP| = 0.009388 (5.36%)
+
+Critical Interpretability Boundary:
+SHAP values represent model-based feature attributions to the Random Forest's DC Fast probability output. They indicate how features contribute to the model prediction and do not establish causality, physical mechanisms, or actual charging demand/utilization.
+
+--------------------------------------------------------------------------------
+6. CONSTRAINED COUNTERFACTUAL PIPELINE COMPATIBILITY
+--------------------------------------------------------------------------------
+The constrained counterfactual optimization pipeline from 08_predict.py was
+tested against JOINT_RF_0257 using the certified threshold tau = 0.76.
+The search strictly explored only the 4 approved planning levers:
+- distance_to_highway_km
+- distance_to_city_center_km
+- nearby_poi_count
+- poi_diversity_index
+
+Test Results (results/diagnostics/joint_rf_0257_counterfactuals.json):
+1. Observed DC Fast Station (TS-MED-0001):
+   Base P(DC Fast) = 0.4385. Under the candidate model, base probability is below 0.76.
+   Counterfactual optimization generated 30 actionable planning scenarios.
+   Best scenario lever: poi_diversity_index -> 0.50 (Probability increases to 0.4960).
+2. Observed AC Slow Station (TS-HYD-0003):
+   Base P(DC Fast) = 0.3590. Counterfactual optimization generated 31 scenarios.
+   Best scenario lever: poi_diversity_index -> 0.50 (Probability increases to 0.4236).
+3. Prospective Site Scenario (TS_SAMPLE_PROSPECTIVE_01):
+   Base P(DC Fast) = 0.8195. Base probability is already above 0.76.
+   Counterfactual pipeline correctly outputs 'already_above_threshold'.
+
+Methodological Boundary:
+Counterfactual scenarios are model-based planning simulations illustrating how
+the mathematical decision surface responds to local lever adjustments. They do
+not represent physical or economic assurances.
+
+--------------------------------------------------------------------------------
+7. APPLICATION AND INFERENCE PIPELINE AUDIT
+--------------------------------------------------------------------------------
+Audit of 08_predict.py, app.py, and model loading modules:
+
+Separation of Inference vs Reference:
+- Model inference in 08_predict.py and app.py (/api/predict) accepts only the
+  certified 21 exogenous features.
+- Observed station attributes (fast_charging_flag, charger_type, etc.) are kept
+  strictly in the descriptive dataset view (/api/stations) and are NEVER passed
+  into model feature construction or predict_proba().
+- Station ID lookup (load_existing_station_by_id) explicitly sanitizes the station
+  record, discarding any observed target or current-infrastructure metadata.
+
+Pipeline Compatibility:
+- Dropdown station selector continues to load successfully from the frozen dataset.
+- Prospective site inference functions properly with zero reliance on existing records.
+- No deprecated scaler is referenced or loaded anywhere in the inference path.
+- Since JOINT_RF_0257 shares the identical 21-feature contract and 0.76 decision
+  threshold as the baseline, seamless interchangeability is achieved with zero
+  code modifications required for feature construction or validation.
+
+--------------------------------------------------------------------------------
+8. PROSPECTIVE SITE TEST VERIFICATION
+--------------------------------------------------------------------------------
+Test Sample: TS_SAMPLE_PROSPECTIVE_01
+(Illustrative Medchal Commercial Corridor Site, District: Medchal-Malkajgiri)
+Coordinates: Lat 17.6320, Lon 78.5610 | Road: primary | Hwy dist: 0.85 km |
+City dist: 6.20 km | POIs: 9.0 | POI diversity: 0.78
+
+Inference Outputs (results/diagnostics/joint_rf_0257_prospective_prediction.json):
+- P(DC Fast)            : 0.8195 (81.95%)
+- Decision Threshold    : 0.76
+- Predicted Class       : Class 1 -> DC Fast-Charging Infrastructure (>= 50kW)
+- Top Positive Drivers  : road_type_residential=0.0 (+0.0234), distance_to_city_center_km=6.2 (+0.0085), city_center_proximity_score=0.1389 (+0.0049)
+- Top Negative Drivers  : poi_diversity_index=0.78 (-0.0933), latitude=17.632 (-0.0055), district_ev_penetration_rate=4.111 (-0.0023)
+- Counterfactual Status : already_above_threshold (Candidate site already meets DC Fast criterion)
+
+--------------------------------------------------------------------------------
+9. EXISTING-STATION INFERENCE TEST
+--------------------------------------------------------------------------------
+Evaluated two physical stations with separate reporting of model inference and
+observed dataset reference:
+
+Station 1: TS-MED-0001 (Bharat Charge Ev Charging Station, Medchal-Malkajgiri)
+- Model Input           : Strictly constructed from 21 non-leaky predictors
+- Observed Dataset Label: DC Fast (>= 50 kW) [Observed fast_charging_flag = 1]
+- Candidate P(DC Fast)  : 0.4385
+- Decision Threshold    : 0.76
+- Candidate Prediction  : Class 0 -> AC Slow/Medium Charging (< 50kW)
+- Reference Comparison  : Model prediction differs from observed ground truth
+
+Station 2: TS-HYD-0003 (MobiLane CRVRGROWA-EV CHARGING STATION - 2, Hyderabad)
+- Model Input           : Strictly constructed from 21 non-leaky predictors
+- Observed Dataset Label: AC / Non-Fast [Observed fast_charging_flag = 0]
+- Candidate P(DC Fast)  : 0.3590
+- Decision Threshold    : 0.76
+- Candidate Prediction  : Class 0 -> AC Slow/Medium Charging (< 50kW)
+- Reference Comparison  : Model prediction matches observed ground truth
+
+--------------------------------------------------------------------------------
+10. DEPLOYMENT CANDIDATE PREPARATION (ISOLATED)
+--------------------------------------------------------------------------------
+In accordance with Stage 10 requirements, a separate deployment candidate artifact
+was prepared and saved without modifying or overwriting current production files:
+
+Created Candidate Artifacts:
+- models/joint_rf_0257_deployment_candidate.joblib (476,761 bytes)
+  Retrained on all 154 labeled stations across 33 districts (131 DC Fast, 23 AC Slow).
+  Unknown-label 12 stations remain excluded from supervised training scope.
+- models/joint_rf_0257_deployment_metadata.json
+  Complete audit trail, training scope, development OOF reference, and outer-test benchmark.
+- models/joint_rf_0257_deployment_threshold.json
+  Decision threshold payload (threshold = 0.76).
+
+Untouched Frozen Production Artifacts:
+- models/final_deployment_model.joblib         : UNTOUCHED (Timestamp & content preserved)
+- models/final_deployment_metadata.json      : UNTOUCHED (Timestamp & content preserved)
+- models/final_deployment_threshold.json     : UNTOUCHED (Timestamp & content preserved)
+
+Scope Documentation:
+- Independent outer-test benchmarking used the frozen 119-station development training scope.
+- The future deployment candidate artifact is retrained on all 154 labeled stations.
+
+--------------------------------------------------------------------------------
+11. EXACT FILES CREATED AND UNTOUCHED
+--------------------------------------------------------------------------------
+Files Created:
+1. scripts/audit_stages_1_to_4.py
+2. scripts/execute_stages_5_to_10.py
+3. results/xai/joint_rf_0257/joint_rf_0257_shap_feature_importance.csv
+4. results/xai/joint_rf_0257/joint_rf_0257_station_shap_values.csv
+5. results/xai/joint_rf_0257/joint_rf_0257_shap_beeswarm.png
+6. results/xai/joint_rf_0257/joint_rf_0257_shap_local_TS_MED_0001.png
+7. results/diagnostics/joint_rf_0257_counterfactuals.json
+8. results/diagnostics/joint_rf_0257_prospective_prediction.json
+9. models/joint_rf_0257_deployment_candidate.joblib
+10. models/joint_rf_0257_deployment_metadata.json
+11. models/joint_rf_0257_deployment_threshold.json
+12. results/diagnostics/joint_rf_0257_certification_report.txt
+
+Files Intentionally Left Untouched:
+1. models/final_deployment_model.joblib
+2. models/final_deployment_metadata.json
+3. models/final_deployment_threshold.json
+4. results/xai/shap_feature_importance.csv
+5. results/xai/station_shap_values.csv
+6. results/diagnostics/joint_cost_sensitive_search.csv
+7. results/diagnostics/joint_baseline_vs_candidates.csv
+8. results/diagnostics/joint_outer_test_results.csv
+9. data/processed/phase10_outer_test.csv (Quarantined)
+10. app.py (Inference logic preserved)
+11. 08_predict.py (Inference logic preserved)
+
+================================================================================
+END OF CERTIFICATION REPORT
+================================================================================

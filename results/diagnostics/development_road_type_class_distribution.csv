@@ -1,0 +1,8 @@
+feature,class_0_count,class_1_count,class_0_rate,class_1_rate
+road_type_motorway,0,5,0.0,0.047619047619047616
+road_type_primary,0,5,0.0,0.047619047619047616
+road_type_residential,5,2,0.35714285714285715,0.01904761904761905
+road_type_secondary,0,3,0.0,0.02857142857142857
+road_type_service,0,2,0.0,0.01904761904761905
+road_type_trunk,9,86,0.6428571428571429,0.819047619047619
+road_type_unclassified,0,2,0.0,0.01904761904761905

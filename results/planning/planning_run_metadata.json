@@ -1,0 +1,28 @@
+{
+  "project_title": "Explainable AI Framework for Smart EV Charging Infrastructure Planning",
+  "step": 6,
+  "station_rows": 33,
+  "station_total": 166,
+  "fast_labeled": 131,
+  "slow_labeled": 23,
+  "unknown_labels": 12,
+  "districts": 33,
+  "eips_criteria": [
+    "district_ev_penetration_rate",
+    "infrastructure_gap_index",
+    "nh_corridors_crossing_count",
+    "grid_readiness_score",
+    "spatial_suitability_score"
+  ],
+  "eips_scale": "0-100",
+  "ahp_lambda_max": 5.003993617858791,
+  "ahp_ci": 0.0009984044646977885,
+  "ahp_cr": 0.0008914325577658826,
+  "grid_missingness_policy": "No fabricated physical value; zero score indicates no observed TGSPDCL throughput evidence",
+  "generated_at": "2026-09-27T00:45:23.913754",
+  "python_version": "3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "pandas_version": "2.0.3",
+  "numpy_version": "1.24.3",
+  "matplotlib_version": "3.7.1"
+}

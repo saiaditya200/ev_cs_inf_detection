@@ -1,0 +1,6 @@
+criterion,description,weight
+C1_EV_Adoption_Context,FY2023-24 district EV penetration context; FY18-FY24 adoption velocity retained as context,0.2565
+C2_Infrastructure_Gap,Observed fast-charging infrastructure deficit relative to district EV adoption,0.3449
+C3_Corridor_Accessibility,National Highway corridor connectivity / crossing exposure,0.1329
+C4_Grid_Readiness,Observed TGSPDCL utility throughput evidence with explicit data-availability status,0.1329
+C5_Spatial_Suitability,"Station-derived highway, city-center and POI spatial suitability",0.1329

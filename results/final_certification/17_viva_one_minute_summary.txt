@@ -1,0 +1,7 @@
+VIVA 1-MINUTE SUMMARY:
+This project develops an explainable, spatially aware AI framework for planning EV charging infrastructure across Telangana's 33 districts.
+Using real multi-source data from OpenStreetMap, Census 2011, and electricity discoms, we establish a leakage-free contract of 21 certified exogenous spatial and demographic predictors.
+To prevent geographic data leakage, we enforce 4-fold GroupKFold validation by district and maintain a quarantined 35-station outer test across 8 held-out districts.
+Our benchmark demonstrates that Random Forest achieves superior balanced performance and full explainability via TreeSHAP and constrained counterfactual planning scenarios.
+At the macro level, we integrate EV adoption, infrastructure deficits, and grid capacity through an AHP-TOPSIS multi-criteria synthesis to compute the Electric Infrastructure Planning Score (EIPS), which is visualized in an interactive GIS web platform.
+Importantly, our error analysis revealed severe spatial covariate shift on outer-test trunk highways, providing a rigorous, scientifically grounded direction for future grid-level data enrichment.

@@ -1,0 +1,22 @@
+{
+  "step": "05_xai_explainability",
+  "project_title": "Explainable AI Framework for Smart EV Charging Infrastructure Planning",
+  "model": "Random_Forest",
+  "model_class": "unknown",
+  "frozen_decision_threshold": 0.76,
+  "xai_method": "TreeSHAP",
+  "counterfactual_method": "Constrained normalized L1 search",
+  "counterfactual_target_probability": 0.76,
+  "predictor_count": 21,
+  "xai_rows": 154,
+  "xai_target_class_0": 23,
+  "xai_target_class_1": 131,
+  "top_feature": "road_type_residential",
+  "counterfactual_rows": 21,
+  "counterfactual_feasible_rows": 8,
+  "outer_test_used_for_model_selection": false,
+  "generated_at": "2026-09-27T02:47:02.997617",
+  "python_version": "3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "shap_version": "0.44.1"
+}

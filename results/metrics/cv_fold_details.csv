@@ -1,0 +1,5 @@
+fold_id,train_count,validation_count,train_class_0,train_class_1,validation_class_0,validation_class_1,train_district_count,validation_district_count,district_overlap
+0,74,45,8,66,6,39,24,1,0
+1,94,25,11,83,3,22,17,8,0
+2,94,25,11,83,3,22,17,8,0
+3,95,24,12,83,2,22,17,8,0

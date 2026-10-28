@@ -1,0 +1,23 @@
+{
+  "model_family": "Random_Forest",
+  "hyperparameters": "{\"n_estimators\": 250, \"max_depth\": 3, \"min_samples_split\": 2, \"min_samples_leaf\": 2, \"max_features\": 0.5, \"class_weight\": null}",
+  "threshold": 0.76,
+  "mean_cv_accuracy": 0.8005555555555556,
+  "std_cv_accuracy": 0.0652133251550461,
+  "mean_cv_balanced_accuracy": 0.6193181818181819,
+  "std_cv_balanced_accuracy": 0.1766447534359204,
+  "mean_cv_minority_f1": 0.251984126984127,
+  "std_cv_minority_f1": 0.1782073007081897,
+  "mean_cv_minority_recall": 0.375,
+  "std_cv_minority_recall": 0.3796013991310124,
+  "mean_cv_pr_auc": 0.9004579284104717,
+  "std_cv_pr_auc": 0.057973754218752,
+  "mean_cv_macro_f1": 0.5675750250500471,
+  "std_cv_macro_f1": 0.0996940285164282,
+  "mean_cv_roc_auc": 0.5552156177156178,
+  "std_cv_roc_auc": 0.194144900318412,
+  "oof_accuracy": 0.8151260504201681,
+  "oof_balanced_accuracy": 0.5857142857142856,
+  "oof_minority_f1": 0.2666666666666666,
+  "oof_macro_f1": 0.580448717948718
+}

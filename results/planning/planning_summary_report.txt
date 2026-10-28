@@ -1,0 +1,74 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+EIPS & MULTI-CRITERIA DECISION ANALYSIS SUMMARY REPORT
+================================================================================
+
+1. PLANNING FRAMEWORK
+   AHP-weighted TOPSIS -> EIPS
+   Districts evaluated: 33
+   EIPS scale: 0-100
+   EIPS criterion directions: all benefit criteria
+
+2. AHP CONSISTENCY
+   Principal Eigenvalue: 5.003994
+   Consistency Index: 0.000998
+   Consistency Ratio: 0.000891
+   Consistency criterion: CR < 0.10
+
+3. DATA CONTEXT
+   Station grain: 166 physical stations
+   Supervised labeled stations: 154
+   Unknown fast-charging labels: 12
+   District-year panel: 33 districts x 7 financial years
+   TGSPDCL utility ledger: 288 section-month records
+
+4. EV ADOPTION CONTEXT
+   EIPS C1 uses FY2023-24 district EV penetration.
+   FY18-FY24 cumulative-EV velocity proxy is retained as context.
+
+5. GRID CONTEXT
+   Grid score uses observed district TGSPDCL annual throughput from the certified panel.
+   Missing TGSPDCL district values are not replaced by fabricated physical measurements.
+   A grid score of 0 therefore means no observed TGSPDCL throughput evidence in this context.
+
+6. PRIORITY TIERS
+   Tier 1: ranks 1-10
+   Tier 2: ranks 11-22
+   Tier 3: ranks 23-33
+
+7. EIPS DISTRICT OUTPUT
+   Rank #1  | Medchal-Malkajgiri             | EIPS  58.75 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #2  | Ranga Reddy                    | EIPS  54.61 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #3  | Mancherial                     | EIPS  52.85 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #4  | Hyderabad                      | EIPS  52.78 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #5  | Adilabad                       | EIPS  49.46 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #6  | Warangal Urban                 | EIPS  45.18 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #7  | Jagitial                       | EIPS  42.15 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #8  | Kamareddy                      | EIPS  41.97 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #9  | Nirmal                         | EIPS  41.34 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #10 | Jayashankar Bhupalapally       | EIPS  36.14 | Tier 1: High Priority (Immediate Fast-Charging Expansion)
+   Rank #11 | Khammam                        | EIPS  35.73 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #12 | Sangareddy                     | EIPS  34.75 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #13 | Mulugu                         | EIPS  33.07 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #14 | Peddapalli                     | EIPS  32.73 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #15 | Suryapet                       | EIPS  32.22 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #16 | Mahabubabad                    | EIPS  31.97 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #17 | Warangal Rural                 | EIPS  31.20 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #18 | Mahabubnagar                   | EIPS  31.15 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #19 | Yadadri Bhuvanagiri            | EIPS  28.86 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #20 | Nalgonda                       | EIPS  28.46 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #21 | Nizamabad                      | EIPS  27.93 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #22 | Nagarkurnool                   | EIPS  27.93 | Tier 2: Medium Priority (Growth Corridor Provisioning)
+   Rank #23 | Jogulamba Gadwal               | EIPS  27.61 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #24 | Wanaparthy                     | EIPS  27.28 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #25 | Siddipet                       | EIPS  26.73 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #26 | Bhadradri Kothagudem           | EIPS  26.52 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #27 | Rajanna Sircilla               | EIPS  25.99 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #28 | Medak                          | EIPS  25.18 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #29 | Jangaon                        | EIPS  25.06 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #30 | Karimnagar                     | EIPS  22.66 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #31 | Vikarabad                      | EIPS  21.19 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #32 | Narayanpet                     | EIPS  20.47 | Tier 3: Standard Priority (Sustained Maintenance)
+   Rank #33 | Kumurambheem Asifabad          | EIPS  19.13 | Tier 3: Standard Priority (Sustained Maintenance)
+
+================================================================================

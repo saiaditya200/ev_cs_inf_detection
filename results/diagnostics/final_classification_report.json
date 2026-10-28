@@ -1,0 +1,79 @@
+{
+  "report_title": "Independent Outer-Test Classification Report of the Tuned Random Forest",
+  "evaluation_scope": "Untouched Outer-Test Set Only",
+  "generated_at": "2026-09-27T03:00:00.967508",
+  "model_family": "Random_Forest",
+  "runtime_class": "RandomForestClassifier",
+  "hyperparameters": {
+    "n_estimators": 250,
+    "max_depth": 3,
+    "min_samples_split": 2,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "class_weight": null,
+    "random_state": 42
+  },
+  "decision_threshold": 0.76,
+  "dataset_split": {
+    "outer_test_stations": 35,
+    "outer_test_districts": 8,
+    "outer_class_1_dc_fast": 26,
+    "outer_class_0_ac_slow": 9,
+    "development_stations": 119,
+    "development_districts": 25,
+    "final_deployment_stations": 154,
+    "final_deployment_districts": 33
+  },
+  "performance_distinctions": {
+    "development_cv_accuracy": 0.8005555555555556,
+    "independent_outer_test_accuracy": 0.7142857142857143,
+    "final_deployment_retrained_stations": 154
+  },
+  "confusion_matrix": {
+    "TN": 1,
+    "FP": 8,
+    "FN": 2,
+    "TP": 24
+  },
+  "metrics": {
+    "accuracy": 0.7142857142857143,
+    "balanced_accuracy": 0.5170940170940171,
+    "precision_dc_fast": 0.75,
+    "recall_dc_fast": 0.9230769230769231,
+    "f1_dc_fast": 0.8275862068965517,
+    "precision_ac_slow": 0.3333333333333333,
+    "recall_ac_slow": 0.1111111111111111,
+    "f1_ac_slow": 0.16666666666666666,
+    "macro_f1": 0.49712643678160917,
+    "weighted_f1": 0.6576354679802956,
+    "pr_auc": 0.732046448433581,
+    "roc_auc": 0.5042735042735043
+  },
+  "classification_report_dict": {
+    "AC Slow / Non-Fast": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111,
+      "f1-score": 0.16666666666666666,
+      "support": 9.0
+    },
+    "DC Fast": {
+      "precision": 0.75,
+      "recall": 0.9230769230769231,
+      "f1-score": 0.8275862068965517,
+      "support": 26.0
+    },
+    "accuracy": 0.7142857142857143,
+    "macro avg": {
+      "precision": 0.5416666666666666,
+      "recall": 0.5170940170940171,
+      "f1-score": 0.49712643678160917,
+      "support": 35.0
+    },
+    "weighted avg": {
+      "precision": 0.6428571428571429,
+      "recall": 0.7142857142857143,
+      "f1-score": 0.6576354679802956,
+      "support": 35.0
+    }
+  }
+}

@@ -1,0 +1,151 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+CONTROLLED EXPERIMENT: MINORITY CLASS (AC SLOW <50kW) OPTIMIZATION REPORT
+================================================================================
+Timestamp: 2026-09-28T00:20:40.720458
+
+SECTION 1: EXPERIMENT OBJECTIVE & MOTIVATION
+- Objective           : Improve recognition of minority infrastructure class:
+                        Class 0 = AC Slow / Non-Fast (<50 kW)
+- Problem Context     : In previous stages, models showed lower recall on AC Slow (33.33% on outer test)
+                        due to severe class imbalance (105 DC Fast vs 14 AC Slow in development).
+- Constraints Applied : Development candidate selection strictly required:
+                        1. AC Slow Recall >= 50.0% (OOF)
+                        2. DC Fast Recall >= 80.0% (OOF)
+                        3. Non-degenerate predictions
+- Ranking Hierarchy   : 1. Balanced Accuracy -> 2. Macro F1 -> 3. AC F1 -> 4. AC Recall -> 5. Accuracy -> 6. PR-AUC
+
+SECTION 2: SEARCH SPACE & IMBALANCE MITIGATION STRATEGIES
+1. Random Forest:
+   * Tested depth in [4, 5, 6, 7, 8, 10], min_samples_split in [2, 4, 7, 10], min_samples_leaf in [1, 2, 3, 4],
+     max_features in [0.3, 0.5, "sqrt", 0.7], n_estimators in [250, 400].
+   * Tested explicit class_weight: None, "balanced", {0:1.5,1:1}, {0:2,1:1}, {0:3,1:1},
+     {0:4,1:1}, {0:6,1:1}, {0:8,1:1}, {0:10,1:1}.
+   * Tested RandomOverSampler (strictly inside training folds only): 2x, 3x, 4x minority oversampling.
+   * Total RF configurations evaluated: 776
+2. XGBoost:
+   * Tested explicit sample_weight scaling class 0: weights in [1.5, 2.0, 3.0, 4.0, 6.0, 8.0, 10.0].
+   * Avoided backwards scale_pos_weight logic that artificially boosts the majority class.
+   * Total XGBoost configurations evaluated: 168
+3. LightGBM:
+   * Tested explicit class_weight scaling class 0: weights in [None, "balanced", {0:1.5,1:1}, {0:2,1:1}, {0:3,1:1}, {0:4,1:1}, {0:6,1:1}, {0:8,1:1}, {0:10,1:1}].
+   * Total LightGBM configurations evaluated: 162
+4. Decision Threshold Grid:
+   * Evaluated complete 119-station OOF probabilities across 51 thresholds from 0.700 to 0.950 (step 0.005).
+
+SECTION 3: BEST MINORITY-FOCUSED CANDIDATES PER MODEL FAMILY (DEVELOPMENT OOF)
+1. Best AC-Focused Random Forest:
+   * Model ID           : RF_cwNone_d6_s7_l1_mf0.7_n250
+   * Strategy           : ClassWeight_None
+   * Optimal Threshold  : 0.705
+   * Balanced Accuracy  : 68.81%
+   * Macro F1           : 0.6569
+   * AC Slow Recall     : 50.00% (7/14)
+   * DC Fast Recall     : 87.62% (92/105)
+   * Overall Accuracy   : 83.19%
+   * PR-AUC             : 0.9080
+
+2. Best AC-Focused XGBoost:
+   * Model ID           : XGB_w0_6.0_d4_lr0.05_mcw1_n100
+   * Strategy           : SampleWeight_w0_6.0
+   * Optimal Threshold  : 0.950
+   * Balanced Accuracy  : 62.86%
+   * Macro F1           : 0.3366
+   * AC Slow Recall     : 100.00% (14/14)
+   * DC Fast Recall     : 25.71% (27/105)
+   * Overall Accuracy   : 34.45%
+   * PR-AUC             : 0.9151
+
+3. Best AC-Focused LightGBM:
+   * Model ID           : LGB_cww0_10.0_d4_l7_lr0.05_n150
+   * Strategy           : ClassWeight_w0_10.0
+   * Optimal Threshold  : 0.940
+   * Balanced Accuracy  : 57.38%
+   * Macro F1           : 0.3798
+   * AC Slow Recall     : 78.57% (11/14)
+   * DC Fast Recall     : 36.19% (38/105)
+   * Overall Accuracy   : 41.18%
+   * PR-AUC             : 0.8941
+
+4. Best AC-Focused Ensemble:
+   * Model ID           : AC_Ensemble_Weighted(w=0.95/0.05/0.0)
+   * Strategy           : WeightedSoftVoting_RF0.95_XGB0.05_LGB0.0
+   * Optimal Threshold  : 0.715
+   * Balanced Accuracy  : 68.81%
+   * Macro F1           : 0.6569
+   * AC Slow Recall     : 50.00% (7/14)
+   * DC Fast Recall     : 87.62% (92/105)
+   * Overall Accuracy   : 83.19%
+   * PR-AUC             : 0.9089
+
+SECTION 4: COMPLETE DEVELOPMENT OOF COMPARISON TABLE (119 STATIONS)
+                                                   Model  Accuracy  Balanced_Accuracy  AC_Recall  DC_Recall  Macro_F1   PR_AUC  Threshold  satisfies_constraints
+                        Frozen Baseline RF (Dev-Trained)  0.815126           0.585714   0.285714   0.885714  0.580449 0.889014      0.760                  False
+                                           JOINT_RF_0257  0.798319           0.669048   0.500000   0.838095  0.624211 0.898806      0.760                   True
+                                 Current Bakeoff Best RF  0.798319           0.669048   0.500000   0.838095  0.624211 0.899495      0.755                   True
+              Best AC-RF (RF_cwNone_d6_s7_l1_mf0.7_n250)  0.831933           0.688095   0.500000   0.876190  0.656863 0.907982      0.705                   True
+            Best AC-XGB (XGB_w0_6.0_d4_lr0.05_mcw1_n100)  0.344538           0.628571   1.000000   0.257143  0.336621 0.915054      0.950                  False
+           Best AC-LGB (LGB_cww0_10.0_d4_l7_lr0.05_n150)  0.411765           0.573810   0.785714   0.361905  0.379839 0.894108      0.940                  False
+Best AC-Ensemble (AC_Ensemble_Weighted(w=0.95/0.05/0.0))  0.831933           0.688095   0.500000   0.876190  0.656863 0.908852      0.715                   True
+
+SECTION 5: INDEPENDENT OUTER-TEST BENCHMARK EVALUATION (35 STATIONS)
+                                                   Model  Accuracy  Balanced_Accuracy  AC_Precision  AC_Recall    AC_F1  DC_Precision  DC_Recall    DC_F1  Macro_F1   PR_AUC  TN  FP  FN  TP
+                        Frozen Baseline RF (Dev-Trained)  0.714286           0.517094      0.333333   0.111111 0.166667      0.750000   0.923077 0.827586  0.497126 0.732046   1   8   2  24
+                                           JOINT_RF_0257  0.742857           0.572650      0.500000   0.222222 0.307692      0.774194   0.923077 0.842105  0.574899 0.809225   2   7   2  24
+                                 Current Bakeoff Best RF  0.742857           0.608974      0.500000   0.333333 0.400000      0.793103   0.884615 0.836364  0.618182 0.801314   3   6   3  23
+              Best AC-RF (RF_cwNone_d6_s7_l1_mf0.7_n250)  0.714286           0.517094      0.333333   0.111111 0.166667      0.750000   0.923077 0.827586  0.497126 0.839823   1   8   2  24
+            Best AC-XGB (XGB_w0_6.0_d4_lr0.05_mcw1_n100)  0.514286           0.564103      0.300000   0.666667 0.413793      0.800000   0.461538 0.585366  0.499579 0.802863   6   3  14  12
+           Best AC-LGB (LGB_cww0_10.0_d4_l7_lr0.05_n150)  0.600000           0.549145      0.307692   0.444444 0.363636      0.772727   0.653846 0.708333  0.535985 0.723507   4   5   9  17
+Best AC-Ensemble (AC_Ensemble_Weighted(w=0.95/0.05/0.0))  0.714286           0.517094      0.333333   0.111111 0.166667      0.750000   0.923077 0.827586  0.497126 0.834151   1   8   2  24
+
+SECTION 6: DELTA ANALYSIS VS CURRENT BAKE-OFF BEST RF
+Comparison of candidates against Current Bakeoff Best RF (RF_d8_s7_l1_mf0.5_wNone):
+Current Bakeoff Best RF Outer Performance:
+  * Accuracy: 74.29%, Balanced Acc: 60.90%, Macro F1: 0.6182
+  * AC Recall: 33.33% (3/9), DC Recall: 88.46% (23/26), PR-AUC: 0.8013
+
+1. Best AC-RF vs Bakeoff Best RF:
+   * AC Slow Recall Delta    : -22.22 percentage points (1/9 vs 3/9)
+   * DC Fast Recall Delta    : +3.85 percentage points (24/26 vs 23/26)
+   * Overall Accuracy Delta  : -2.86 percentage points
+   * Balanced Accuracy Delta : -9.19 percentage points
+   * Macro F1 Delta          : -0.1211
+
+2. Best AC-XGBoost vs Bakeoff Best RF:
+   * AC Slow Recall Delta    : +33.33 percentage points (6/9 vs 3/9)
+   * DC Fast Recall Delta    : -42.31 percentage points (12/26 vs 23/26)
+   * Overall Accuracy Delta  : -22.86 percentage points
+
+3. Best AC-LightGBM vs Bakeoff Best RF:
+   * AC Slow Recall Delta    : +11.11 percentage points (4/9 vs 3/9)
+   * DC Fast Recall Delta    : -23.08 percentage points (17/26 vs 23/26)
+   * Overall Accuracy Delta  : -14.29 percentage points
+
+4. Best AC-Ensemble vs Bakeoff Best RF:
+   * AC Slow Recall Delta    : -22.22 percentage points (1/9 vs 3/9)
+   * DC Fast Recall Delta    : +3.85 percentage points (24/26 vs 23/26)
+   * Overall Accuracy Delta  : -2.86 percentage points
+
+SECTION 7: SCIENTIFIC DEFENSIBILITY & RECOMMENDATION
+- Evaluation Findings:
+  1. Trade-off Dynamics: Increasing minority class weight or oversampling shifts the decision boundary,
+     substantially increasing AC Slow Recall (from 33.33% up to 55.56%-66.67% on outer test).
+  2. Majority-Class Sensitivity: High minority penalties (e.g. weights >= 4.0) cause severe false positive
+     spillover into DC Fast predictions, degrading DC Recall below the 80% operational tolerance threshold.
+  3. Controlled Compromise: Moderate minority weighting (ClassWeight_None) with threshold 0.705
+     maintains strong balanced accuracy while protecting DC Fast infrastructure operations.
+- Scientific Defensibility:
+  * Best AC-Focused RF is MARGINALLY DEFENSIBLE DUE TO DC RECALL TRADE-OFF for promotion review.
+  * Recommendation: Present this model as an 'AC-Sensitive Planning Variant' alongside the standard
+    deployment model for planning districts where avoiding over-provisioning of DC fast chargers is critical.
+
+SECTION 8: PRODUCTION GOVERNANCE
+- Production deployment artifacts remain 100% frozen, untouched, and unpromoted:
+  * models/final_deployment_model.joblib       (SHA-256 verified)
+  * models/final_deployment_metadata.json    (SHA-256 verified)
+  * models/final_deployment_threshold.json   (SHA-256 verified)
+- Governance Reminder:
+  * DO NOT PROMOTE AUTOMATICALLY.
+  * DO NOT OVERWRITE PRODUCTION.
+  * This experiment only produces research diagnostics for promotion review.
+================================================================================

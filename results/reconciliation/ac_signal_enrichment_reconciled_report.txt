@@ -1,0 +1,129 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+AC SIGNAL ENRICHMENT & SPATIAL COVARIATE SHIFT RECONCILED REPORT
+================================================================================
+Timestamp: 2026-09-28T01:25:44.219426
+
+SECTION 1: EXPERIMENTAL PROTOCOL & METHODOLOGY
+- Objective: Investigate why minority AC Slow (<50 kW) detection fails to transfer
+  from development districts to independent held-out districts.
+- Datasets:
+  * Development Set: 119 labeled stations across 25 districts (14 AC / 105 DC).
+  * Quarantined Outer Test: 35 labeled stations across 8 held-out districts (9 AC / 26 DC).
+  * Zero district overlap between development and outer test sets.
+  * Validation Protocol: 4-fold GroupKFold by district.
+- Feature Contracts Evaluated:
+  * Contract A: Existing 21 certified unscaled spatial predictors.
+  * Block 1: Site Context (location_type, parking_availability).
+  * Block 2: Major Road Geometry (distance_to_major_road_km, nearest_major_road_type, nearest_road_distance_m).
+  * Block 3: Granular POI counts (9 categories).
+  * Block 4: Mathematical transformations & interaction terms.
+  * All Blocks: Full spatial enrichment (Contract A + Blocks 1, 2, 3, 4).
+- Models Evaluated: Random Forest, XGBoost, LightGBM, and Logistic Regression.
+- Strict Fold-Safe Preprocessing:
+  * Categorical features imputed with 'UNKNOWN' and OneHotEncoded on training folds only.
+  * Numerical features imputed with training-fold medians with binary missingness indicators.
+  * Standard scaling fitted strictly inside training folds for Logistic Regression.
+
+================================================================================
+SECTION 2: DEVELOPMENT FEATURE AUDIT
+================================================================================
+- Strongest Discriminating Feature : road_type_residential
+- Effect Size (Cohen's d)         : -1.6074 (p-value = 5.20e-07)
+- Empirical Distributions:
+  * AC Slow (Development)         : 35.71% (5/14) on residential roads
+  * DC Fast (Development)         : 1.90% (2/105) on residential roads
+- Secondary Features:
+  * city_center_proximity_score   : Cohen's d = +0.500 | AC mean = 0.089 vs DC mean = 0.196
+  * road_type_trunk               : Cohen's d = +0.440 | AC mean = 0.643 vs DC mean = 0.819
+  * highway_proximity_score       : Cohen's d = +0.402 | AC mean = 0.447 vs DC mean = 0.559
+
+================================================================================
+SECTION 3: FEATURE-BLOCK BENCHMARK (DEVELOPMENT OOF)
+================================================================================
+Peak Balanced Accuracy Leaders by Feature Block:
+1. Contract_A Random Forest           : Bal Acc = 64.05% | AC Recall = 64.29% | DC Recall = 63.81% (T = 0.815)
+2. Contract_A + Block 4 Random Forest : Bal Acc = 63.33% | AC Recall = 57.14% | DC Recall = 69.52% (T = 0.790)
+3. Contract_A + Block 1 Random Forest : Bal Acc = 63.10% | AC Recall = 64.29% | DC Recall = 61.90% (T = 0.830)
+4. Contract_A + Block 2 Random Forest : Bal Acc = 63.10% | AC Recall = 64.29% | DC Recall = 61.90% (T = 0.840)
+5. Contract_A + All Blocks RF         : Bal Acc = 60.95% | AC Recall = 57.14% | DC Recall = 64.76% (T = 0.810)
+
+Evaluation at Fixed Operational Candidate Threshold (T = 0.740):
+- Contract A Random Forest            : Bal Acc = 68.81% | AC Recall = 50.00% (7/14) | DC Recall = 87.62% (92/105) | PR-AUC = 0.9028
+- Contract A + Block 1 Random Forest  : Bal Acc = 69.76% | AC Recall = 50.00% (7/14) | DC Recall = 89.52% (94/105) | PR-AUC = 0.9085
+- Contract A + Block 4 Random Forest  : Bal Acc = 68.04% | AC Recall = 57.14% (8/14) | DC Recall = 78.93% (82/105) | PR-AUC = 0.8842
+
+================================================================================
+SECTION 4: FOLD STABILITY AUDIT
+================================================================================
+- Stability Definition: AC detected in >= 3 of 4 folds AND min fold DC recall >= 70.0%.
+- Recomputed Stability for Contract_A+Block1__Random_Forest:
+  * At Optimal Threshold (T = 0.830)  : Min DC Recall = 51.28% | is_stable = FALSE
+  * At Candidate Threshold (T = 0.740): Min DC Recall = 86.36% | Mean DC Recall = 89.47% | is_stable = TRUE
+- Critical Correction:
+  The previous report's claim that Contract A + Block 1 had a minimum fold DC recall of 77.3%
+  at threshold 0.830 was a transcription discrepancy. Recomputed fold stability shows that
+  at T=0.830, DC recall dropped to 51.28% in Fold 1, failing the 70% operational stability constraint.
+
+================================================================================
+SECTION 5: QUARANTINED OUTER-TEST BENCHMARK (35 STATIONS / 8 DISTRICTS)
+================================================================================
+- Current Bakeoff Best RF (Benchmark) : Bal Acc = 60.90% | AC Recall = 33.33% (3/9) | DC Recall = 88.46% (23/26) | Macro F1 = 0.6182 | Acc = 74.29%
+- RF_0039_ClassWeight_None (Band 4)   : Bal Acc = 64.74% | AC Recall = 33.33% (3/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.6694 | Acc = 80.00%
+- RF_0002_ClassWeight_None (Band 2)   : Bal Acc = 51.71% | AC Recall = 11.11% (1/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.4971 | Acc = 71.43%
+- Contract A Random Forest (T=0.740)  : Bal Acc = 57.26% | AC Recall = 22.22% (2/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.5749 | Acc = 74.29%
+- Contract A + Block 1 RF (T=0.740)   : Bal Acc = 57.26% | AC Recall = 22.22% (2/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.5749 | Acc = 74.29%
+- Contract A + Block 4 RF (T=0.740)   : Bal Acc = 59.19% | AC Recall = 22.22% (2/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.5977 | Acc = 77.14%
+- Contract A + All Blocks RF (T=0.740): Bal Acc = 59.19% | AC Recall = 22.22% (2/9) | DC Recall = 96.15% (25/26) | Macro F1 = 0.5977 | Acc = 77.14%
+- Contract A + Block 1 Logistic Reg   : Bal Acc = 46.15% | AC Recall =  0.00% (0/9) | DC Recall = 92.31% (24/26) | Macro F1 = 0.4068 | Acc = 68.57%
+
+================================================================================
+SECTION 6: AC ERROR ANALYSIS & SPATIAL COVARIATE SHIFT
+================================================================================
+Detailed Profile of the 9 Outer-Test AC Slow Stations:
+- Trunk Road Proportion         : 100.0% (9 out of 9 stations)
+- Government Office Proportion  :  88.9% (8 out of 9 stations)
+- Mean Distance to Highway      :  0.64 km
+- Mean Distance to City Center  : 16.85 km
+- Mean Nearby POI Count         :  32.6
+- Mean Predicted P(DC) Missed   : 0.939 (n=7)
+- Mean Predicted P(DC) Detected : 0.683 (n=2)
+
+Defensible Findings on Spatial Covariate Shift:
+1. Spatial covariate shift was observed between the development and held-out districts.
+2. In development, AC Slow stations were primarily located in residential zones (35.71%).
+3. In held-out districts, 100% of actual AC stations were deployed along trunk highways,
+   and 88.9% were at Government Offices with dense commercial POIs.
+4. Because outer-test AC stations physically mimic the spatial footprint of DC fast hubs,
+   purely spatial exogenous models assign them elevated DC probabilities (mean P(DC) = 0.939),
+   leading to false-positive classification.
+
+================================================================================
+SECTION 7: MODEL-FAMILY COMPARISON
+================================================================================
+- Random Forest remains the most robust model family across geographic cross-validation folds.
+- XGBoost and LightGBM collapsed on minority AC detection across fold splits (achieving <10% AC recall),
+  showing severe sensitivity to geographic cluster imbalances.
+- Logistic Regression demonstrated poor generalization (0% outer AC recall), confirming that
+  linear decision hyperplanes are inadequate in this spatial feature space.
+
+================================================================================
+SECTION 8: SCIENTIFIC LIMITATIONS
+================================================================================
+- The tested exogenous spatial feature space was insufficient to reliably distinguish AC Slow from
+  DC Fast under the observed held-out distribution.
+- Electrical/site-level infrastructure variables (such as transformer capacity, sanctioned load,
+  and feeder ratings) may provide additional discriminatory information and represent a logical
+  direction for future data enrichment.
+- Claims regarding an 'irreducible Bayes error floor' or 'proven mathematical non-separability'
+  have been revised to reflect appropriate scientific conservatism.
+
+================================================================================
+SECTION 9: PRODUCTION GOVERNANCE & FINAL DECISION
+================================================================================
+- Production model: models/final_deployment_model.joblib (100% frozen, hash verified).
+- Production threshold: models/final_deployment_threshold.json (100% frozen, hash verified).
+- Production candidate must NOT be changed.
+- None of the evaluated feature blocks demonstrated superior, transferable outer-test generalization
+  over the established Bakeoff Best RF benchmark.
+================================================================================

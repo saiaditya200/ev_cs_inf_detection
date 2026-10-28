@@ -1,0 +1,6 @@
+identity_label,model_family,n_estimators,max_depth,min_samples_split,min_samples_leaf,max_features,max_samples,class_weight,decision_threshold,source_experiment,role,production_status
+ACTIVE_PRODUCTION_MODEL,Random_Forest,250,3,2,2,0.5,None,None,0.76,Initial_Production_Deployment,ACTIVE_DEPLOYMENT_MODEL,CURRENT_PRODUCTION
+CURRENT_BAKEOFF_BENCHMARK,Random_Forest,250,8,7,1,0.5,None,None,0.755,Final_Bakeoff_Script_09,BAKEOFF_PRIMARY_BENCHMARK,BENCHMARK_ONLY
+JOINT_RF_0257_CANDIDATE,Random_Forest,250,6,7,1,0.5,None,None,0.76,Joint_Optimization_Script_11,JOINT_SEARCH_CANDIDATE,PREPARED_SEPARATELY
+RF_0002_PARETO_BENCHMARK,Random_Forest,250,5,4,1,0.5,0.7,None,0.74,Pareto_Optimization_Script_13,PARETO_SECONDARY_BENCHMARK,BENCHMARK_ONLY
+RF_0039_PARETO_BENCHMARK,Random_Forest,250,8,4,1,0.7,None,None,0.72,Pareto_Optimization_Script_13,PARETO_SECONDARY_BENCHMARK,BENCHMARK_ONLY

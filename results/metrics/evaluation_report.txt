@@ -1,0 +1,39 @@
+================================================================================
+EXPLAINABLE AI EV CHARGING INFRASTRUCTURE PLANNING
+OUTER SPATIAL TEST BENCHMARKING REPORT
+================================================================================
+
+Champion Model: Random_Forest
+Outer Test Stations: 35 across 8 untouched districts
+Class 0 (AC Slow): 9 stations
+Class 1 (DC Fast): 26 stations
+
+PERFORMANCE SUMMARY:
+Model: Random_Forest
+  Dev CV PR-AUC:       0.9209 (+/- 0.0222)
+  Dev CV ROC-AUC:      0.5620
+  Outer Test PR-AUC:   0.8211
+  Outer Test ROC-AUC:  0.5940
+  Outer Test Accuracy: 0.7429
+  Outer Balanced Acc:  0.5000
+  Outer Macro F1:      0.4262
+
+Model: XGBoost
+  Dev CV PR-AUC:       0.8843 (+/- 0.0633)
+  Dev CV ROC-AUC:      0.3964
+  Outer Test PR-AUC:   0.7876
+  Outer Test ROC-AUC:  0.5641
+  Outer Test Accuracy: 0.6571
+  Outer Balanced Acc:  0.4423
+  Outer Macro F1:      0.3966
+
+Model: LightGBM
+  Dev CV PR-AUC:       0.8975 (+/- 0.0441)
+  Dev CV ROC-AUC:      0.4681
+  Outer Test PR-AUC:   0.8026
+  Outer Test ROC-AUC:  0.5620
+  Outer Test Accuracy: 0.6000
+  Outer Balanced Acc:  0.4038
+  Outer Macro F1:      0.3750
+
+================================================================================

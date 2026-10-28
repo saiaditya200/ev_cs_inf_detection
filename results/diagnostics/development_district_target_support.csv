@@ -1,0 +1,26 @@
+district,station_count,class_0,class_1,class_0_present,class_1_present
+Adilabad,1,0,1,False,True
+Hyderabad,45,6,39,True,True
+Jangaon,2,0,2,False,True
+Jayashankar Bhupalapally,1,0,1,False,True
+Jogulamba Gadwal,3,0,3,False,True
+Kamareddy,1,0,1,False,True
+Khammam,3,0,3,False,True
+Kumurambheem Asifabad,2,0,2,False,True
+Mahabubabad,2,1,1,True,True
+Mahabubnagar,4,0,4,False,True
+Mancherial,3,2,1,True,True
+Medchal-Malkajgiri,8,1,7,True,True
+Nagarkurnool,3,1,2,True,True
+Nalgonda,4,0,4,False,True
+Narayanpet,2,0,2,False,True
+Nirmal,1,0,1,False,True
+Nizamabad,4,0,4,False,True
+Peddapalli,3,0,3,False,True
+Rajanna Sircilla,2,0,2,False,True
+Ranga Reddy,7,0,7,False,True
+Sangareddy,5,2,3,True,True
+Siddipet,3,1,2,True,True
+Suryapet,4,0,4,False,True
+Wanaparthy,3,0,3,False,True
+Yadadri Bhuvanagiri,3,0,3,False,True

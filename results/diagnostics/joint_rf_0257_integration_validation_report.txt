@@ -1,0 +1,183 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+CONTROLLED INTEGRATION & END-TO-END VALIDATION REPORT: JOINT_RF_0257
+================================================================================
+Candidate Model Evaluated : JOINT_RF_0257
+Integration Architecture  : Reversible Runtime Selection Mode
+Runtime Role              : Candidate Mode (Active in testing; Production remains frozen)
+Decision Threshold        : 0.76
+Predictor Schema          : Certified 21 Exogenous Spatial Predictors
+Report Timestamp          : 2026-09-27T21:49:00.838875
+================================================================================
+
+FINAL GOVERNANCE STATEMENT:
+"JOINT_RF_0257 is technically integrated in reversible candidate mode.
+Production remains unchanged and requires explicit approval before promotion."
+
+--------------------------------------------------------------------------------
+1. CANDIDATE ARTIFACT INTEGRITY
+--------------------------------------------------------------------------------
+- Candidate Model Path    : models/joint_rf_0257_deployment_candidate.joblib (476,761 bytes)
+- Runtime Class           : RandomForestClassifier
+- Hyperparameters         :
+    * n_estimators        : 250
+    * max_depth           : 6
+    * min_samples_split   : 7
+    * min_samples_leaf    : 1
+    * max_features        : 0.5 (numeric float 0.5; verified float)
+    * criterion           : 'gini'
+    * bootstrap           : True
+    * class_weight        : None (w0 = 1.0)
+    * random_state        : 42
+- Training Scope          : Retrained on full 154 labeled stations across 33 districts
+                            (131 DC Fast, 23 AC Slow; 12 unlabeled stations excluded)
+- Threshold Artifact      : models/joint_rf_0257_deployment_threshold.json (0.76)
+- Metadata Artifact       : models/joint_rf_0257_deployment_metadata.json
+
+--------------------------------------------------------------------------------
+2. PRODUCTION / CANDIDATE CONTRACT PARITY
+--------------------------------------------------------------------------------
+Verified 100% parity across all operational boundaries:
+- Predictor count         : Exactly 21 predictors on both production and candidate
+- Predictor ordering      : Identical ordering matching models/feature_manifest.json
+- Target definition       : fast_charging_flag (1 = DC Fast >= 50kW, 0 = AC Slow < 50kW)
+- Threshold               : 0.76 on both models
+- Categorical encoding    : Identical 7 road-type one-hot features
+- Preprocessing scaling   : False on both models (unscaled physical units)
+- Missing-value handling  : Zero imputation; strict validation on input presence
+- Validation gates        : Leakage fields strictly rejected in station inputs
+- Intended differences    : Only the certified deeper tree parameters:
+                            max_depth: 3 -> 6
+                            min_samples_split: 2 -> 7
+                            min_samples_leaf: 2 -> 1
+Audit saved: results/diagnostics/joint_rf_0257_contract_parity.json
+
+--------------------------------------------------------------------------------
+3. END-TO-END APPLICATION & API VALIDATION
+--------------------------------------------------------------------------------
+Validated live via Flask application endpoints:
+- /api/health             : Healthy; candidate model loaded; threshold 0.76 verified
+- /api/stations           : 166 physical station records loaded from frozen dataset;
+                            descriptive fast_charging_flag displayed for reference;
+                            NEVER passed into inference engine
+- /api/predict            : Accepts valid 21-feature inputs; returns candidate
+                            probabilities, threshold-based classification, local
+                            TreeSHAP explanations, and counterfactual scenarios
+- Leakage isolation       : Station input rejected if any current-infrastructure
+                            fields (charger_type, capacity, etc.) are present
+
+--------------------------------------------------------------------------------
+4. PROSPECTIVE-SITE REGRESSION TEST
+--------------------------------------------------------------------------------
+Input: TS_SAMPLE_PROSPECTIVE_01 (Illustrative Medchal Commercial Corridor Site)
+- District                : Medchal-Malkajgiri (Lat 17.6320, Lon 78.5610)
+- Road Type & Distances   : Primary | Hwy: 0.85 km | City Center: 6.20 km
+- POI Attributes          : 9.0 POIs | Diversity Index: 0.78
+- Model P(DC Fast)        : 0.8195 (81.95%)
+- Decision Threshold      : 0.76
+- Predicted Class         : Class 1 -> DC Fast-Charging Infrastructure (>= 50kW)
+- Regional Planning (EIPS): District Rank #1 | EIPS Score: 58.75/100 |
+                            Priority Tier: "Tier 1 — High Relative Planning Priority"
+- Counterfactual Status   : already_above_threshold
+
+--------------------------------------------------------------------------------
+5. EXISTING-STATION REGRESSION TEST (STRICT SEPARATION)
+--------------------------------------------------------------------------------
+Station 1: TS-MED-0001 (Bharat Charge Ev Charging Station, Medchal-Malkajgiri)
+- Observed Dataset Ground Truth : DC Fast (>= 50 kW) [Observed flag = 1]
+- Candidate Model P(DC Fast)   : 0.4385 (Threshold = 0.76)
+- Candidate Model Prediction   : Class 0 -> AC Slow/Medium Charging (< 50kW)
+- Disagreement Note            : Disagreement transparently shown; observed target
+                                 was kept separate and NOT fed into prediction.
+
+Station 2: TS-HYD-0003 (MobiLane CRVRGROWA-EV CHARGING STATION - 2, Hyderabad)
+- Observed Dataset Ground Truth : AC / Non-Fast [Observed flag = 0]
+- Candidate Model P(DC Fast)   : 0.3590 (Threshold = 0.76)
+- Candidate Model Prediction   : Class 0 -> AC Slow/Medium Charging (< 50kW)
+- Comparison                   : Model prediction matches observed ground truth.
+
+--------------------------------------------------------------------------------
+6. SHAP REGRESSION & INTERPRETABILITY BOUNDARIES
+--------------------------------------------------------------------------------
+Authoritative Global Ranking (Recomputed from joint_rf_0257_shap_feature_importance.csv):
+  1. road_type_residential               : Mean |SHAP| = 0.044424 (25.37%)
+  2. latitude                            : Mean |SHAP| = 0.020446 (11.68%)
+  3. nearby_poi_count                    : Mean |SHAP| = 0.011236 (6.42%)
+  4. longitude                           : Mean |SHAP| = 0.010994 (6.28%)
+  5. distance_to_city_center_km          : Mean |SHAP| = 0.010607 (6.06%)
+  6. city_center_proximity_score         : Mean |SHAP| = 0.010605 (6.06%)
+  7. poi_diversity_index                 : Mean |SHAP| = 0.010412 (5.95%)
+  8. highway_proximity_score             : Mean |SHAP| = 0.009836 (5.62%)
+  9. district_urban_population_pct       : Mean |SHAP| = 0.009772 (5.58%)
+ 10. distance_to_highway_km              : Mean |SHAP| = 0.009388 (5.36%)
+
+Methodological Interpretation:
+"SHAP values represent model-based feature attributions to the Random Forest's DC Fast probability output. They indicate how features contribute to the model prediction and do not establish causality, physical mechanisms, or actual charging demand/utilization."
+
+--------------------------------------------------------------------------------
+7. CONSTRAINED COUNTERFACTUAL REGRESSION
+--------------------------------------------------------------------------------
+Actionable planning levers restricted to:
+`distance_to_highway_km`, `distance_to_city_center_km`, `nearby_poi_count`, `poi_diversity_index`.
+- TS-MED-0001           : Base P = 0.4385. Best scenario: poi_diversity_index -> 0.50 (P = 0.4960). Does NOT cross 0.76.
+- TS-HYD-0003           : Base P = 0.3590. Best scenario: poi_diversity_index -> 0.50 (P = 0.4236). Does NOT cross 0.76.
+- TS_SAMPLE_PROSPECTIVE_01: Base P = 0.8195. Base probability >= 0.76. Status: already_above_threshold.
+Terminology: "model-based planning scenario" (NOT causal or physical assurances).
+
+--------------------------------------------------------------------------------
+8. USER INTERFACE (UI) VALIDATION
+--------------------------------------------------------------------------------
+- Existing Station Selector : Populates strictly from data/final/FINAL_PROJECT_DATASET.csv.
+- Prospective Sample        : Kept separate; does NOT appear in existing-station dropdown.
+- Descriptive Separation    : Model inference displays predicted class; observed ground
+                              truth is labeled separately as dataset reference.
+- Unknown Observed Labels   : Displayed strictly as "Unlabeled / Unknown" with no
+                              erroneous correctness claims.
+
+--------------------------------------------------------------------------------
+9. REVERSIBLE RUNTIME & ROLLBACK MECHANISM
+--------------------------------------------------------------------------------
+Configuration Files:
+- Candidate Configuration   : config/model_runtime_candidate.json
+- Production Configuration  : config/model_runtime_production.json
+Runtime Switching Mechanism:
+- Environment variable ACTIVE_MODEL_ROLE=candidate or MODEL_RUNTIME_CONFIG enables
+  the candidate runtime.
+- Default behavior (no environment variable) loads the frozen production model.
+- Instant, non-destructive rollback is guaranteed without altering binary model files.
+
+--------------------------------------------------------------------------------
+10. PRODUCTION ARTIFACT INTEGRITY CHECK
+--------------------------------------------------------------------------------
+The production artifacts were verified with zero modifications:
+- models/final_deployment_model.joblib         : UNTOUCHED
+- models/final_deployment_metadata.json      : UNTOUCHED
+- models/final_deployment_threshold.json     : UNTOUCHED
+Quarantine Check:
+- data/processed/phase10_outer_test.csv        : STRICTLY QUARANTINED (35 stations)
+
+--------------------------------------------------------------------------------
+11. INDEPENDENT BENCHMARK REFERENCE (NOT LIVE TEST ACCURACY)
+--------------------------------------------------------------------------------
+Note: These metrics represent offline spatial cross-validation and outer-test
+evaluations conducted under scientific protocols, NOT live application test accuracy.
+
+Development Out-Of-Fold (OOF) Benchmark (119 stations across 25 districts):
+- Accuracy              : 79.83%
+- Balanced Accuracy     : 66.90%
+- AC Slow Recall        : 50.00%
+- DC Fast Recall        : 83.81%
+- Macro F1              : 0.6242
+
+Independent Outer-Test Benchmark (35 quarantined stations across 8 held-out districts):
+- Accuracy              : 74.29%
+- Balanced Accuracy     : 57.26%
+- AC Slow Recall        : 22.22%
+- DC Fast Recall        : 92.31%
+- Macro F1              : 0.5749
+- PR-AUC                : 0.8092
+- ROC-AUC               : 0.5897
+
+================================================================================
+END OF INTEGRATION & VALIDATION REPORT
+================================================================================

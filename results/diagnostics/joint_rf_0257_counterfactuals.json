@@ -1,0 +1,41 @@
+{
+  "TS-MED-0001": {
+    "test_type": "Observed DC Fast Station",
+    "station_id": "TS-MED-0001",
+    "base_p_dc_fast": 0.4384792799928374,
+    "threshold": 0.76,
+    "cf_status": "scenarios_generated",
+    "best_scenario": {
+      "changed_lever": "poi_diversity_index",
+      "new_value": 0.5,
+      "change_magnitude": 0.27690000000000003,
+      "probability_dc_fast": 0.4959610383096189,
+      "crosses_threshold": false
+    },
+    "candidate_count": 30
+  },
+  "TS-HYD-0003": {
+    "test_type": "Observed AC Slow Station",
+    "station_id": "TS-HYD-0003",
+    "base_p_dc_fast": 0.3589878125561069,
+    "threshold": 0.76,
+    "cf_status": "scenarios_generated",
+    "best_scenario": {
+      "changed_lever": "poi_diversity_index",
+      "new_value": 0.5,
+      "change_magnitude": 0.5,
+      "probability_dc_fast": 0.42357578446949,
+      "crosses_threshold": false
+    },
+    "candidate_count": 31
+  },
+  "TS_SAMPLE_PROSPECTIVE_01": {
+    "test_type": "Prospective Site Scenario",
+    "station_id": "TS_SAMPLE_PROSPECTIVE_01",
+    "base_p_dc_fast": 0.8195236302244253,
+    "threshold": 0.76,
+    "cf_status": "already_above_threshold",
+    "best_scenario": null,
+    "candidate_count": 0
+  }
+}

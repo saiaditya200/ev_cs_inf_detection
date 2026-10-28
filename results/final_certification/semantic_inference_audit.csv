@@ -1,0 +1,4 @@
+test_case,mode,ground_truth_label,input_contains_label,observed_label_displayed_separately,model_input_vector_length,predicted_class,predicted_probability_dc,applied_threshold,semantic_audit_status
+TS-MED-0001,Existing Station Record,"Class 1 (DC Fast, 60kW)",False,True,21,AC Slow/Medium (<50kW),0.53,0.76,PASS (Label strictly excluded from input; prediction based on exogenous features)
+TS-HYD-0003,Existing Station Record,"Class 0 (AC Slow, 3.3kW)",False,True,21,AC Slow/Medium (<50kW),0.38,0.76,PASS (Label strictly excluded from input; prediction based on exogenous features)
+TS_SAMPLE_PROSPECTIVE_01,Prospective Site,None (Prospective / Unbuilt),False,False,21,DC Fast (>=50kW),0.833,0.76,PASS (Pure prospective planning scenario; no ground truth assumption)

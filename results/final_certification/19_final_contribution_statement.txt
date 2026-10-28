@@ -1,0 +1,2 @@
+FINAL PROJECT CONTRIBUTION STATEMENT:
+"The project develops an explainable, spatially aware EV charging infrastructure planning framework that combines leakage-controlled station-level machine learning, TreeSHAP explanations, constrained counterfactual reasoning, EV adoption context, infrastructure-gap analysis, grid context, AHP-TOPSIS multi-criteria synthesis, EIPS district prioritization, GIS visualization, and deployable web-based decision support."

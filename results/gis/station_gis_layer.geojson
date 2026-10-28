@@ -1,0 +1,5158 @@
+{
+  "type": "FeatureCollection",
+  "name": "telangana_ev_stations",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46395,
+          17.44366
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0001",
+        "station_name": "Fortum Mahindra",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 2.11,
+        "distance_to_city_center_km": 7.6,
+        "nearby_poi_count": 44,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.393084,
+          17.536528
+        ]
+      },
+      "properties": {
+        "station_id": "TS-MED-0001",
+        "station_name": "Bharat Charge Ev Charging Station",
+        "district": "Medchal-Malkajgiri",
+        "operator": "Unknown",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 240.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 4.21,
+        "distance_to_city_center_km": 13.89,
+        "nearby_poi_count": 22,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.545395,
+          17.340476
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0002",
+        "station_name": "Blaze Fast Charger For 2 Ev Wheeler",
+        "district": "Hyderabad",
+        "operator": "Bolt.Earth (IN)",
+        "charger_type": "AC_LEVEL1",
+        "connector_type": "Type 2 (Tethered Connector)",
+        "charging_power_kw": 3.0,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.87,
+        "distance_to_city_center_km": 7.34,
+        "nearby_poi_count": 38,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.408033,
+          17.465639
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0003",
+        "station_name": "MobiLane CRVRGROWA-EV CHARGING STATION - 2",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Unknown",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 1.86,
+        "distance_to_city_center_km": 12.9,
+        "nearby_poi_count": 2,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.421966,
+          17.424924
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0004",
+        "station_name": "Amplify Mobility",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 2.67,
+        "distance_to_city_center_km": 8.78,
+        "nearby_poi_count": 79,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.426597,
+          17.413362
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0005",
+        "station_name": "Tellus Power",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 1 (J1772)",
+        "charging_power_kw": 7.2,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 1.91,
+        "distance_to_city_center_km": 7.68,
+        "nearby_poi_count": 17,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.354761,
+          17.1705
+        ]
+      },
+      "properties": {
+        "station_id": "TS-NAL-0001",
+        "station_name": "MobiLane SSKATPGCS",
+        "district": "Nalgonda",
+        "operator": "Unknown",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.03,
+        "distance_to_city_center_km": 16.15,
+        "nearby_poi_count": 0,
+        "district_eips": 28.46,
+        "district_eips_rank": 20,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.461,
+        "infrastructure_gap_index": 0.2922,
+        "grid_readiness_score": 0.8392,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4337,
+          17.36334
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0006",
+        "station_name": "Fortum Mahindra",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 2.01,
+        "distance_to_city_center_km": 6.26,
+        "nearby_poi_count": 27,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.309106,
+          17.467012
+        ]
+      },
+      "properties": {
+        "station_id": "TS-RAN-0001",
+        "station_name": "SASS EV charging station⛽",
+        "district": "Ranga Reddy",
+        "operator": "Unknown",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.23,
+        "distance_to_city_center_km": 16.39,
+        "nearby_poi_count": 8,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.215093,
+          17.483787
+        ]
+      },
+      "properties": {
+        "station_id": "TS-SAN-0001",
+        "station_name": "May Fair Marketing Office",
+        "district": "Sangareddy",
+        "operator": "Salzer NexCharge (IN)",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2 (Tethered Connector)",
+        "charging_power_kw": 7.0,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 6.47,
+        "distance_to_city_center_km": 20.98,
+        "nearby_poi_count": 0,
+        "district_eips": 34.75,
+        "district_eips_rank": 12,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.662,
+        "infrastructure_gap_index": 0.4155,
+        "grid_readiness_score": 0.9062,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.212304,
+          17.484253
+        ]
+      },
+      "properties": {
+        "station_id": "TS-SAN-0002",
+        "station_name": "May Fair Green Mark Project",
+        "district": "Sangareddy",
+        "operator": "Salzer NexCharge (IN)",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2 (Tethered Connector)",
+        "charging_power_kw": 7.0,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 6.53,
+        "distance_to_city_center_km": 20.75,
+        "nearby_poi_count": 0,
+        "district_eips": 34.75,
+        "district_eips_rank": 12,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.662,
+        "infrastructure_gap_index": 0.4155,
+        "grid_readiness_score": 0.9062,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.561178,
+          17.0
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0007",
+        "station_name": "Anand Nagar, Hyderabad",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 80.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 6.22,
+        "distance_to_city_center_km": 42.93,
+        "nearby_poi_count": 0,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.20817,
+          18.632171
+        ]
+      },
+      "properties": {
+        "station_id": "TS-NIZ-0001",
+        "station_name": "Sri Sai Kanchetty Family Restaurant",
+        "district": "Nizamabad",
+        "operator": "Chargezone (India)",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.03,
+        "distance_to_city_center_km": 13.14,
+        "nearby_poi_count": 0,
+        "district_eips": 27.93,
+        "district_eips_rank": 21,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.884,
+        "infrastructure_gap_index": 0.3768,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.561206,
+          16.89062
+        ]
+      },
+      "properties": {
+        "station_id": "TS-SUR-0001",
+        "station_name": "Narketpally - Addanki - Medarametla Road",
+        "district": "Suryapet",
+        "operator": "Unknown",
+        "charger_type": "DC_FAST",
+        "connector_type": "Unknown",
+        "charging_power_kw": 180.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.23,
+        "distance_to_city_center_km": 28.97,
+        "nearby_poi_count": 0,
+        "district_eips": 32.22,
+        "district_eips_rank": 15,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.391,
+        "infrastructure_gap_index": 0.2782,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.321723,
+          18.822908
+        ]
+      },
+      "properties": {
+        "station_id": "TS-NIZ-0002",
+        "station_name": "JIO-BP Pulse",
+        "district": "Nizamabad",
+        "operator": "JIO BP Pulse (India)",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.06,
+        "distance_to_city_center_km": 29.74,
+        "nearby_poi_count": 0,
+        "district_eips": 27.93,
+        "district_eips_rank": 21,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.884,
+        "infrastructure_gap_index": 0.3768,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1484,
+          16.814755
+        ]
+      },
+      "properties": {
+        "station_id": "TS-MAH-0001",
+        "station_name": "Driftnation Food Court NH44",
+        "district": "Mahabubnagar",
+        "operator": "JIO BP Pulse (India)",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.06,
+        "distance_to_city_center_km": 17.85,
+        "nearby_poi_count": 0,
+        "district_eips": 31.15,
+        "district_eips_rank": 18,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.491,
+        "infrastructure_gap_index": 0.2982,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.016366,
+          15.886334
+        ]
+      },
+      "properties": {
+        "station_id": "TS-JOG-0001",
+        "station_name": "NH44",
+        "district": "Jogulamba Gadwal",
+        "operator": "Chargezone (India)",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 240.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.05,
+        "distance_to_city_center_km": 44.66,
+        "nearby_poi_count": 1,
+        "district_eips": 27.61,
+        "district_eips_rank": 23,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.373,
+        "infrastructure_gap_index": 0.3432,
+        "grid_readiness_score": 0.8581,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.619266,
+          16.511133
+        ]
+      },
+      "properties": {
+        "station_id": "TS-KHA-0001",
+        "station_name": "BMW",
+        "district": "Khammam",
+        "operator": "BMW",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.2,
+        "distance_to_city_center_km": 96.14,
+        "nearby_poi_count": 120,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.474929,
+          17.364959
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0008",
+        "station_name": "Unknown OSM Station",
+        "district": "Hyderabad",
+        "operator": "Unknown",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.03,
+        "distance_to_city_center_km": 2.31,
+        "nearby_poi_count": 81,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.566798,
+          16.558007
+        ]
+      },
+      "properties": {
+        "station_id": "TS-KHA-0002",
+        "station_name": "VoltronEV",
+        "district": "Khammam",
+        "operator": "Unknown",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.03,
+        "distance_to_city_center_km": 88.81,
+        "nearby_poi_count": 4,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.349999,
+          17.494381
+        ]
+      },
+      "properties": {
+        "station_id": "TS-HYD-0009",
+        "station_name": "TGRedCo",
+        "district": "Hyderabad",
+        "operator": "TGRedCo",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.04,
+        "distance_to_city_center_km": 19.55,
+        "nearby_poi_count": 72,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.720421,
+          16.509474
+        ]
+      },
+      "properties": {
+        "station_id": "TS-KHA-0003",
+        "station_name": "Unknown OSM Station",
+        "district": "Khammam",
+        "operator": "Électricité de France",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 3.97,
+        "distance_to_city_center_km": 102.29,
+        "nearby_poi_count": 354,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.521644,
+          17.16585
+        ]
+      },
+      "properties": {
+        "station_id": "TS-SUR-0002",
+        "station_name": "Unknown OSM Station",
+        "district": "Suryapet",
+        "operator": "Nuego",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.09,
+        "distance_to_city_center_km": 12.9,
+        "nearby_poi_count": 1,
+        "district_eips": 32.22,
+        "district_eips_rank": 15,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.391,
+        "infrastructure_gap_index": 0.2782,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.615893,
+          16.50716
+        ]
+      },
+      "properties": {
+        "station_id": "TS-KHA-0004",
+        "station_name": "Ather Grid",
+        "district": "Khammam",
+        "operator": "Ather grid",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 0.0,
+        "distance_to_city_center_km": 96.33,
+        "nearby_poi_count": 45,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3333,
+          17.40475
+        ]
+      },
+      "properties": {
+        "station_id": "TS-RAN-0002",
+        "station_name": "FreshBus Charging Point",
+        "district": "Ranga Reddy",
+        "operator": "FreshBus Charging Point",
+        "charger_type": "Unknown",
+        "connector_type": "Unknown",
+        "charging_power_kw": null,
+        "fast_charging_flag": null,
+        "fast_charging_desc": "Unlabeled / Unknown",
+        "distance_to_highway_km": 5.63,
+        "distance_to_city_center_km": 9.53,
+        "nearby_poi_count": 6,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3614,
+          17.4968
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0026",
+        "station_name": "Miyapur Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.02,
+        "distance_to_city_center_km": 18.2,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3887,
+          17.4981
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0027",
+        "station_name": "JNTU College Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.09,
+        "distance_to_city_center_km": 16.32,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4015,
+          17.493
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0028",
+        "station_name": "KPHB Colony Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.1,
+        "distance_to_city_center_km": 15.03,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4138,
+          17.4849
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0029",
+        "station_name": "Kukatpally Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.18,
+        "distance_to_city_center_km": 13.54,
+        "nearby_poi_count": 34,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4357,
+          17.4727
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0030",
+        "station_name": "Balanagar Metro Station",
+        "district": "Medchal-Malkajgiri",
+        "operator": "EESL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.92,
+        "distance_to_city_center_km": 9.15,
+        "nearby_poi_count": 31,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4419,
+          17.4646
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0031",
+        "station_name": "Moosapet Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.15,
+        "distance_to_city_center_km": 10.05,
+        "nearby_poi_count": 30,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4452,
+          17.458
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0032",
+        "station_name": "Bharat Nagar Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.17,
+        "distance_to_city_center_km": 9.23,
+        "nearby_poi_count": 30,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4485,
+          17.4532
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0033",
+        "station_name": "Erragadda Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.24,
+        "distance_to_city_center_km": 8.6,
+        "nearby_poi_count": 30,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4465,
+          17.4439
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0034",
+        "station_name": "ESI Hospital Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.57,
+        "distance_to_city_center_km": 7.82,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.448,
+          17.441
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0035",
+        "station_name": "SR Nagar Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.57,
+        "distance_to_city_center_km": 7.46,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4482,
+          17.4355
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0036",
+        "station_name": "Ameerpet Interchange Metro",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.32,
+        "distance_to_city_center_km": 6.94,
+        "nearby_poi_count": 34,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4519,
+          17.4262
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0037",
+        "station_name": "Punjagutta Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.08,
+        "distance_to_city_center_km": 5.88,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4552,
+          17.4184
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0038",
+        "station_name": "Irrum Manzil Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.73,
+        "distance_to_city_center_km": 5.0,
+        "nearby_poi_count": 32,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4601,
+          17.4124
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0039",
+        "station_name": "Khairatabad Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.1,
+        "distance_to_city_center_km": 4.15,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4646,
+          17.4045
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0040",
+        "station_name": "Lakdi-ka-pul Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.05,
+        "distance_to_city_center_km": 3.19,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4705,
+          17.3995
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0041",
+        "station_name": "Assembly Metro Station",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.02,
+        "distance_to_city_center_km": 2.36,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4715,
+          17.392
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0042",
+        "station_name": "Nampally Railway Station Metro",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.16,
+        "distance_to_city_center_km": 1.79,
+        "nearby_poi_count": 34,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4746,
+          17.3872
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0043",
+        "station_name": "Gandhi Bhavan Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.17,
+        "distance_to_city_center_km": 1.31,
+        "nearby_poi_count": 34,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4815,
+          17.3789
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0044",
+        "station_name": "MGBS Central Interchange",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.08,
+        "distance_to_city_center_km": 0.87,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4952,
+          17.3732
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0045",
+        "station_name": "Malakpet Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.39,
+        "distance_to_city_center_km": 1.59,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5246,
+          17.3688
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0046",
+        "station_name": "Dilsukhnagar Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.06,
+        "distance_to_city_center_km": 4.41,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5372,
+          17.365
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0047",
+        "station_name": "Chaitanyapuri Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.39,
+        "distance_to_city_center_km": 5.8,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5468,
+          17.3592
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0048",
+        "station_name": "Victoria Memorial Metro",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.8,
+        "distance_to_city_center_km": 6.99,
+        "nearby_poi_count": 32,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5522,
+          17.3458
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0049",
+        "station_name": "LB Nagar Terminal Metro",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.0,
+        "distance_to_city_center_km": 8.2,
+        "nearby_poi_count": 35,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5684,
+          17.3768
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0050",
+        "station_name": "Nagole Metro Terminal",
+        "district": "Medchal-Malkajgiri",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.11,
+        "distance_to_city_center_km": 16.82,
+        "nearby_poi_count": 31,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5582,
+          17.3985
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0051",
+        "station_name": "Uppal Metro Station",
+        "district": "Medchal-Malkajgiri",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.18,
+        "distance_to_city_center_km": 14.18,
+        "nearby_poi_count": 34,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.551,
+          17.4045
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0052",
+        "station_name": "Stadium Metro Station",
+        "district": "Medchal-Malkajgiri",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.38,
+        "distance_to_city_center_km": 13.29,
+        "nearby_poi_count": 33,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5445,
+          17.4112
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0053",
+        "station_name": "NGRI Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 1.11,
+        "distance_to_city_center_km": 6.79,
+        "nearby_poi_count": 31,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5392,
+          17.418
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0054",
+        "station_name": "Habsiguda Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.94,
+        "distance_to_city_center_km": 6.67,
+        "nearby_poi_count": 27,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5312,
+          17.4285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0055",
+        "station_name": "Tarnaka Metro Station",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.27,
+        "distance_to_city_center_km": 6.76,
+        "nearby_poi_count": 22,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5205,
+          17.4362
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0056",
+        "station_name": "Mettuguda Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.38,
+        "distance_to_city_center_km": 6.73,
+        "nearby_poi_count": 21,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5034,
+          17.4398
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0057",
+        "station_name": "Secunderabad East Metro",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.57,
+        "distance_to_city_center_km": 6.35,
+        "nearby_poi_count": 29,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4982,
+          17.4435
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0058",
+        "station_name": "Parade Ground Interchange",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.13,
+        "distance_to_city_center_km": 6.62,
+        "nearby_poi_count": 30,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4682,
+          17.4412
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0059",
+        "station_name": "Begumpet Metro Station",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.99,
+        "distance_to_city_center_km": 6.55,
+        "nearby_poi_count": 27,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4602,
+          17.4445
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0060",
+        "station_name": "Prakash Nagar Metro",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.91,
+        "distance_to_city_center_km": 7.19,
+        "nearby_poi_count": 27,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4725,
+          17.4478
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0061",
+        "station_name": "Rasoolpura Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.15,
+        "distance_to_city_center_km": 7.14,
+        "nearby_poi_count": 30,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3789,
+          17.4468
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0062",
+        "station_name": "Hitec City Metro Station",
+        "district": "Ranga Reddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.71,
+        "distance_to_city_center_km": 13.74,
+        "nearby_poi_count": 28,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3845,
+          17.4392
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0063",
+        "station_name": "Durgam Cheruvu Metro",
+        "district": "Ranga Reddy",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 2.18,
+        "distance_to_city_center_km": 12.73,
+        "nearby_poi_count": 26,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3962,
+          17.4345
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0064",
+        "station_name": "Madhapur Metro Station",
+        "district": "Ranga Reddy",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.45,
+        "distance_to_city_center_km": 11.83,
+        "nearby_poi_count": 21,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4068,
+          17.432
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0065",
+        "station_name": "Peddamma Gudi Metro",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.75,
+        "distance_to_city_center_km": 9.96,
+        "nearby_poi_count": 20,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4145,
+          17.4285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0066",
+        "station_name": "Jubilee Hills Check Post",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.23,
+        "distance_to_city_center_km": 9.06,
+        "nearby_poi_count": 22,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4215,
+          17.4312
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0067",
+        "station_name": "Road No 5 Jubilee Hills",
+        "district": "Hyderabad",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 2.43,
+        "distance_to_city_center_km": 8.62,
+        "nearby_poi_count": 25,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4289,
+          17.4378
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0068",
+        "station_name": "Yousufguda Metro Station",
+        "district": "Hyderabad",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.4,
+        "distance_to_city_center_km": 8.49,
+        "nearby_poi_count": 29,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4382,
+          17.4365
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0069",
+        "station_name": "Madhura Nagar Metro",
+        "district": "Hyderabad",
+        "operator": "EESL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.57,
+        "distance_to_city_center_km": 7.7,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4985,
+          17.4498
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0070",
+        "station_name": "TSRTC Jubilee Bus Station JBS",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.17,
+        "distance_to_city_center_km": 7.31,
+        "nearby_poi_count": 30,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4412,
+          17.3912
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0071",
+        "station_name": "TSRTC Mehdipatnam Depot",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.43,
+        "distance_to_city_center_km": 4.88,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4842,
+          17.3845
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0072",
+        "station_name": "TSRTC Koti Bus Terminal",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.44,
+        "distance_to_city_center_km": 0.27,
+        "nearby_poi_count": 33,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5015,
+          17.4345
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0073",
+        "station_name": "TSRTC Rathifile Secunderabad",
+        "district": "Hyderabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.38,
+        "distance_to_city_center_km": 5.72,
+        "nearby_poi_count": 29,
+        "district_eips": 52.78,
+        "district_eips_rank": 4,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5615,
+          17.4812
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0074",
+        "station_name": "TSRTC ECIL Crossroads Hub",
+        "district": "Medchal-Malkajgiri",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 8.54,
+        "distance_to_city_center_km": 6.88,
+        "nearby_poi_count": 5,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6482,
+          17.1952
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0075",
+        "station_name": "TSRTC Ibrahimpatnam Depot",
+        "district": "Ranga Reddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 7.31,
+        "distance_to_city_center_km": 27.9,
+        "nearby_poi_count": 6,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5245,
+          17.9782
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0076",
+        "station_name": "Kazipet Railway Station Plaza",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.84,
+        "distance_to_city_center_km": 7.43,
+        "nearby_poi_count": 20,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.6012,
+          17.9625
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0077",
+        "station_name": "Warangal Main Bus Station",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.09,
+        "distance_to_city_center_km": 1.03,
+        "nearby_poi_count": 35,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5612,
+          18.0085
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0078",
+        "station_name": "Hanamkonda Bus Station Hub",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.2,
+        "distance_to_city_center_km": 5.61,
+        "nearby_poi_count": 34,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5442,
+          18.0215
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0079",
+        "station_name": "Kakatiya University Campus",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.51,
+        "distance_to_city_center_km": 7.88,
+        "nearby_poi_count": 33,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5545,
+          18.0012
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0080",
+        "station_name": "Warangal Collectorate Complex",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.37,
+        "distance_to_city_center_km": 5.52,
+        "nearby_poi_count": 34,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5312,
+          17.9945
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0081",
+        "station_name": "Waddepally Lake Charging Station",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 2.48,
+        "distance_to_city_center_km": 7.24,
+        "nearby_poi_count": 25,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5825,
+          17.9712
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0082",
+        "station_name": "Hunter Road Commercial Hub",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.54,
+        "distance_to_city_center_km": 1.25,
+        "nearby_poi_count": 29,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.6152,
+          17.9542
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0083",
+        "station_name": "Fort Warangal Public Parking",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 1.51,
+        "distance_to_city_center_km": 2.77,
+        "nearby_poi_count": 29,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5982,
+          17.9815
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0084",
+        "station_name": "MGM Hospital EV Station",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.78,
+        "distance_to_city_center_km": 1.47,
+        "nearby_poi_count": 32,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5712,
+          18.0145
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0085",
+        "station_name": "Naimnagar Crossroads Plaza",
+        "district": "Warangal Urban",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.81,
+        "distance_to_city_center_km": 5.62,
+        "nearby_poi_count": 32,
+        "district_eips": 45.18,
+        "district_eips_rank": 6,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.7112,
+          18.1985
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0086",
+        "station_name": "Parkal TSRTC Bus Station Hub",
+        "district": "Warangal Rural",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.96,
+        "distance_to_city_center_km": 26.99,
+        "nearby_poi_count": 31,
+        "district_eips": 31.2,
+        "district_eips_rank": 17,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.041,
+        "infrastructure_gap_index": 0.5205,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.8912,
+          17.9245
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0087",
+        "station_name": "Narsampet Municipal EV Plaza",
+        "district": "Warangal Rural",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.71,
+        "distance_to_city_center_km": 31.42,
+        "nearby_poi_count": 32,
+        "district_eips": 31.2,
+        "district_eips_rank": 17,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.041,
+        "infrastructure_gap_index": 0.5205,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1312,
+          18.4325
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0088",
+        "station_name": "Karimnagar Bus Station Terminal",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.16,
+        "distance_to_city_center_km": 0.72,
+        "nearby_poi_count": 30,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1245,
+          18.4412
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0089",
+        "station_name": "Karimnagar Collectorate Hub",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.35,
+        "distance_to_city_center_km": 0.54,
+        "nearby_poi_count": 34,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1285,
+          18.4385
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0090",
+        "station_name": "Court Road Public Charger",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.54,
+        "distance_to_city_center_km": 0.03,
+        "nearby_poi_count": 33,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0982,
+          18.4512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0091",
+        "station_name": "Kothapalli Municipal Charging",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 2.04,
+        "distance_to_city_center_km": 3.52,
+        "nearby_poi_count": 27,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1412,
+          18.4215
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0092",
+        "station_name": "Karimnagar Housing Board Hub",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.7,
+        "distance_to_city_center_km": 2.31,
+        "nearby_poi_count": 32,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1352,
+          18.4285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0093",
+        "station_name": "Mankammathota EV Plaza",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.36,
+        "distance_to_city_center_km": 1.31,
+        "nearby_poi_count": 30,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1215,
+          18.4352
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0094",
+        "station_name": "Mukarampura Commercial Station",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.07,
+        "distance_to_city_center_km": 0.86,
+        "nearby_poi_count": 31,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1385,
+          18.4462
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0095",
+        "station_name": "Kashmirgadda Public Parking",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.54,
+        "distance_to_city_center_km": 1.33,
+        "nearby_poi_count": 33,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1142,
+          18.4582
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0096",
+        "station_name": "Ramnagar Highway Junction",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.19,
+        "distance_to_city_center_km": 2.67,
+        "nearby_poi_count": 34,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1305,
+          18.4368
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0097",
+        "station_name": "Clock Tower Karimnagar Hub",
+        "district": "Karimnagar",
+        "operator": "REIL",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.68,
+        "distance_to_city_center_km": 0.27,
+        "nearby_poi_count": 32,
+        "district_eips": 22.66,
+        "district_eips_rank": 30,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2045,
+          17.0682
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0098",
+        "station_name": "NH44 Shadnagar Highway Plaza",
+        "district": "Ranga Reddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.1,
+        "distance_to_city_center_km": 37.81,
+        "nearby_poi_count": 35,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1412,
+          16.7645
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0099",
+        "station_name": "NH44 Jadcherla Travel Hub",
+        "district": "Mahabubnagar",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.2,
+        "distance_to_city_center_km": 14.76,
+        "nearby_poi_count": 34,
+        "district_eips": 31.15,
+        "district_eips_rank": 18,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.491,
+        "infrastructure_gap_index": 0.2982,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9345,
+          16.3812
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0100",
+        "station_name": "NH44 Kothakota Highway Station",
+        "district": "Wanaparthy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.33,
+        "distance_to_city_center_km": 13.82,
+        "nearby_poi_count": 34,
+        "district_eips": 27.28,
+        "district_eips_rank": 24,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.36,
+        "infrastructure_gap_index": 0.34,
+        "grid_readiness_score": 0.8452,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9012,
+          16.2085
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0101",
+        "station_name": "NH44 Pebbair Corridor Plaza",
+        "district": "Wanaparthy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 6.36,
+        "distance_to_city_center_km": 24.26,
+        "nearby_poi_count": 10,
+        "district_eips": 27.28,
+        "district_eips_rank": 24,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.36,
+        "infrastructure_gap_index": 0.34,
+        "grid_readiness_score": 0.8452,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0215,
+          15.9312
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0102",
+        "station_name": "NH44 Alampur Toll EV Hub",
+        "district": "Jogulamba Gadwal",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.19,
+        "distance_to_city_center_km": 41.09,
+        "nearby_poi_count": 34,
+        "district_eips": 27.61,
+        "district_eips_rank": 23,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.373,
+        "infrastructure_gap_index": 0.3432,
+        "grid_readiness_score": 0.8581,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4815,
+          17.6312
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0103",
+        "station_name": "NH44 Medchal Bypass Plaza",
+        "district": "Medchal-Malkajgiri",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.34,
+        "distance_to_city_center_km": 13.03,
+        "nearby_poi_count": 34,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4712,
+          17.8542
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0104",
+        "station_name": "NH44 Toopran Corridor Station",
+        "district": "Medak",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.42,
+        "distance_to_city_center_km": 30.64,
+        "nearby_poi_count": 33,
+        "district_eips": 25.18,
+        "district_eips_rank": 28,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.247,
+        "infrastructure_gap_index": 0.4157,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3412,
+          18.3145
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0105",
+        "station_name": "NH44 Kamareddy Bypass Hub",
+        "district": "Kamareddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.47,
+        "distance_to_city_center_km": 1.0,
+        "nearby_poi_count": 33,
+        "district_eips": 41.97,
+        "district_eips_rank": 8,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.356,
+        "infrastructure_gap_index": 0.678,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2145,
+          18.6185
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0106",
+        "station_name": "NH44 Dichpally Highway Station",
+        "district": "Nizamabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.89,
+        "distance_to_city_center_km": 14.03,
+        "nearby_poi_count": 31,
+        "district_eips": 27.93,
+        "district_eips_rank": 21,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.884,
+        "infrastructure_gap_index": 0.3768,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2815,
+          18.7942
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0107",
+        "station_name": "NH44 Armoor Corridor Plaza",
+        "district": "Nizamabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.96,
+        "distance_to_city_center_km": 23.93,
+        "nearby_poi_count": 31,
+        "district_eips": 27.93,
+        "district_eips_rank": 21,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.884,
+        "infrastructure_gap_index": 0.3768,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3312,
+          19.0845
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0108",
+        "station_name": "NH44 Nirmal Bypass EV Station",
+        "district": "Nirmal",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.49,
+        "distance_to_city_center_km": 1.86,
+        "nearby_poi_count": 29,
+        "district_eips": 41.34,
+        "district_eips_rank": 9,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.39,
+        "infrastructure_gap_index": 0.695,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5215,
+          19.6512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0109",
+        "station_name": "NH44 Adilabad Highway Gateway",
+        "district": "Adilabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.12,
+        "distance_to_city_center_km": 1.81,
+        "nearby_poi_count": 35,
+        "district_eips": 49.46,
+        "district_eips_rank": 5,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.648,
+        "infrastructure_gap_index": 0.824,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6012,
+          17.6745
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0110",
+        "station_name": "NH65 Zaheerabad Corridor Hub",
+        "district": "Sangareddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.81,
+        "distance_to_city_center_km": 51.3,
+        "nearby_poi_count": 28,
+        "district_eips": 34.75,
+        "district_eips_rank": 12,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.662,
+        "infrastructure_gap_index": 0.4155,
+        "grid_readiness_score": 0.9062,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0945,
+          17.6285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0111",
+        "station_name": "NH65 Sangareddy Bypass Plaza",
+        "district": "Sangareddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 3.75,
+        "distance_to_city_center_km": 1.71,
+        "nearby_poi_count": 20,
+        "district_eips": 34.75,
+        "district_eips_rank": 12,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.662,
+        "infrastructure_gap_index": 0.4155,
+        "grid_readiness_score": 0.9062,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2612,
+          17.5285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0112",
+        "station_name": "NH65 Patancheru Toll EV Hub",
+        "district": "Sangareddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.15,
+        "distance_to_city_center_km": 21.52,
+        "nearby_poi_count": 34,
+        "district_eips": 34.75,
+        "district_eips_rank": 12,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.662,
+        "infrastructure_gap_index": 0.4155,
+        "grid_readiness_score": 0.9062,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.9045,
+          17.2512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0113",
+        "station_name": "NH65 Choutuppal Corridor Station",
+        "district": "Yadadri Bhuvanagiri",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 2.74,
+        "distance_to_city_center_km": 28.97,
+        "nearby_poi_count": 24,
+        "district_eips": 28.86,
+        "district_eips_rank": 19,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.207,
+        "infrastructure_gap_index": 0.3018,
+        "grid_readiness_score": 0.8603,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.2012,
+          17.1845
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0114",
+        "station_name": "NH65 Narketpally Plaza Hub",
+        "district": "Nalgonda",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.07,
+        "distance_to_city_center_km": 15.8,
+        "nearby_poi_count": 35,
+        "district_eips": 28.46,
+        "district_eips_rank": 20,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.461,
+        "infrastructure_gap_index": 0.2922,
+        "grid_readiness_score": 0.8392,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.4312,
+          17.1645
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0115",
+        "station_name": "NH65 Nakrekal Highway Station",
+        "district": "Nalgonda",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.49,
+        "distance_to_city_center_km": 20.98,
+        "nearby_poi_count": 33,
+        "district_eips": 28.46,
+        "district_eips_rank": 20,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.461,
+        "infrastructure_gap_index": 0.2922,
+        "grid_readiness_score": 0.8392,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.6145,
+          17.1512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0116",
+        "station_name": "NH65 Suryapet Bypass Superhub",
+        "district": "Suryapet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.56,
+        "distance_to_city_center_km": 1.29,
+        "nearby_poi_count": 33,
+        "district_eips": 32.22,
+        "district_eips_rank": 15,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.391,
+        "infrastructure_gap_index": 0.2782,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.8215,
+          17.0612
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0117",
+        "station_name": "NH65 Munagala Highway Plaza",
+        "district": "Suryapet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.1,
+        "distance_to_city_center_km": 22.93,
+        "nearby_poi_count": 35,
+        "district_eips": 32.22,
+        "district_eips_rank": 15,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.391,
+        "infrastructure_gap_index": 0.2782,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9612,
+          16.9945
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0118",
+        "station_name": "NH65 Kodad Corridor Terminal",
+        "district": "Suryapet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.55,
+        "distance_to_city_center_km": 39.52,
+        "nearby_poi_count": 33,
+        "district_eips": 32.22,
+        "district_eips_rank": 15,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.391,
+        "infrastructure_gap_index": 0.2782,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6812,
+          17.4485
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0119",
+        "station_name": "NH163 Ghatkesar Corridor Hub",
+        "district": "Medchal-Malkajgiri",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.62,
+        "distance_to_city_center_km": 19.83,
+        "nearby_poi_count": 33,
+        "district_eips": 58.75,
+        "district_eips_rank": 1,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.8912,
+          17.5112
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0120",
+        "station_name": "NH163 Bhongir Highway Station",
+        "district": "Yadadri Bhuvanagiri",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.79,
+        "distance_to_city_center_km": 0.24,
+        "nearby_poi_count": 32,
+        "district_eips": 28.86,
+        "district_eips_rank": 19,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.207,
+        "infrastructure_gap_index": 0.3018,
+        "grid_readiness_score": 0.8603,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0345,
+          17.6312
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0121",
+        "station_name": "NH163 Alair Corridor Hub",
+        "district": "Yadadri Bhuvanagiri",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.19,
+        "distance_to_city_center_km": 20.4,
+        "nearby_poi_count": 34,
+        "district_eips": 28.86,
+        "district_eips_rank": 19,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.207,
+        "infrastructure_gap_index": 0.3018,
+        "grid_readiness_score": 0.8603,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1612,
+          17.7285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0122",
+        "station_name": "NH163 Jangaon Bypass Plaza",
+        "district": "Jangaon",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.01,
+        "distance_to_city_center_km": 0.65,
+        "nearby_poi_count": 31,
+        "district_eips": 25.06,
+        "district_eips_rank": 29,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.303,
+        "infrastructure_gap_index": 0.4343,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.3512,
+          17.8445
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0123",
+        "station_name": "NH163 Station Ghanpur Hub",
+        "district": "Jangaon",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.86,
+        "distance_to_city_center_km": 24.53,
+        "nearby_poi_count": 32,
+        "district_eips": 25.06,
+        "district_eips_rank": 29,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.303,
+        "infrastructure_gap_index": 0.4343,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.9445,
+          18.1912
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0124",
+        "station_name": "NH163 Mulugu Highway Gateway",
+        "district": "Mulugu",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.05,
+        "distance_to_city_center_km": 0.31,
+        "nearby_poi_count": 35,
+        "district_eips": 33.07,
+        "district_eips_rank": 13,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 0.98,
+        "infrastructure_gap_index": 0.49,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.8612,
+          18.4285
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0125",
+        "station_name": "NH163 Bhupalpally Corridor Station",
+        "district": "Jayashankar Bhupalapally",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.19,
+        "distance_to_city_center_km": 0.69,
+        "nearby_poi_count": 34,
+        "district_eips": 36.14,
+        "district_eips_rank": 10,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.164,
+        "infrastructure_gap_index": 0.582,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5845,
+          17.0812
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0126",
+        "station_name": "NH765 Kadthal Corridor Plaza",
+        "district": "Ranga Reddy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 11.63,
+        "distance_to_city_center_km": 32.51,
+        "nearby_poi_count": 5,
+        "district_eips": 54.61,
+        "district_eips_rank": 2,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4912,
+          16.6712
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0127",
+        "station_name": "NH765 Kalwakurthy EV Station",
+        "district": "Nagarkurnool",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 4.18,
+        "distance_to_city_center_km": 26.66,
+        "nearby_poi_count": 18,
+        "district_eips": 27.93,
+        "district_eips_rank": 22,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.3807,
+        "grid_readiness_score": 0.8165,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.9545,
+          16.5812
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0128",
+        "station_name": "NH765 Dindi Highway Hub",
+        "district": "Nalgonda",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 12.68,
+        "distance_to_city_center_km": 62.64,
+        "nearby_poi_count": 5,
+        "district_eips": 28.46,
+        "district_eips_rank": 20,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.461,
+        "infrastructure_gap_index": 0.2922,
+        "grid_readiness_score": 0.8392,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0145,
+          16.7412
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0129",
+        "station_name": "NH167 Mahabubnagar Link Plaza",
+        "district": "Mahabubnagar",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.32,
+        "distance_to_city_center_km": 1.44,
+        "nearby_poi_count": 30,
+        "district_eips": 31.15,
+        "district_eips_rank": 18,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.491,
+        "infrastructure_gap_index": 0.2982,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1345,
+          16.7712
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0130",
+        "station_name": "NH167 Jadcherla Link Station",
+        "district": "Mahabubnagar",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.32,
+        "distance_to_city_center_km": 14.17,
+        "nearby_poi_count": 34,
+        "district_eips": 31.15,
+        "district_eips_rank": 18,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.491,
+        "infrastructure_gap_index": 0.2982,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5612,
+          16.8712
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0131",
+        "station_name": "NH167 Miryalguda Transit Hub",
+        "district": "Nalgonda",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.23,
+        "distance_to_city_center_km": 37.41,
+        "nearby_poi_count": 30,
+        "district_eips": 28.46,
+        "district_eips_rank": 20,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.461,
+        "infrastructure_gap_index": 0.2922,
+        "grid_readiness_score": 0.8392,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.8512,
+          18.1045
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0132",
+        "station_name": "Siddipet Integrated Collectorate",
+        "district": "Siddipet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.86,
+        "distance_to_city_center_km": 0.31,
+        "nearby_poi_count": 28,
+        "district_eips": 26.73,
+        "district_eips_rank": 25,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.378,
+        "infrastructure_gap_index": 0.4593,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6812,
+          17.8512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0133",
+        "station_name": "Gajwel Municipal EV Hub",
+        "district": "Siddipet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.64,
+        "distance_to_city_center_km": 33.21,
+        "nearby_poi_count": 32,
+        "district_eips": 26.73,
+        "district_eips_rank": 25,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.378,
+        "infrastructure_gap_index": 0.4593,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7012,
+          17.8345
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0134",
+        "station_name": "Pragnapur Commercial Station",
+        "district": "Siddipet",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.16,
+        "distance_to_city_center_km": 33.73,
+        "nearby_poi_count": 34,
+        "district_eips": 26.73,
+        "district_eips_rank": 25,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.378,
+        "infrastructure_gap_index": 0.4593,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.4612,
+          18.8712
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0135",
+        "station_name": "Mancherial Town Station Hub",
+        "district": "Mancherial",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.88,
+        "distance_to_city_center_km": 0.46,
+        "nearby_poi_count": 31,
+        "district_eips": 52.85,
+        "district_eips_rank": 3,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.915,
+        "infrastructure_gap_index": 0.9575,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.4912,
+          19.0612
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0136",
+        "station_name": "Bellampalli Municipal Station",
+        "district": "Mancherial",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 1.39,
+        "distance_to_city_center_km": 21.68,
+        "nearby_poi_count": 29,
+        "district_eips": 52.85,
+        "district_eips_rank": 3,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.915,
+        "infrastructure_gap_index": 0.9575,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.4812,
+          18.9812
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0137",
+        "station_name": "Mandamarri Public Charger",
+        "district": "Mancherial",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 2.08,
+        "distance_to_city_center_km": 12.73,
+        "nearby_poi_count": 27,
+        "district_eips": 52.85,
+        "district_eips_rank": 3,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.915,
+        "infrastructure_gap_index": 0.9575,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.3812,
+          18.6185
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0138",
+        "station_name": "Peddapalli Bus Station Plaza",
+        "district": "Peddapalli",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.41,
+        "distance_to_city_center_km": 0.27,
+        "nearby_poi_count": 33,
+        "district_eips": 32.73,
+        "district_eips_rank": 14,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.997,
+        "infrastructure_gap_index": 0.4992,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5112,
+          18.7612
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0139",
+        "station_name": "Ramagundam NTPC Gateway",
+        "district": "Peddapalli",
+        "operator": "NTPC",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.04,
+        "distance_to_city_center_km": 21.1,
+        "nearby_poi_count": 35,
+        "district_eips": 32.73,
+        "district_eips_rank": 14,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.997,
+        "infrastructure_gap_index": 0.4992,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5212,
+          18.7512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0140",
+        "station_name": "Godavarikhani Bus Station Hub",
+        "district": "Peddapalli",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.49,
+        "distance_to_city_center_km": 20.98,
+        "nearby_poi_count": 29,
+        "district_eips": 32.73,
+        "district_eips_rank": 14,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.997,
+        "infrastructure_gap_index": 0.4992,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.9112,
+          18.7985
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0141",
+        "station_name": "Jagtial Collectorate Complex",
+        "district": "Jagitial",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.38,
+        "distance_to_city_center_km": 0.37,
+        "nearby_poi_count": 33,
+        "district_eips": 42.15,
+        "district_eips_rank": 7,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.492,
+        "infrastructure_gap_index": 0.746,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7112,
+          18.8212
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0142",
+        "station_name": "Korutla Bus Stand EV Station",
+        "district": "Jagitial",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.53,
+        "distance_to_city_center_km": 21.54,
+        "nearby_poi_count": 33,
+        "district_eips": 42.15,
+        "district_eips_rank": 7,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.492,
+        "infrastructure_gap_index": 0.746,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5812,
+          18.8312
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0143",
+        "station_name": "Metpally Municipal Charger",
+        "district": "Jagitial",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.85,
+        "distance_to_city_center_km": 35.26,
+        "nearby_poi_count": 32,
+        "district_eips": 42.15,
+        "district_eips_rank": 7,
+        "district_priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "district_ev_penetration_rate": 1.492,
+        "infrastructure_gap_index": 0.746,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.8012,
+          18.3885
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0144",
+        "station_name": "Sircilla Textile Park EV Hub",
+        "district": "Rajanna Sircilla",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 2.11,
+        "distance_to_city_center_km": 0.5,
+        "nearby_poi_count": 27,
+        "district_eips": 25.99,
+        "district_eips_rank": 27,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.46,
+        "infrastructure_gap_index": 0.4867,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.8685,
+          18.4685
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0145",
+        "station_name": "Vemulawada Temple Parking",
+        "district": "Rajanna Sircilla",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 10.79,
+        "distance_to_city_center_km": 11.68,
+        "nearby_poi_count": 5,
+        "district_eips": 25.99,
+        "district_eips_rank": 27,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.46,
+        "infrastructure_gap_index": 0.4867,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2612,
+          18.0485
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0146",
+        "station_name": "Medak Church Public Parking",
+        "district": "Medak",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.33,
+        "distance_to_city_center_km": 0.35,
+        "nearby_poi_count": 34,
+        "district_eips": 25.18,
+        "district_eips_rank": 28,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.247,
+        "infrastructure_gap_index": 0.4157,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2812,
+          17.7412
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0147",
+        "station_name": "Narsapur Forest Academy Hub",
+        "district": "Medak",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.1,
+        "distance_to_city_center_km": 33.98,
+        "nearby_poi_count": 35,
+        "district_eips": 25.18,
+        "district_eips_rank": 28,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.247,
+        "infrastructure_gap_index": 0.4157,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9012,
+          17.3385
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0148",
+        "station_name": "Vikarabad Ananthagiri Hills Hub",
+        "district": "Vikarabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 10.25,
+        "distance_to_city_center_km": 0.45,
+        "nearby_poi_count": 5,
+        "district_eips": 21.19,
+        "district_eips_rank": 31,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.195,
+        "infrastructure_gap_index": 0.3983,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5812,
+          17.2585
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0149",
+        "station_name": "Tandur Bus Station Charger",
+        "district": "Vikarabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.67,
+        "distance_to_city_center_km": 35.43,
+        "nearby_poi_count": 32,
+        "district_eips": 21.19,
+        "district_eips_rank": 31,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.195,
+        "infrastructure_gap_index": 0.3983,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.8812,
+          17.1812
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0150",
+        "station_name": "Pargi Municipal EV Station",
+        "district": "Vikarabad",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 0.49,
+        "distance_to_city_center_km": 17.44,
+        "nearby_poi_count": 33,
+        "district_eips": 21.19,
+        "district_eips_rank": 31,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.195,
+        "infrastructure_gap_index": 0.3983,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4985,
+          16.7385
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0151",
+        "station_name": "Narayanpet Municipal Hub",
+        "district": "Narayanpet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 23.15,
+        "distance_to_city_center_km": 0.6,
+        "nearby_poi_count": 5,
+        "district_eips": 20.47,
+        "district_eips_rank": 32,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.174,
+        "infrastructure_gap_index": 0.3913,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5112,
+          16.5012
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0152",
+        "station_name": "Makthal Highway Link Station",
+        "district": "Narayanpet",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.37,
+        "distance_to_city_center_km": 25.84,
+        "nearby_poi_count": 34,
+        "district_eips": 20.47,
+        "district_eips_rank": 32,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.174,
+        "infrastructure_gap_index": 0.3913,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0612,
+          16.3685
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0153",
+        "station_name": "Wanaparthy Collectorate Complex",
+        "district": "Wanaparthy",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 12.35,
+        "distance_to_city_center_km": 0.71,
+        "nearby_poi_count": 5,
+        "district_eips": 27.28,
+        "district_eips_rank": 24,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.36,
+        "infrastructure_gap_index": 0.34,
+        "grid_readiness_score": 0.8452,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.8012,
+          16.2385
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0154",
+        "station_name": "Gadwal Fort Public Charging",
+        "district": "Jogulamba Gadwal",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 15.15,
+        "distance_to_city_center_km": 0.59,
+        "nearby_poi_count": 5,
+        "district_eips": 27.61,
+        "district_eips_rank": 23,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.373,
+        "infrastructure_gap_index": 0.3432,
+        "grid_readiness_score": 0.8581,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3312,
+          16.4885
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0155",
+        "station_name": "Nagarkurnool Bus Stand Plaza",
+        "district": "Nagarkurnool",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.96,
+        "distance_to_city_center_km": 0.36,
+        "nearby_poi_count": 31,
+        "district_eips": 27.93,
+        "district_eips_rank": 22,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.3807,
+        "grid_readiness_score": 0.8165,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6712,
+          16.3985
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0156",
+        "station_name": "Achampet Forest Gateway Station",
+        "district": "Nagarkurnool",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 5.16,
+        "distance_to_city_center_km": 37.37,
+        "nearby_poi_count": 14,
+        "district_eips": 27.93,
+        "district_eips_rank": 22,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.3807,
+        "grid_readiness_score": 0.8165,
+        "grid_data_observed_flag": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0012,
+          17.6012
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0157",
+        "station_name": "Mahabubabad Town Collectorate",
+        "district": "Mahabubabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.29,
+        "distance_to_city_center_km": 0.4,
+        "nearby_poi_count": 34,
+        "district_eips": 31.97,
+        "district_eips_rank": 16,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.571,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.7312,
+          17.5385
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0158",
+        "station_name": "Thorrur Commercial EV Station",
+        "district": "Mahabubabad",
+        "operator": "TGREDCO",
+        "charger_type": "AC_LEVEL2",
+        "connector_type": "Type 2",
+        "charging_power_kw": 7.4,
+        "fast_charging_flag": 0,
+        "fast_charging_desc": "AC / Non-Fast (observed)",
+        "distance_to_highway_km": 1.64,
+        "distance_to_city_center_km": 29.66,
+        "nearby_poi_count": 28,
+        "district_eips": 31.97,
+        "district_eips_rank": 16,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.571,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1545,
+          17.2512
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0159",
+        "station_name": "Khammam Collectorate Complex",
+        "district": "Khammam",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.92,
+        "distance_to_city_center_km": 0.54,
+        "nearby_poi_count": 31,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.3512,
+          17.1985
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0160",
+        "station_name": "Wyra Highway Link Plaza",
+        "district": "Khammam",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.05,
+        "distance_to_city_center_km": 21.9,
+        "nearby_poi_count": 35,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.8312,
+          17.2112
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0161",
+        "station_name": "Sathupally Coal Corridor Station",
+        "district": "Khammam",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.09,
+        "distance_to_city_center_km": 72.31,
+        "nearby_poi_count": 35,
+        "district_eips": 35.73,
+        "district_eips_rank": 11,
+        "district_priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "district_ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.6145,
+          17.5585
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0162",
+        "station_name": "Kothagudem Mining Hub Charger",
+        "district": "Bhadradri Kothagudem",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.38,
+        "distance_to_city_center_km": 0.62,
+        "nearby_poi_count": 33,
+        "district_eips": 26.52,
+        "district_eips_rank": 26,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.635,
+        "infrastructure_gap_index": 0.4088,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.7012,
+          17.6012
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0163",
+        "station_name": "Palwancha Industrial EV Hub",
+        "district": "Bhadradri Kothagudem",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.5,
+        "distance_to_city_center_km": 10.12,
+        "nearby_poi_count": 33,
+        "district_eips": 26.52,
+        "district_eips_rank": 26,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.635,
+        "infrastructure_gap_index": 0.4088,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.8912,
+          17.6712
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0164",
+        "station_name": "Bhadrachalam Temple Pilgrimage",
+        "district": "Bhadradri Kothagudem",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 0.11,
+        "distance_to_city_center_km": 31.61,
+        "nearby_poi_count": 35,
+        "district_eips": 26.52,
+        "district_eips_rank": 26,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.635,
+        "infrastructure_gap_index": 0.4088,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.2845,
+          19.3685
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0165",
+        "station_name": "Asifabad District Headquarters",
+        "district": "Kumurambheem Asifabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 1.19,
+        "distance_to_city_center_km": 0.84,
+        "nearby_poi_count": 30,
+        "district_eips": 19.13,
+        "district_eips_rank": 33,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.176,
+        "infrastructure_gap_index": 0.392,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.4812,
+          19.3385
+        ]
+      },
+      "properties": {
+        "station_id": "TS-GOV-0166",
+        "station_name": "Kagaznagar Railway Gateway Hub",
+        "district": "Kumurambheem Asifabad",
+        "operator": "TGREDCO",
+        "charger_type": "DC_FAST",
+        "connector_type": "CCS (Type 2)",
+        "charging_power_kw": 60.0,
+        "fast_charging_flag": 1,
+        "fast_charging_desc": "DC Fast (>= 50 kW)",
+        "distance_to_highway_km": 9.63,
+        "distance_to_city_center_km": 20.35,
+        "nearby_poi_count": 5,
+        "district_eips": 19.13,
+        "district_eips_rank": 33,
+        "district_priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "district_ev_penetration_rate": 1.176,
+        "infrastructure_gap_index": 0.392,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0
+      }
+    }
+  ]
+}

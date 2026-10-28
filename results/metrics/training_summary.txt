@@ -1,0 +1,19 @@
+======================================================================
+STEP 3: MACHINE LEARNING MODEL TRAINING & CV SUMMARY
+======================================================================
+Development Set:       119 stations across 25 districts
+Class Imbalance:       105 Class 1 : 14 Class 0 (7.50:1)
+Validation Design:     GroupKFold (n_splits=4) Grouped by District
+Outer Test Set:        QUARANTINED (Untouched during training and tuning)
+Champion Model:        Random_Forest
+
+Development Cross-Validation Summary (Out-of-Fold):
+        model  balanced_accuracy  f1_macro  recall_minority_c0   pr_auc  roc_auc
+Random_Forest           0.485714  0.461538                 0.0 0.920351 0.564286
+      XGBoost           0.495238  0.466368                 0.0 0.902185 0.501701
+     LightGBM           0.495238  0.466368                 0.0 0.889772 0.426190
+
+Selected Artifact:     C:\Users\Dell\Downloads\EV_Charging\models\selected_model.joblib
+Scaler Artifact:       C:\Users\Dell\Downloads\EV_Charging\models\scaler.joblib
+STATUS:                TRAINING COMPLETE & CERTIFIED
+======================================================================

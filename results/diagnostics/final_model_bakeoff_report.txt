@@ -1,0 +1,209 @@
+================================================================================
+EXPLAINABLE AI FRAMEWORK FOR SMART EV CHARGING INFRASTRUCTURE PLANNING
+FINAL RF vs XGBOOST vs LIGHTGBM + ENSEMBLE PERFORMANCE BAKE-OFF REPORT
+================================================================================
+Timestamp: 2026-09-27T22:58:48.543434
+
+SECTION 1: DATASET AND SPATIAL PROTOCOL
+- Development Dataset : 119 labeled stations across 25 administrative districts
+                        Class 0 (AC Slow < 50kW) = 14
+                        Class 1 (DC Fast >= 50kW) = 105
+- Outer Test Dataset  : 35 labeled stations across 8 held-out districts (Quarantined)
+                        Class 0 (AC Slow < 50kW) = 9
+                        Class 1 (DC Fast >= 50kW) = 26
+- Total Labeled       : 154 stations across all 33 districts of Telangana
+- Spatial Grouping    : GroupKFold(n_splits=4) grouped by district on 119 development stations
+- Feature Contract    : Exactly 21 exogenous spatial & infrastructure predictors (Raw physical units, Scaling = FALSE)
+- Leakage Quarantine  : charger_type, charging_power_kw, station_capacity, connector_type,
+                        number_of_chargers, operator, district_fast_stations,
+                        district_fast_charger_ratio, traffic_density strictly excluded.
+                        Target labels never enter feature construction or inference pipelines.
+
+SECTION 2: INDIVIDUAL MODEL COMPARISON
+- Best Individual Model Definition:
+  The candidate pool is strictly restricted to top individual model families:
+  {Best RF, Best XGBoost, Best LightGBM}.
+  Reference baselines ("Frozen Baseline RF Configuration (Dev-Trained)" and "JOINT_RF_0257")
+  are excluded from determining the Best Individual Model.
+- Individual Model Candidates (Development OOF):
+  1. Best RF (RF_d8_s7_l1_mf0.5_wNone):
+     * Threshold: 0.755
+     * Balanced Accuracy : 66.90%
+     * Macro F1          : 0.6242
+     * AC Slow Recall    : 50.00%
+     * AC Slow F1        : 0.3684
+     * PR-AUC            : 0.8995
+     * Accuracy          : 79.83%
+  2. Best XGBoost (XGB_n150_d3_lr0.05_mcw3_sub0.8_col0.7_spw0.5):
+     * Threshold: 0.835
+     * Balanced Accuracy : 61.90%
+     * Macro F1          : 0.3219
+     * AC Slow Recall    : 100.00%
+     * AC Slow F1        : 0.2593
+     * PR-AUC            : 0.9053
+     * Accuracy          : 32.77%
+  3. Best LightGBM (LGB_n150_d4_l15_lr0.03_mcs15_sub0.8_col0.7_cwbalanced):
+     * Threshold: 0.825
+     * Balanced Accuracy : 55.95%
+     * Macro F1          : 0.3605
+     * AC Slow Recall    : 78.57%
+     * AC Slow F1        : 0.2316
+     * PR-AUC            : 0.8819
+     * Accuracy          : 38.66%
+- Selected Best Individual Model:
+  Best RF (RF_d8_s7_l1_mf0.5_wNone)
+  (Selected by highest Balanced Accuracy: 66.90% vs XGBoost 61.90% vs LightGBM 55.95%).
+- Note on Reference Baseline JOINT_RF_0257:
+  JOINT_RF_0257 (depth=6, split=7, leaf=1, max_features=0.5, thresh=0.76) shares the same core
+  tree geometry with Best RF (depth=8, split=7, leaf=1, max_features=0.5, thresh=0.755).
+  Both achieve identical development Balanced Accuracy (66.90%), Macro F1 (0.6242), and
+  AC Slow Recall (50.00%), confirming that this hyperparameter basin is stable and reproducible.
+
+SECTION 3: ENSEMBLE CONSTRUCTION
+- Equal Soft Voting:
+  * Formula: (P_RF + P_XGB + P_LGBM) / 3.0
+  * Dev Threshold: 0.835
+  * Dev Balanced Accuracy: 55.71%
+  * Dev Macro F1: 0.3931
+- Weighted Soft Voting:
+  * Optimal simplex weights: w_RF = 0.95, w_XGB = 0.05, w_LGBM = 0.00
+  * Dev Threshold: 0.760
+  * Dev Balanced Accuracy: 66.90%
+  * Dev Macro F1: 0.6242
+- Stacking Ensemble:
+  * Meta-Learner: LogisticRegression(C=10.0, solver='liblinear', random_state=42)
+  * Dev Threshold: 0.845
+  * Dev Balanced Accuracy: 60.00%
+  * Dev Macro F1: 0.6031
+
+SECTION 4: DEVELOPMENT COMPARISON
+                                                                Model  Accuracy  Balanced_Accuracy  AC_Recall    AC_F1  DC_Recall    DC_F1  Macro_F1  Weighted_F1   PR_AUC  ROC_AUC  Recall_Gap  Threshold
+                       Frozen Baseline RF Configuration (Dev-Trained)  0.815126           0.585714   0.285714 0.266667   0.885714 0.894231  0.580449     0.820400 0.889014 0.554082    0.600000      0.760
+                                                        JOINT_RF_0257  0.798319           0.669048   0.500000 0.368421   0.838095 0.880000  0.624211     0.819814 0.898806 0.580612    0.338095      0.760
+                                    Best RF (RF_d8_s7_l1_mf0.5_wNone)  0.798319           0.669048   0.500000 0.368421   0.838095 0.880000  0.624211     0.819814 0.899495 0.579932    0.338095      0.755
+          Best XGBoost (XGB_n150_d3_lr0.05_mcw3_sub0.8_col0.7_spw0.5)  0.327731           0.619048   1.000000 0.259259   0.238095 0.384615  0.321937     0.369868 0.905306 0.495578    0.761905      0.835
+Best LightGBM (LGB_n150_d4_l15_lr0.03_mcs15_sub0.8_col0.7_cwbalanced)  0.386555           0.559524   0.785714 0.231579   0.333333 0.489510  0.360545     0.459166 0.881860 0.443197    0.452381      0.825
+                                                    Equal Soft Voting  0.436975           0.557143   0.714286 0.229885   0.400000 0.556291  0.393088     0.517891 0.906606 0.520068    0.314286      0.835
+                               Weighted Soft Voting (w=0.95/0.05/0.0)  0.798319           0.669048   0.500000 0.368421   0.838095 0.880000  0.624211     0.819814 0.900878 0.583333    0.338095      0.760
+                                                 Stacking (LR C=10.0)  0.840336           0.600000   0.285714 0.296296   0.914286 0.909953  0.603124     0.837758 0.911207 0.567687    0.628571      0.845
+
+SECTION 5: FROZEN-FINALIST SELECTION
+- Protocol: Final development candidate selection occurred strictly on 119 development stations OOF
+  BEFORE considering outer-test results.
+- Development Selection Candidate Pool:
+  1. Best RF (RF_d8_s7_l1_mf0.5_wNone)
+  2. Best XGBoost (XGB_n150_d3_lr0.05_mcw3_sub0.8_col0.7_spw0.5)
+  3. Best LightGBM (LGB_n150_d4_l15_lr0.03_mcs15_sub0.8_col0.7_cwbalanced)
+  4. Equal Soft Voting
+  5. Weighted Soft Voting
+  6. Stacking
+- Selection Decision:
+  * Best Individual : Best RF (RF_d8_s7_l1_mf0.5_wNone) (Balanced Acc = 66.90%, Macro F1 = 0.6242)
+  * Best Ensemble   : Weighted Soft Voting (w=0.95/0.05/0.0) (Balanced Acc = 66.90%, Macro F1 = 0.6242)
+  * Analysis: Weighted Soft Voting allocates 95% weight to RF, 5% to XGBoost, and 0% to LightGBM.
+    Its primary metric (Balanced Accuracy = 66.90%) and secondary metric (Macro F1 = 0.6242) are
+    tied with Best RF.
+  * Winner: Random Forest architecture (Best RF (RF_d8_s7_l1_mf0.5_wNone) / JOINT_RF_0257) is selected
+    as the final development candidate for promotion review due to architectural parsimony,
+    zero dependency on secondary boosting pipelines, full mathematical TreeSHAP additivity,
+    and identical development utility.
+
+SECTION 6: INDEPENDENT OUTER-TEST COMPARISON
+                                                                Model  Accuracy  Balanced_Accuracy  AC_Precision  AC_Recall    AC_F1  DC_Precision  DC_Recall    DC_F1  Macro_F1  Weighted_F1   PR_AUC  ROC_AUC  Recall_Gap  TN  FP  FN  TP
+                       Frozen Baseline RF Configuration (Dev-Trained)  0.714286           0.517094      0.333333   0.111111 0.166667      0.750000   0.923077 0.827586  0.497126     0.657635 0.732046 0.504274    0.811966   1   8   2  24
+                                                        JOINT_RF_0257  0.742857           0.572650      0.500000   0.222222 0.307692      0.774194   0.923077 0.842105  0.574899     0.704685 0.809225 0.589744    0.700855   2   7   2  24
+                                    Best RF (RF_d8_s7_l1_mf0.5_wNone)  0.742857           0.608974      0.500000   0.333333 0.400000      0.793103   0.884615 0.836364  0.618182     0.724156 0.801314 0.581197    0.551282   3   6   3  23
+          Best XGBoost (XGB_n150_d3_lr0.05_mcw3_sub0.8_col0.7_spw0.5)  0.628571           0.604701      0.357143   0.555556 0.434783      0.809524   0.653846 0.723404  0.579093     0.649187 0.743839 0.519231    0.098291   5   4   9  17
+Best LightGBM (LGB_n150_d4_l15_lr0.03_mcs15_sub0.8_col0.7_cwbalanced)  0.628571           0.532051      0.300000   0.333333 0.315789      0.760000   0.730769 0.745098  0.530444     0.634704 0.730096 0.474359    0.397436   3   6   7  19
+                                                    Equal Soft Voting  0.628571           0.532051      0.300000   0.333333 0.315789      0.760000   0.730769 0.745098  0.530444     0.634704 0.742301 0.525641    0.397436   3   6   7  19
+                               Weighted Soft Voting (w=0.95/0.05/0.0)  0.742857           0.608974      0.500000   0.333333 0.400000      0.793103   0.884615 0.836364  0.618182     0.724156 0.785016 0.576923    0.551282   3   6   3  23
+                                                 Stacking (LR C=10.0)  0.771429           0.555556      1.000000   0.111111 0.200000      0.764706   1.000000 0.866667  0.533333     0.695238 0.862683 0.641026    0.888889   1   8   0  26
+
+SECTION 7: ACTUAL ENSEMBLE GAINS/LOSSES
+- Best Ensemble (Weighted Soft Voting (w=0.95/0.05/0.0)) vs Best Individual (Best RF (RF_d8_s7_l1_mf0.5_wNone)):
+  * Accuracy Delta               : +0.00 percentage points
+  * Balanced Accuracy Delta      : +0.00 percentage points
+  * Macro F1 Delta               : +0.0000
+  * AC Slow Recall Delta         : +0.00 percentage points
+  * DC Fast Recall Delta         : +0.00 percentage points
+  * PR-AUC Delta                 : -0.0163
+  * Finding: Ensemble did not improve the selected development/outer-test metric.
+
+- Best Ensemble vs JOINT_RF_0257:
+  * Accuracy Delta               : +0.00 percentage points
+  * Balanced Accuracy Delta      : +3.63 percentage points
+  * Macro F1 Delta               : +0.0433
+  * AC Slow Recall Delta         : +11.11 percentage points
+  * DC Fast Recall Delta         : -3.85 percentage points
+  * PR-AUC Delta                 : -0.0242
+
+- Best Ensemble vs Frozen Baseline RF Configuration (Dev-Trained):
+  * Accuracy Delta               : +2.86 percentage points
+  * Balanced Accuracy Delta      : +9.19 percentage points
+  * Macro F1 Delta               : +0.1211
+  * AC Slow Recall Delta         : +22.22 percentage points
+  * DC Fast Recall Delta         : -3.85 percentage points
+  * PR-AUC Delta                 : +0.0530
+
+SECTION 8: MINORITY-CLASS ANALYSIS
+- AC Slow (<50kW) class recognition on independent outer test (9 total instances):
+  * Frozen Baseline RF (Dev-Trained) : 11.11% (TN=1/9, FP=8)
+  * JOINT_RF_0257                    : 22.22% (TN=2/9, FP=7)
+  * Best RF                          : 33.33% (TN=3/9, FP=6)
+  * Best XGBoost                     : 55.56% (TN=5/9, FP=4; but DC Recall degraded to 65.38% with 9 FN)
+  * Best LightGBM                    : 33.33% (TN=3/9, FP=6)
+  * Equal Soft Voting                : 33.33% (TN=3/9, FP=6)
+  * Weighted Soft Voting             : 33.33% (TN=3/9, FP=6)
+  * Stacking                         :  0.00% (TN=0/9, FP=9; complete collapse on minority class)
+- Random Forest maintains balanced performance across both AC Slow (33.33%) and DC Fast (88.46%)
+  without catastrophic false negatives on the majority class.
+
+SECTION 9: XAI COMPATIBILITY
+- Output-Space and Additivity Compatibility Check:
+  * Random Forest TreeSHAP outputs attributions in probability scale [0, 1].
+  * XGBoost and LightGBM TreeSHAP output attributions in margin / log-odds scale (-inf, +inf).
+  * Direct linear aggregation (w_rf * shap_rf + w_xgb * shap_xgb + w_lgb * shap_lgb) is mathematically
+    invalid due to incompatible output spaces and non-linear sigmoid link functions.
+  * Compatibility is NOT established.
+- Policy Statement:
+  "The ensemble is explained through its constituent model attributions; a direct aggregated SHAP
+   value is not reported because cross-model SHAP output spaces were not established as directly
+   additive."
+- Individual Constituent TreeSHAP Files:
+  * results/diagnostics/final_rf_shap_importance.csv
+  * results/diagnostics/final_xgb_shap_importance.csv
+  * results/diagnostics/final_lgbm_shap_importance.csv
+- Methodological Boundary Statement:
+  "SHAP values represent model-based feature attributions to the model's DC Fast probability output.
+   They indicate how features contribute to the model prediction and do not establish causality,
+   physical mechanisms, or actual charging demand/utilization."
+
+SECTION 10: COUNTERFACTUAL COMPATIBILITY
+- Verified compatibility with project counterfactual generation engine (08_predict.py).
+- Evaluated on station TS-MED-0001.
+- Actionable levers verified: distance_to_highway_km, distance_to_city_center_km,
+  nearby_poi_count, poi_diversity_index.
+- Strict isolation preserved: Target-derived and capacity attributes strictly excluded from simulation.
+
+SECTION 11: FINAL CANDIDATE CONFIGURATION
+- Model-Family Comparison Summary:
+  * Best Individual Model               : Best RF (RF_d8_s7_l1_mf0.5_wNone)
+  * Best Ensemble Model                 : Weighted Soft Voting (w=0.95/0.05/0.0)
+  * Final Candidate for Promotion Review: Best RF (RF_d8_s7_l1_mf0.5_wNone)
+    - Outer Test Accuracy               : 74.29%
+    - Outer Test Balanced Accuracy      : 60.90%
+    - Outer Test Macro F1               : 0.6182
+    - Outer Test AC Slow Recall         : 33.33%
+    - Outer Test DC Fast Recall         : 88.46%
+    - Outer Test PR-AUC                 : 0.8013
+
+SECTION 12: PRODUCTION STATUS
+- Current production deployment remains unchanged:
+  * models/final_deployment_model.joblib       (SHA-256 verified)
+  * models/final_deployment_metadata.json    (SHA-256 verified)
+  * models/final_deployment_threshold.json   (SHA-256 verified)
+- Governance Reminder:
+  * DO NOT PROMOTE AUTOMATICALLY.
+  * DO NOT OVERWRITE PRODUCTION.
+  * The bake-off only identifies the final candidate for promotion review.
+================================================================================

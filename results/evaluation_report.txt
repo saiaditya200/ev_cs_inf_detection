@@ -1,0 +1,40 @@
+================================================================================
+EXPLAINABLE AI EV CHARGING INFRASTRUCTURE PLANNING
+OUTER SPATIAL TEST BENCHMARKING REPORT
+================================================================================
+
+Champion Model: Random_Forest
+Champion Decision Threshold: 0.76
+Outer Test Stations: 35 across 8 untouched districts
+Class 0 (AC Slow): 9 stations
+Class 1 (DC Fast): 26 stations
+
+PERFORMANCE SUMMARY:
+Model: Random_Forest
+  Dev Optimized Bal Acc: 0.6476
+  Decision Threshold:   0.76
+  Outer Test PR-AUC:   0.8214
+  Outer Test ROC-AUC:  0.6154
+  Outer Test Accuracy: 0.5714
+  Outer Balanced Acc:  0.6026
+  Outer Macro F1:      0.5478
+
+Model: LightGBM
+  Dev Optimized Bal Acc: 0.5810
+  Decision Threshold:   0.67
+  Outer Test PR-AUC:   0.7913
+  Outer Test ROC-AUC:  0.5513
+  Outer Test Accuracy: 0.6571
+  Outer Balanced Acc:  0.5513
+  Outer Macro F1:      0.5513
+
+Model: XGBoost
+  Dev Optimized Bal Acc: 0.5762
+  Decision Threshold:   0.90
+  Outer Test PR-AUC:   0.8130
+  Outer Test ROC-AUC:  0.5897
+  Outer Test Accuracy: 0.4286
+  Outer Balanced Acc:  0.5064
+  Outer Macro F1:      0.4243
+
+================================================================================

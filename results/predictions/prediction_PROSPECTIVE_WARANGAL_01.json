@@ -1,0 +1,215 @@
+{
+  "status": "success",
+  "project": "Explainable AI Framework for Smart EV Charging Infrastructure Planning",
+  "step": 8,
+  "station_id": "PROSPECTIVE_WARANGAL_01",
+  "station_name": "Prospective Highway Corridor Site Warangal",
+  "input_mode": "custom_json",
+  "coordinates": {
+    "latitude": 17.982,
+    "longitude": 79.598
+  },
+  "district": "Warangal Urban",
+  "road_type": "trunk",
+  "model": {
+    "name": "Random_Forest",
+    "runtime_class": "RandomForestClassifier",
+    "feature_count": 21,
+    "decision_threshold": 0.76,
+    "scaling": false
+  },
+  "prediction": {
+    "class_label": 1,
+    "classification": "DC Fast-Charging Infrastructure (>= 50kW)",
+    "probability_dc_fast": 0.8456,
+    "probability_ac_slow": 0.1544,
+    "predicted_class_probability": 0.8456,
+    "threshold_applied": 0.76
+  },
+  "feature_vector": {
+    "latitude": 17.982,
+    "longitude": 79.598,
+    "distance_to_highway_km": 0.35,
+    "distance_to_city_center_km": 3.5,
+    "nearby_poi_count": 14.0,
+    "highway_proximity_score": 0.740741,
+    "city_center_proximity_score": 0.222222,
+    "poi_diversity_index": 0.82,
+    "road_type_motorway": 0.0,
+    "road_type_primary": 0.0,
+    "road_type_residential": 0.0,
+    "road_type_secondary": 0.0,
+    "road_type_service": 0.0,
+    "road_type_trunk": 1.0,
+    "road_type_unclassified": 0.0,
+    "district_population_density_2011": 829.0,
+    "district_urban_population_pct": 67.2,
+    "district_projected_density_fy24": 901.64,
+    "district_nh_crossing_count": 3.0,
+    "district_ev_penetration_rate": 3.617,
+    "discom_utility_data_available_flag": 0.0
+  },
+  "explainable_ai": {
+    "target_interpretation": "Observed fast-charging infrastructure classification; not station-level charging demand/utilization.",
+    "top_positive_drivers": [
+      {
+        "feature": "distance_to_city_center_km",
+        "value": 3.5,
+        "shap_impact": 0.01809
+      },
+      {
+        "feature": "road_type_residential",
+        "value": 0.0,
+        "shap_impact": 0.016039
+      },
+      {
+        "feature": "distance_to_highway_km",
+        "value": 0.35,
+        "shap_impact": 0.014999
+      }
+    ],
+    "top_negative_drivers": [
+      {
+        "feature": "poi_diversity_index",
+        "value": 0.82,
+        "shap_impact": -0.063758
+      },
+      {
+        "feature": "discom_utility_data_available_flag",
+        "value": 0.0,
+        "shap_impact": -0.007687
+      },
+      {
+        "feature": "longitude",
+        "value": 79.598,
+        "shap_impact": -0.004637
+      }
+    ],
+    "all_local_attributions": [
+      {
+        "feature": "latitude",
+        "value": 17.982,
+        "shap_impact": -0.002094
+      },
+      {
+        "feature": "longitude",
+        "value": 79.598,
+        "shap_impact": -0.004637
+      },
+      {
+        "feature": "distance_to_highway_km",
+        "value": 0.35,
+        "shap_impact": 0.014999
+      },
+      {
+        "feature": "distance_to_city_center_km",
+        "value": 3.5,
+        "shap_impact": 0.01809
+      },
+      {
+        "feature": "nearby_poi_count",
+        "value": 14.0,
+        "shap_impact": 0.00089
+      },
+      {
+        "feature": "highway_proximity_score",
+        "value": 0.7407,
+        "shap_impact": 0.009833
+      },
+      {
+        "feature": "city_center_proximity_score",
+        "value": 0.2222,
+        "shap_impact": 0.007931
+      },
+      {
+        "feature": "poi_diversity_index",
+        "value": 0.82,
+        "shap_impact": -0.063758
+      },
+      {
+        "feature": "road_type_motorway",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_primary",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_residential",
+        "value": 0.0,
+        "shap_impact": 0.016039
+      },
+      {
+        "feature": "road_type_secondary",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_service",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "road_type_trunk",
+        "value": 1.0,
+        "shap_impact": -3.2e-05
+      },
+      {
+        "feature": "road_type_unclassified",
+        "value": 0.0,
+        "shap_impact": 0.0
+      },
+      {
+        "feature": "district_population_density_2011",
+        "value": 829.0,
+        "shap_impact": -0.000414
+      },
+      {
+        "feature": "district_urban_population_pct",
+        "value": 67.2,
+        "shap_impact": 0.003432
+      },
+      {
+        "feature": "district_projected_density_fy24",
+        "value": 901.64,
+        "shap_impact": -0.000178
+      },
+      {
+        "feature": "district_nh_crossing_count",
+        "value": 3.0,
+        "shap_impact": 0.000976
+      },
+      {
+        "feature": "district_ev_penetration_rate",
+        "value": 3.617,
+        "shap_impact": 0.003403
+      },
+      {
+        "feature": "discom_utility_data_available_flag",
+        "value": 0.0,
+        "shap_impact": -0.007687
+      }
+    ]
+  },
+  "actionable_counterfactual": {
+    "status": "already_above_threshold",
+    "target_probability": 0.76,
+    "candidate_count": 0,
+    "best_scenario": null,
+    "scenarios": [],
+    "interpretation": "The current feature vector is already above the frozen classification threshold."
+  },
+  "regional_planning_context": {
+    "district": "Warangal Urban",
+    "eips_rank": 6,
+    "eips_score": 45.18,
+    "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+    "infrastructure_gap_index": 0.4019,
+    "ev_penetration_rate": 3.617,
+    "existing_fast_stations": 8,
+    "planning_narrative": "Rank #6; EIPS 45.18/100. FY2023-24 EV penetration 3.617 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1983.0/year. Infrastructure Gap 0.4019 with 8 fast stations; NH crossings 3; spatial suitability 0.3284; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+  },
+  "methodological_note": "EIPS is a district-level planning score. District EV penetration and grid context are used as contextual planning information and are not converted into station-level demand."
+}

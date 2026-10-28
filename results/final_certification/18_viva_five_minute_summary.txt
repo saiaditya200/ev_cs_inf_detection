@@ -1,0 +1,19 @@
+VIVA 5-MINUTE COMPREHENSIVE SUMMARY:
+
+1. MOTIVATION & PROBLEM:
+The rapid adoption of electric vehicles requires strategic deployment of charging infrastructure. Existing approaches often rely on ad-hoc placement or black-box models that suffer from target leakage, spatial overfitting, and lack of stakeholder explainability. Our objective was to develop an end-to-end explainable decision-support framework for Telangana, India.
+
+2. DATASET & LEAKAGE CONTROL:
+We curated a master dataset of 166 charging stations across all 33 Telangana districts, comprising 154 labeled stations (131 DC Fast, 23 AC Slow) and 12 unlabeled stations. We enforced strict leakage controls by excluding all target proxies, charger power ratings, station capacities, connector types, and commercial operator identities, establishing a certified feature contract of exactly 21 exogenous spatial and demographic predictors.
+
+3. SPATIAL CROSS-VALIDATION & MODELING:
+To account for spatial clustering, we implemented a 4-fold GroupKFold protocol strictly grouped by district, alongside a quarantined outer test of 35 stations across 8 independent districts. Across extensive evaluations of Random Forest, XGBoost, LightGBM, and ensembles, a tuned Random Forest demonstrated the highest balanced accuracy and stability under geographic boundaries.
+
+4. EXPLAINABILITY (TreeSHAP & COUNTERFACTUALS):
+We integrated TreeSHAP to provide both global feature attributions (identifying road topology, city proximity, and demographic density as primary drivers) and local explanations for individual site assessments. Furthermore, we formulated model-based counterfactual planning scenarios restricted strictly to actionable planning levers (e.g., highway distance, POI density) to guide planners on what site modifications would alter the infrastructure classification.
+
+5. MACRO PRIORITIZATION (AHP-TOPSIS & EIPS):
+At the macro level, we formulated the Electric Infrastructure Planning Score (EIPS) using an AHP-TOPSIS multi-criteria decision framework (Consistency Ratio = 0.000891). EIPS synthesizes EV adoption, infrastructure gap, corridor connectivity, discom grid context, and spatial suitability to rank districts by expansion urgency without conflating district planning scores with station-level ML probabilities.
+
+6. RESEARCH DISCOVERY (SPATIAL COVARIATE SHIFT):
+Our investigation into minority AC Slow detection revealed that in development districts, 35.7% of AC stations were located in residential zones. However, on held-out outer districts, 100% of AC stations were deployed along trunk highways and government campuses, physically mimicking urban DC Fast hubs. This proved that purely spatial exogenous features face an inherent information ceiling, scientifically demonstrating that future transferability requires integrating electrical transformer and feeder capacity data.

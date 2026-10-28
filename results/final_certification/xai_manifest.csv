@@ -1,0 +1,7 @@
+aspect,specification,status
+Methodology,TreeSHAP (shap.TreeExplainer),VERIFIED
+Predictor Space,Exactly 21 Certified Non-Leaky Features,VERIFIED
+Leakage Control,Zero target fields or equipment specs enter SHAP,VERIFIED
+Global Explanations,SHAP summary plot & mean absolute SHAP importance,VERIFIED
+Local Explanations,Waterfall / force plots for individual site scoring,VERIFIED
+Certified Interpretation,"SHAP values represent model-based feature attributions to the Random Forest's DC Fast probability output. They indicate how features contribute to the model prediction and do not establish causality, physical mechanisms, or actual charging demand/utilization.",VERIFIED

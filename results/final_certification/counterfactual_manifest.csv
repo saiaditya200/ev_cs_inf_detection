@@ -1,0 +1,6 @@
+lever_name,planning_nature,status,terminology,prohibited_terms
+distance_to_highway_km,Actionable Planning Lever,APPROVED,,
+distance_to_city_center_km,Actionable Planning Lever,APPROVED,,
+nearby_poi_count,Actionable Planning Lever,APPROVED,,
+poi_diversity_index,Actionable Planning Lever,APPROVED,,
+,,FROZEN,model-based planning scenario,"guaranteed action, causal intervention, physical road modification guarantee, guaranteed charging-demand increase"

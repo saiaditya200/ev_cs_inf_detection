@@ -1,0 +1,903 @@
+{
+  "type": "FeatureCollection",
+  "name": "telangana_district_eips",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5583,
+          17.6297
+        ]
+      },
+      "properties": {
+        "rank": 1,
+        "district": "Medchal-Malkajgiri",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 58.75,
+        "ev_penetration_rate": 4.111,
+        "infrastructure_gap_index": 0.5139,
+        "total_stations": 8,
+        "fast_stations": 7,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 3,
+        "spatial_suitability_score": 0.2342,
+        "grid_readiness_score": 0.956,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #1; EIPS 58.75/100. FY2023-24 EV penetration 4.111 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 5087.1/year. Infrastructure Gap 0.5139 with 7 fast stations; NH crossings 3; spatial suitability 0.2342; grid score 0.9560 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3578,
+          17.2023
+        ]
+      },
+      "properties": {
+        "rank": 2,
+        "district": "Ranga Reddy",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 54.61,
+        "ev_penetration_rate": 3.652,
+        "infrastructure_gap_index": 0.4565,
+        "total_stations": 8,
+        "fast_stations": 7,
+        "slow_stations": 0,
+        "unknown_label_stations": 1,
+        "nh_crossings": 4,
+        "spatial_suitability_score": 0.1378,
+        "grid_readiness_score": 0.9842,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #2; EIPS 54.61/100. FY2023-24 EV penetration 3.652 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 4531.3/year. Infrastructure Gap 0.4565 with 7 fast stations; NH crossings 4; spatial suitability 0.1378; grid score 0.9842 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.4639,
+          18.8679
+        ]
+      },
+      "properties": {
+        "rank": 3,
+        "district": "Mancherial",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 52.85,
+        "ev_penetration_rate": 1.915,
+        "infrastructure_gap_index": 0.9575,
+        "total_stations": 3,
+        "fast_stations": 1,
+        "slow_stations": 2,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.2723,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #3; EIPS 52.85/100. FY2023-24 EV penetration 1.915 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 783.7/year. Infrastructure Gap 0.9575 with 1 fast stations; NH crossings 2; spatial suitability 0.2723; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4867,
+          17.385
+        ]
+      },
+      "properties": {
+        "rank": 4,
+        "district": "Hyderabad",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 52.78,
+        "ev_penetration_rate": 5.05,
+        "infrastructure_gap_index": 0.1262,
+        "total_stations": 50,
+        "fast_stations": 39,
+        "slow_stations": 6,
+        "unknown_label_stations": 5,
+        "nh_crossings": 5,
+        "spatial_suitability_score": 0.3146,
+        "grid_readiness_score": 1.0,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #4; EIPS 52.78/100. FY2023-24 EV penetration 5.050 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 10098.4/year. Infrastructure Gap 0.1262 with 39 fast stations; NH crossings 5; spatial suitability 0.3146; grid score 1.0000 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.532,
+          19.6641
+        ]
+      },
+      "properties": {
+        "rank": 5,
+        "district": "Adilabad",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 49.46,
+        "ev_penetration_rate": 1.648,
+        "infrastructure_gap_index": 0.824,
+        "total_stations": 1,
+        "fast_stations": 1,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.5799,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #5; EIPS 49.46/100. FY2023-24 EV penetration 1.648 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 592.7/year. Infrastructure Gap 0.8240 with 1 fast stations; NH crossings 2; spatial suitability 0.5799; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.5941,
+          17.9784
+        ]
+      },
+      "properties": {
+        "rank": 6,
+        "district": "Warangal Urban",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 45.18,
+        "ev_penetration_rate": 3.617,
+        "infrastructure_gap_index": 0.4019,
+        "total_stations": 10,
+        "fast_stations": 8,
+        "slow_stations": 2,
+        "unknown_label_stations": 0,
+        "nh_crossings": 3,
+        "spatial_suitability_score": 0.3284,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #6; EIPS 45.18/100. FY2023-24 EV penetration 3.617 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1983.0/year. Infrastructure Gap 0.4019 with 8 fast stations; NH crossings 3; spatial suitability 0.3284; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.9127,
+          18.7946
+        ]
+      },
+      "properties": {
+        "rank": 7,
+        "district": "Jagitial",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 42.15,
+        "ev_penetration_rate": 1.492,
+        "infrastructure_gap_index": 0.746,
+        "total_stations": 3,
+        "fast_stations": 1,
+        "slow_stations": 2,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.3612,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #7; EIPS 42.15/100. FY2023-24 EV penetration 1.492 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 745.4/year. Infrastructure Gap 0.7460 with 1 fast stations; NH crossings 1; spatial suitability 0.3612; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3375,
+          18.3248
+        ]
+      },
+      "properties": {
+        "rank": 8,
+        "district": "Kamareddy",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 41.97,
+        "ev_penetration_rate": 1.356,
+        "infrastructure_gap_index": 0.678,
+        "total_stations": 1,
+        "fast_stations": 1,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.5397,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #8; EIPS 41.97/100. FY2023-24 EV penetration 1.356 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 668.9/year. Infrastructure Gap 0.6780 with 1 fast stations; NH crossings 2; spatial suitability 0.5397; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.343,
+          19.0964
+        ]
+      },
+      "properties": {
+        "rank": 9,
+        "district": "Nirmal",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 41.34,
+        "ev_penetration_rate": 1.39,
+        "infrastructure_gap_index": 0.695,
+        "total_stations": 1,
+        "fast_stations": 1,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.3644,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #9; EIPS 41.34/100. FY2023-24 EV penetration 1.390 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 500.4/year. Infrastructure Gap 0.6950 with 1 fast stations; NH crossings 2; spatial suitability 0.3644; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.8661,
+          18.4348
+        ]
+      },
+      "properties": {
+        "rank": 10,
+        "district": "Jayashankar Bhupalapally",
+        "priority_tier": "Tier 1: High Priority (Immediate Fast-Charging Expansion)",
+        "EIPS": 36.14,
+        "ev_penetration_rate": 1.164,
+        "infrastructure_gap_index": 0.582,
+        "total_stations": 1,
+        "fast_stations": 1,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.6386,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #10; EIPS 36.14/100. FY2023-24 EV penetration 1.164 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 420.0/year. Infrastructure Gap 0.5820 with 1 fast stations; NH crossings 1; spatial suitability 0.6386; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.1514,
+          17.2473
+        ]
+      },
+      "properties": {
+        "rank": 11,
+        "district": "Khammam",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 35.73,
+        "ev_penetration_rate": 1.954,
+        "infrastructure_gap_index": 0.4885,
+        "total_stations": 7,
+        "fast_stations": 3,
+        "slow_stations": 0,
+        "unknown_label_stations": 4,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.4834,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #11; EIPS 35.73/100. FY2023-24 EV penetration 1.954 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1389.1/year. Infrastructure Gap 0.4885 with 3 fast stations; NH crossings 2; spatial suitability 0.4834; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0815,
+          17.619
+        ]
+      },
+      "properties": {
+        "rank": 12,
+        "district": "Sangareddy",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 34.75,
+        "ev_penetration_rate": 1.662,
+        "infrastructure_gap_index": 0.4155,
+        "total_stations": 5,
+        "fast_stations": 3,
+        "slow_stations": 2,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.1448,
+        "grid_readiness_score": 0.9062,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #12; EIPS 34.75/100. FY2023-24 EV penetration 1.662 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1287.4/year. Infrastructure Gap 0.4155 with 3 fast stations; NH crossings 2; spatial suitability 0.1448; grid score 0.9062 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.94,
+          18.1925
+        ]
+      },
+      "properties": {
+        "rank": 13,
+        "district": "Mulugu",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 33.07,
+        "ev_penetration_rate": 0.98,
+        "infrastructure_gap_index": 0.49,
+        "total_stations": 1,
+        "fast_stations": 1,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.7463,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #13; EIPS 33.07/100. FY2023-24 EV penetration 0.980 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 146.5/year. Infrastructure Gap 0.4900 with 1 fast stations; NH crossings 1; spatial suitability 0.7463; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.3739,
+          18.6161
+        ]
+      },
+      "properties": {
+        "rank": 14,
+        "district": "Peddapalli",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 32.73,
+        "ev_penetration_rate": 1.997,
+        "infrastructure_gap_index": 0.4992,
+        "total_stations": 3,
+        "fast_stations": 3,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.3567,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #14; EIPS 32.73/100. FY2023-24 EV penetration 1.997 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 805.8/year. Infrastructure Gap 0.4992 with 3 fast stations; NH crossings 1; spatial suitability 0.3567; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.6239,
+          17.1439
+        ]
+      },
+      "properties": {
+        "rank": 15,
+        "district": "Suryapet",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 32.22,
+        "ev_penetration_rate": 1.391,
+        "infrastructure_gap_index": 0.2782,
+        "total_stations": 5,
+        "fast_stations": 4,
+        "slow_stations": 0,
+        "unknown_label_stations": 1,
+        "nh_crossings": 3,
+        "spatial_suitability_score": 0.2829,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #15; EIPS 32.22/100. FY2023-24 EV penetration 1.391 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 775.6/year. Infrastructure Gap 0.2782 with 4 fast stations; NH crossings 3; spatial suitability 0.2829; grid score 0.8996 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0038,
+          17.5985
+        ]
+      },
+      "properties": {
+        "rank": 16,
+        "district": "Mahabubabad",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 31.97,
+        "ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.571,
+        "total_stations": 2,
+        "fast_stations": 1,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.3123,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #16; EIPS 31.97/100. FY2023-24 EV penetration 1.142 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 448.6/year. Infrastructure Gap 0.5710 with 1 fast stations; NH crossings 1; spatial suitability 0.3123; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.6,
+          17.9689
+        ]
+      },
+      "properties": {
+        "rank": 17,
+        "district": "Warangal Rural",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 31.2,
+        "ev_penetration_rate": 1.041,
+        "infrastructure_gap_index": 0.5205,
+        "total_stations": 2,
+        "fast_stations": 1,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.3179,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #17; EIPS 31.20/100. FY2023-24 EV penetration 1.041 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 379.6/year. Infrastructure Gap 0.5205 with 1 fast stations; NH crossings 2; spatial suitability 0.3179; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0035,
+          16.7433
+        ]
+      },
+      "properties": {
+        "rank": 18,
+        "district": "Mahabubnagar",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 31.15,
+        "ev_penetration_rate": 1.491,
+        "infrastructure_gap_index": 0.2982,
+        "total_stations": 4,
+        "fast_stations": 4,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.3667,
+        "grid_readiness_score": 0.8996,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #18; EIPS 31.15/100. FY2023-24 EV penetration 1.491 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1124.5/year. Infrastructure Gap 0.2982 with 4 fast stations; NH crossings 2; spatial suitability 0.3667; grid score 0.8996 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.8845,
+          17.5108
+        ]
+      },
+      "properties": {
+        "rank": 19,
+        "district": "Yadadri Bhuvanagiri",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 28.86,
+        "ev_penetration_rate": 1.207,
+        "infrastructure_gap_index": 0.3018,
+        "total_stations": 3,
+        "fast_stations": 3,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.2827,
+        "grid_readiness_score": 0.8603,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #19; EIPS 28.86/100. FY2023-24 EV penetration 1.207 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 452.9/year. Infrastructure Gap 0.3018 with 3 fast stations; NH crossings 2; spatial suitability 0.2827; grid score 0.8603 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.2684,
+          17.0577
+        ]
+      },
+      "properties": {
+        "rank": 20,
+        "district": "Nalgonda",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 28.46,
+        "ev_penetration_rate": 1.461,
+        "infrastructure_gap_index": 0.2922,
+        "total_stations": 5,
+        "fast_stations": 4,
+        "slow_stations": 0,
+        "unknown_label_stations": 1,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.1714,
+        "grid_readiness_score": 0.8392,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #20; EIPS 28.46/100. FY2023-24 EV penetration 1.461 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1199.0/year. Infrastructure Gap 0.2922 with 4 fast stations; NH crossings 2; spatial suitability 0.1714; grid score 0.8392 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0941,
+          18.6725
+        ]
+      },
+      "properties": {
+        "rank": 21,
+        "district": "Nizamabad",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 27.93,
+        "ev_penetration_rate": 1.884,
+        "infrastructure_gap_index": 0.3768,
+        "total_stations": 4,
+        "fast_stations": 4,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 2,
+        "spatial_suitability_score": 0.3293,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #21; EIPS 27.93/100. FY2023-24 EV penetration 1.884 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1501.3/year. Infrastructure Gap 0.3768 with 4 fast stations; NH crossings 2; spatial suitability 0.3293; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3196,
+          16.4856
+        ]
+      },
+      "properties": {
+        "rank": 22,
+        "district": "Nagarkurnool",
+        "priority_tier": "Tier 2: Medium Priority (Growth Corridor Provisioning)",
+        "EIPS": 27.93,
+        "ev_penetration_rate": 1.142,
+        "infrastructure_gap_index": 0.3807,
+        "total_stations": 3,
+        "fast_stations": 2,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.1647,
+        "grid_readiness_score": 0.8165,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #22; EIPS 27.93/100. FY2023-24 EV penetration 1.142 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 517.5/year. Infrastructure Gap 0.3807 with 2 fast stations; NH crossings 1; spatial suitability 0.1647; grid score 0.8165 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.808,
+          16.233
+        ]
+      },
+      "properties": {
+        "rank": 23,
+        "district": "Jogulamba Gadwal",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 27.61,
+        "ev_penetration_rate": 1.373,
+        "infrastructure_gap_index": 0.3432,
+        "total_stations": 3,
+        "fast_stations": 3,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.1144,
+        "grid_readiness_score": 0.8581,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #23; EIPS 27.61/100. FY2023-24 EV penetration 1.373 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 424.9/year. Infrastructure Gap 0.3432 with 3 fast stations; NH crossings 1; spatial suitability 0.1144; grid score 0.8581 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0628,
+          16.3624
+        ]
+      },
+      "properties": {
+        "rank": 24,
+        "district": "Wanaparthy",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 27.28,
+        "ev_penetration_rate": 1.36,
+        "infrastructure_gap_index": 0.34,
+        "total_stations": 3,
+        "fast_stations": 3,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.1254,
+        "grid_readiness_score": 0.8452,
+        "grid_data_observed_flag": 1,
+        "explanation": "Rank #24; EIPS 27.28/100. FY2023-24 EV penetration 1.360 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 398.5/year. Infrastructure Gap 0.3400 with 3 fast stations; NH crossings 1; spatial suitability 0.1254; grid score 0.8452 (Observed TGSPDCL district throughput evidence)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.852,
+          18.1018
+        ]
+      },
+      "properties": {
+        "rank": 25,
+        "district": "Siddipet",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 26.73,
+        "ev_penetration_rate": 1.378,
+        "infrastructure_gap_index": 0.4593,
+        "total_stations": 3,
+        "fast_stations": 2,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.3148,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #25; EIPS 26.73/100. FY2023-24 EV penetration 1.378 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 707.0/year. Infrastructure Gap 0.4593 with 2 fast stations; NH crossings 1; spatial suitability 0.3148; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.6177,
+          17.5558
+        ]
+      },
+      "properties": {
+        "rank": 26,
+        "district": "Bhadradri Kothagudem",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 26.52,
+        "ev_penetration_rate": 1.635,
+        "infrastructure_gap_index": 0.4088,
+        "total_stations": 3,
+        "fast_stations": 3,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.4183,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #26; EIPS 26.52/100. FY2023-24 EV penetration 1.635 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 886.8/year. Infrastructure Gap 0.4088 with 3 fast stations; NH crossings 1; spatial suitability 0.4183; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.8037,
+          18.3888
+        ]
+      },
+      "properties": {
+        "rank": 27,
+        "district": "Rajanna Sircilla",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 25.99,
+        "ev_penetration_rate": 1.46,
+        "infrastructure_gap_index": 0.4867,
+        "total_stations": 2,
+        "fast_stations": 2,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 0,
+        "spatial_suitability_score": 0.1479,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #27; EIPS 25.99/100. FY2023-24 EV penetration 1.460 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 409.0/year. Infrastructure Gap 0.4867 with 2 fast stations; NH crossings 0; spatial suitability 0.1479; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2618,
+          18.0478
+        ]
+      },
+      "properties": {
+        "rank": 28,
+        "district": "Medak",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 25.18,
+        "ev_penetration_rate": 1.247,
+        "infrastructure_gap_index": 0.4157,
+        "total_stations": 3,
+        "fast_stations": 2,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.4225,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #28; EIPS 25.18/100. FY2023-24 EV penetration 1.247 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 485.3/year. Infrastructure Gap 0.4157 with 2 fast stations; NH crossings 1; spatial suitability 0.4225; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1557,
+          17.7249
+        ]
+      },
+      "properties": {
+        "rank": 29,
+        "district": "Jangaon",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 25.06,
+        "ev_penetration_rate": 1.303,
+        "infrastructure_gap_index": 0.4343,
+        "total_stations": 2,
+        "fast_stations": 2,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.3208,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #29; EIPS 25.06/100. FY2023-24 EV penetration 1.303 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 374.4/year. Infrastructure Gap 0.4343 with 2 fast stations; NH crossings 1; spatial suitability 0.3208; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.1288,
+          18.4386
+        ]
+      },
+      "properties": {
+        "rank": 30,
+        "district": "Karimnagar",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 22.66,
+        "ev_penetration_rate": 2.102,
+        "infrastructure_gap_index": 0.2336,
+        "total_stations": 10,
+        "fast_stations": 8,
+        "slow_stations": 2,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.4519,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #30; EIPS 22.66/100. FY2023-24 EV penetration 2.102 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 1072.4/year. Infrastructure Gap 0.2336 with 8 fast stations; NH crossings 1; spatial suitability 0.4519; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9048,
+          17.3366
+        ]
+      },
+      "properties": {
+        "rank": 31,
+        "district": "Vikarabad",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 21.19,
+        "ev_penetration_rate": 1.195,
+        "infrastructure_gap_index": 0.3983,
+        "total_stations": 3,
+        "fast_stations": 2,
+        "slow_stations": 1,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.1674,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #31; EIPS 21.19/100. FY2023-24 EV penetration 1.195 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 561.7/year. Infrastructure Gap 0.3983 with 2 fast stations; NH crossings 1; spatial suitability 0.1674; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.4988,
+          16.741
+        ]
+      },
+      "properties": {
+        "rank": 32,
+        "district": "Narayanpet",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 20.47,
+        "ev_penetration_rate": 1.174,
+        "infrastructure_gap_index": 0.3913,
+        "total_stations": 2,
+        "fast_stations": 2,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 1,
+        "spatial_suitability_score": 0.1106,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #32; EIPS 20.47/100. FY2023-24 EV penetration 1.174 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 248.3/year. Infrastructure Gap 0.3913 with 2 fast stations; NH crossings 1; spatial suitability 0.1106; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.2891,
+          19.3588
+        ]
+      },
+      "properties": {
+        "rank": 33,
+        "district": "Kumurambheem Asifabad",
+        "priority_tier": "Tier 3: Standard Priority (Sustained Maintenance)",
+        "EIPS": 19.13,
+        "ev_penetration_rate": 1.176,
+        "infrastructure_gap_index": 0.392,
+        "total_stations": 2,
+        "fast_stations": 2,
+        "slow_stations": 0,
+        "unknown_label_stations": 0,
+        "nh_crossings": 0,
+        "spatial_suitability_score": 0.1417,
+        "grid_readiness_score": 0.0,
+        "grid_data_observed_flag": 0,
+        "explanation": "Rank #33; EIPS 19.13/100. FY2023-24 EV penetration 1.176 EV/1,000; FY18-FY24 cumulative-EV velocity proxy 307.8/year. Infrastructure Gap 0.3920 with 2 fast stations; NH crossings 0; spatial suitability 0.1417; grid score 0.0000 (No observed TGSPDCL district throughput value)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+FINAL MODEL TRAINING SUMMARY
+=============================
+
+Development rows: 119
+Development districts: 25
+Predictors: 21
+Cross-validation: 4-fold GroupKFold by district
+Candidate configurations: 112
+Selection metric: threshold-optimized balanced accuracy
+Selected model: Random_Forest
+Selected parameters: {'n_estimators': 200, 'max_depth': 3, 'min_samples_split': 2, 'min_samples_leaf': 2}
+Selected decision threshold: 0.76
+Outer test accessed: NO
+Scaling: NONE
+=============================
+
+Random_Forest
+Parameters: {"max_depth": 3, "min_samples_leaf": 2, "min_samples_split": 2, "n_estimators": 200}
+Threshold: 0.76
+Development balanced accuracy: 0.647619
+Development macro F1: 0.505882
+Development minority F1: 0.294118
+Development minority recall: 0.714286
+Development minority precision: 0.185185
+Development minority PR-AUC: 0.134406
+Development minority ROC-AUC: 0.565646
+
+XGBoost
+Parameters: {"learning_rate": 0.03, "max_depth": 4, "min_child_weight": 1, "n_estimators": 100}
+Threshold: 0.90
+Development balanced accuracy: 0.576190
+Development macro F1: 0.344638
+Development minority F1: 0.240000
+Development minority recall: 0.857143
+Development minority precision: 0.139535
+Development minority PR-AUC: 0.108355
+Development minority ROC-AUC: 0.463946
+
+LightGBM
+Parameters: {"learning_rate": 0.03, "max_depth": 3, "n_estimators": 100, "num_leaves": 7}
+Threshold: 0.67
+Development balanced accuracy: 0.580952
+Development macro F1: 0.481458
+Development minority F1: 0.246154
+Development minority recall: 0.571429
+Development minority precision: 0.156863
+Development minority PR-AUC: 0.117401
+Development minority ROC-AUC: 0.476871
+

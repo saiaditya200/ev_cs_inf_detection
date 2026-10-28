@@ -1,0 +1,21 @@
+{
+  "manifest_type": "PRODUCTION_MODEL_MANIFEST",
+  "timestamp": "2026-09-28T02:06:59.073032",
+  "model_role": "ACTIVE_PRODUCTION_MODEL",
+  "model_family": "Random_Forest",
+  "runtime_class": "RandomForestClassifier",
+  "n_estimators": 250,
+  "max_depth": 3,
+  "min_samples_split": 2,
+  "min_samples_leaf": 2,
+  "max_features": 0.5,
+  "criterion": "gini",
+  "bootstrap": true,
+  "class_weight": null,
+  "random_state": 42,
+  "decision_threshold": 0.76,
+  "feature_contract": "CERTIFIED_21_PREDICTORS",
+  "predictor_count": 21,
+  "production_status": "FROZEN_UNCHANGED",
+  "sha256": "5187a5f2766b555bba4a4fa6153fb779f405f8e281a6c9df7fcfd46d03f523d6"
+}

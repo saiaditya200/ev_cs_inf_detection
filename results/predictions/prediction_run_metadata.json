@@ -1,0 +1,13 @@
+{
+  "step": 8,
+  "status": "success",
+  "station_id": "TS-HYD-0003",
+  "input_mode": "existing_frozen_station",
+  "model_name": "Random_Forest",
+  "runtime_model_class": "RandomForestClassifier",
+  "n_features": 21,
+  "decision_threshold": 0.76,
+  "prediction_class": 0,
+  "probability_dc_fast": 0.3799,
+  "district": "Hyderabad"
+}

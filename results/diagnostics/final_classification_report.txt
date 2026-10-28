@@ -1,0 +1,68 @@
+================================================================================
+Independent Outer-Test Classification Report of the Tuned Random Forest
+Project: Explainable AI Framework for Smart EV Charging Infrastructure Planning
+================================================================================
+Evaluation Date: 2026-09-27 03:00:00
+
+METHODOLOGICAL BENCHMARK CONTEXT:
+  - Evaluation Set: UNTOUCHED OUTER-TEST SET ONLY (Zero district leakage)
+  - Outer Test Stations: 35 physical charging stations
+  - Outer Test Districts: 8 held-out administrative districts
+  - Class 1 (DC Fast): 26 stations
+  - Class 0 (AC Slow / Non-Fast): 9 stations
+  - Training Scope for this Benchmark: 119 development stations across 25 districts
+  - Predictors: Exactly 21 certified spatial & infrastructure predictors (unscaled)
+
+FROZEN MODEL CONFIGURATION:
+  - Model Family: Random Forest (sklearn.ensemble.RandomForestClassifier)
+  - Hyperparameters: n_estimators=250, max_depth=3, min_samples_split=2,
+                    min_samples_leaf=2, max_features=0.5, class_weight=None,
+                    random_state=42
+  - Decision Threshold: 0.76 (frozen from development CV protocol)
+
+PERFORMANCE METRICS SUMMARY (OUTER TEST):
+  - Accuracy:           0.7143 (71.43%) [25/35 correct]
+  - Balanced Accuracy:  0.5171 (51.71%)
+  - Precision (DC Fast): 0.7500
+  - Recall (DC Fast):    0.9231 (24 of 26 DC fast stations identified)
+  - F1-Score (DC Fast):  0.8276
+  - Precision (AC Slow): 0.3333
+  - Recall (AC Slow):    0.1111
+  - F1-Score (AC Slow):  0.1667
+  - Macro F1:           0.4971
+  - Weighted F1:        0.6576
+  - PR-AUC:             0.7320
+  - ROC-AUC:            0.5043
+
+CONFUSION MATRIX:
+  True Negative (TN) [AC Slow correctly predicted]:      1
+  False Positive (FP) [AC Slow predicted as DC Fast]:    8
+  False Negative (FN) [DC Fast predicted as AC Slow]:    2
+  True Positive (TP) [DC Fast correctly predicted]:       24
+
+                  Predicted AC Slow    Predicted DC Fast
+  Actual AC Slow            1                   8
+  Actual DC Fast            2                  24
+
+SKLEARN CLASSIFICATION REPORT:
+                    precision    recall  f1-score   support
+
+AC Slow / Non-Fast     0.3333    0.1111    0.1667         9
+           DC Fast     0.7500    0.9231    0.8276        26
+
+          accuracy                         0.7143        35
+         macro avg     0.5417    0.5171    0.4971        35
+      weighted avg     0.6429    0.7143    0.6576        35
+
+================================================================================
+CRITICAL RESEARCH REPORTING DISTINCTIONS:
+  1. Development CV Performance: 80.06% mean cross-validation accuracy
+     (4-fold district GroupKFold on 119 development stations across 25 districts).
+     The tuned RF is designated as the selected non-degenerate configuration
+     under the predefined development-only model-selection protocol.
+  2. Independent Outer-Test Performance: 71.43% test accuracy (25/35 correct).
+     Evaluated strictly on the 35 quarantined stations across 8 held-out districts.
+  3. Final Deployment Model: Retrained on all 154 labeled stations across 33 districts
+     (131 DC Fast, 23 AC Slow; 12 unknown-target stations excluded)
+     and saved to models/final_deployment_model.joblib.
+================================================================================

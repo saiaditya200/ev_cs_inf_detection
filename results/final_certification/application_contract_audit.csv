@@ -1,0 +1,13 @@
+checkpoint,expected,observed,status
+1. Deployment Model Loading,final_deployment_model.joblib,final_deployment_model.joblib,PASS
+2. Decision Threshold Loading,0.76 from final_deployment_threshold.json,0.76,PASS
+3. Certified Inference Predictors,Exactly 21 predictors,Exactly 21 predictors,PASS
+4. Scaling in RF Inference,No StandardScaler loaded in RF path,No scaler loaded in RF path,PASS
+5. Target Leakage Control,Target fields stripped before predict_proba(),fast_charging_flag stripped,PASS
+6. Equipment Spec Leakage Control,Charger specs stripped before predict_proba(),charging_power_kw stripped,PASS
+7. Existing Station Semantic Boundary,"Observed label displayed separately, not in input",Observed label strictly separated,PASS
+8. Prospective Site Independence,Synthesizes site from user coordinates/road/POI,Independent inference without label,PASS
+9. SHAP Vector Parity,Uses the same 21-feature vector,Identical 21-feature input to TreeExplainer,PASS
+10. Counterfactual Levers,Permits only 4 approved planning levers,Only highway/city/POI levers perturbed,PASS
+11. Downstream EIPS Attachment,EIPS added as separate district context,EIPS merged downstream from rankings,PASS
+12. API & Frontend Parity,app.py and 08_predict.py share identical schema,Identical 21-feature contract and threshold,PASS

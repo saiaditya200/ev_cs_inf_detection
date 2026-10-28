@@ -1,0 +1,19 @@
+============================================================
+STEP 2: FEATURE ENGINEERING & SPATIAL PARTITION SUMMARY
+============================================================
+Certified Predictors (X): 21
+  Spatial / GIS:          8
+  Road One-Hot Dummies:   7
+  District Context:       6
+Leakage Control Gate:     PASS (All direct charger specs blocked)
+Outer Spatial Test Set:   35 stations (8 districts) [QUARANTINED]
+  Class 0:                9
+  Class 1:                26
+Development Set:          119 stations (25 districts)
+  Class 0:                14
+  Class 1:                105
+District Overlap:         0 (Strict spatial partition)
+Development CV Strategy:  GroupKFold(n_splits=4)
+StandardScaler Fitted on: Development Set ONLY (Zero outer-test leakage)
+STATUS:                   PASS & CERTIFIED
+============================================================

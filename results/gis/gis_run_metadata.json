@@ -1,0 +1,20 @@
+{
+  "project_title": "Explainable AI Framework for Smart EV Charging Infrastructure Planning",
+  "step": 7,
+  "master_dataset": "data\\final\\FINAL_PROJECT_DATASET.csv",
+  "master_dataset_sha256": "a1999524323860397e7255b5ff7884d7f77394b09abd69a168a306bf7eae9788",
+  "station_records": 166,
+  "districts": 33,
+  "fast_observed": 131,
+  "slow_observed": 23,
+  "unknown_fast_charging_labels": 12,
+  "eips_districts": 33,
+  "eips_output": "results\\planning\\district_eips_rankings.csv",
+  "districts_with_observed_tgspdcl_context": 11,
+  "notes": [
+    "Unknown fast-charging labels are retained and never imputed.",
+    "EIPS is a district-level planning score, not an ML performance metric.",
+    "District circles are centered on the project centroid reference table.",
+    "Circle size in the interactive map is scaled from infrastructure_gap_index."
+  ]
+}

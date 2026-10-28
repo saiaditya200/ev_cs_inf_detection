@@ -1,0 +1,4 @@
+aspect,specification,status
+Data Level,TGSPDCL / DISCOM Section x Month Aggregate Level,VERIFIED
+Disaggregation Boundary,Never disaggregated into station-level energy/demand ground truth,VERIFIED
+Certified Role,Grid/electricity context is used as an aggregate planning criterion and is not treated as station-level charging energy ground truth.,VERIFIED
