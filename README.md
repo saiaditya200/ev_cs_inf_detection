@@ -13,6 +13,7 @@ A lightweight, spatial-aware, and interpretable electric vehicle infrastructure 
 - [Dataset](#dataset)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Web Application Screenshots](#web-application-screenshots)
 - [Pipeline](#pipeline)
 - [Results](#results)
 - [Explainability (TreeSHAP and Counterfactuals)](#explainability-treeshap-and-counterfactuals)
@@ -238,6 +239,42 @@ python app.py
 ```
 
 Then open your browser at `http://127.0.0.1:5000` to access the full-stack GIS planning platform.
+
+---
+
+## Web Application Screenshots
+
+The project features a full-stack interactive GIS dashboard deployed via Flask, Leaflet/Folium, and a responsive dark glassmorphic interface:
+
+### 1. Executive Planning & Infrastructure Dashboard
+> Comprehensive monitoring of observed infrastructure metrics, spatial distribution summaries, district coverage KPIs, and the canonical multi-track methodology.
+
+![Executive Planning Dashboard](reports/figures/screenshots/01_overview.png)
+
+### 2. Interactive Station Siting & Inference Engine
+> Evaluates prospective planning sites or existing stations across Telangana, predicting DC Fast vs AC Slow suitability with local TreeSHAP attributions and actionable counterfactual recommendations.
+
+![Station Prediction Engine](reports/figures/screenshots/02_predict.png)
+
+### 3. Spatial Cross-Validation & Model Evaluation
+> Transparent benchmarking of Random Forest, XGBoost, and LightGBM across 4-fold District-Grouped CV and the quarantined 8-district Outer Test Set, showing ROC/PR curves and feature importances.
+
+![Model Evaluation & Metrics](reports/figures/screenshots/03_models.png)
+
+### 4. TreeSHAP Explainability & Feature Attributions
+> Global SHAP beeswarm and summary distributions highlighting the positive and negative contributions of the 21 certified exogenous predictors on charger type suitability.
+
+![TreeSHAP Explainability](reports/figures/screenshots/04_xai.png)
+
+### 5. EIPS Multi-Criteria District Prioritization
+> AHP-TOPSIS district siting synthesis ranking all 33 administrative districts of Telangana into prioritized tiers for infrastructure investment.
+
+![EIPS District Planning](reports/figures/screenshots/05_planning.png)
+
+### 6. Telangana State GIS Interactive Infrastructure Map
+> Full geospatial visualization mapping all 166 verified charging stations, National Highway corridors, and district boundaries across Telangana.
+
+![GIS Interactive Infrastructure Map](reports/figures/screenshots/06_gis.png)
 
 ---
 
