@@ -1,0 +1,13 @@
+{
+  "model": "Random_Forest",
+  "threshold": 0.7599999999999997,
+  "selection_metric": "development_groupkfold_threshold_optimized_balanced_accuracy",
+  "tie_breakers": [
+    "minority_f1",
+    "minority_pr_auc",
+    "macro_f1"
+  ],
+  "development_rows": 119,
+  "development_districts": 25,
+  "outer_test_accessed": false
+}

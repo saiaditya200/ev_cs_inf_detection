@@ -1,0 +1,6 @@
+{
+  "threshold": 0.76,
+  "decision_threshold": 0.76,
+  "model_family": "Random_Forest",
+  "threshold_source": "4-fold district GroupKFold development CV search"
+}

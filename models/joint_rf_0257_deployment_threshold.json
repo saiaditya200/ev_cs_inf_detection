@@ -1,0 +1,9 @@
+{
+  "candidate_id": "JOINT_RF_0257",
+  "threshold": 0.76,
+  "decision_threshold": 0.76,
+  "model_family": "Random_Forest",
+  "threshold_source": "4-fold district GroupKFold development joint cost-sensitive search",
+  "deployment_status": "candidate_prepared_separately",
+  "production_status": "current_production_deployment_remains_frozen"
+}
