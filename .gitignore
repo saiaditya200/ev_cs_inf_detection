@@ -57,3 +57,7 @@ logs/
 
 # Redundant nested folder
 EV_Charging/
+
+# Intermediate architecture image crops
+reports/figures/crop_*.png
+reports/figures/paper_crops/
