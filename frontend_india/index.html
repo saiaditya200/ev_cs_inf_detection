@@ -36,22 +36,22 @@
                 </div>
             </div>
             <nav class="nav-tabs" id="nav-tabs">
-                <button class="nav-tab active" data-tab="overview">
+                <button class="nav-tab active" data-tab="overview" onclick="switchTab('overview')">
                     <span class="tab-icon">📊</span> Overview
                 </button>
-                <button class="nav-tab" data-tab="predict">
+                <button class="nav-tab" data-tab="predict" onclick="switchTab('predict')">
                     <span class="tab-icon">🔍</span> Station Prediction
                 </button>
-                <button class="nav-tab" data-tab="models">
+                <button class="nav-tab" data-tab="models" onclick="switchTab('models')">
                     <span class="tab-icon">🎯</span> Model Evaluation
                 </button>
-                <button class="nav-tab" data-tab="xai">
+                <button class="nav-tab" data-tab="xai" onclick="switchTab('xai')">
                     <span class="tab-icon">💡</span> Explainability (SHAP)
                 </button>
-                <button class="nav-tab" data-tab="planning">
+                <button class="nav-tab" data-tab="planning" onclick="switchTab('planning')">
                     <span class="tab-icon">📈</span> EIPS Planning
                 </button>
-                <button class="nav-tab" data-tab="gis">
+                <button class="nav-tab" data-tab="gis" onclick="switchTab('gis')">
                     <span class="tab-icon">🗺️</span> GIS Map
                 </button>
             </nav>
@@ -810,8 +810,8 @@
     </footer>
 
     <!-- Standalone Data Bundle for Instant Offline Interactivity -->
-    <script src="data.js"></script>
-    <script src="script.js?v=interactive_v3"></script>
+    <script src="data.js?v=4"></script>
+    <script src="script.js?v=interactive_v4"></script>
 </body>
 
 </html>

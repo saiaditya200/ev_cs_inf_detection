@@ -56,6 +56,7 @@ function switchTab(tabId) {
         }, 150);
     }
 }
+window.switchTab = switchTab;
 
 // ========================= 2. DATA ENGINE (HYBRID API + BUNDLE) =========================
 async function initDataEngine() {
@@ -238,11 +239,11 @@ function populateCounterfactualTable(cfList) {
         const cf = Number(r.counterfactual_prob_fast);
         const tr = document.createElement("tr");
         tr.innerHTML = `
-            <td><span style="font-family:'JetBrains Mono'; font-size:0.8rem;">${r.station_id ?? "—"}</span></td>
-            <td><b>${r.district || r.state ?? "—"}</b></td>
+            <td><span style="font-family:'JetBrains Mono'; font-size:0.8rem;">${r.station_id || "—"}</span></td>
+            <td><b>${r.district || r.state || "—"}</b></td>
             <td>${(orig * 100).toFixed(1)}%</td>
             <td><b style="color:var(--success); font-family:'JetBrains Mono';">${(cf * 100).toFixed(1)}%</b></td>
-            <td style="font-size:0.78rem; color:#94a3b8; white-space:normal;">${r.actionable_modifications ?? "—"}</td>
+            <td style="font-size:0.78rem; color:#94a3b8; white-space:normal;">${r.actionable_modifications || "—"}</td>
         `;
         tbody.appendChild(tr);
     });
@@ -819,3 +820,15 @@ function openModal(src) {
 function closeModal() {
     document.getElementById("image-modal").style.display = "none";
 }
+
+// Global window attachments for inline HTML handlers
+window.syncSlider = syncSlider;
+window.triggerLiveInference = triggerLiveInference;
+window.loadDemoPreset = loadDemoPreset;
+window.filterByTier = filterByTier;
+window.sortPlanningTable = sortPlanningTable;
+window.sortModelTable = sortModelTable;
+window.jumpGisToState = jumpGisToState;
+window.openModal = openModal;
+window.closeModal = closeModal;
+window.selectStateFromTable = selectStateFromTable;

@@ -206,3 +206,4 @@ with open(FRONTEND_DIR / "data.js", "w", encoding="utf-8") as f:
     f.write(js_content)
 
 print(f"[OK] Successfully built {FRONTEND_DIR / 'data.js'} ({len(merged_states)} states, {len(clean_stations)} stations)")
+
