@@ -1,0 +1,37 @@
+national_rank,state_or_ut,state_code,official_dec2025_total,official_dec2025_fast,official_dec2025_slow,july2026_scaled_total,july2026_scaled_fast,july2026_scaled_slow,fast_charging_percentage,state_nodal_agency
+1,Karnataka,KA,6096,751,5345,10912,1413,9499,12.9,BESCOM (Bangalore Electricity Supply Company Limited)
+2,Maharashtra,MH,4166,1205,2961,7528,2266,5262,30.1,MSEDCL (Maharashtra State Electricity Distribution Co)
+3,Uttar Pradesh,UP,2316,540,1776,4172,1016,3156,24.4,UPNEDA (Uttar Pradesh New & Renewable Energy Dev Agency)
+4,Delhi,DL,1957,399,1558,3519,750,2769,21.3,Delhi Transco Limited (DTL) / EV Cell
+5,Tamil Nadu,TN,1780,926,854,3260,1742,1518,53.4,TEDA (Tamil Nadu Energy Development Agency)
+6,Rajasthan,RJ,1515,523,992,2747,984,1763,35.8,RRECL (Rajasthan Renewable Energy Corporation Limited)
+7,Kerala,KL,1389,553,836,2526,1040,1486,41.2,ANERT (Agency for New and Renewable Energy Research & Tech)
+8,Gujarat,GJ,1205,578,627,2201,1087,1114,49.4,GEDA (Gujarat Energy Development Agency)
+9,Madhya Pradesh,MP,1146,353,793,2073,664,1409,32.0,MP Urja Vikas Nigam Limited (MPUVNL)
+10,Telangana,TS,1062,548,514,1944,1031,913,53.0,TGREDCO (Telangana State Renewable Energy Dev Corp)
+11,Haryana,HR,919,384,535,1673,722,951,43.2,HAREDA (Haryana Renewable Energy Dev Agency)
+12,West Bengal,WB,891,321,570,1617,604,1013,37.4,WBSEDCL (West Bengal State Electricity Distribution Co)
+13,Andhra Pradesh,AP,791,424,367,1449,797,652,55.0,NREDCAP (New & Renewable Energy Dev Corp of AP)
+14,Punjab,PB,698,225,473,1264,423,841,33.5,PEDA (Punjab Energy Development Agency)
+15,Odisha,OD,606,165,441,1094,310,784,28.3,OREDA (Odisha Renewable Energy Development Agency)
+16,Bihar,BR,518,172,346,938,323,615,34.4,BREDA (Bihar Renewable Energy Dev Agency)
+17,Jharkhand,JH,353,129,224,641,243,398,37.9,JREDA (Jharkhand Renewable Energy Dev Agency)
+18,Chhattisgarh,CG,347,124,223,629,233,396,37.0,CREDA (Chhattisgarh State Renewable Energy Dev Agency)
+19,Assam,AS,345,96,249,623,181,442,29.1,APDCL (Assam Power Distribution Company Limited)
+20,Uttarakhand,UK,221,84,137,401,158,243,39.4,UREDA (Uttarakhand Renewable Energy Dev Agency)
+21,Jammu and Kashmir,JK,180,61,119,326,115,211,35.3,JAKEDA (J&K Energy Development Agency)
+22,Goa,GA,156,94,62,287,177,110,61.7,GEDA (Goa Energy Development Agency)
+23,Himachal Pradesh,HP,133,52,81,242,98,144,40.5,HIMURJA (HP Energy Development Agency)
+24,Meghalaya,ML,62,21,41,112,39,73,34.8,MNREDA (Meghalaya New & Renewable Energy Dev Agency)
+25,Manipur,MN,58,9,49,104,17,87,16.3,MANIREDA (Manipur Renewable Energy Dev Agency)
+26,Tripura,TR,55,4,51,98,7,91,7.1,TREDA (Tripura Renewable Energy Development Agency)
+27,Puducherry,PY,46,28,18,85,53,32,62.4,REAP (Renewable Energy Agency of Puducherry)
+28,Arunachal Pradesh,AR,45,4,41,80,7,73,8.8,"Department of Power, Arunachal Pradesh"
+29,Nagaland,NL,37,6,31,66,11,55,16.7,"Directorate of New and Renewable Energy, Nagaland"
+30,Dadra and Nagar Haveli and Daman and Diu,DN,14,11,3,26,21,5,80.8,Electricity Department DNH & DD
+31,Chandigarh,CH,13,11,2,25,21,4,84.0,CREST (Chandigarh Renewal Energy and Science & Tech)
+32,Mizoram,MZ,13,0,13,23,0,23,0.0,ZEDA (Zoram Energy Development Agency)
+33,Sikkim,SK,12,3,9,22,6,16,27.3,SREDA (Sikkim Renewable Energy Development Agency)
+34,Andaman and Nicobar Islands,AN,4,1,3,7,2,5,28.6,Electricity Department A&N
+35,Ladakh,LA,1,0,1,2,0,2,0.0,Ladakh Renewable Energy Development Agency (LREDA)
+36,Lakshadweep,LD,1,0,1,2,0,2,0.0,"Department of Electricity, Lakshadweep"

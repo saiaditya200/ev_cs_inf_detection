@@ -1,0 +1,31 @@
+feature_name,category,data_type,example,description
+station_id,Identification,string,IN-KA-00001 / TS-HYD-0001,Unique alphanumeric station identifier with state code and serial number
+station_name,Identification,string,BESCOM EV Mitr Bengaluru Urban Station #001,Operational station name including CPO operator branding and district hub
+operator,Identification,string,"BESCOM EV Mitr, Tata Power, Ather Grid",Charge Point Operator (CPO) managing the charging hardware and billing
+address,Identification,string,"Near NH 44, Bengaluru Urban, Karnataka - 560001",Locality address and postal corridor reference
+state,Geography,string,"Karnataka, Maharashtra, Telangana",State or Union Territory name (covers all 36 jurisdictions)
+district,Geography,string,"Bengaluru Urban, Pune, Hyderabad",Administrative district where the station is physically installed
+latitude,Geography,float,12.971600,WGS84 decimal latitude coordinate
+longitude,Geography,float,77.594600,WGS84 decimal longitude coordinate
+pincode,Geography,integer,560001,6-digit postal index code
+charger_type,Infrastructure,string,"DC Fast Charger, AC Slow / Destination",Hardware architecture and technological class of EV charging dispenser
+connector_type,Infrastructure,string,"CCS-2 Dual Gun, Type 2 AC, Bharat AC-001",Physical plug interface standard supported by the station dispensers
+charger_count,Infrastructure,integer,"2, 4, 6",Total simultaneous charging guns/connectors available at the installation
+rated_power_kw,Infrastructure,float,"60.0, 120.0, 22.0, 7.4",Maximum rated electrical charging capacity in kilowatts (kW)
+charging_speed,Infrastructure,string,"Ultra-Fast, Rapid, Fast, Standard, Slow",Categorical operational delivery speed benchmark
+availability_status,Operations,string,Operational,Live hardware operational readiness status
+operating_hours,Operations,string,24x7 / 06:00 - 22:00,Public operating schedule and time window
+access_type,Operations,string,Public,Public vs semi-public access permission
+commissioning_date,Operations,date (YYYY-MM-DD),2024-03-15,Official grid integration and commercial commissioning date
+distance_to_highway_km,Accessibility & GIS,float,1.24,Great-circle distance in kilometers to the nearest National Highway
+road_type,Accessibility & GIS,string,"motorway, trunk, primary, secondary, residential",OpenStreetMap road hierarchy of the direct frontage corridor
+urban_rural_classification,Accessibility & GIS,string,"Tier 1, Tier 2, Tier 3",Demographic economic tier classification of surrounding settlement
+highway_proximity_score,Accessibility & GIS,float,0.7804,Normalized exponential proximity decay to National Highways [exp(-0.2*d)]
+city_center_proximity_score,Accessibility & GIS,float,0.8333,Normalized proximity decay to district urban administrative headquarters
+nearby_poi_count,Accessibility & GIS,integer,38,Count of vital points of interest within 1 km radius
+poi_diversity_index,Accessibility & GIS,float,0.8245,Shannon entropy diversity index of surrounding commercial and transit POIs
+nearby_ev_registrations,AI Planning & Demographics,integer,145000,Total cumulative registered EV fleet in district (VAHAN 4.0 data)
+population_density,AI Planning & Demographics,float,438.5,District population density in persons per square kilometer (Census 2011)
+traffic_estimates,AI Planning & Demographics,string,High Corridor Density / Medium Urban Density,Corridor traffic volume index based on highway proximity and road tier
+grid_capacity_indicators,AI Planning & Demographics,string,High Capacity (33kV/132kV) / Standard Substation (11kV),DISCOM electrical grid distribution feeder capacity status
+fast_charging_flag,Supervised Target,integer (0 or 1),"1: DC Fast (>= 50kW), 0: AC Slow (< 50kW)",Canonical ground-truth target variable for machine learning classification
