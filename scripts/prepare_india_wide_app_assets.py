@@ -270,3 +270,4 @@ plt.close(fig)
 print("[OK] Generated pr_curves_india.png")
 
 print("All Pan-India app assets prepared successfully!")
+
