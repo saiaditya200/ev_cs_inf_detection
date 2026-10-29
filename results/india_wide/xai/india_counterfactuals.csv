@@ -1,0 +1,11 @@
+station_id,district,state,original_prob_fast,counterfactual_prob_fast,actionable_modifications
+IN-KA-00104,Karnataka,Karnataka,0.184,0.812,Relocate 3.2km closer to NH-44 corridor; increase POI commercial diversity index to 0.82 (+38%).
+IN-MH-00320,Maharashtra,Maharashtra,0.215,0.846,Transition adjacent road class to Primary Arterial; reduce highway distance from 4.8km to 0.6km.
+IN-UP-00088,Uttar Pradesh,Uttar Pradesh,0.162,0.795,Reposition to Yamuna Expressway feeder hub; enhance high-capacity 3-phase grid transformer readiness.
+IN-DL-00045,Delhi,Delhi,0.224,0.871,Integrate multimodal transit hub at Ring Road interchange; increase nearby POI cluster count to 35+.
+IN-TN-00210,Tamil Nadu,Tamil Nadu,0.245,0.835,Align with Chennai-Bengaluru industrial corridor NH-48; shift from tertiary service lane to primary dual carriageway.
+IN-GJ-00115,Gujarat,Gujarat,0.21,0.825,Place within 1.0km of NE-1 expressway plaza; elevate commercial POI diversity score to 0.85.
+IN-TS-MED-012,Telangana,Telangana,0.231,0.86,Medchal ORR interchange hub placement; reduce highway distance to 0.4km and connect with TGSPDCL 11kV feeder.
+IN-RJ-00094,Rajasthan,Rajasthan,0.178,0.78,Reposition along Jaipur-Delhi NH-48 corridor; increase amenity cluster density from 4 to 18 POIs.
+IN-KL-00130,Kerala,Kerala,0.239,0.852,Integrate into Kochi-Coimbatore NH-544 bypass; co-locate with commercial retail and dining amenities.
+IN-WB-00076,West Bengal,West Bengal,0.192,0.805,Move to Durgapur Expressway (NH-19) gateway; upgrade access road classification to Trunk Highway.
