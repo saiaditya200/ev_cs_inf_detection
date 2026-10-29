@@ -1,0 +1,32 @@
+{
+  "evaluation_timestamp": "2026-10-29T19:13:58.880636+00:00",
+  "total_evaluated_stations": 52706,
+  "target_positive_fast_dc": 16561,
+  "target_negative_slow_ac": 36145,
+  "model_comparison": {
+    "model_1_telangana_baseline_transfer": {
+      "description": "Frozen champion model trained only on Telangana 33 districts evaluated zero-shot across India",
+      "training_domain": "Telangana State Only (154 development stations)",
+      "decision_threshold": 0.76,
+      "roc_auc": 0.4921,
+      "pr_auc": 0.3097,
+      "accuracy": 0.6626,
+      "precision": 0.2162,
+      "recall": 0.0281,
+      "f1_score": 0.0498,
+      "brier_score": 0.2623
+    },
+    "model_2_pan_india_national_model": {
+      "description": "Retrained champion Random Forest trained across all 36 States & UTs with 5-fold Spatial CV",
+      "training_domain": "All-India (52,718 public charging stations)",
+      "decision_threshold": 0.2488,
+      "roc_auc": 0.4911,
+      "pr_auc": 0.3118,
+      "accuracy": 0.3164,
+      "precision": 0.3147,
+      "recall": 0.9986,
+      "f1_score": 0.4786,
+      "brier_score": 0.2346
+    }
+  }
+}

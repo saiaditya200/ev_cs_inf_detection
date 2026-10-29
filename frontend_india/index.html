@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pan-India EV Charging Infrastructure Planning Dashboard (52,718 Stations)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <div class="brand">
+      <span class="flag">🇮🇳</span>
+      <div>
+        <h1>Pan-India EV Infrastructure Dashboard</h1>
+        <p class="subtitle">Official National Benchmark: 52,718 Stations Across All 36 States & UTs (July 2026)</p>
+      </div>
+    </div>
+    <div class="header-badges">
+      <span class="badge badge-success"><i class="fa-solid fa-bolt"></i> 52,718 Stations</span>
+      <span class="badge badge-info"><i class="fa-solid fa-map"></i> 36 States & UTs</span>
+      <span class="badge badge-warning"><i class="fa-solid fa-chart-line"></i> 30-Feature Matrix</span>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <!-- KPI Summary Cards -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon icon-blue"><i class="fa-solid fa-charging-station"></i></div>
+        <div class="kpi-data">
+          <h3>Total Public EVCS</h3>
+          <p class="kpi-value" id="kpi-total">52,718</p>
+          <span class="kpi-sub">Exact July 2026 PIB Total</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon icon-green"><i class="fa-solid fa-bolt-lightning"></i></div>
+        <div class="kpi-data">
+          <h3>DC Fast Chargers (≥50 kW)</h3>
+          <p class="kpi-value text-green" id="kpi-fast">16,561</p>
+          <span class="kpi-sub">31.4% National Share</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon icon-purple"><i class="fa-solid fa-plug"></i></div>
+        <div class="kpi-data">
+          <h3>AC Slow / Destination</h3>
+          <p class="kpi-value text-purple" id="kpi-slow">36,157</p>
+          <span class="kpi-sub">68.6% National Share</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon icon-orange"><i class="fa-solid fa-brain"></i></div>
+        <div class="kpi-data">
+          <h3>National Matrix Dimensions</h3>
+          <p class="kpi-value" id="kpi-matrix">52,718 × 30</p>
+          <span class="kpi-sub">1,581,540 Total Data Cells</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Model Comparison Section: Telangana Baseline vs. Pan-India Retrained -->
+    <section class="section-card">
+      <div class="card-header">
+        <h2><i class="fa-solid fa-scale-balanced"></i> Machine Learning Model Performance Bake-off (Evaluated on 52,718 Stations)</h2>
+        <span class="tag">Faculty Verification Card</span>
+      </div>
+      <div class="model-comparison-grid">
+        <div class="model-card baseline-card">
+          <div class="model-header">
+            <span class="model-tag tag-baseline">Baseline Model (Frozen)</span>
+            <h3>Telangana 33 Districts Champion</h3>
+          </div>
+          <p class="model-desc">Trained strictly on Telangana's 33 districts and evaluated zero-shot across India to test geographic domain shift.</p>
+          <div class="metric-row">
+            <span>Training Scope:</span>
+            <strong>Telangana State Only (154 Stations)</strong>
+          </div>
+          <div class="metric-row">
+            <span>National Accuracy:</span>
+            <strong class="text-warning" id="tg-acc">66.26%</strong>
+          </div>
+          <div class="metric-row">
+            <span>ROC-AUC (Spatial):</span>
+            <strong id="tg-auc">0.4921</strong>
+          </div>
+          <div class="metric-row">
+            <span>PR-AUC:</span>
+            <strong id="tg-pr-auc">0.3097</strong>
+          </div>
+          <div class="metric-row">
+            <span>Decision Threshold (τ):</span>
+            <strong>0.76 (76.0%)</strong>
+          </div>
+          <div class="model-status status-warning">
+            <i class="fa-solid fa-triangle-exclamation"></i> Exhibits Spatial Domain Shift Out-of-State
+          </div>
+        </div>
+
+        <div class="model-card retrained-card">
+          <div class="model-header">
+            <span class="model-tag tag-retrained">Retrained National Model</span>
+            <h3>Pan-India Spatial Champion</h3>
+          </div>
+          <p class="model-desc">Trained on all 52,718 stations across all 36 States & UTs with 5-Fold State-Grouped Spatial Cross-Validation.</p>
+          <div class="metric-row">
+            <span>Training Scope:</span>
+            <strong class="text-success">All 36 States & UTs (52,718 Stations)</strong>
+          </div>
+          <div class="metric-row">
+            <span>National Spatial CV:</span>
+            <strong class="text-success" id="nat-cv">5-Fold GroupKFold</strong>
+          </div>
+          <div class="metric-row">
+            <span>PR-AUC (Precision-Recall):</span>
+            <strong class="text-success" id="nat-pr-auc">0.3118</strong>
+          </div>
+          <div class="metric-row">
+            <span>Optimal F1-Score:</span>
+            <strong class="text-success" id="nat-f1">0.4786</strong>
+          </div>
+          <div class="metric-row">
+            <span>Optimal Threshold (τ*):</span>
+            <strong class="text-success" id="nat-thresh">0.2488</strong>
+          </div>
+          <div class="model-status status-success">
+            <i class="fa-solid fa-check-circle"></i> Calibrated Across National Highway Corridors
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- State Explorer & Interactive Map -->
+    <div class="two-column-layout">
+      <!-- Left: State Explorer & Stations List -->
+      <section class="section-card">
+        <div class="card-header">
+          <h2><i class="fa-solid fa-map-location-dot"></i> State & UT Infrastructure Explorer</h2>
+          <select id="state-select" class="form-select">
+            <option value="">Loading States...</option>
+          </select>
+        </div>
+
+        <div id="state-stats-box" class="state-stats-box">
+          <h3 id="stat-state-title">Select a state above</h3>
+          <div class="stat-pills">
+            <span class="pill">Total: <strong id="stat-total">-</strong></span>
+            <span class="pill pill-green">Fast: <strong id="stat-fast">-</strong></span>
+            <span class="pill pill-purple">Slow: <strong id="stat-slow">-</strong></span>
+            <span class="pill pill-blue">Fast %: <strong id="stat-pct">-</strong></span>
+          </div>
+          <div class="agency-info">
+            <small>State Nodal Agency: <span id="stat-agency">-</span></small>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table" id="stations-table">
+            <thead>
+              <tr>
+                <th>Station ID</th>
+                <th>Operator</th>
+                <th>Type</th>
+                <th>Power</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="stations-tbody">
+              <tr><td colspan="5" style="text-align:center;">Select a state to load stations...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Right: Interactive Leaflet Map -->
+      <section class="section-card map-card">
+        <div class="card-header">
+          <h2><i class="fa-solid fa-earth-americas"></i> Geospatial Station Map</h2>
+          <span class="legend-note"><span class="dot dot-green"></span> DC Fast (≥50kW) &nbsp; <span class="dot dot-purple"></span> AC Slow (&lt;50kW)</span>
+        </div>
+        <div id="map" class="map-container"></div>
+      </section>
+    </div>
+
+    <!-- Live Prediction & Dual Model Inference Simulator -->
+    <section class="section-card">
+      <div class="card-header">
+        <h2><i class="fa-solid fa-calculator"></i> Real-Time Dual-Model Prediction Simulator</h2>
+        <span class="tag">Live Site Inference</span>
+      </div>
+      <p class="section-desc">Test any geographical site coordinate across India to compare the prediction of the <strong>Frozen Telangana Baseline Model</strong> versus the <strong>Pan-India National Model</strong>.</p>
+      
+      <div class="sim-grid">
+        <div class="sim-inputs">
+          <div class="input-group">
+            <label>Latitude:</label>
+            <input type="number" id="sim-lat" value="12.9716" step="0.0001">
+          </div>
+          <div class="input-group">
+            <label>Longitude:</label>
+            <input type="number" id="sim-lon" value="77.5946" step="0.0001">
+          </div>
+          <div class="input-group">
+            <label>Distance to National Highway (km):</label>
+            <input type="number" id="sim-hdist" value="1.2" step="0.1">
+          </div>
+          <div class="input-group">
+            <label>Road Type:</label>
+            <select id="sim-road" class="form-select">
+              <option value="trunk">Trunk Road (NH Corridor)</option>
+              <option value="motorway">Motorway / Expressway</option>
+              <option value="primary" selected>Primary Arterial Road</option>
+              <option value="secondary">Secondary City Road</option>
+              <option value="residential">Residential Road</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Nearby POI Count (within 1 km):</label>
+            <input type="number" id="sim-poi" value="35">
+          </div>
+          <button id="btn-predict" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Run Dual-Model Inference</button>
+        </div>
+
+        <div class="sim-results">
+          <div class="res-box" id="res-box-tg">
+            <h4>Telangana Model Prediction</h4>
+            <p class="res-pred" id="res-pred-tg">Awaiting Input...</p>
+            <div class="res-bar-container">
+              <div class="res-bar" id="res-bar-tg" style="width: 0%;"></div>
+            </div>
+            <p class="res-prob">Probability: <span id="res-prob-tg">-</span></p>
+          </div>
+
+          <div class="res-box" id="res-box-nat">
+            <h4>Pan-India Model Prediction</h4>
+            <p class="res-pred" id="res-pred-nat">Awaiting Input...</p>
+            <div class="res-bar-container">
+              <div class="res-bar bg-green" id="res-bar-nat" style="width: 0%;"></div>
+            </div>
+            <p class="res-prob">Probability: <span id="res-prob-nat">-</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Leaflet JS & App Script -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

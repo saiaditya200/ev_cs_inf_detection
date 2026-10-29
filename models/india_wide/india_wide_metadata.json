@@ -1,0 +1,40 @@
+{
+  "model_role": "india_wide_production_champion",
+  "model_architecture": "RandomForestClassifier(n_estimators=200, max_depth=14)",
+  "training_samples_total": 52706,
+  "training_states_count": 36,
+  "national_benchmark": "52,718 public charging stations (July 2026 PIB ID: 2287125)",
+  "predictors": [
+    "latitude",
+    "longitude",
+    "distance_to_highway_km",
+    "distance_to_city_center_km",
+    "nearby_poi_count",
+    "highway_proximity_score",
+    "city_center_proximity_score",
+    "poi_diversity_index",
+    "road_type_motorway",
+    "road_type_primary",
+    "road_type_residential",
+    "road_type_secondary",
+    "road_type_service",
+    "road_type_trunk",
+    "road_type_unclassified",
+    "district_population_density_2011",
+    "district_urban_population_pct",
+    "district_projected_density_fy24",
+    "district_nh_crossing_count",
+    "district_ev_penetration_rate",
+    "discom_utility_data_available_flag"
+  ],
+  "metrics": {
+    "spatial_cv_roc_auc": 0.4911,
+    "spatial_cv_pr_auc": 0.3118,
+    "accuracy": 0.3164,
+    "precision": 0.3147,
+    "recall": 0.9986,
+    "f1_score": 0.4786,
+    "brier_score": 0.2346
+  },
+  "timestamp": "2026-10-29T19:13:58.100864+00:00"
+}
