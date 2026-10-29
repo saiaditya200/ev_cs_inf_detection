@@ -42,6 +42,7 @@ data/raw/*.json
 data/raw/*.csv
 data/raw/*.xlsx
 !data/raw/.gitkeep
+data/india_wide/raw/*.json
 
 # Model outputs
 models/*.pkl
