@@ -65,7 +65,7 @@ This implementation delivers a **pure, standalone, non-comparative system** trai
 
 ## System Architecture
 
-The high-resolution vector system architecture diagram is saved at [`system_architecture_india_wide.svg`](file:///c:/Users/Dell/Downloads/EV_Charging/system_architecture_india_wide.svg) (and mirrored in [`results/india_wide/figures/system_architecture_india_wide.svg`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/system_architecture_india_wide.svg)).
+The high-resolution vector system architecture diagram is saved at [`system_architecture_india_wide.svg`](file:///c:/Users/Dell/Downloads/EV_Charging/system_architecture_india_wide.svg) (mirrored in [`results/india_wide/figures/system_architecture_india_wide.svg`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/system_architecture_india_wide.svg)). An ultra-high-resolution JPEG version optimized for WhatsApp, presentations, and social media sharing is available at [`system_architecture_india_wide.jpg`](file:///c:/Users/Dell/Downloads/EV_Charging/system_architecture_india_wide.jpg) (mirrored in [`results/india_wide/figures/system_architecture_india_wide.jpg`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/system_architecture_india_wide.jpg)).
 
 ![System Architecture — Pan-India Master Framework](system_architecture_india_wide.svg)
 
@@ -551,7 +551,8 @@ EV_Charging/
 ├── scripts/
 │   └── train_india_wide_standalone.py                             # Standalone Spatial Training Script
 ├── app_india_wide.py                                              # Dedicated Pan-India Backend (Port 5001)
-├── system_architecture_india_wide.svg                             # Pan-India System Architecture SVG
+├── system_architecture_india_wide.svg                             # Pan-India System Architecture SVG (Light Theme)
+├── system_architecture_india_wide.jpg                             # High-Res Architecture JPG (Social Media / WhatsApp)
 └── README.md                                                      # Pan-India Master Documentation (This Document)
 ```
 
