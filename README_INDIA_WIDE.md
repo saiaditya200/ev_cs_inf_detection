@@ -67,6 +67,8 @@ This implementation delivers a **pure, standalone, non-comparative system** trai
 
 The high-resolution vector system architecture diagram is saved at [`system_architecture_india_wide.svg`](file:///c:/Users/Dell/Downloads/EV_Charging/system_architecture_india_wide.svg) (and mirrored in [`results/india_wide/figures/system_architecture_india_wide.svg`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/system_architecture_india_wide.svg)).
 
+![System Architecture — Pan-India Master Framework](system_architecture_india_wide.svg)
+
 ```text
 ========================================================================================
 PAN-INDIA MULTI-SOURCE INPUT REGISTRIES (36 States & UTs • 52,718 Stations)
@@ -271,9 +273,19 @@ All metrics are computed strictly across the **5-Fold State-Grouped Spatial Hold
 - **Lowest Calibration Error:** Random Forest achieved the lowest **Brier Score ($0.2346$)**, ensuring that predicted probabilities accurately mirror real-world empirical deployment odds.
 - **Why Outer Accuracy is 31.64%:** The cost-sensitive threshold $\tau^* = 0.2488$ deliberately sacrifices raw accuracy on majority AC Slow chargers to guarantee that **$99.85\%$ ($16,537$ out of $16,561$) of all DC Fast stations are correctly identified and captured** rather than missed. Under spatial imbalance, **Balanced Accuracy ($50.12\%$) and PR-AUC ($0.3118$)** are the mathematically valid metrics.
 
+### Final Model Training Accuracy on the Pan-India Dataset
+
+When evaluating the Champion Random Forest model on the complete master dataset ($N = 52,706$ verified stations across all 36 States & UTs):
+
+| Decision Policy Threshold | Total Stations Evaluated | Correct Classifications | Final Accuracy | DC Fast Charging Recall (Sensitivity) | AC Slow Charging Specificity | Balanced Accuracy |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Standard Cut-Off ($\\tau = 0.50$)** | 52,706 | 24,502 | **46.49%** | 60.53% (10,024 / 16,561) | 40.06% (14,478 / 36,145) | **50.29%** |
+| **Calibrated Threshold ($\\tau^* = 0.2488$)** | 52,706 | 16,600 | **31.50%** | **100.00%** (16,561 / 16,561) | 0.11% (39 / 36,145) | **50.05%** |
+| **Outer Spatial Holdout ($\\tau^* = 0.2488$)** | 52,706 | 16,678 | **31.64%** | **99.85%** (16,537 / 16,561) | 0.39% (141 / 36,145) | **50.12%** |
+
 ### Evaluation Curves & Diagnostics
 
-All figures are saved in [`results/india_wide/figures/`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/):
+All figures are generated standalone and saved in [`results/india_wide/figures/`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/):
 
 1. **Confusion Matrix (`confusion_matrix.png`):**
    - True Positives (DC Fast correctly predicted): **16,537**
@@ -282,6 +294,12 @@ All figures are saved in [`results/india_wide/figures/`](file:///c:/Users/Dell/D
    - False Positives (AC Slow flagged for fast charging): **36,004**
 2. **Precision-Recall Curves (`pr_curves.png`):** Demonstrates the PR curves of RF, XGBoost, and LightGBM against the no-skill baseline ($0.3142$).
 3. **ROC Curves (`roc_curves.png`):** Shows the sensitivity vs. specificity tradeoff across all decision thresholds.
+
+![Confusion Matrix (Outer Test - 52,718 Stations)](results/india_wide/figures/confusion_matrix.png)
+
+![Precision-Recall Curves Comparison](results/india_wide/figures/pr_curves.png)
+
+![ROC Curves Comparison](results/india_wide/figures/roc_curves.png)
 
 ---
 
@@ -328,7 +346,17 @@ $$\delta^* = \arg\min_{\delta} \|\delta\|_1 \quad \text{s.t.} \quad \hat{P}(x + 
 
 *Immutable features* (such as latitude, longitude, and historical population) are constrained ($\delta_j = 0$), while *actionable features* (distance to highway, POI count, adjacent road class) are optimized via Nelder-Mead simplex search.
 
+### Global TreeSHAP Feature Attribution & Distributions
+
+![Global TreeSHAP Feature Ranking](results/india_wide/figures/feature_importance.png)
+
+![SHAP Value Distributions Beeswarm Plot](results/india_wide/figures/shap_beeswarm.png)
+
+### Actionable Counterfactual Elevation
+
 Visualized in [`results/india_wide/figures/counterfactual_comparison.png`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/counterfactual_comparison.png) across representative stations in 10 states:
+
+![Actionable Counterfactual Elevation](results/india_wide/figures/counterfactual_comparison.png)
 
 | Station ID | State / UT | Original $P(\text{DC Fast})$ | Optimized $P(\text{DC Fast})$ | Prescriptive Planning Guidance |
 | :--- | :--- | :---: | :---: | :--- |
@@ -363,6 +391,10 @@ The normalized criteria weights ($w_j$):
 ### TOPSIS State Ranking & Prioritization Tiers
 
 Using the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS), all **36 States and Union Territories** are ranked into three distinct capital allocation tiers:
+
+![EIPS State Prioritization Index](results/india_wide/figures/eips_state_rankings.png)
+
+![Multi-Criteria Component Decomposition](results/india_wide/figures/eips_component_breakdown.png)
 
 ```text
 TOP 15 STATES EIPS RANKINGS (AHP-TOPSIS)
@@ -406,6 +438,34 @@ The frontend is hosted in [`frontend_india/`](file:///c:/Users/Dell/Downloads/EV
 4. `💡 Explainability (SHAP)`: Global TreeSHAP feature ranking, beeswarm distribution, and actionable counterfactual transition table.
 5. `📈 EIPS Planning`: Multi-criteria state ranking bar charts, component decomposition, and full 36-state searchable table.
 6. `🗺️ GIS Map`: Full-screen embedded Folium GIS map showing station locations with Folium layer controls.
+
+### Interactive Dashboard UI Progression
+
+The full-stack web application running on Port 5001 provides 6 interactive modules with real-time model inference:
+
+#### 1. Executive Planning & Infrastructure Dashboard (Overview)
+
+![Executive Overview Dashboard](results/india_wide/figures/dashboard_overview.jpg)
+
+#### 2. Station Classification & Decision Inference
+
+![Station Classification & Decision Inference](results/india_wide/figures/dashboard_station_prediction.png)
+
+#### 3. Spatial Machine Learning Evaluation & Benchmarking
+
+![Spatial Machine Learning Evaluation & Benchmarking](results/india_wide/figures/dashboard_model_evaluation.png)
+
+#### 4. Explainable AI: TreeSHAP & Actionable Counterfactuals
+
+![Explainable AI: TreeSHAP & Actionable Counterfactuals](results/india_wide/figures/dashboard_explainability_shap.png)
+
+#### 5. Multi-Criteria Planning & EIPS Framework (Visualizations)
+
+![Multi-Criteria Planning & EIPS Framework Charts](results/india_wide/figures/dashboard_eips_planning_charts.jpg)
+
+#### 6. Multi-Criteria Planning & EIPS Framework (State Rankings Table)
+
+![All 36 States & UTs EIPS Ranking Table](results/india_wide/figures/dashboard_eips_ranking_table_1.jpg)
 
 ### REST API Endpoints
 

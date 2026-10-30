@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1600" width="1600" height="1600">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background Gradient (Clean Light Theme) -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0b1329"/>
-      <stop offset="50%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e293b"/>
+      <stop offset="0%" stop-color="#dceaf8"/>
+      <stop offset="50%" stop-color="#edf4fb"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
     </linearGradient>
 
-    <!-- Slab Gradients -->
+    <!-- 3D Slab Gradients: Upper Panel -->
+    <!-- Blue Slab -->
     <linearGradient id="slabBlueFront" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="100%" stop-color="#0284c7"/>
@@ -22,6 +23,7 @@
       <stop offset="100%" stop-color="#075985"/>
     </linearGradient>
 
+    <!-- Green Slab -->
     <linearGradient id="slabGreenFront" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#34d399"/>
       <stop offset="100%" stop-color="#059669"/>
@@ -35,6 +37,7 @@
       <stop offset="100%" stop-color="#065f46"/>
     </linearGradient>
 
+    <!-- Orange Slab -->
     <linearGradient id="slabOrangeFront" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#fb923c"/>
       <stop offset="100%" stop-color="#ea580c"/>
@@ -48,6 +51,7 @@
       <stop offset="100%" stop-color="#9a3412"/>
     </linearGradient>
 
+    <!-- Teal Slab -->
     <linearGradient id="slabTealFront" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#2dd4bf"/>
       <stop offset="100%" stop-color="#0d9488"/>
@@ -61,32 +65,35 @@
       <stop offset="100%" stop-color="#115e59"/>
     </linearGradient>
 
+    <!-- Coral / Pink Slab -->
     <linearGradient id="slabPinkFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="100%" stop-color="#be123c"/>
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
     </linearGradient>
     <linearGradient id="slabPinkTop" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fecdd3"/>
-      <stop offset="100%" stop-color="#fda4af"/>
+      <stop offset="0%" stop-color="#fecaca"/>
+      <stop offset="100%" stop-color="#fca5a5"/>
     </linearGradient>
     <linearGradient id="slabPinkSide" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#9f1239"/>
-      <stop offset="100%" stop-color="#881337"/>
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#991b1b"/>
     </linearGradient>
 
+    <!-- Yellow / Gold Slab -->
     <linearGradient id="slabYellowFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#eab308"/>
-      <stop offset="100%" stop-color="#a16207"/>
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
     </linearGradient>
     <linearGradient id="slabYellowTop" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#fef08a"/>
-      <stop offset="100%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#facc15"/>
     </linearGradient>
     <linearGradient id="slabYellowSide" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#854d0e"/>
-      <stop offset="100%" stop-color="#713f12"/>
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#854d0e"/>
     </linearGradient>
 
+    <!-- Purple Slab -->
     <linearGradient id="slabPurpleFront" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#c084fc"/>
       <stop offset="100%" stop-color="#9333ea"/>
@@ -101,339 +108,354 @@
     </linearGradient>
 
     <!-- 3D Cube Gradients -->
-    <linearGradient id="cubeFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#6d28d9"/>
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d8b4fe"/>
+      <stop offset="100%" stop-color="#a855f7"/>
     </linearGradient>
-    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c4b5fd"/>
-      <stop offset="100%" stop-color="#a78bfa"/>
+    <linearGradient id="cubeFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
     </linearGradient>
     <linearGradient id="cubeSide" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#5b21b6"/>
-      <stop offset="100%" stop-color="#4c1d95"/>
+      <stop offset="0%" stop-color="#6b21a8"/>
+      <stop offset="100%" stop-color="#581c87"/>
     </linearGradient>
 
-    <!-- Pipeline 3D Blocks -->
+    <!-- Middle Panel 3D Block Gradients -->
     <linearGradient id="blkTealFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f766e"/>
-      <stop offset="100%" stop-color="#115e59"/>
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0f766e"/>
     </linearGradient>
     <linearGradient id="blkTealTop" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2dd4bf"/>
-      <stop offset="100%" stop-color="#14b8a6"/>
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
     </linearGradient>
     <linearGradient id="blkTealSide" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#134e4a"/>
-      <stop offset="100%" stop-color="#042f2e"/>
+      <stop offset="0%" stop-color="#115e59"/>
+      <stop offset="100%" stop-color="#134e4a"/>
     </linearGradient>
 
     <linearGradient id="blkPurpFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7e22ce"/>
-      <stop offset="100%" stop-color="#581c87"/>
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
     </linearGradient>
     <linearGradient id="blkPurpTop" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#a855f7"/>
+      <stop offset="0%" stop-color="#d8b4fe"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
     <linearGradient id="blkPurpSide" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4c1d95"/>
-      <stop offset="100%" stop-color="#3b0764"/>
+      <stop offset="0%" stop-color="#6b21a8"/>
+      <stop offset="100%" stop-color="#581c87"/>
     </linearGradient>
 
     <linearGradient id="blkRedFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#b91c1c"/>
-      <stop offset="100%" stop-color="#7f1d1d"/>
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
     </linearGradient>
     <linearGradient id="blkRedTop" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f87171"/>
-      <stop offset="100%" stop-color="#ef4444"/>
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#34d399"/>
     </linearGradient>
     <linearGradient id="blkRedSide" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#991b1b"/>
-      <stop offset="100%" stop-color="#450a0a"/>
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#064e3b"/>
     </linearGradient>
 
     <!-- Arrow Markers -->
     <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8"/>
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1e293b"/>
     </marker>
     <marker id="arrowBlue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#60a5fa"/>
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
     </marker>
 
     <!-- Drop Shadows -->
     <filter id="shadowSm" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#020617" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.08"/>
     </filter>
     <filter id="shadowMd" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="2" dy="5" stdDeviation="7" flood-color="#020617" flood-opacity="0.5"/>
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
     </filter>
   </defs>
 
   <!-- ================= CANVAS BACKGROUND & BORDER ================= -->
-  <rect x="8" y="8" width="1584" height="1584" rx="14" fill="url(#bgGrad)" stroke="#1e3a8a" stroke-width="2.5"/>
+  <rect x="8" y="8" width="1584" height="1584" rx="14" fill="url(#bgGrad)" stroke="#b8d3eb" stroke-width="2"/>
 
   <!-- ================= HEADER SECTION ================= -->
-  <text x="800" y="46" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="32" font-weight="800" fill="#f8fafc" letter-spacing="2">SYSTEM ARCHITECTURE — PAN-INDIA MASTER FRAMEWORK</text>
-  <text x="800" y="72" text-anchor="middle" font-family="'Inter', -apple-system, sans-serif" font-size="14.5" font-weight="600" fill="#94a3b8" letter-spacing="0.5">Explainable AI &amp; Multi-Criteria Siting for 52,718 Public EV Charging Stations Across 36 States &amp; UTs</text>
+  <text x="800" y="48" text-anchor="middle" font-family="'Times New Roman', Times, Georgia, serif" font-size="34" font-weight="bold" fill="#0f172a" letter-spacing="2">SYSTEM ARCHITECTURE — PAN-INDIA MASTER FRAMEWORK</text>
+  <text x="800" y="74" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="600" fill="#475569" letter-spacing="0.5">Explainable AI Framework for Smart EV Charging Infrastructure Planning — 52,718 Stations Across 36 States &amp; UTs</text>
 
   <!-- ================= LEFT COLUMN: DATA INPUTS (FORMAL SPECIFICATION CARDS) ================= -->
   <g id="left-column">
-    <rect x="24" y="95" width="232" height="1480" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.8" filter="url(#shadowSm)"/>
-    <path d="M 24 105 A 10 10 0 0 1 34 95 L 246 95 A 10 10 0 0 1 256 105 L 256 135 L 24 135 Z" fill="#1e293b" stroke="#334155" stroke-width="1.8"/>
-    <text x="140" y="122" text-anchor="middle" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="#38bdf8" letter-spacing="1">PAN-INDIA DATA INPUTS</text>
+    <rect x="24" y="95" width="232" height="1480" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" filter="url(#shadowSm)"/>
+    <path d="M 24 105 A 10 10 0 0 1 34 95 L 246 95 A 10 10 0 0 1 256 105 L 256 135 L 24 135 Z" fill="#f1f5f9" stroke="#1e293b" stroke-width="1.8"/>
+    <text x="140" y="122" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" letter-spacing="1">PAN-INDIA DATA INPUTS</text>
 
     <!-- Card 1: National Charging Registry -->
     <g transform="translate(32, 145)">
-      <rect x="0" y="0" width="216" height="345" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#0369a1"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">National Charging Station Registry</text>
+      <rect x="0" y="0" width="216" height="345" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#e0f2fe"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#0369a1">National Charging Registry</text>
       
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Source: OpenChargeMap + BEE Portal</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">Master Database (36 States &amp; UTs)</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Source: OpenChargeMap + BEE Portal</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">Master Database (36 States &amp; UTs)</text>
 
       <rect x="10" y="78" width="196" height="24" rx="4" fill="#0284c7"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Ground-Truth Target (N=52,718)</text>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Ground-Truth Target (N=52,718)</text>
 
       <!-- Formal Specs Box 1 -->
-      <rect x="10" y="110" width="196" height="98" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Classification Target y_i:</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Class 0: AC Slow (&lt;50 kW) — 36,157</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Class 1: DC Fast (≥50 kW) — 16,561</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• National Prevalence: 31.42% DC</text>
-      <text x="18" y="200" font-family="'Inter', sans-serif" font-size="10.5" fill="#38bdf8">• Empirical Verified Operational Status</text>
+      <rect x="10" y="110" width="196" height="98" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Classification Target y_i:</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Class 0: AC Slow (&lt;50 kW) — 36,157</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Class 1: DC Fast (≥50 kW) — 16,561</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• National Prevalence: 31.42% DC</text>
+      <text x="18" y="200" font-family="-apple-system, sans-serif" font-size="10.5" fill="#0369a1">• Empirical Verified Operational Status</text>
 
       <!-- Formal Specs Box 2 -->
-      <rect x="10" y="216" width="196" height="92" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="234" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Spatial Geometry &amp; Coverage:</text>
-      <text x="18" y="252" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Geo-Tagged Latitude / Longitude</text>
-      <text x="18" y="270" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• WGS84 Geodetic Coordinates</text>
-      <text x="18" y="288" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Coverage: All 36 States/UTs</text>
-      <text x="18" y="304" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• Zero Missing Coordinates (100%)</text>
+      <rect x="10" y="216" width="196" height="92" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="234" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Spatial Geometry &amp; Coverage:</text>
+      <text x="18" y="252" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Geo-Tagged Latitude / Longitude</text>
+      <text x="18" y="270" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• WGS84 Geodetic Coordinates</text>
+      <text x="18" y="288" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Coverage: All 36 States &amp; UTs</text>
+      <text x="18" y="304" font-family="-apple-system, sans-serif" font-size="10" fill="#059669">• Zero Missing Coordinates (100%)</text>
 
-      <rect x="10" y="316" width="196" height="20" rx="3" fill="#0f172a"/>
-      <text x="108" y="330" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Certified Station Ground Truth</text>
+      <rect x="10" y="316" width="196" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="330" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Certified Station Ground Truth</text>
     </g>
 
-    <!-- Card 2: OSM Roads & POIs -->
+    <!-- Card 2: Road & POI Infrastructure -->
     <g transform="translate(32, 510)">
-      <rect x="0" y="0" width="216" height="345" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#065f46"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">Road Network &amp; POI GIS</text>
+      <rect x="0" y="0" width="216" height="345" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#ecfdf5"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#047857">Road &amp; POI Infrastructure</text>
 
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Source: OpenStreetMap Overpass</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">Geospatial Vector Highway Graph</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Source: OpenStreetMap Overpass</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">NHAI Vector Corridor Network</text>
 
       <rect x="10" y="78" width="196" height="24" rx="4" fill="#059669"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Multi-Scale Spatial Buffers</text>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Multi-Scale Spatial Buffers</text>
 
-      <rect x="10" y="110" width="196" height="98" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#34d399">National Arteries &amp; Corridors:</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• National Highways (NH-44, NH-48)</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• State Highways &amp; Expressways</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Haversine Dist. to Highway (km)</text>
-      <text x="18" y="200" font-family="'Inter', sans-serif" font-size="10.5" fill="#34d399">• Highway Proximity Index (0 - 1)</text>
+      <rect x="10" y="110" width="196" height="98" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Highway Network Layers:</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• National &amp; State Primary Highways</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Trunk &amp; Arterial Road Links</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Shortest Distance to Highway (km)</text>
+      <text x="18" y="200" font-family="-apple-system, sans-serif" font-size="10.5" fill="#047857">• Highway Proximity Score 1/(1+d)</text>
 
-      <rect x="10" y="216" width="196" height="92" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="234" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#34d399">Commercial POI Metrics:</text>
-      <text x="18" y="252" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Nearby POI Counts (5km buffer)</text>
-      <text x="18" y="270" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Shannon POI Diversity Index (H')</text>
-      <text x="18" y="288" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Distance to City Center (km)</text>
-      <text x="18" y="304" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• Urban-Rural Centroid Vector</text>
+      <rect x="10" y="216" width="196" height="92" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="234" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Commercial POI Classes (5km):</text>
+      <text x="18" y="252" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Commercial Malls &amp; Transit Hubs</text>
+      <text x="18" y="270" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Shannon POI Diversity Index (H')</text>
+      <text x="18" y="288" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Nearby POI Count Aggregation</text>
+      <text x="18" y="304" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">• Urban Centroid Proximity Score</text>
 
-      <rect x="10" y="316" width="196" height="20" rx="3" fill="#0f172a"/>
-      <text x="108" y="330" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Exogenous Spatial Predictors</text>
+      <rect x="10" y="316" width="196" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="330" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Certified Exogenous Spatial Predictors</text>
     </g>
 
-    <!-- Card 3: VAHAN EV Adoption Registry -->
+    <!-- Card 3: VAHAN EV Registry -->
     <g transform="translate(32, 875)">
-      <rect x="0" y="0" width="216" height="345" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#9a3412"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">National EV Fleet Adoption</text>
+      <rect x="0" y="0" width="216" height="345" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#fef3c7"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#b45309">EV Fleet Adoption Registry</text>
 
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Source: MoRTH VAHAN 4.0 Dashboard</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">National Vehicle Registry (36 States)</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Source: MoRTH VAHAN Dashboard</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">Official National Vehicle Registry</text>
 
-      <rect x="10" y="78" width="196" height="24" rx="4" fill="#ea580c"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">State &amp; District Penetration</text>
+      <rect x="10" y="78" width="196" height="24" rx="4" fill="#d97706"/>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">All 700+ Indian Districts</text>
 
-      <rect x="10" y="110" width="196" height="98" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#fb923c">Fleet Segmentation:</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• E-2W Fleet Registrations</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• E-3W Passenger &amp; Cargo Fleet</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• E-4W Personal &amp; Commercial Cabs</text>
-      <text x="18" y="200" font-family="'Inter', sans-serif" font-size="10.5" fill="#fb923c">• Total Active Vehicle Stock</text>
+      <rect x="10" y="110" width="196" height="98" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Fleet Categorization:</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Electric 2-Wheelers (E-2W Fleet)</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Electric 3-Wheelers (Commercial)</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Electric 4-Wheelers (E-Cars &amp; Cabs)</text>
+      <text x="18" y="200" font-family="-apple-system, sans-serif" font-size="10.5" fill="#b45309">• Complete Vehicle Population</text>
 
-      <rect x="10" y="216" width="196" height="92" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="234" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#fb923c">Contextual Adoption Metrics:</text>
-      <text x="18" y="252" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• District EV Penetration Rate (%)</text>
-      <text x="18" y="270" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• EV Adoption per 1,000 Vehicles</text>
-      <text x="18" y="288" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Demographic Density Projections</text>
-      <text x="18" y="304" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• Zero Circular Station Demand</text>
+      <rect x="10" y="216" width="196" height="92" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="234" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Adoption Metric Formulation:</text>
+      <text x="18" y="252" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• EV Penetration Rate per 1,000 veh</text>
+      <text x="18" y="270" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• District EV Registrations Count</text>
+      <text x="18" y="288" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Census Population Density (km²)</text>
+      <text x="18" y="304" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">• Macro Non-Leaky Context</text>
 
-      <rect x="10" y="316" width="196" height="20" rx="3" fill="#0f172a"/>
-      <text x="108" y="330" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Macro Contextual Evidence Base</text>
+      <rect x="10" y="316" width="196" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="330" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Contextual Siting Evidence Base</text>
     </g>
 
-    <!-- Card 4: CEA Power Grid & Nodal Agencies -->
+    <!-- Card 4: CEA Power Grid Utility -->
     <g transform="translate(32, 1240)">
-      <rect x="0" y="0" width="216" height="325" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#115e59"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">Grid Utility &amp; Nodal Context</text>
+      <rect x="0" y="0" width="216" height="325" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#ccfbf1"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#0f766e">Grid &amp; Nodal Agency Context</text>
 
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Source: Central Electricity Authority</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">State DISCOMs &amp; Nodal Agencies</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Source: CEA &amp; State Discoms</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">BESCOM, MSEDCL, UPNEDA, etc.</text>
 
       <rect x="10" y="78" width="196" height="24" rx="4" fill="#0d9488"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">National Energy Context (12.45 TWh)</text>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Substation &amp; Feeder Network</text>
 
-      <rect x="10" y="110" width="196" height="92" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#2dd4bf">Power Infrastructure Assets:</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• High-Voltage Transmission Nodes</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• State Nodal Readiness Portals</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• BESCOM, MSEDCL, UPNEDA, TEDA</text>
-      <text x="18" y="198" font-family="'Inter', sans-serif" font-size="10.5" fill="#2dd4bf">• Regional Grid Reliability Margin</text>
+      <rect x="10" y="110" width="196" height="92" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Grid Infrastructure Assets:</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 11 kV, 33 kV &amp; 132 kV Feeders</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Distribution Substation Proximity</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Grid Capacity Indicator Categories</text>
+      <text x="18" y="198" font-family="-apple-system, sans-serif" font-size="10.5" fill="#0f766e">• High Capacity Voltage Readiness</text>
 
-      <rect x="10" y="210" width="196" height="86" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="228" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#2dd4bf">High-Power Feeder Feasibility:</text>
-      <text x="18" y="246" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 3-Phase Heavy Transformer Load</text>
-      <text x="18" y="264" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Utility Data Available Flag</text>
-      <text x="18" y="282" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Fast-Charging Substation Headroom</text>
+      <rect x="10" y="210" width="196" height="86" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="228" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Feeder Headroom &amp; Capacity:</text>
+      <text x="18" y="246" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Transformer Loading Margin (%)</text>
+      <text x="18" y="264" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Spare Feeder Capacity Tier</text>
+      <text x="18" y="282" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• DC Fast Charger Feasibility</text>
 
-      <rect x="10" y="302" width="196" height="18" rx="3" fill="#0f172a"/>
-      <text x="108" y="315" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Certified Grid Context Gate</text>
+      <rect x="10" y="302" width="196" height="18" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="315" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Certified Electrical Feasibility Gate</text>
     </g>
   </g>
 
   <!-- ================= UPPER PANEL: DATA ENGINEERING & SPATIAL ENRICHMENT ================= -->
   <g id="upper-panel">
-    <rect x="272" y="95" width="1056" height="540" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.8" filter="url(#shadowSm)"/>
-    <text x="800" y="122" text-anchor="middle" font-family="'Inter', sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">Data Engineering &amp; Spatial Enrichment (Strict Anti-Leakage Gate — 21 Certified Predictors)</text>
+    <rect x="272" y="95" width="1056" height="540" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" filter="url(#shadowSm)"/>
+    <text x="800" y="118" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold" fill="#0f172a">Data Engineering &amp; Spatial Enrichment (Strict Anti-Leakage Gate — 21 Certified Predictors)</text>
 
     <!-- Vector Arrow from Left Column into Upper Panel -->
-    <path d="M 256 360 L 302 360" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M 256 360 L 302 360" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
 
     <!-- 4 INGESTION SLABS (3D Tilted Isometric Slabs) -->
+    <!-- Slab 1: Blue (BEE Spatial) -->
     <g transform="translate(306, 225)">
       <polygon points="0,0 12,-12 42,-12 30,0" fill="url(#slabBlueTop)" stroke="#0369a1" stroke-width="0.8"/>
       <polygon points="30,0 42,-12 42,248 30,260" fill="url(#slabBlueSide)" stroke="#0369a1" stroke-width="0.8"/>
       <rect x="0" y="0" width="30" height="260" fill="url(#slabBlueFront)" stroke="#0369a1" stroke-width="0.8"/>
-      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff">52K Stations</text>
+      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">BEE 52K</text>
     </g>
 
+    <!-- Slab 2: Green (OSM Buffers) -->
     <g transform="translate(352, 225)">
       <polygon points="0,0 12,-12 42,-12 30,0" fill="url(#slabGreenTop)" stroke="#047857" stroke-width="0.8"/>
       <polygon points="30,0 42,-12 42,248 30,260" fill="url(#slabGreenSide)" stroke="#047857" stroke-width="0.8"/>
       <rect x="0" y="0" width="30" height="260" fill="url(#slabGreenFront)" stroke="#047857" stroke-width="0.8"/>
-      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff">OSM Corridors</text>
+      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">NHAI Corridors</text>
     </g>
 
+    <!-- Slab 3: Orange (VAHAN Fleet) -->
     <g transform="translate(398, 225)">
       <polygon points="0,0 12,-12 42,-12 30,0" fill="url(#slabOrangeTop)" stroke="#c2410c" stroke-width="0.8"/>
       <polygon points="30,0 42,-12 42,248 30,260" fill="url(#slabOrangeSide)" stroke="#c2410c" stroke-width="0.8"/>
       <rect x="0" y="0" width="30" height="260" fill="url(#slabOrangeFront)" stroke="#c2410c" stroke-width="0.8"/>
-      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff">VAHAN Fleet</text>
+      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">VAHAN Fleet</text>
     </g>
 
+    <!-- Slab 4: Teal (CEA Discom Grid) -->
     <g transform="translate(444, 225)">
       <polygon points="0,0 12,-12 42,-12 30,0" fill="url(#slabTealTop)" stroke="#0f766e" stroke-width="0.8"/>
       <polygon points="30,0 42,-12 42,248 30,260" fill="url(#slabTealSide)" stroke="#0f766e" stroke-width="0.8"/>
       <rect x="0" y="0" width="30" height="260" fill="url(#slabTealFront)" stroke="#0f766e" stroke-width="0.8"/>
-      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff">CEA Utilities</text>
+      <text x="-130" y="20" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">CEA Discoms</text>
     </g>
 
-    <path d="M 306 502 L 306 510 L 390 510 L 390 515 L 390 510 L 474 510 L 474 502" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
-    <text x="390" y="530" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#38bdf8">Pan-India Ingestion (N=52,718)</text>
+    <!-- Underneath Label for 4 Ingestion Slabs -->
+    <path d="M 306 502 L 306 510 L 390 510 L 390 515 L 390 510 L 474 510 L 474 502" fill="none" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="390" y="530" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">Spatial Ingestion Slabs (N=52,718)</text>
 
     <!-- Connecting Arrow to Feature Assembly -->
-    <path d="M 496 360 L 536 360" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M 496 360 L 536 360" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
 
-    <!-- INVERTED RESIDUAL FEATURE ASSEMBLY -->
+    <!-- RESIDUAL FEATURE ASSEMBLY -->
     <g id="residual-assembly">
-      <text x="705" y="152" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Certified Spatial Feature Synthesis (21-D)</text>
-      <path d="M 548 166 L 548 160 L 705 160 L 705 156 L 705 160 L 853 160 L 853 166" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="705" y="142" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#0f172a">Residual Feature Engineering &amp; Harmonization (×21)</text>
+      <path d="M 548 156 L 548 150 L 705 150 L 705 146 L 705 150 L 853 150 L 853 156" fill="none" stroke="#1e293b" stroke-width="1.2"/>
 
-      <path d="M 545 210 C 545 170, 856 170, 856 210" fill="none" stroke="#60a5fa" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#arrowBlue)"/>
-      <rect x="630" y="172" width="150" height="20" rx="4" fill="#1e293b" stroke="#60a5fa" stroke-width="1"/>
-      <text x="705" y="186" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10.5" font-weight="bold" fill="#60a5fa">+ Zero Leaky Specs</text>
+      <!-- Curved Skip Connection Vector Arrow -->
+      <path d="M 545 210 C 545 162, 856 162, 856 210" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#arrowBlue)"/>
+      <rect x="630" y="156" width="150" height="20" rx="4" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+      <text x="705" y="170" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="bold" fill="#0284c7">+ Skip Identity (21 Feats)</text>
 
+      <!-- Slab 1: Pink (Spatial Lags) -->
       <g transform="translate(548, 225)">
         <polygon points="0,0 12,-12 77,-12 65,0" fill="url(#slabPinkTop)" stroke="#b91c1c" stroke-width="0.8"/>
         <polygon points="65,0 77,-12 77,248 65,260" fill="url(#slabPinkSide)" stroke="#b91c1c" stroke-width="0.8"/>
         <rect x="0" y="0" width="65" height="260" fill="url(#slabPinkFront)" stroke="#b91c1c" stroke-width="0.8"/>
-        <text x="-130" y="38" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Spatial Lags</text>
+        <text x="-130" y="38" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Spatial Distance</text>
       </g>
 
-      <path d="M 632 360 L 655 360" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+      <!-- Intermediate Arrow -->
+      <path d="M 632 360 L 655 360" fill="none" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
 
+      <!-- Slab 2: Yellow (Density & Entropy) -->
       <g transform="translate(662, 225)">
         <polygon points="0,0 12,-12 77,-12 65,0" fill="url(#slabYellowTop)" stroke="#a16207" stroke-width="0.8"/>
         <polygon points="65,0 77,-12 77,248 65,260" fill="url(#slabYellowSide)" stroke="#a16207" stroke-width="0.8"/>
         <rect x="0" y="0" width="65" height="260" fill="url(#slabYellowFront)" stroke="#a16207" stroke-width="0.8"/>
-        <text x="-130" y="38" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Corridor Density</text>
+        <text x="-130" y="38" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#713f12">Entropy H' + Density</text>
       </g>
 
-      <path d="M 746 360 L 769 360" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+      <!-- Intermediate Arrow -->
+      <path d="M 746 360 L 769 360" fill="none" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
 
+      <!-- Slab 3: Purple (One-Hot Road Dummies) -->
       <g transform="translate(776, 225)">
         <polygon points="0,0 12,-12 77,-12 65,0" fill="url(#slabPurpleTop)" stroke="#7e22ce" stroke-width="0.8"/>
         <polygon points="65,0 77,-12 77,248 65,260" fill="url(#slabPurpleSide)" stroke="#7e22ce" stroke-width="0.8"/>
         <rect x="0" y="0" width="65" height="260" fill="url(#slabPurpleFront)" stroke="#7e22ce" stroke-width="0.8"/>
-        <text x="-130" y="38" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Scaling &amp; Norm</text>
+        <text x="-130" y="38" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Road Hierarchy</text>
       </g>
 
-      <path d="M 548 502 L 548 510 L 705 510 L 705 515 L 705 510 L 853 510 L 853 502" fill="none" stroke="#38bdf8" stroke-width="1.3"/>
-      <text x="705" y="530" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#38bdf8">21 Exogenous Feature Vector</text>
+      <!-- Underneath Bracket & Label -->
+      <path d="M 548 502 L 548 510 L 705 510 L 705 515 L 705 510 L 853 510 L 853 502" fill="none" stroke="#1e293b" stroke-width="1.3"/>
+      <text x="705" y="530" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">×21 Exogenous Feature Vector</text>
     </g>
 
     <!-- Connecting Arrow to Anti-Leakage Gate -->
-    <path d="M 870 360 L 908 360" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M 870 360 L 908 360" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
 
     <!-- STRICT ANTI-LEAKAGE ISOLATION GATE -->
     <g id="leakage-gate">
+      <!-- Slab 1: Green Guard -->
       <g transform="translate(916, 225)">
         <polygon points="0,0 12,-12 52,-12 40,0" fill="url(#slabGreenTop)" stroke="#047857" stroke-width="0.8"/>
         <polygon points="40,0 52,-12 52,248 40,260" fill="url(#slabGreenSide)" stroke="#047857" stroke-width="0.8"/>
         <rect x="0" y="0" width="40" height="260" fill="url(#slabGreenFront)" stroke="#047857" stroke-width="0.8"/>
-        <text x="-130" y="25" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Feature Gate</text>
+        <text x="-130" y="25" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Hardware Guard</text>
       </g>
 
+      <!-- Slab 2: Orange Gate -->
       <g transform="translate(976, 225)">
         <polygon points="0,0 12,-12 52,-12 40,0" fill="url(#slabOrangeTop)" stroke="#c2410c" stroke-width="0.8"/>
         <polygon points="40,0 52,-12 52,248 40,260" fill="url(#slabOrangeSide)" stroke="#c2410c" stroke-width="0.8"/>
         <rect x="0" y="0" width="40" height="260" fill="url(#slabOrangeFront)" stroke="#c2410c" stroke-width="0.8"/>
-        <text x="-130" y="25" transform="rotate(-90)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Spatial Gate</text>
+        <text x="-130" y="25" transform="rotate(-90)" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Anti-Leakage Gate</text>
       </g>
 
-      <path d="M 916 502 L 916 510 L 966 510 L 966 515 L 966 510 L 1016 510 L 1016 502" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
-      <text x="966" y="530" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#38bdf8">Strict Leakage Rejection</text>
+      <!-- Underneath Label -->
+      <path d="M 916 502 L 916 510 L 966 510 L 966 515 L 966 510 L 1016 510 L 1016 502" fill="none" stroke="#1e293b" stroke-width="1.2"/>
+      <text x="966" y="530" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">9 Leaky Fields Dropped</text>
     </g>
 
     <!-- Connecting Arrow to 3D Cube -->
-    <path d="M 1038 360 L 1092 360" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <path d="M 1038 360 L 1092 360" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
 
     <!-- 3D ISOMETRIC PURPLE CUBE (Feature Matrix Assembly) -->
     <g transform="translate(1105, 305)" id="feature-cube">
       <polygon points="0,0 35,-35 125,-35 90,0" fill="url(#cubeTop)" stroke="#581c87" stroke-width="1.2"/>
       <polygon points="90,0 125,-35 125,55 90,90" fill="url(#cubeSide)" stroke="#581c87" stroke-width="1.2"/>
       <rect x="0" y="0" width="90" height="90" fill="url(#cubeFront)" stroke="#581c87" stroke-width="1.2"/>
-      <text x="45" y="54" text-anchor="middle" font-family="'Inter', sans-serif" font-size="24" font-weight="bold" fill="#ffffff">21-D</text>
+      <text x="45" y="54" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">21-D</text>
       
-      <text x="62" y="-45" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Feature Matrix</text>
-      <text x="50" y="122" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#c084fc">N=52,718 × 21</text>
+      <text x="62" y="-45" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Feature Matrix Assembly</text>
+      <text x="50" y="122" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#7e22ce">21 Certified Predictors</text>
     </g>
   </g>
 
   <!-- ================= CHANNEL ARROW: UPPER TO MIDDLE ================= -->
-  <path d="M 1165 435 L 1165 650 L 305 650 L 305 855 L 325 855" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
-  <rect x="670" y="638" width="180" height="24" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
-  <text x="760" y="654" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#38bdf8">21-D Certified Tensor</text>
+  <path d="M 1165 435 L 1165 650 L 305 650 L 305 855 L 325 855" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <rect x="670" y="638" width="160" height="24" rx="5" fill="#ffffff" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="750" y="654" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">21-D Certified Tensor</text>
 
   <!-- ================= MIDDLE PANEL: SPATIAL-AWARE ML CLASSIFICATION PIPELINE ================= -->
   <g id="middle-panel">
-    <rect x="272" y="665" width="1056" height="400" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.8" filter="url(#shadowSm)"/>
-    <text x="800" y="696" text-anchor="middle" font-family="'Inter', sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">Standalone Spatial Machine Learning Bake-Off &amp; Calibration</text>
+    <rect x="272" y="665" width="1056" height="400" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" filter="url(#shadowSm)"/>
+    <text x="800" y="696" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Spatial-Aware Machine Learning Pipeline (5-Fold State-Grouped CV)</text>
 
     <!-- BLOCK 1: Spatial Partitioning (Teal 3D Block) -->
     <g transform="translate(332, 740)" filter="url(#shadowMd)">
@@ -441,334 +463,333 @@
       <polygon points="260,0 274,-14 274,236 260,250" fill="url(#blkTealSide)" stroke="#115e59" stroke-width="1"/>
       <rect x="0" y="0" width="260" height="250" rx="4" fill="url(#blkTealFront)" stroke="#115e59" stroke-width="1.2"/>
       
-      <text x="130" y="34" text-anchor="middle" font-family="'Inter', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Spatial Partitioning</text>
-      <line x1="20" y1="46" x2="240" y2="46" stroke="#2dd4bf" stroke-width="1.5"/>
-      <rect x="15" y="58" width="230" height="175" rx="5" fill="#0f172a" fill-opacity="0.95"/>
-      <text x="28" y="85" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#2dd4bf">5-Fold State-Grouped CV</text>
-      <text x="28" y="112" font-family="'Inter', sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">• GroupKFold by 36 States/UTs</text>
-      <text x="28" y="136" font-family="'Inter', sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">• Blocks Spatial Autocorrelation</text>
-      <text x="28" y="160" font-family="'Inter', sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">• Zero Inter-State Leakage</text>
-      <rect x="25" y="178" width="210" height="42" rx="4" fill="#134e4a" stroke="#2dd4bf" stroke-width="0.8"/>
-      <text x="130" y="196" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#2dd4bf">Spatial Isolation Guard</text>
-      <text x="130" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10.5" fill="#99f6e4">Tobler's First Law Enforced</text>
+      <text x="130" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Spatial Partitioning</text>
+      <line x1="20" y1="46" x2="240" y2="46" stroke="#5eead4" stroke-width="1.5"/>
+      <rect x="15" y="58" width="230" height="175" rx="5" fill="#ffffff" fill-opacity="0.95"/>
+      <text x="28" y="85" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Spatial GroupKFold (5-Fold)</text>
+      <text x="28" y="112" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" fill="#334155">• Grouped by 36 States &amp; UTs</text>
+      <text x="28" y="136" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" fill="#334155">• Tobler's 1st Law Spatial Guard</text>
+      <text x="28" y="160" font-family="-apple-system, sans-serif" font-size="12" font-weight="500" fill="#334155">• Prevents Coordinate Cheating</text>
+      <rect x="25" y="178" width="210" height="42" rx="4" fill="#ccfbf1" stroke="#2dd4bf" stroke-width="0.8"/>
+      <text x="130" y="196" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f766e">Zero Geographic Leakage</text>
+      <text x="130" y="212" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10.5" fill="#115e59">Strict Out-of-State Generalization</text>
     </g>
 
-    <!-- Connecting Arrow to Bake-off & Threshold Tuning -->
-    <path d="M 606 855 L 662 855" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
-    <rect x="608" y="830" width="50" height="18" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8"/>
-    <text x="633" y="843" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">Folds</text>
+    <!-- Connecting Arrow to Bake-Off -->
+    <path d="M 606 855 L 662 855" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <rect x="608" y="830" width="50" height="18" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8"/>
+    <text x="633" y="843" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Folds</text>
 
-    <!-- BLOCK 2: Model Bake-Off & Tuning (Purple 3D Block) -->
+    <!-- BLOCK 2: Model Bake-Off (Purple 3D Block) -->
     <g transform="translate(670, 740)" filter="url(#shadowMd)">
       <polygon points="0,0 14,-14 274,-14 260,0" fill="url(#blkPurpTop)" stroke="#6b21a8" stroke-width="1"/>
       <polygon points="260,0 274,-14 274,236 260,250" fill="url(#blkPurpSide)" stroke="#6b21a8" stroke-width="1"/>
       <rect x="0" y="0" width="260" height="250" rx="4" fill="url(#blkPurpFront)" stroke="#6b21a8" stroke-width="1.2"/>
-      <text x="130" y="34" text-anchor="middle" font-family="'Inter', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Model Bake-Off</text>
-      <line x1="20" y1="46" x2="240" y2="46" stroke="#c084fc" stroke-width="1.5"/>
-      <rect x="15" y="58" width="230" height="175" rx="5" fill="#0f172a" fill-opacity="0.95"/>
-      <text x="28" y="83" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" fill="#c084fc">RF vs XGBoost vs LightGBM</text>
-      <text x="28" y="105" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• RF PR-AUC: 0.3118 (Winner)</text>
-      <text x="28" y="125" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• XGB PR-AUC: 0.3051</text>
-      <text x="28" y="145" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• LGBM PR-AUC: 0.2970</text>
-      <rect x="25" y="165" width="210" height="55" rx="4" fill="#3b0764" stroke="#c084fc" stroke-width="0.8"/>
-      <text x="130" y="184" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#c084fc">Optimal Threshold Tuning</text>
-      <text x="130" y="200" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10.5" fill="#e9d5ff">Calibrated τ* = 0.2488 (24.9%)</text>
-      <text x="130" y="214" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9" fill="#d8b4fe">Balances Class Imbalance (31.4% DC)</text>
+      <text x="130" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Model Bake-Off</text>
+      <line x1="20" y1="46" x2="240" y2="46" stroke="#d8b4fe" stroke-width="1.5"/>
+      <rect x="15" y="58" width="230" height="175" rx="5" fill="#ffffff" fill-opacity="0.95"/>
+      <text x="28" y="83" font-family="-apple-system, sans-serif" font-size="12" font-weight="bold" fill="#7e22ce">RF vs XGBoost vs LightGBM</text>
+      <text x="28" y="105" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• RF PR-AUC: 0.3118 (Winner)</text>
+      <text x="28" y="125" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• XGB PR-AUC: 0.3051</text>
+      <text x="28" y="145" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• LGBM PR-AUC: 0.2970</text>
+      <rect x="25" y="165" width="210" height="55" rx="4" fill="#f3e8ff" stroke="#c084fc" stroke-width="0.8"/>
+      <text x="130" y="184" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#7e22ce">Optimal Threshold Tuning</text>
+      <text x="130" y="200" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10.5" fill="#6b21a8">Calibrated τ* = 0.2488 (24.9%)</text>
+      <text x="130" y="214" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#581c87">Maximizes Macro F1 &amp; Fast Recall</text>
     </g>
 
     <!-- Connecting Arrow to Champion RF -->
-    <path d="M 944 855 L 1000 855" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
-    <rect x="946" y="830" width="50" height="18" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8"/>
-    <text x="971" y="843" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">Model</text>
+    <path d="M 944 855 L 1000 855" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <rect x="946" y="830" width="50" height="18" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="0.8"/>
+    <text x="971" y="843" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Champion</text>
 
-    <!-- BLOCK 3: Champion Random Forest (Red 3D Block) -->
+    <!-- BLOCK 3: Champion Random Forest (Green 3D Block) -->
     <g transform="translate(1008, 740)" filter="url(#shadowMd)">
-      <polygon points="0,0 14,-14 274,-14 260,0" fill="url(#blkRedTop)" stroke="#991b1b" stroke-width="1"/>
-      <polygon points="260,0 274,-14 274,236 260,250" fill="url(#blkRedSide)" stroke="#991b1b" stroke-width="1"/>
-      <rect x="0" y="0" width="260" height="250" rx="4" fill="url(#blkRedFront)" stroke="#991b1b" stroke-width="1.2"/>
-      <text x="130" y="34" text-anchor="middle" font-family="'Inter', sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Champion Random Forest</text>
-      <line x1="20" y1="46" x2="240" y2="46" stroke="#f87171" stroke-width="1.5"/>
-      <rect x="15" y="58" width="230" height="175" rx="5" fill="#0f172a" fill-opacity="0.95"/>
-      <text x="28" y="83" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#f87171">52,718 Stations Champion</text>
-      <text x="28" y="104" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• Dev CV PR-AUC: 0.3416</text>
-      <text x="28" y="123" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• Outer Test PR-AUC: 0.3118</text>
-      <text x="28" y="142" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• Balanced Accuracy: 50.12%</text>
-      <text x="28" y="161" font-family="'Inter', sans-serif" font-size="11.5" fill="#cbd5e1">• Lowest Brier Score: 0.2346</text>
-      <rect x="25" y="178" width="210" height="42" rx="4" fill="#450a0a" stroke="#f87171" stroke-width="0.8"/>
-      <text x="130" y="196" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#f87171">High Generalizability</text>
-      <text x="130" y="212" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10.5" fill="#fca5a5">Zero Overfitting to Baseline</text>
+      <polygon points="0,0 14,-14 274,-14 260,0" fill="url(#blkRedTop)" stroke="#064e3b" stroke-width="1"/>
+      <polygon points="260,0 274,-14 274,236 260,250" fill="url(#blkRedSide)" stroke="#064e3b" stroke-width="1"/>
+      <rect x="0" y="0" width="260" height="250" rx="4" fill="url(#blkRedFront)" stroke="#064e3b" stroke-width="1.2"/>
+      <text x="130" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Champion Random Forest</text>
+      <line x1="20" y1="46" x2="240" y2="46" stroke="#a7f3d0" stroke-width="1.5"/>
+      <rect x="15" y="58" width="230" height="175" rx="5" fill="#ffffff" fill-opacity="0.95"/>
+      <text x="28" y="83" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#047857">52,718 Stations Champion</text>
+      <text x="28" y="104" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• Spatial PR-AUC: 0.3118 (Champion)</text>
+      <text x="28" y="123" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• Full Dataset Accuracy: 46.49%</text>
+      <text x="28" y="142" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• DC Fast Recall (τ*): 99.85%</text>
+      <text x="28" y="161" font-family="-apple-system, sans-serif" font-size="11.5" fill="#334155">• Lowest Brier Score: 0.2346</text>
+      <rect x="25" y="178" width="210" height="42" rx="4" fill="#ecfdf5" stroke="#10b981" stroke-width="0.8"/>
+      <text x="130" y="196" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#047857">Superior Spatial Calibration</text>
+      <text x="130" y="212" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10.5" fill="#065f46">Minimal Prediction Variance</text>
     </g>
 
     <!-- Arrow Exiting to Right Column -->
-    <path d="M 1282 855 L 1340 855" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
-    <rect x="1280" y="832" width="58" height="18" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8"/>
-    <text x="1309" y="845" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#38bdf8">Outputs</text>
+    <path d="M 1282 855 L 1340 855" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <rect x="1280" y="832" width="58" height="18" rx="3" fill="#ffffff" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="1309" y="845" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">Outputs</text>
   </g>
 
   <!-- ================= CHANNEL ARROW: MIDDLE TO LOWER ================= -->
-  <path d="M 1138 995 L 1138 1078 L 305 1078 L 305 1162 L 325 1162" fill="none" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrow)"/>
-  <rect x="670" y="1066" width="180" height="24" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
-  <text x="760" y="1082" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11.5" font-weight="bold" fill="#38bdf8">Fitted Champion RF Model</text>
+  <path d="M 1138 995 L 1138 1078 L 305 1078 L 305 1162 L 325 1162" fill="none" stroke="#1e293b" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <rect x="670" y="1066" width="180" height="24" rx="5" fill="#ffffff" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="760" y="1082" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a">Fitted Champion RF Model</text>
 
   <!-- ================= LOWER PANEL: EXPLAINABLE AI & ACTIONABLE COUNTERFACTUALS ================= -->
   <g id="lower-panel">
-    <rect x="272" y="1090" width="1056" height="485" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.8" filter="url(#shadowSm)"/>
-    <text x="800" y="1120" text-anchor="middle" font-family="'Inter', sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">Explainable AI (TreeSHAP) &amp; Actionable Counterfactual Optimization</text>
+    <rect x="272" y="1090" width="1056" height="485" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" filter="url(#shadowSm)"/>
+    <text x="800" y="1120" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Explainable AI (TreeSHAP) &amp; Actionable Counterfactual Optimization</text>
 
     <!-- Workflow Box 1 -->
     <g transform="translate(332, 1140)">
-      <rect x="0" y="0" width="220" height="54" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
-      <text x="110" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#38bdf8">TreeSHAP Explainer</text>
-      <text x="110" y="42" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Fast polynomial-time attribution</text>
+      <rect x="0" y="0" width="220" height="54" rx="6" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#0369a1">TreeSHAP Explainer</text>
+      <text x="110" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">Fast polynomial-time attribution</text>
     </g>
 
     <!-- Arrow 1 -> 2 -->
-    <path d="M 552 1167 L 588 1167" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 552 1167 L 588 1167" fill="none" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
 
     <!-- Workflow Box 2 -->
     <g transform="translate(594, 1140)">
-      <rect x="0" y="0" width="220" height="54" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
-      <text x="110" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#34d399">Additive Attributions</text>
-      <text x="110" y="42" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Exact ϕ_i feature impacts</text>
+      <rect x="0" y="0" width="220" height="54" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="1.2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#047857">Additive Attributions</text>
+      <text x="110" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">Exact ϕ_i feature impacts</text>
     </g>
 
     <!-- Arrow 2 -> 3 -->
-    <path d="M 814 1167 L 850 1167" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 814 1167 L 850 1167" fill="none" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
 
     <!-- Workflow Box 3 -->
     <g transform="translate(856, 1140)">
-      <rect x="0" y="0" width="220" height="54" rx="6" fill="#1e293b" stroke="#fb923c" stroke-width="1.2"/>
-      <text x="110" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#fb923c">Nelder-Mead Solver</text>
-      <text x="110" y="42" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Minimizing L1 actionable cost</text>
+      <rect x="0" y="0" width="220" height="54" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#c2410c">Nelder-Mead Solver</text>
+      <text x="110" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">Minimizing L1 actionable cost</text>
     </g>
 
     <!-- Arrow 3 -> 4 -->
-    <path d="M 1076 1167 L 1112 1167" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 1076 1167 L 1112 1167" fill="none" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
 
     <!-- Workflow Box 4 -->
     <g transform="translate(1118, 1140)">
-      <rect x="0" y="0" width="180" height="54" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.2"/>
-      <text x="90" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#c084fc">Actionable Guidance</text>
-      <text x="90" y="42" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#94a3b8">Feasible site transitions</text>
+      <rect x="0" y="0" width="180" height="54" rx="6" fill="#f5f3ff" stroke="#9333ea" stroke-width="1.2"/>
+      <text x="90" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#7e22ce">Actionable Guidance</text>
+      <text x="90" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">Feasible site transitions</text>
     </g>
 
     <!-- TWO REAL PROJECT EMBEDDED VISUALIZATIONS -->
     <!-- Visual 1: SHAP Ranking -->
     <g transform="translate(300, 1215)">
-      <rect x="0" y="0" width="485" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="485" height="32" rx="8" fill="#0f172a"/>
-      <text x="242" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#38bdf8">Global TreeSHAP Feature Ranking (Top 15)</text>
+      <rect x="0" y="0" width="485" height="340" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="485" height="32" rx="8" fill="#e0f2fe"/>
+      <text x="242" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#0369a1">Global TreeSHAP Feature Ranking (Top 15)</text>
       
       <!-- Schematic Bar Graph -->
       <g transform="translate(30, 50)">
-        <text x="10" y="20" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">district_ev_penetration_rate</text>
-        <rect x="150" y="10" width="240" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="45" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">latitude / longitude coords</text>
-        <rect x="150" y="35" width="210" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="70" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">district_nh_crossing_count</text>
-        <rect x="150" y="60" width="165" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="95" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">distance_to_city_center_km</text>
-        <rect x="150" y="85" width="125" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="120" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">distance_to_highway_km</text>
-        <rect x="150" y="110" width="105" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="145" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">nearby_poi_count</text>
-        <rect x="150" y="135" width="85" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="170" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">highway_proximity_score</text>
-        <rect x="150" y="160" width="70" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="195" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">poi_diversity_index</text>
-        <rect x="150" y="185" width="60" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="220" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">district_urban_population_pct</text>
-        <rect x="150" y="210" width="55" height="12" rx="2" fill="#38bdf8"/>
-        <text x="10" y="245" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">road_type_trunk</text>
-        <rect x="150" y="235" width="40" height="12" rx="2" fill="#38bdf8"/>
+        <text x="10" y="20" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">district_ev_penetration_rate</text>
+        <rect x="150" y="10" width="240" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="45" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">latitude / longitude coords</text>
+        <rect x="150" y="35" width="210" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="70" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">district_nh_crossing_count</text>
+        <rect x="150" y="60" width="165" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="95" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">distance_to_city_center_km</text>
+        <rect x="150" y="85" width="125" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="120" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">distance_to_highway_km</text>
+        <rect x="150" y="110" width="105" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="145" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">nearby_poi_count</text>
+        <rect x="150" y="135" width="85" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="170" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">highway_proximity_score</text>
+        <rect x="150" y="160" width="70" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="195" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">poi_diversity_index</text>
+        <rect x="150" y="185" width="60" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="220" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">district_urban_population_pct</text>
+        <rect x="150" y="210" width="55" height="12" rx="2" fill="#0284c7"/>
+        <text x="10" y="245" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">road_type_trunk</text>
+        <rect x="150" y="235" width="40" height="12" rx="2" fill="#0284c7"/>
       </g>
-      <text x="242" y="325" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Top non-leaky exogenous features ranked by mean |SHAP| impact on DC Fast suitability</text>
+      <text x="242" y="325" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">Top non-leaky exogenous features ranked by mean |SHAP| impact on DC Fast suitability</text>
     </g>
 
     <!-- Visual 2: Counterfactual Elevation -->
     <g transform="translate(815, 1215)">
-      <rect x="0" y="0" width="485" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="485" height="32" rx="8" fill="#0f172a"/>
-      <text x="242" y="22" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" fill="#34d399">Actionable Counterfactual Elevation (10 States)</text>
+      <rect x="0" y="0" width="485" height="340" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="485" height="32" rx="8" fill="#ecfdf5"/>
+      <text x="242" y="22" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#047857">Actionable Counterfactual Elevation (10 States)</text>
       
       <!-- Schematic Dumbbell Elevation Plot -->
       <g transform="translate(30, 45)">
-        <line x1="120" y1="20" x2="380" y2="20" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="20" x2="380" y2="20" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="160" cy="20" r="4.5" fill="#ef4444"/>
         <circle cx="340" cy="20" r="4.5" fill="#10b981"/>
-        <text x="10" y="23" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Karnataka (IN-KA)</text>
-        <text x="390" y="23" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">81.2%</text>
+        <text x="10" y="23" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Karnataka (IN-KA)</text>
+        <text x="390" y="23" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">81.2%</text>
 
-        <line x1="120" y1="45" x2="380" y2="45" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="45" x2="380" y2="45" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="170" cy="45" r="4.5" fill="#ef4444"/>
         <circle cx="355" cy="45" r="4.5" fill="#10b981"/>
-        <text x="10" y="48" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Maharashtra (IN-MH)</text>
-        <text x="390" y="48" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">84.6%</text>
+        <text x="10" y="48" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Maharashtra (IN-MH)</text>
+        <text x="390" y="48" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">84.6%</text>
 
-        <line x1="120" y1="70" x2="380" y2="70" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="70" x2="380" y2="70" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="150" cy="70" r="4.5" fill="#ef4444"/>
         <circle cx="330" cy="70" r="4.5" fill="#10b981"/>
-        <text x="10" y="73" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Uttar Pradesh (IN-UP)</text>
-        <text x="390" y="73" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">79.5%</text>
+        <text x="10" y="73" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Uttar Pradesh (IN-UP)</text>
+        <text x="390" y="73" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">79.5%</text>
 
-        <line x1="120" y1="95" x2="380" y2="95" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="95" x2="380" y2="95" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="180" cy="95" r="4.5" fill="#ef4444"/>
         <circle cx="365" cy="95" r="4.5" fill="#10b981"/>
-        <text x="10" y="98" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Delhi (IN-DL)</text>
-        <text x="390" y="98" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">87.1%</text>
+        <text x="10" y="98" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Delhi (IN-DL)</text>
+        <text x="390" y="98" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">87.1%</text>
 
-        <line x1="120" y1="120" x2="380" y2="120" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="120" x2="380" y2="120" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="185" cy="120" r="4.5" fill="#ef4444"/>
         <circle cx="350" cy="120" r="4.5" fill="#10b981"/>
-        <text x="10" y="123" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Tamil Nadu (IN-TN)</text>
-        <text x="390" y="123" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">83.5%</text>
+        <text x="10" y="123" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Tamil Nadu (IN-TN)</text>
+        <text x="390" y="123" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">83.5%</text>
 
-        <line x1="120" y1="145" x2="380" y2="145" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="145" x2="380" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="170" cy="145" r="4.5" fill="#ef4444"/>
         <circle cx="345" cy="145" r="4.5" fill="#10b981"/>
-        <text x="10" y="148" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Gujarat (IN-GJ)</text>
-        <text x="390" y="148" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">82.5%</text>
+        <text x="10" y="148" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Gujarat (IN-GJ)</text>
+        <text x="390" y="148" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">82.5%</text>
 
-        <line x1="120" y1="170" x2="380" y2="170" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="170" x2="380" y2="170" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="180" cy="170" r="4.5" fill="#ef4444"/>
         <circle cx="360" cy="170" r="4.5" fill="#10b981"/>
-        <text x="10" y="173" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Telangana (IN-TS)</text>
-        <text x="390" y="173" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">86.0%</text>
+        <text x="10" y="173" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Telangana (IN-TS)</text>
+        <text x="390" y="173" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">86.0%</text>
 
-        <line x1="120" y1="195" x2="380" y2="195" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="195" x2="380" y2="195" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="155" cy="195" r="4.5" fill="#ef4444"/>
         <circle cx="325" cy="195" r="4.5" fill="#10b981"/>
-        <text x="10" y="198" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Rajasthan (IN-RJ)</text>
-        <text x="390" y="198" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">78.0%</text>
+        <text x="10" y="198" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Rajasthan (IN-RJ)</text>
+        <text x="390" y="198" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">78.0%</text>
 
-        <line x1="120" y1="220" x2="380" y2="220" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="220" x2="380" y2="220" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="180" cy="220" r="4.5" fill="#ef4444"/>
         <circle cx="355" cy="220" r="4.5" fill="#10b981"/>
-        <text x="10" y="223" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">Kerala (IN-KL)</text>
-        <text x="390" y="223" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">85.2%</text>
+        <text x="10" y="223" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">Kerala (IN-KL)</text>
+        <text x="390" y="223" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">85.2%</text>
 
-        <line x1="120" y1="245" x2="380" y2="245" stroke="#475569" stroke-width="1.5"/>
+        <line x1="120" y1="245" x2="380" y2="245" stroke="#94a3b8" stroke-width="1.5"/>
         <circle cx="160" cy="245" r="4.5" fill="#ef4444"/>
         <circle cx="335" cy="245" r="4.5" fill="#10b981"/>
-        <text x="10" y="248" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">West Bengal (IN-WB)</text>
-        <text x="390" y="248" font-family="'Inter', sans-serif" font-size="9.5" fill="#10b981">80.5%</text>
+        <text x="10" y="248" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b">West Bengal (IN-WB)</text>
+        <text x="390" y="248" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" font-weight="bold">80.5%</text>
 
         <!-- Threshold line -->
-        <line x1="190" y1="5" x2="190" y2="260" stroke="#eab308" stroke-width="1.5" stroke-dasharray="3 3"/>
-        <text x="195" y="258" font-family="'Inter', sans-serif" font-size="9" fill="#eab308">τ*=24.9%</text>
+        <line x1="190" y1="5" x2="190" y2="260" stroke="#d97706" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <text x="195" y="258" font-family="-apple-system, sans-serif" font-size="9" fill="#d97706" font-weight="bold">τ*=24.9%</text>
       </g>
-      <text x="242" y="325" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Constraint-respecting actionable transitions elevating AC slow stations into DC fast suitability</text>
+      <text x="242" y="325" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#64748b">Constraint-respecting actionable transitions elevating destination charging into DC fast suitability</text>
     </g>
   </g>
 
   <!-- ================= RIGHT COLUMN: EIPS PLANNING & WEB APPLICATION ================= -->
   <g id="right-column">
-    <rect x="1344" y="95" width="232" height="1480" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.8" filter="url(#shadowSm)"/>
-    <path d="M 1344 105 A 10 10 0 0 1 1354 95 L 1566 95 A 10 10 0 0 1 1576 105 L 1576 135 L 1344 135 Z" fill="#1e293b" stroke="#334155" stroke-width="1.8"/>
-    <text x="1460" y="122" text-anchor="middle" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" fill="#38bdf8" letter-spacing="1">PLANNING &amp; DELIVERY</text>
+    <rect x="1344" y="95" width="232" height="1480" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" filter="url(#shadowSm)"/>
+    <path d="M 1344 105 A 10 10 0 0 1 1354 95 L 1566 95 A 10 10 0 0 1 1576 105 L 1576 135 L 1344 135 Z" fill="#f1f5f9" stroke="#1e293b" stroke-width="1.8"/>
+    <text x="1460" y="122" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" letter-spacing="1">PLANNING &amp; DELIVERY</text>
 
     <!-- Card 1: AHP-TOPSIS EIPS Framework -->
     <g transform="translate(1352, 145)">
-      <rect x="0" y="0" width="216" height="425" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#7e22ce"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">AHP-TOPSIS Planning (EIPS)</text>
+      <rect x="0" y="0" width="216" height="425" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#f3e8ff"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#7e22ce">AHP-TOPSIS Planning (EIPS)</text>
 
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Multi-Criteria Prioritization</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">36 States &amp; Union Territories</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Multi-Criteria Prioritization</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">36 States &amp; Union Territories</text>
 
-      <rect x="10" y="78" width="196" height="24" rx="4" fill="#6b21a8"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">AHP Consistent (CR &lt; 0.10)</text>
+      <rect x="10" y="78" width="196" height="24" rx="4" fill="#7e22ce"/>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">AHP Consistent (CR &lt; 0.10)</text>
 
-      <rect x="10" y="110" width="196" height="110" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#c084fc">AHP Criteria Weights (w_j):</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Spatial Adoption Suit.: 30%</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Grid Headroom Readiness: 25%</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• NH Corridor Connectivity: 25%</text>
-      <text x="18" y="200" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• Infrastructure Deficit Gap: 20%</text>
-      <text x="18" y="214" font-family="'Inter', sans-serif" font-size="9.5" fill="#c084fc">• Perfectly Normalized (Σ = 1.0)</text>
+      <rect x="10" y="110" width="196" height="110" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">AHP Criteria Weights (w_j):</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Spatial Adoption Suit.: 30%</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Grid Headroom Readiness: 25%</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• NH Corridor Connectivity: 25%</text>
+      <text x="18" y="200" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• Infrastructure Deficit Gap: 20%</text>
+      <text x="18" y="214" font-family="-apple-system, sans-serif" font-size="9.5" fill="#7e22ce">• Normalized Matrix (Σ = 1.0)</text>
 
-      <rect x="10" y="228" width="196" height="165" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="246" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#c084fc">State Prioritization Tiers:</text>
-      <text x="18" y="264" font-family="'Inter', sans-serif" font-size="10.5" fill="#f87171">• Tier 1 (High Priority - Top 10):</text>
-      <text x="24" y="280" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">#1 KA, #2 MH, #3 UP, #4 DL,</text>
-      <text x="24" y="294" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">#5 TN, #6 RJ, #7 KL, #8 GJ,</text>
-      <text x="24" y="308" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">#9 MP, #10 TS</text>
-      <text x="18" y="326" font-family="'Inter', sans-serif" font-size="10.5" fill="#fde047">• Tier 2 (Moderate - 12 States):</text>
-      <text x="24" y="342" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">#11 HR, #12 WB, #13 AP... #22 GA</text>
-      <text x="18" y="360" font-family="'Inter', sans-serif" font-size="10.5" fill="#34d399">• Tier 3 (Emerging - 14 States/UTs):</text>
-      <text x="24" y="376" font-family="'Inter', sans-serif" font-size="9.5" fill="#cbd5e1">#23 HP, #24 ML... #36 LK</text>
+      <rect x="10" y="228" width="196" height="165" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="246" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">State Prioritization Tiers:</text>
+      <text x="18" y="264" font-family="-apple-system, sans-serif" font-size="10.5" fill="#dc2626">• Tier 1 (High Priority - Top 10):</text>
+      <text x="24" y="280" font-family="-apple-system, sans-serif" font-size="9.5" fill="#334155">#1 KA, #2 MH, #3 UP, #4 DL,</text>
+      <text x="24" y="294" font-family="-apple-system, sans-serif" font-size="9.5" fill="#334155">#5 TN, #6 RJ, #7 KL, #8 GJ,</text>
+      <text x="24" y="308" font-family="-apple-system, sans-serif" font-size="9.5" fill="#334155">#9 MP, #10 TS</text>
+      <text x="18" y="326" font-family="-apple-system, sans-serif" font-size="10.5" fill="#d97706">• Tier 2 (Moderate - 12 States):</text>
+      <text x="24" y="342" font-family="-apple-system, sans-serif" font-size="9.5" fill="#334155">#11 HR, #12 WB, #13 AP... #22 GA</text>
+      <text x="18" y="360" font-family="-apple-system, sans-serif" font-size="10.5" fill="#059669">• Tier 3 (Emerging - 14 States/UTs):</text>
+      <text x="24" y="376" font-family="-apple-system, sans-serif" font-size="9.5" fill="#334155">#23 HP, #24 ML... #36 LK</text>
 
-      <rect x="10" y="398" width="196" height="20" rx="3" fill="#0f172a"/>
-      <text x="108" y="412" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Scientific Siting Ranking</text>
+      <rect x="10" y="398" width="196" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="412" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Scientific Siting Ranking</text>
     </g>
 
     <!-- Card 2: Interactive GIS Web Dashboard -->
     <g transform="translate(1352, 590)">
-      <rect x="0" y="0" width="216" height="470" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#0284c7"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">Interactive Web Application</text>
+      <rect x="0" y="0" width="216" height="470" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#e0f2fe"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#0369a1">Interactive Web Application</text>
 
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Port 5001 • Pan-India Master</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">Flask REST API + Vanilla JS UI</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Port 5001 • Pan-India Master</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">Flask REST API + Dynamic UI</text>
 
-      <rect x="10" y="78" width="196" height="24" rx="4" fill="#0369a1"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">6 Full Interactive Modules</text>
+      <rect x="10" y="78" width="196" height="24" rx="4" fill="#0284c7"/>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">6 Full Interactive Modules</text>
 
-      <rect x="10" y="110" width="196" height="150" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Dashboard Tab Structure:</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 📊 Overview &amp; 6 Executive KPIs</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 🔍 Station Inference &amp; 4-Card Stack</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 🎯 Model Evaluation (RF, XGB, LGBM)</text>
-      <text x="18" y="200" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 💡 Explainability (SHAP &amp; CF)</text>
-      <text x="18" y="218" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 📈 EIPS Planning (All 36 States)</text>
-      <text x="18" y="236" font-family="'Inter', sans-serif" font-size="10.5" fill="#cbd5e1">• 🗺️ GIS Map (National Folium)</text>
-      <text x="18" y="252" font-family="'Inter', sans-serif" font-size="9.5" fill="#38bdf8">• 1:1 Parity with Telangana UI</text>
+      <rect x="10" y="110" width="196" height="150" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0369a1">Dashboard Tab Structure:</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 📊 Overview &amp; 6 Executive KPIs</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 🔍 Station Inference &amp; 4-Card Stack</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 🎯 Model Evaluation (RF, XGB, LGBM)</text>
+      <text x="18" y="200" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 💡 Explainability (SHAP &amp; CF)</text>
+      <text x="18" y="218" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 📈 EIPS Planning (All 36 States)</text>
+      <text x="18" y="236" font-family="-apple-system, sans-serif" font-size="10.5" fill="#334155">• 🗺️ GIS Map (National Folium)</text>
+      <text x="18" y="252" font-family="-apple-system, sans-serif" font-size="9.5" fill="#0284c7">• Interactive Real-Time Predictions</text>
 
-      <rect x="10" y="268" width="196" height="170" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="286" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">REST API Endpoint Endpoints:</text>
-      <text x="18" y="304" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• GET  /api/health</text>
-      <text x="18" y="322" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• GET  /api/metrics</text>
-      <text x="18" y="340" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• GET  /api/planning</text>
-      <text x="18" y="358" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• GET  /api/xai</text>
-      <text x="18" y="376" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• GET  /api/stations</text>
-      <text x="18" y="394" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• POST /api/predict</text>
-      <text x="18" y="412" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">• GET  /results/figures/&lt;filename&gt;</text>
-      <text x="18" y="428" font-family="'Inter', sans-serif" font-size="9.5" fill="#38bdf8">• Dynamic JSON Responses (100%)</text>
+      <rect x="10" y="268" width="196" height="170" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="286" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0369a1">REST API Endpoints:</text>
+      <text x="18" y="304" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• GET  /api/health</text>
+      <text x="18" y="322" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• GET  /api/metrics</text>
+      <text x="18" y="340" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• GET  /api/planning</text>
+      <text x="18" y="358" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• GET  /api/xai</text>
+      <text x="18" y="376" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• GET  /api/stations</text>
+      <text x="18" y="394" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• POST /api/predict</text>
+      <text x="18" y="412" font-family="-apple-system, sans-serif" font-size="10" fill="#334155">• GET  /results/figures/&lt;filename&gt;</text>
+      <text x="18" y="428" font-family="-apple-system, sans-serif" font-size="9.5" fill="#0284c7">• Dynamic JSON Responses (100%)</text>
 
-      <rect x="10" y="444" width="196" height="18" rx="3" fill="#0f172a"/>
-      <text x="108" y="457" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Interactive Siting Delivery</text>
+      <rect x="10" y="444" width="196" height="18" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="457" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">Interactive Siting Delivery</text>
     </g>
 
-    <!-- Card 3: Dual Independent Execution -->
+    <!-- Card 3: Standalone Pan-India Execution -->
     <g transform="translate(1352, 1080)">
-      <rect x="0" y="0" width="216" height="365" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
-      <rect x="0" y="0" width="216" height="32" rx="8" fill="#059669"/>
-      <text x="108" y="21" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" font-weight="bold" fill="#ffffff">Dual Pipeline Execution</text>
+      <rect x="0" y="0" width="216" height="365" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="216" height="32" rx="8" fill="#ecfdf5"/>
+      <text x="108" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="bold" fill="#047857">Standalone Execution</text>
 
-      <text x="12" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Side-by-Side Execution</text>
-      <text x="12" y="68" font-family="'Inter', sans-serif" font-size="10.5" fill="#94a3b8">Zero Dependency or Conflict</text>
+      <text x="12" y="52" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Pan-India Microservice</text>
+      <text x="12" y="68" font-family="-apple-system, sans-serif" font-size="10.5" fill="#475569">Independent End-to-End Engine</text>
 
-      <rect x="10" y="78" width="196" height="24" rx="4" fill="#047857"/>
-      <text x="108" y="94" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Parallel Port Architecture</text>
+      <rect x="10" y="78" width="196" height="24" rx="4" fill="#059669"/>
+      <text x="108" y="94" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Production Server (Port 5001)</text>
 
-      <rect x="10" y="110" width="196" height="105" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="128" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#34d399">Telangana Baseline (Port 5000):</text>
-      <text x="18" y="146" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">python app.py</text>
-      <text x="18" y="164" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• 33 Districts, 166 Stations</text>
-      <text x="18" y="182" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• Frozen Baseline Model</text>
-      <text x="18" y="200" font-family="'Inter', sans-serif" font-size="10" fill="#34d399">• URL: http://localhost:5000</text>
+      <rect x="10" y="110" width="196" height="105" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="128" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#047857">Web Service Execution:</text>
+      <text x="18" y="146" font-family="-apple-system, sans-serif" font-size="10" fill="#1e293b" font-weight="bold">python app_india_wide.py</text>
+      <text x="18" y="164" font-family="-apple-system, sans-serif" font-size="10" fill="#475569">• Port: 5001 (Isolated Server)</text>
+      <text x="18" y="182" font-family="-apple-system, sans-serif" font-size="10" fill="#475569">• 52,718 Master Stations</text>
+      <text x="18" y="200" font-family="-apple-system, sans-serif" font-size="10" fill="#047857">• http://localhost:5001</text>
 
-      <rect x="10" y="224" width="196" height="105" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1"/>
-      <text x="18" y="242" font-family="'Inter', sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Pan-India Master (Port 5001):</text>
-      <text x="18" y="260" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">python app.py --india</text>
-      <text x="18" y="278" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• 36 States/UTs, 52,718 Stations</text>
-      <text x="18" y="296" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">• Standalone Native Models</text>
-      <text x="18" y="314" font-family="'Inter', sans-serif" font-size="10" fill="#38bdf8">• URL: http://localhost:5001</text>
+      <rect x="10" y="224" width="196" height="105" rx="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="18" y="242" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#0284c7">Standalone Retraining:</text>
+      <text x="18" y="260" font-family="-apple-system, sans-serif" font-size="9.5" fill="#1e293b" font-weight="bold">python scripts/train_india...</text>
+      <text x="18" y="278" font-family="-apple-system, sans-serif" font-size="10" fill="#475569">• 5-Fold State GroupKFold</text>
+      <text x="18" y="296" font-family="-apple-system, sans-serif" font-size="10" fill="#475569">• Updates Models &amp; Figures</text>
+      <text x="18" y="314" font-family="-apple-system, sans-serif" font-size="10" fill="#0284c7">• Complete Reproducibility</text>
 
-      <rect x="10" y="336" width="196" height="20" rx="3" fill="#0f172a"/>
-      <text x="108" y="350" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#94a3b8">Clickable Header Switchers</text>
+      <rect x="10" y="336" width="196" height="20" rx="3" fill="#f1f5f9"/>
+      <text x="108" y="350" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="bold" fill="#475569">High Availability Siting Microservice</text>
     </g>
   </g>
 
 </svg>
-
