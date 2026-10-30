@@ -1,8 +1,8 @@
 # 🇮🇳 Pan-India Smart EV Charging Infrastructure Planning
 
-### Spatial-Aware Machine Learning + TreeSHAP Explainability & AHP-TOPSIS National Siting (52,718 Stations across 36 States & Union Territories)
+## Spatial-Aware Machine Learning + TreeSHAP Explainability & AHP-TOPSIS National Siting (52,718 Stations across 36 States & Union Territories)
 
-A standalone, spatial-aware, and interpretable electric vehicle infrastructure planning system trained and evaluated on **52,718 Public Charging Stations across all 36 States and Union Territories of India**. 
+A standalone, spatial-aware, and interpretable electric vehicle infrastructure planning system trained and evaluated on **52,718 Public Charging Stations across all 36 States and Union Territories of India**.
 
 The framework synthesizes **21 Certified Exogenous GIS Predictors** with **5-Fold State-Grouped Spatial Cross-Validation**, **Random Forest / XGBoost / LightGBM Benchmark Bake-Off**, **TreeSHAP Explainability**, **Actionable Counterfactual Optimization**, and an **AHP-TOPSIS Multi-Criteria Prioritization (EIPS)** ranking all 36 Indian States and UTs.
 
@@ -140,6 +140,7 @@ The Pan-India Master Dataset combines public registries, government open data, a
 In charging infrastructure modeling, including internal station specifications (such as power ratings, charger capacity, connector plug types, or utility bills) causes severe target leakage because fast chargers by definition feature high power capacity and CCS-2 / CHAdeMO connectors.
 
 The Anti-Leakage Gate enforces that **only exogenous environmental, topological, corridor, demographic, and grid readiness indicators are provided to the model**:
+
 - **Excluded Leaky Fields:** `power_kw`, `capacity`, `connector_type`, `voltage`, `current_rating`, `charging_tariff`, `station_kwh_consumption`.
 - **Retained Exogenous Predictors:** Strictly 21 pre-construction spatial and contextual features.
 
@@ -174,31 +175,39 @@ The Anti-Leakage Gate enforces that **only exogenous environmental, topological,
 ## Methodology & Technical Pipeline
 
 ### 1. Data Cleaning & Integration
+
 1. **Coordinate Validation:** Filtered raw records to ensure bounding box validity: Latitude $\in [8.0, 37.0]$, Longitude $\in [68.0, 97.5]$.
 2. **Standardization:** Categorical road classifications were one-hot encoded into 7 orthogonal columns (`road_type_*`). Missing continuous fields were imputed using median spatial-lag estimators.
 3. **Target Encoding:** Binary fast-charging target $y_i \in \{0, 1\}$ where $1 = \text{DC Fast } (\ge 50\text{ kW})$ and $0 = \text{AC Slow } (< 50\text{ kW})$.
 
 ### 2. 5-Fold State-Grouped Spatial Cross-Validation
+
 Standard random $k$-fold cross-validation fails in spatial data science due to **spatial autocorrelation** (Tobler's First Law: *"everything is related to everything else, but near things are more related than distant things"*). Random splitting results in training and test points co-located in the same neighborhood, yielding artificially inflated accuracy.
 
 To guarantee true geographic generalizability:
+
 - We partition the dataset using **`GroupKFold(n_splits=5)` grouping on `state`**.
 - All stations within a given state belong strictly to the same fold.
 - When evaluating Fold $k$, the model has **never seen any station from the validation states**, measuring its true ability to predict greenfield sites in un-electrified states.
 
 ### 3. Standalone Model Bake-Off & Hyperparameter Tuning
+
 We trained three distinct architectures natively from scratch on the 52K records:
+
 - **Random Forest Classifier:** 200 estimators, max depth 12, cost-sensitive balanced class weighting (`balanced_subsample`), min samples leaf 4.
 - **XGBoost Classifier:** 200 boosting rounds, max depth 6, learning rate $\eta = 0.05$, scale pos weight tuned to national ratio $2.18$.
 - **LightGBM Classifier:** 200 iterations, num leaves 31, feature fraction 0.8, learning rate 0.05.
 
 ### 4. Precision-Recall Optimization & Threshold Calibration
+
 Because the dataset exhibits a $31.42\%$ DC Fast to $68.58\%$ AC Slow class imbalance, the standard threshold $\tau = 0.50$ is inappropriate (a naive model predicting all AC Slow achieves $68.6\%$ accuracy while detecting $0\%$ of fast chargers).
 
 Instead, we calibrate the decision threshold $\tau^*$ by sweeping $\tau \in [0.05, 0.95]$ to maximize the **Precision-Recall $F_1$-score on out-of-fold spatial predictions**:
+
 $$\tau^* = \arg\max_{\tau} \left( \frac{2 \cdot \text{Precision}(\tau) \cdot \text{Recall}(\tau)}{\text{Precision}(\tau) + \text{Recall}(\tau)} \right)$$
 
 For the Champion Random Forest model, the calibrated threshold is:
+
 $$\tau^* = 0.2488 \quad (24.9\%)$$
 
 ---
@@ -216,12 +225,15 @@ All metrics are computed strictly across the **5-Fold State-Grouped Spatial Hold
 | **LightGBM** | 0.3422 | 0.2970 | 0.4672 | 32.46% | 50.36% | 0.4783 | 0.2438 | 0.1183 (11.8%) | Evaluated |
 
 ### Champion Model Selection
+
 - **Random Forest** achieved the highest generalizable **Precision-Recall AUC ($0.3118$)** across unseen states, outperforming XGBoost ($0.3051$) and LightGBM ($0.2970$).
 - **Lowest Calibration Error:** Random Forest achieved the lowest **Brier Score ($0.2346$)**, ensuring that predicted probabilities accurately mirror real-world empirical deployment odds.
 - **Why Outer Accuracy is 31.64%:** The cost-sensitive threshold $\tau^* = 0.2488$ deliberately sacrifices raw accuracy on majority AC Slow chargers to guarantee that **$99.85\%$ ($16,537$ out of $16,561$) of all DC Fast stations are correctly identified and captured** rather than missed. Under spatial imbalance, **Balanced Accuracy ($50.12\%$) and PR-AUC ($0.3118$)** are the mathematically valid metrics.
 
 ### Evaluation Curves & Diagnostics
+
 All figures are saved in [`results/india_wide/figures/`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/):
+
 1. **Confusion Matrix (`confusion_matrix.png`):**
    - True Positives (DC Fast correctly predicted): **16,537**
    - False Negatives (DC Fast missed): **24**
@@ -235,10 +247,13 @@ All figures are saved in [`results/india_wide/figures/`](file:///c:/Users/Dell/D
 ## Explainable AI (XAI) Framework
 
 ### TreeSHAP Global Feature Attributions
+
 Using the Lundberg & Lee (2018) TreeSHAP algorithm, we compute exact, polynomial-time Shapley attributions $\phi_i(x)$ satisfying efficiency, symmetry, and additivity:
+
 $$f(x) = \phi_0 + \sum_{j=1}^{21} \phi_j(x)$$
 
 The top 10 features driving national fast-charging suitability ([`results/india_wide/figures/feature_importance.png`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/feature_importance.png)):
+
 1. `district_ev_penetration_rate` (Mean $|\text{SHAP}| = 0.176$): Fleet adoption momentum is the primary exogenous driver.
 2. `latitude` & `longitude` ($0.169$ & $0.122$): Spatial coordinate clustering reflects major economic transit belts.
 3. `district_nh_crossing_count` ($0.113$): Multi-corridor crossroads require heavy fast-charging plazas.
@@ -251,17 +266,23 @@ The top 10 features driving national fast-charging suitability ([`results/india_
 10. `road_type_trunk` ($0.002$): Presence on National Trunk highways strongly favors DC fast classification.
 
 ### TreeSHAP Beeswarm Distribution
+
 Persisted in [`results/india_wide/figures/shap_beeswarm.png`](file:///c:/Users/Dell/Downloads/EV_Charging/results/india_wide/figures/shap_beeswarm.png), the beeswarm plot visualizes feature value impact directions:
+
 - High `district_ev_penetration_rate` (red) shifts predictions strongly positive ($\phi > 0$).
 - Low `distance_to_highway_km` (blue) provides significant positive lifts towards DC Fast suitability.
 
 ### Local TreeSHAP Inference
+
 For any individual station query (e.g., `IN-AP-00004` Jio-bp pulse Visakhapatnam), the dashboard computes local attributions:
+
 - **Positive Drivers (+):** `road_type_trunk = 1` ($+0.1180$), `nearby_poi_count = 14` ($+0.0520$).
 - **Negative Penalties (-):** `distance_to_highway_km = 15.95` ($-0.1240$), `poi_diversity_index = 0.15` ($-0.0620$).
 
 ### Actionable Counterfactual Optimization ($L_1$-Norm)
+
 For candidate locations currently below the decision threshold ($\hat{P} < 0.2488$), the system computes the minimal, constraint-respecting modification vector $\delta^*$ required to elevate the site into DC Fast suitability ($\hat{P}(x + \delta^*) \ge 0.2488$):
+
 $$\delta^* = \arg\min_{\delta} \|\delta\|_1 \quad \text{s.t.} \quad \hat{P}(x + \delta) \ge \tau^*, \quad l_j \le x_j + \delta_j \le u_j$$
 
 *Immutable features* (such as latitude, longitude, and historical population) are constrained ($\delta_j = 0$), while *actionable features* (distance to highway, POI count, adjacent road class) are optimized via Nelder-Mead simplex search.
@@ -286,20 +307,23 @@ Visualized in [`results/india_wide/figures/counterfactual_comparison.png`](file:
 ## Multi-Criteria Planning Framework (EIPS)
 
 ### Analytical Hierarchy Process (AHP) Weighting
+
 The EV Infrastructure Priority Score (EIPS) aggregates macro indicators into an actionable composite ranking using Saaty's Analytical Hierarchy Process (AHP) with guaranteed mathematical consistency ($\text{Consistency Ratio } CR = 0.000891 < 0.10$):
 
 $$\text{EIPS}_i = \sum_{j=1}^{4} w_j \cdot S_{ij}$$
 
 The normalized criteria weights ($w_j$):
+
 1. **$w_1 = 30\%$ — Spatial EV Adoption Context:** Macro vehicle registration volume and regional EV adoption rate.
 2. **$w_2 = 25\%$ — Electrical Grid Readiness:** Substation capacity, transformer loading headroom, and state nodal energy frameworks.
 3. **$w_3 = 25\%$ — National Highway Connectivity:** Proximity to primary national freight corridors and expressway interchanges.
 4. **$w_4 = 20\%$ — Infrastructure Deficit Gap:** Ratio of EV adoption demand relative to existing operational fast-charging stations.
 
 ### TOPSIS State Ranking & Prioritization Tiers
+
 Using the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS), all **36 States and Union Territories** are ranked into three distinct capital allocation tiers:
 
-```
+```text
 TOP 15 STATES EIPS RANKINGS (AHP-TOPSIS)
 ┌───────────────────────────┬────────────┬──────────────┬───────────────┐
 │ State / Union Territory   │ EIPS Score │ Priority Tier│ Fast Stations │
@@ -332,7 +356,9 @@ TOP 15 STATES EIPS RANKINGS (AHP-TOPSIS)
 ## Full-Stack Interactive GIS Web Application
 
 ### Architecture & 6-Tab Interface
+
 The frontend is hosted in [`frontend_india/`](file:///c:/Users/Dell/Downloads/EV_Charging/frontend_india/) and served by [`app_india_wide.py`](file:///c:/Users/Dell/Downloads/EV_Charging/app_india_wide.py) on **Port 5001**:
+
 1. `📊 Overview`: Executive dashboard, 6 KPI cards, three methodological tracks, and national spatial infrastructure summary.
 2. `🔍 Station Prediction`: Interactive inference form, pre-loaded existing station lookup (all 52K records), 4-card decision stack ($P(\text{DC Fast})$ vs $P(\text{AC})$, Local TreeSHAP, What-If Planning, State EIPS Context).
 3. `🎯 Model Evaluation`: Standalone model comparison matrix (RF vs XGBoost vs LightGBM), Outer Confusion Matrix, Precision-Recall curves, and ROC curves.
@@ -360,38 +386,51 @@ The frontend is hosted in [`frontend_india/`](file:///c:/Users/Dell/Downloads/EV
 Both systems are completely decoupled and run simultaneously on separate ports without conflict.
 
 ### System 1: Telangana Baseline (Port 5000)
+
 Runs the baseline model trained on the 33 administrative districts of Telangana (166 verified stations):
+
 ```bash
 python app.py
 ```
+
 > **Access URL:** Open **[http://localhost:5000](http://localhost:5000)** in your browser.
 
 ---
 
 ### System 2: Pan-India Master (Port 5001)
+
 Runs the standalone Pan-India system trained natively on all 52,718 charging stations across 36 States & UTs:
+
 ```bash
 python app.py --india
 ```
+
 *or directly:*
+
 ```bash
 python app_india_wide.py
 ```
+
 > **Access URL:** Open **[http://localhost:5001](http://localhost:5001)** in your browser.
 
 ---
 
 ### Standalone Model Retraining Pipeline
+
 To retrain the Pan-India models from scratch using 5-Fold State-Grouped Spatial Cross-Validation:
+
 ```bash
 python scripts/train_india_wide_standalone.py
 ```
+
 This updates all model weights in `models/india_wide/` and regenerates all figures in `results/india_wide/figures/`.
 
 ---
 
 ### Side-by-Side Dual Running
+
 To present both dashboards simultaneously:
+
 1. Open **Terminal 1**: run `python app.py` (Telangana Baseline on `http://localhost:5000`).
 2. Open **Terminal 2**: run `python app_india_wide.py` (Pan-India Master on `http://localhost:5001`).
 3. Both headers feature clickable cross-navigation badges (`🇮🇳 Open Pan-India Master ↗` and `⚡ Open Telangana Baseline ↗`) allowing faculty to switch between both implementations instantly.
@@ -400,7 +439,7 @@ To present both dashboards simultaneously:
 
 ## Directory Structure
 
-```
+```text
 EV_Charging/
 ├── data/
 │   ├── final/FINAL_PROJECT_DATASET.csv                        # Telangana Baseline (166 stations)
@@ -464,4 +503,6 @@ EV_Charging/
 
 ---
 
-*(B.Tech Major Project • Department of Computer Science & Engineering / Data Science • Pan-India Master Dataset Framework)*
+## Project Attribution
+
+B.Tech Major Project • Department of Computer Science & Engineering / Data Science • Pan-India Master Dataset Framework
