@@ -2,14 +2,9 @@
 
 ## Spatial-Aware Machine Learning + TreeSHAP Explainability & AHP-TOPSIS National Siting (52,718 Stations across 36 States & Union Territories)
 
-> [!NOTE]
-> **Dual-System Repository:**
-> - **🇮🇳 Pan-India Master (36 States & UTs • 52,718 Stations):** Documented below (Primary Repository Homepage).
-> - **⚡ Telangana Baseline (33 Districts • 166 Stations):** Preserved in full at [README_TELANGANA.md](README_TELANGANA.md).
-
 A standalone, spatial-aware, and interpretable electric vehicle infrastructure planning system trained and evaluated on **52,718 Public Charging Stations across all 36 States and Union Territories of India**.
 
-The framework synthesizes **21 Certified Exogenous GIS Predictors** with **5-Fold State-Grouped Spatial Cross-Validation**, **Random Forest / XGBoost / LightGBM Benchmark Bake-Off**, **TreeSHAP Explainability**, **Actionable Counterfactual Optimization**, and an **AHP-TOPSIS Multi-Criteria Prioritization (EIPS)** ranking all 36 Indian States and UTs.
+The framework synthesizes the **Official Pan-India Master Dataset (52,718 × 30 dimensions)** with **5-Fold State-Grouped Spatial Cross-Validation**, **Random Forest / XGBoost / LightGBM Benchmark Bake-Off**, **TreeSHAP Explainability**, **Actionable Counterfactual Optimization**, and an **AHP-TOPSIS Multi-Criteria Prioritization (EIPS)** ranking all 36 Indian States and UTs.
 
 ---
 
@@ -17,10 +12,11 @@ The framework synthesizes **21 Certified Exogenous GIS Predictors** with **5-Fol
 
 - [Overview](#overview)
 - [System Architecture](#system-architecture)
-- [Dataset Formulation & Schema](#dataset-formulation--schema)
-  - [Data Sources & Dimensions](#data-sources--dimensions)
+- [Master Dataset Formulation & 30-Feature Schema](#master-dataset-formulation--30-feature-schema)
+  - [Official Master Dataset File & Dimensions](#official-master-dataset-file--dimensions)
+  - [Complete 30-Feature Canonical Schema](#complete-30-feature-canonical-schema)
   - [Strict Anti-Leakage Feature Gate](#strict-anti-leakage-feature-gate)
-  - [21 Certified Predictors Dictionary](#21-certified-predictors-dictionary)
+  - [21 Certified Modeling Predictors](#21-certified-modeling-predictors)
 - [Methodology & Technical Pipeline](#methodology--technical-pipeline)
   - [1. Data Cleaning & Integration](#1-data-cleaning--integration)
   - [2. 5-Fold State-Grouped Spatial Cross-Validation](#2-5-fold-state-grouped-spatial-cross-validation)
@@ -41,28 +37,29 @@ The framework synthesizes **21 Certified Exogenous GIS Predictors** with **5-Fol
 - [Full-Stack Interactive GIS Web Application](#full-stack-interactive-gis-web-application)
   - [Architecture & 6-Tab Interface](#architecture--6-tab-interface)
   - [REST API Endpoints](#rest-api-endpoints)
-- [Independent Dual-Execution Guide](#independent-dual-execution-guide)
-  - [System 1: Telangana Baseline (Port 5000)](#system-1-telangana-baseline-port-5000)
-  - [System 2: Pan-India Master (Port 5001)](#system-2-pan-india-master-port-5001)
-  - [Side-by-Side Dual Running](#side-by-side-dual-running)
+- [Execution & Deployment Guide](#execution--deployment-guide)
+  - [Web Application Startup (Port 5001)](#web-application-startup-port-5001)
+  - [Standalone Model Retraining Pipeline](#standalone-model-retraining-pipeline)
 - [Directory Structure](#directory-structure)
 - [References & Data Citations](#references--data-citations)
+- [Project Attribution](#project-attribution)
 
 ---
 
 ## Overview
 
-As India's electric vehicle fleet expands rapidly under the **FAME-II** (Faster Adoption and Manufacturing of Electric Vehicles) and **PM E-DRIVE** schemes, transitioning from municipal-level micro-planning (such as individual state baselines) to an empirically grounded, **Pan-India charging infrastructure strategy** is critical for grid stability, highway corridor electrification, and public capital efficiency.
+As India's electric vehicle fleet expands rapidly under the **FAME-II** (Faster Adoption and Manufacturing of Electric Vehicles) and **PM E-DRIVE** schemes, transitioning to an empirically grounded, **Pan-India charging infrastructure strategy** is critical for grid stability, highway corridor electrification, and public capital efficiency.
 
-This implementation delivers a **pure, standalone, non-comparative system** trained on the nationwide dataset of **52,718 public charging stations**:
+This implementation delivers a **pure, standalone, non-comparative system** trained on the nationwide master dataset of **52,718 public charging stations**:
 
-1. **Nationwide Empirical Ground Truth:** 52,718 geocoded public charging stations across all 36 States and Union Territories (16,561 DC Fast $\ge 50$ kW vs 36,157 AC Slow $< 50$ kW; 31.42% DC prevalence).
-2. **Strict Anti-Leakage Feature Gate:** Exactly 21 non-leaky exogenous environmental, spatial, road network, demographic, and grid availability predictors. Circular charger hardware fields (`charging_power_kw`, `capacity`, `connector_types`) are strictly excluded.
-3. **5-Fold State-Grouped Spatial Cross-Validation:** Folds are partitioned by administrative state boundaries (`GroupKFold`), completely isolating training and validation geographies to eliminate spatial autocorrelation leakage (Tobler's First Law of Geography).
-4. **Champion Model:** Standalone **Random Forest** achieving the highest generalizable Spatial PR-AUC ($0.3118$) and lowest Brier calibration error ($0.2346$) with a calibrated decision threshold of $\tau^* = 0.2488$ ($24.9\%$).
-5. **TreeSHAP & Actionable Counterfactuals:** Fast polynomial-time additive Shapley attributions, directional beeswarm visualizers, and an $L_1$-norm constrained Nelder-Mead optimization solver generating feasible site upgrade paths.
-6. **AHP-TOPSIS National Siting (EIPS):** Multi-criteria synthesis prioritizing all 36 States and UTs across Spatial EV Adoption (30%), Grid Readiness (25%), National Highway Connectivity (25%), and Infrastructure Deficit Gap (20%).
-7. **Interactive GIS Dashboard:** Full-stack Flask REST API on **Port 5001** offering exact 1:1 UI parity with the Telangana baseline dashboard.
+1. **Nationwide Empirical Ground Truth:** 52,718 geocoded public charging stations across all 36 States and Union Territories (16,561 DC Fast $\ge 50$ kW vs 36,145 AC Slow $< 50$ kW; 31.42% DC prevalence).
+2. **Official 30-Feature Master Dataset:** Comprehensive canonical schema synthesizing site identifiers, geodetic coordinates, charger hardware specifications, road network topologies, commercial POIs, MoRTH VAHAN fleet adoption, and CEA power grid headroom.
+3. **Strict Anti-Leakage Feature Gate:** Exactly 21 non-leaky exogenous environmental, spatial, road network, demographic, and grid availability predictors. Circular charger hardware fields (`rated_power_kw`, `charger_type`, `connector_type`, `charging_speed`) are strictly quarantined.
+4. **5-Fold State-Grouped Spatial Cross-Validation:** Folds are partitioned by administrative state boundaries (`GroupKFold`), completely isolating training and validation geographies to eliminate spatial autocorrelation leakage (Tobler's First Law of Geography).
+5. **Champion Model:** Standalone **Random Forest** achieving the highest generalizable Spatial PR-AUC ($0.3118$) and lowest Brier calibration error ($0.2346$) with a calibrated decision threshold of $\tau^* = 0.2488$ ($24.9\%$).
+6. **TreeSHAP & Actionable Counterfactuals:** Fast polynomial-time additive Shapley attributions, directional beeswarm visualizers, and an $L_1$-norm constrained Nelder-Mead optimization solver generating feasible site upgrade paths.
+7. **AHP-TOPSIS National Siting (EIPS):** Multi-criteria synthesis prioritizing all 36 States and UTs across Spatial EV Adoption (30%), Grid Readiness (25%), National Highway Connectivity (25%), and Infrastructure Deficit Gap (20%).
+8. **Interactive GIS Dashboard:** Full-stack Flask REST API on **Port 5001** with real-time inference, interactive Folium GIS mapping, and complete multi-criteria planning analytics.
 
 ---
 
@@ -80,8 +77,14 @@ PAN-INDIA MULTI-SOURCE INPUT REGISTRIES (36 States & UTs • 52,718 Stations)
                                      │
                                      ▼
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  OFFICIAL MASTER DATASET: INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv       │
+│  - Exactly 52,718 Rows × 30 Comprehensive Attributes across all 36 States & UTs      │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+                                     │
+                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
 │  STRICT ANTI-LEAKAGE FEATURE GATE                                                    │
-│  - Rejects circular internal specs (power_kw, capacity, connector_types)             │
+│  - Isolates 9 internal hardware columns (rated_power_kw, charger_type, etc.)         │
 │  - Retains strictly 21 exogenous spatial, corridor, demographic, and grid predictors │
 └──────────────────────────────────────────────────────────────────────────────────────┘
                                      │
@@ -114,66 +117,99 @@ PAN-INDIA MULTI-SOURCE INPUT REGISTRIES (36 States & UTs • 52,718 Stations)
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
 │  FULL-STACK INTERACTIVE GIS WEB DASHBOARD (Port 5001)                                │
 │  - Flask REST API Backend (app_india_wide.py)                                        │
-│  - Exact 1:1 UI Layout: Overview, Prediction, Evaluation, SHAP, EIPS, GIS Map        │
-│  - Interactive Folium Pan-India Map & Instant Cross-Dashboard Switcher to Port 5000  │
+│  - Overview, Station Prediction, Model Evaluation, SHAP, EIPS Planning, GIS Map      │
+│  - Interactive Folium Pan-India Map with Station Clustering and Outlines             │
 ========================================================================================
 ```
 
 ---
 
-## Dataset Formulation & Schema
+## Master Dataset Formulation & 30-Feature Schema
 
-### Data Sources & Dimensions
+### Official Master Dataset File & Dimensions
 
-The Pan-India Master Dataset combines public registries, government open data, and geospatial vector layers:
+The canonical dataset for this project is:
+- **File Path:** [`data/india_wide/INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv`](file:///c:/Users/Dell/Downloads/EV_Charging/data/india_wide/INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv)
+- **Total Records ($N$):** **52,718** public charging stations
+- **Total Dimensions:** **52,718 rows × 30 columns**
+- **Geographic Representation:** All **36 States and Union Territories of India**
+- **Target Variable (`fast_charging_flag`):** Binary status ($1.0 =$ DC Fast $\ge 50$ kW, $0.0 =$ AC Slow $< 50$ kW)
+  - **Class 1 (DC Fast):** **16,561** stations ($31.42\%$)
+  - **Class 0 (AC Slow):** **36,145** stations ($68.58\%$)
+  - **Evaluated Stations:** **52,706** stations (after omitting 12 unresolvable coordinate edge records)
 
-| Dimension / Asset | Specification |
-| :--- | :--- |
-| **Primary File Path** | [`data/india_wide/INDIA_WIDE_EV_CHARGING_MASTER_DATASET.csv`](file:///c:/Users/Dell/Downloads/EV_Charging/data/india_wide/INDIA_WIDE_EV_CHARGING_MASTER_DATASET.csv) |
-| **Total Evaluated Stations ($N$)** | **52,706** stations (after dropping 12 coordinate-unresolvable edge records) |
-| **Total Geographic Scope** | All **36 States and Union Territories** of India |
-| **Total Features in Master CSV** | 117 raw columns, consolidated into **21 Certified Predictors** |
-| **Target Variable ($y_i$)** | Binary Fast-Charging Infrastructure: $\ge 50$ kW DC Fast ($1$) vs $< 50$ kW AC Slow ($0$) |
-| **Class 1 (DC Fast $\ge 50$ kW)** | **16,561** stations ($31.42\%$) |
-| **Class 0 (AC Slow $< 50$ kW)** | **36,145** stations ($68.58\%$) |
-| **National Fleet EV Penetration** | Extracted from MoRTH VAHAN 4.0 (e-2W, e-3W, e-4W vehicle volume per 1,000 vehicles) |
-| **National Highway Corridors** | Extracted from OpenStreetMap (NH-44, NH-48, NH-16, NH-19, expressways) |
-| **National Grid EV Energy Context** | Central Electricity Authority (CEA) benchmark: **12,450 GWh** |
+### Complete 30-Feature Canonical Schema
+
+The 30 features in `INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv` are organized into 5 logical categories:
+
+| # | Column Name | Data Type | Category | Physical & Functional Description |
+| :-: | :--- | :---: | :---: | :--- |
+| **1** | `station_id` | String | Administrative | Unique alphanumeric station identifier (e.g., `IN-DL-00001`, `IN-MH-00520`). |
+| **2** | `station_name` | String | Administrative | Public commercial name of the charging plaza or hub. |
+| **3** | `operator` | String | Administrative | Charge Point Operator (CPO) network (Tata Power, Jio-bp, Ather, Statiq, etc.). |
+| **4** | `address` | String | Administrative | Descriptive location or street address. |
+| **5** | `state` | String | Administrative | Administrative State or Union Territory (used as the `GroupKFold` spatial key). |
+| **6** | `district` | String | Administrative | District administrative jurisdiction. |
+| **7** | `latitude` | Float | Spatial GIS | Geodetic latitude coordinate in WGS84 decimal degrees ($8.0^\circ\text{N}$ to $37.0^\circ\text{N}$). |
+| **8** | `longitude` | Float | Spatial GIS | Geodetic longitude coordinate in WGS84 decimal degrees ($68.0^\circ\text{E}$ to $97.5^\circ\text{E}$). |
+| **9** | `pincode` | Float | Spatial GIS | Indian Postal Index Number for regional demographic mapping. |
+| **10** | `charger_type` | String | Hardware Specs | Technology type (e.g., `DC Fast Charger`, `AC Type-2 Destination`, `Bharat DC-001`). |
+| **11** | `connector_type` | String | Hardware Specs | Physical connector standard (e.g., `CCS-2 Dual Gun`, `CHAdeMO`, `Type-2 AC`). |
+| **12** | `charger_count` | Float | Hardware Specs | Number of operational charging guns installed at the station. |
+| **13** | `rated_power_kw` | Float | Hardware Specs | Total rated nameplate power delivery capacity in kilowatts (e.g., 7.4 kW, 60 kW, 120 kW). |
+| **14** | `charging_speed` | String | Hardware Specs | Categorical speed tier (`Slow`, `Standard`, `Fast`, `Rapid`, `Ultra-Fast`). |
+| **15** | `availability_status` | String | Operational | Operational availability status (`Operational`, `Planned`, `Maintenance`). |
+| **16** | `operating_hours` | String | Operational | Operational schedule (`24x7`, `Commercial Daytime`). |
+| **17** | `access_type` | String | Operational | Public access permission tier (`Public`, `Semi-public`, `Commercial Depot`). |
+| **18** | `commissioning_date` | String | Operational | Official commissioning date of the station. |
+| **19** | `distance_to_highway_km` | Float | Exogenous Spatial | Shortest Haversine distance from station to nearest National or State Highway (km). |
+| **20** | `road_type` | String | Exogenous Spatial | OpenStreetMap carriageway class (`trunk`, `primary`, `secondary`, `residential`, etc.). |
+| **21** | `urban_rural_classification` | String | Demographic | Urbanization tier (`Metro`, `Tier 1`, `Tier 2`, `Tier 3`, `Rural`). |
+| **22** | `highway_proximity_score` | Float | Exogenous Spatial | Non-linear distance transformation: $1 / (1 + d_{\text{highway}})$, normalized $[0, 1]$. |
+| **23** | `city_center_proximity_score` | Float | Exogenous Spatial | Proximity score to urban commercial centroid: $1 / (1 + d_{\text{city}})$, normalized $[0, 1]$. |
+| **24** | `nearby_poi_count` | Integer | Exogenous Spatial | Total commercial amenities (fuel, dining, retail) within a 5 km buffer. |
+| **25** | `poi_diversity_index` | Float | Exogenous Spatial | Shannon entropy index ($H'$) quantifying diversity of nearby commercial services. |
+| **26** | `nearby_ev_registrations` | Float | Exogenous Macro | Official MoRTH VAHAN registered EV fleet volume in the station's host region. |
+| **27** | `population_density` | Float | Demographic | Population density per square kilometer (Census of India projections). |
+| **28** | `traffic_estimates` | String | Exogenous Corridor | Estimated vehicular traffic density tier along the corridor. |
+| **29** | `grid_capacity_indicators` | String | Exogenous Grid | DISCOM/CEA electrical distribution headroom level (`High Capacity 33kV`, etc.). |
+| **30** | `fast_charging_flag` | Float | Target Variable | **Classification Label:** $1.0 =$ DC Fast ($\ge 50$ kW), $0.0 =$ AC Slow ($< 50$ kW). |
 
 ### Strict Anti-Leakage Feature Gate
 
-In charging infrastructure modeling, including internal station specifications (such as power ratings, charger capacity, connector plug types, or utility bills) causes severe target leakage because fast chargers by definition feature high power capacity and CCS-2 / CHAdeMO connectors.
+In predictive planning, internal station specifications (such as `rated_power_kw`, `charger_type`, `connector_type`, `charger_count`, and `charging_speed`) represent post-construction physical realities. Using them to predict whether a site is suitable for fast charging causes circular target leakage ($100\%$ accuracy during training, but zero utility for evaluating greenfield candidate sites).
 
-The Anti-Leakage Gate enforces that **only exogenous environmental, topological, corridor, demographic, and grid readiness indicators are provided to the model**:
+The **Anti-Leakage Feature Gate** filters the 30-feature master dataset:
+- **Quarantined Hardware Columns (9 columns):** `charger_type`, `connector_type`, `charger_count`, `rated_power_kw`, `charging_speed`, `availability_status`, `operating_hours`, `access_type`, `commissioning_date`.
+- **Retained Exogenous Predictors (21 predictors):** Strictly pre-construction GIS, road network, POI diversity, demographic, and macro grid indicators.
 
-- **Excluded Leaky Fields:** `power_kw`, `capacity`, `connector_type`, `voltage`, `current_rating`, `charging_tariff`, `station_kwh_consumption`.
-- **Retained Exogenous Predictors:** Strictly 21 pre-construction spatial and contextual features.
+### 21 Certified Modeling Predictors
 
-### 21 Certified Predictors Dictionary
+The exogenous features are encoded into **21 numerical and orthogonal predictors** supplied to the machine learning algorithms:
 
-| # | Feature Identifier | Data Type | Units / Scale | Source Registry | Physical & Engineering Description |
-| :-: | :--- | :---: | :---: | :--- | :--- |
-| **1** | `latitude` | Float | Degrees N | OpenChargeMap / BEE | Geodetic latitude coordinate of the charging site. |
-| **2** | `longitude` | Float | Degrees E | OpenChargeMap / BEE | Geodetic longitude coordinate of the charging site. |
-| **3** | `distance_to_highway_km` | Float | Kilometers | OpenStreetMap | Haversine shortest distance to nearest National/State Highway. |
-| **4** | `distance_to_city_center_km` | Float | Kilometers | OpenStreetMap / Census | Haversine distance from site to the district/metro commercial centroid. |
-| **5** | `highway_proximity_score` | Float | Normalized $[0, 1]$ | Feature Engineering | Non-linear proximity score: $1 / (1 + d_{\text{highway}})$. |
-| **6** | `city_center_proximity_score` | Float | Normalized $[0, 1]$ | Feature Engineering | Non-linear proximity score: $1 / (1 + d_{\text{city}})$. |
-| **7** | `nearby_poi_count` | Integer | Count | OpenStreetMap | Total commercial amenities within a 5 km spatial buffer. |
-| **8** | `poi_diversity_index` | Float | Shannon $H'$ $[0, 1]$ | Feature Engineering | Shannon entropy measuring diversity across commercial POI categories. |
-| **9** | `district_ev_penetration_rate` | Float | Percentage $(\%)$ | MoRTH VAHAN 4.0 | Proportion of registered EVs relative to total district vehicle population. |
-| **10** | `district_urban_population_pct` | Float | Percentage $(\%)$ | Census of India / MoHUA | Urbanization percentage of the station's host district/state. |
-| **11** | `district_population_density_2011` | Float | Persons / $\text{km}^2$ | Census of India | Baseline demographic population density. |
-| **12** | `district_projected_density_fy24` | Float | Persons / $\text{km}^2$ | MoHFW / UIDAI Proj. | Growth-adjusted population density projected to FY 2024–25. |
-| **13** | `district_nh_crossing_count` | Integer | Count | NHAI Corridor Vector | Number of National Highway route intersections in the district. |
-| **14** | `discom_utility_data_available_flag` | Binary | $\{0, 1\}$ | CEA / State DISCOM | Flag confirming availability of dedicated electrical distribution data. |
-| **15** | `road_type_trunk` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is adjacent to a primary national trunk highway / expressway. |
-| **16** | `road_type_primary` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is adjacent to a primary arterial carriageway. |
-| **17** | `road_type_secondary` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is adjacent to an inter-city secondary connector road. |
-| **18** | `road_type_tertiary` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is adjacent to a localized intra-district transit artery. |
-| **19** | `road_type_residential` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is located inside a residential access network. |
-| **20** | `road_type_service` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is located along a designated highway service lane / rest plaza. |
-| **21** | `road_type_unclassified` | Binary | $\{0, 1\}$ | OpenStreetMap | Site is on an unclassified or rural feeder road. |
+| # | Predictor Identifier | Type | Source Registry | Physical Rationale |
+| :-: | :--- | :---: | :--- | :--- |
+| **1** | `latitude` | Float | OpenChargeMap / BEE | Latitude coordinate capturing north-south transit corridors. |
+| **2** | `longitude` | Float | OpenChargeMap / BEE | Longitude coordinate capturing east-west freight belts. |
+| **3** | `distance_to_highway_km` | Float | OpenStreetMap Overpass | Proximity to high-throughput National/State Highways. |
+| **4** | `distance_to_city_center_km` | Float | OpenStreetMap / Census | Differentiates peripheral ring-road plazas from downtown hubs. |
+| **5** | `highway_proximity_score` | Float | Non-linear Transformation | Normalized decay function $1 / (1 + d_{\text{highway}})$. |
+| **6** | `city_center_proximity_score` | Float | Non-linear Transformation | Normalized decay function $1 / (1 + d_{\text{city}})$. |
+| **7** | `nearby_poi_count` | Integer | OpenStreetMap Overpass | Dwell-time commercial density within a 5 km buffer. |
+| **8** | `poi_diversity_index` | Float | Shannon Entropy ($H'$) | Commercial amenity diversity (dining, retail, lodging). |
+| **9** | `district_ev_penetration_rate` | Float | MoRTH VAHAN 4.0 | Proportion of registered EVs in the local vehicle population. |
+| **10** | `district_urban_population_pct` | Float | Census of India / MoHUA | Urbanization percentage of the station's host jurisdiction. |
+| **11** | `district_population_density_2011` | Float | Census of India | Baseline demographic population density per $\text{km}^2$. |
+| **12** | `district_projected_density_fy24` | Float | Census / UIDAI Proj. | Growth-adjusted demographic population density per $\text{km}^2$. |
+| **13** | `district_nh_crossing_count` | Integer | NHAI Corridor Vector | Number of National Highway route intersections in the district. |
+| **14** | `discom_utility_data_available_flag` | Binary | CEA / State DISCOM | Confirmed presence of dedicated 11kV/33kV distribution feeder. |
+| **15** | `road_type_trunk` | Binary | OpenStreetMap | Site is adjacent to a National Trunk Highway or Expressway. |
+| **16** | `road_type_primary` | Binary | OpenStreetMap | Site is adjacent to a Primary Arterial roadway. |
+| **17** | `road_type_secondary` | Binary | OpenStreetMap | Site is adjacent to a Secondary inter-city connector. |
+| **18** | `road_type_tertiary` | Binary | OpenStreetMap | Site is adjacent to a localized Tertiary transit artery. |
+| **19** | `road_type_residential` | Binary | OpenStreetMap | Site is located within a Residential street network. |
+| **20** | `road_type_service` | Binary | OpenStreetMap | Site is situated on a Highway Service lane or Rest Plaza. |
+| **21** | `road_type_unclassified` | Binary | OpenStreetMap | Site is situated on an Unclassified or Rural feeder road. |
 
 ---
 
@@ -181,17 +217,17 @@ The Anti-Leakage Gate enforces that **only exogenous environmental, topological,
 
 ### 1. Data Cleaning & Integration
 
-1. **Coordinate Validation:** Filtered raw records to ensure bounding box validity: Latitude $\in [8.0, 37.0]$, Longitude $\in [68.0, 97.5]$.
-2. **Standardization:** Categorical road classifications were one-hot encoded into 7 orthogonal columns (`road_type_*`). Missing continuous fields were imputed using median spatial-lag estimators.
-3. **Target Encoding:** Binary fast-charging target $y_i \in \{0, 1\}$ where $1 = \text{DC Fast } (\ge 50\text{ kW})$ and $0 = \text{AC Slow } (< 50\text{ kW})$.
+1. **Coordinate Bounding Validation:** Verified all coordinates lie within India's territorial boundaries ($8.0^\circ\text{N} \le \text{Lat} \le 37.0^\circ\text{N}$, $68.0^\circ\text{E} \le \text{Lon} \le 97.5^\circ\text{E}$).
+2. **Orthogonal Encoding:** The categorical `road_type` column was decomposed into 7 orthogonal binary indicators (`road_type_*`).
+3. **Target Verification:** The target variable `fast_charging_flag` was validated against rated power ($1.0$ if $\ge 50$ kW, $0.0$ if $< 50$ kW).
 
 ### 2. 5-Fold State-Grouped Spatial Cross-Validation
 
-Standard random $k$-fold cross-validation fails in spatial data science due to **spatial autocorrelation** (Tobler's First Law: *"everything is related to everything else, but near things are more related than distant things"*). Random splitting results in training and test points co-located in the same neighborhood, yielding artificially inflated accuracy.
+Standard random $k$-fold cross-validation fails on spatial data because nearby charging stations share spatial characteristics (highway access, traffic density). Random splitting places neighboring stations in both training and test folds, artificially inflating accuracy through spatial autocorrelation leakage.
 
 To guarantee true geographic generalizability:
 
-- We partition the dataset using **`GroupKFold(n_splits=5)` grouping on `state`**.
+- The dataset is partitioned using **`GroupKFold(n_splits=5)` grouping on `state`**.
 - All stations within a given state belong strictly to the same fold.
 - When evaluating Fold $k$, the model has **never seen any station from the validation states**, measuring its true ability to predict greenfield sites in un-electrified states.
 
@@ -386,31 +422,11 @@ The frontend is hosted in [`frontend_india/`](file:///c:/Users/Dell/Downloads/EV
 
 ---
 
-## Independent Dual-Execution Guide
+## Execution & Deployment Guide
 
-Both systems are completely decoupled and run simultaneously on separate ports without conflict.
+### Web Application Startup (Port 5001)
 
-### System 1: Telangana Baseline (Port 5000)
-
-Runs the baseline model trained on the 33 administrative districts of Telangana (166 verified stations):
-
-```bash
-python app.py
-```
-
-> **Access URL:** Open **[http://localhost:5000](http://localhost:5000)** in your browser.
-
----
-
-### System 2: Pan-India Master (Port 5001)
-
-Runs the standalone Pan-India system trained natively on all 52,718 charging stations across 36 States & UTs:
-
-```bash
-python app.py --india
-```
-
-*or directly:*
+To launch the Pan-India Master Web Application:
 
 ```bash
 python app_india_wide.py
@@ -432,65 +448,51 @@ This updates all model weights in `models/india_wide/` and regenerates all figur
 
 ---
 
-### Side-by-Side Dual Running
-
-To present both dashboards simultaneously:
-
-1. Open **Terminal 1**: run `python app.py` (Telangana Baseline on `http://localhost:5000`).
-2. Open **Terminal 2**: run `python app_india_wide.py` (Pan-India Master on `http://localhost:5001`).
-3. Both headers feature clickable cross-navigation badges (`🇮🇳 Open Pan-India Master ↗` and `⚡ Open Telangana Baseline ↗`) allowing faculty to switch between both implementations instantly.
-
----
-
 ## Directory Structure
 
 ```text
 EV_Charging/
 ├── data/
-│   ├── final/FINAL_PROJECT_DATASET.csv                        # Telangana Baseline (166 stations)
-│   └── india_wide/INDIA_WIDE_EV_CHARGING_MASTER_DATASET.csv   # Pan-India Master (52,718 stations)
-├── models/
-│   ├── final_deployment_model.joblib                          # Telangana Champion Model
 │   └── india_wide/
-│       ├── champion_model.joblib                              # Pan-India Random Forest Champion
-│       ├── selected_threshold.json                            # Optimal Threshold (tau* = 0.2488)
-│       ├── model_metadata.json                                # Model Hyperparameters & Scope
-│       └── feature_manifest.json                              # 21 Certified Predictors List
+│       ├── INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv   # Canonical Master Dataset (52,718 × 30)
+│       └── INDIA_WIDE_EV_CHARGING_MASTER_DATASET.csv              # Expanded Engineering Schema
+├── models/
+│   └── india_wide/
+│       ├── champion_model.joblib                                  # Pan-India Random Forest Champion
+│       ├── selected_threshold.json                                # Optimal Threshold (tau* = 0.2488)
+│       ├── model_metadata.json                                    # Model Hyperparameters & Scope
+│       └── feature_manifest.json                                  # 21 Certified Predictors List
 ├── results/
-│   ├── figures/                                               # Telangana Baseline Evaluation Figures
 │   └── india_wide/
 │       ├── figures/
-│       │   ├── system_architecture_india_wide.svg             # High-Res Architecture Diagram
-│       │   ├── confusion_matrix.png                           # Outer Test Confusion Matrix
-│       │   ├── pr_curves.png                                  # Precision-Recall Bake-Off Curves
-│       │   ├── roc_curves.png                                 # ROC Bake-Off Curves
-│       │   ├── feature_importance.png                         # Global TreeSHAP Feature Ranking
-│       │   ├── shap_beeswarm.png                              # Global SHAP Beeswarm Distribution
-│       │   ├── counterfactual_comparison.png                  # Actionable Counterfactual Elevation
-│       │   ├── eips_state_rankings.png                        # Top 15 States EIPS Prioritization
-│       │   ├── eips_component_breakdown.png                   # Multi-Criteria Decomposition
-│       │   └── gis_spatial_distribution.png                   # Static National Station Map
+│       │   ├── system_architecture_india_wide.svg                 # High-Res Architecture Diagram
+│       │   ├── confusion_matrix.png                               # Outer Test Confusion Matrix
+│       │   ├── pr_curves.png                                      # Precision-Recall Bake-Off Curves
+│       │   ├── roc_curves.png                                     # ROC Bake-Off Curves
+│       │   ├── feature_importance.png                             # Global TreeSHAP Feature Ranking
+│       │   ├── shap_beeswarm.png                                  # Global SHAP Beeswarm Distribution
+│       │   ├── counterfactual_comparison.png                      # Actionable Counterfactual Elevation
+│       │   ├── eips_state_rankings.png                            # Top 15 States EIPS Prioritization
+│       │   ├── eips_component_breakdown.png                       # Multi-Criteria Decomposition
+│       │   └── gis_spatial_distribution.png                       # Static National Station Map
 │       ├── metrics/
-│       │   └── model_comparison.csv                           # RF vs XGBoost vs LightGBM Matrix
+│       │   └── model_comparison.csv                               # RF vs XGBoost vs LightGBM Matrix
 │       ├── planning/
-│       │   ├── state_eips_rankings.csv                        # Complete 36 States/UTs EIPS Table
-│       │   └── ahp_weights.csv                                # Normalized AHP Weights Matrix
+│       │   ├── state_eips_rankings.csv                            # Complete 36 States/UTs EIPS Table
+│       │   └── ahp_weights.csv                                    # Normalized AHP Weights Matrix
 │       ├── xai/
-│       │   ├── shap_feature_importance.csv                    # 21 Predictors SHAP Values
-│       │   └── counterfactual_analysis.csv                    # 10 State Counterfactual Scenarios
+│       │   ├── shap_feature_importance.csv                        # 21 Predictors SHAP Values
+│       │   └── counterfactual_analysis.csv                        # 10 State Counterfactual Scenarios
 │       ├── gis/
-│       │   └── interactive_planning_map_india.html            # National Folium Map
+│       │   └── interactive_planning_map_india.html                # National Folium Map
 │       └── predictions/
-│           └── india_52k_predictions.csv                      # Station-Level Out-of-Fold Predictions
-├── frontend/                                                  # Telangana Dashboard (Port 5000)
-├── frontend_india/                                            # Pan-India Dashboard (Port 5001)
+│           └── india_52k_predictions.csv                          # Station-Level Out-of-Fold Predictions
+├── frontend_india/                                                # Pan-India Dashboard UI (Port 5001)
 ├── scripts/
-│   └── train_india_wide_standalone.py                         # Standalone Spatial Training Script
-├── app.py                                                     # Dual-Dataset CLI Entrypoint (Port 5000 / 5001)
-├── app_india_wide.py                                          # Dedicated Pan-India Backend (Port 5001)
-├── system_architecture_india_wide.svg                         # Pan-India System Architecture SVG
-├── README.md                                                  # Telangana Baseline Documentation
-└── README_INDIA_WIDE.md                                       # Pan-India Master Documentation (This Document)
+│   └── train_india_wide_standalone.py                             # Standalone Spatial Training Script
+├── app_india_wide.py                                              # Dedicated Pan-India Backend (Port 5001)
+├── system_architecture_india_wide.svg                             # Pan-India System Architecture SVG
+└── README.md                                                      # Pan-India Master Documentation (This Document)
 ```
 
 ---
