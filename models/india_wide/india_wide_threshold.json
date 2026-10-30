@@ -1,7 +1,4 @@
 {
   "threshold": 0.2488,
-  "decision_threshold": 0.2488,
-  "validation_strategy": "5-Fold State-Grouped Spatial Cross-Validation",
-  "optimal_f1_score": 0.4786,
-  "national_roc_auc": 0.4911
+  "decision_threshold": 0.2488
 }

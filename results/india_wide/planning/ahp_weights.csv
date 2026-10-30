@@ -1,0 +1,5 @@
+Criterion,Weight,Method
+EV Volume & Infrastructure Density,0.35,AHP Priority Vector
+Adoption & EV Penetration Rate,0.25,AHP Priority Vector
+Highway Corridor Accessibility,0.2,AHP Priority Vector
+Fast-Charging Infrastructure Gap,0.2,AHP Priority Vector

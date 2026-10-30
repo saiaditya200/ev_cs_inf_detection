@@ -1,0 +1,4 @@
+model_name,development_cv_pr_auc,development_cv_roc_auc,outer_test_pr_auc,outer_test_roc_auc,outer_test_accuracy,outer_test_balanced_acc,outer_test_precision,outer_test_recall,outer_test_macro_f1,outer_test_minority_f1,brier_score,decision_threshold,is_champion
+Random_Forest,0.3416,0.5356,0.3118,0.4911,0.3164,0.5012,0.3147,0.9986,0.2432,0.4786,0.2346,0.2488,True
+XGBoost,0.3348,0.5339,0.3051,0.4832,0.3538,0.5142,0.3208,0.9458,0.3142,0.4791,0.2384,0.2018,False
+LightGBM,0.3422,0.5385,0.297,0.4672,0.3246,0.5036,0.3158,0.9851,0.2605,0.4783,0.2438,0.1183,False

@@ -1,22 +1,20 @@
 /* ==========================================================================
    PAN-INDIA EXPLAINABLE AI EV CHARGING PLANNING DASHBOARD - JAVASCRIPT
-   100% Dynamic Metrics, Multi-Tab Navigation, Live Sliders & Interactive Charts
+   Handles dynamic navigation, API integration, inference & data tables
+   100% Dynamic Metrics (Zero Stale Hardcoded Values)
+   Exact Functional Parity with Telangana Baseline UI
    ========================================================================== */
 
-let APP_DATA = window.PAN_INDIA_DATA || null;
-let currentPredictMode = "prospective";
-let selectedStationRecord = null;
-let sortDirections = {};
-let charts = {};
+function metricOrDash(value, digits = 4) {
+    const n = Number(value);
+    return Number.isFinite(n) ? n.toFixed(digits) : "—";
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
-    initDataEngine();
-    initSliders();
+    initDataFetching();
     initPredictionForm();
     initPlanningSearch();
-    initInteractiveCharts();
-    checkBackendHealth();
 });
 
 // ========================= 1. NAVIGATION LOGIC =========================
@@ -47,267 +45,408 @@ function switchTab(tabId) {
         targetTab.classList.add("active");
         targetPane.classList.add("active");
         window.scrollTo({ top: 0, behavior: "smooth" });
-
-        // Trigger chart resize if needed
-        setTimeout(() => {
-            Object.values(charts).forEach(c => {
-                if (c && typeof c.resize === "function") c.resize();
-            });
-        }, 150);
     }
 }
 window.switchTab = switchTab;
 
-// ========================= 2. DATA ENGINE (HYBRID API + BUNDLE) =========================
-async function initDataEngine() {
-    // 1. Populate from local bundle immediately (zero-latency instant render)
-    if (APP_DATA) {
-        populateOverviewFromData(APP_DATA.national_summary);
-        populatePlanningTable(APP_DATA.states);
-        populateModelTable(APP_DATA.models);
-        populateCounterfactualTable(APP_DATA.counterfactuals);
-        populateStateDropdowns(APP_DATA.states);
-        populateSampleStations(APP_DATA.sample_stations);
-    }
-
-    // 2. Fetch live updates from Backend API if server is running
+// ========================= 2. DATA FETCHING & POPULATION =========================
+async function initDataFetching() {
     try {
-        const [healthRes, planRes, metricRes, xaiRes] = await Promise.all([
-            fetch("/api/health").catch(() => null),
-            fetch("/api/planning").catch(() => null),
-            fetch("/api/metrics").catch(() => null),
-            fetch("/api/xai").catch(() => null)
+        await Promise.all([
+            fetchHealthData(),
+            fetchPlanningData(),
+            fetchMetricsData(),
+            fetchXaiData()
         ]);
+    } catch (err) {
+        console.error("[ERROR] Failed to fetch initial data:", err);
+    }
+}
 
-        if (healthRes && healthRes.ok) {
-            const h = await healthRes.json();
-            populateOverviewFromData({
-                total_stations: h.station_count,
-                fast_stations: h.station_class_counts?.dc_fast,
-                slow_stations: h.station_class_counts?.ac_slow,
-                states_covered: h.district_count,
-                grid_energy_gwh: h.grid_throughput_gwh,
-                tier1_critical_states: h.tier1_districts_count,
-                predictors_count: h.n_predictors
-            });
+async function fetchHealthData() {
+    try {
+        const res = await fetch("/api/health");
+        if (!res.ok) return;
+        const data = await res.json();
+
+        document.getElementById("kpi-stations").textContent = data.station_count ? data.station_count.toLocaleString() : "--";
+        document.getElementById("kpi-districts").textContent = data.district_count ?? "--";
+        document.getElementById("kpi-district-count-inline").textContent = data.district_count ?? "--";
+        document.getElementById("kpi-fast-count").textContent = data.station_class_counts?.dc_fast ? data.station_class_counts.dc_fast.toLocaleString() : "--";
+        document.getElementById("kpi-slow-count").textContent = data.station_class_counts?.ac_slow ? data.station_class_counts.ac_slow.toLocaleString() : "--";
+        document.getElementById("kpi-unknown-count").textContent = data.station_class_counts?.unknown ?? "0";
+
+        if (data.grid_throughput_gwh !== null && data.grid_throughput_gwh !== undefined) {
+            document.getElementById("kpi-energy").innerHTML = `${Number(data.grid_throughput_gwh).toLocaleString()} <small>GWh</small>`;
+        } else {
+            document.getElementById("kpi-energy").innerHTML = `-- <small>GWh</small>`;
         }
 
-        if (planRes && planRes.ok) {
-            const p = await planRes.json();
-            if (p.district_rankings) {
-                populatePlanningTable(p.district_rankings);
-                populateStateDropdowns(p.district_rankings);
-            }
+        if (data.outer_test_pr_auc !== null && data.outer_test_pr_auc !== undefined) {
+            document.getElementById("kpi-prauc").textContent = Number(data.outer_test_pr_auc).toFixed(4);
+        } else if (data.cv_pr_auc !== null && data.cv_pr_auc !== undefined) {
+            document.getElementById("kpi-prauc").textContent = Number(data.cv_pr_auc).toFixed(4);
         }
+        document.getElementById("kpi-tier1").innerHTML = `${data.tier1_districts_count ?? "--"} <small>States</small>`;
+        document.getElementById("kpi-features").textContent = data.n_predictors ?? "--";
 
-        if (metricRes && metricRes.ok) {
-            const m = await metricRes.json();
-            if (m.models) populateModelTable(m.models);
+        if (data.model_name) {
+            const runtime = data.sklearn_version ? ` • sklearn ${data.sklearn_version}` : "";
+            document.getElementById("model-status-badge").textContent = `Model: ${data.model_name.replaceAll("_", " ")}${runtime}`;
         }
+    } catch (e) {
+        console.warn("Health API error:", e);
+    }
+}
 
-        if (xaiRes && xaiRes.ok) {
-            const x = await xaiRes.json();
-            if (x.counterfactual_analysis) populateCounterfactualTable(x.counterfactual_analysis);
+async function fetchPlanningData() {
+    try {
+        const res = await fetch("/api/planning");
+        if (!res.ok) return;
+        const data = await res.json();
+
+        // 1. Populate State dropdown in form
+        const distSelect = document.getElementById("st-district");
+        distSelect.innerHTML = "";
+        const states = data.district_rankings || [];
+
+        states.forEach(d => {
+            const opt = document.createElement("option");
+            const stName = d.state || d.district;
+            opt.value = stName;
+            opt.textContent = `${stName} (Rank #${d.rank}, EIPS: ${parseFloat(d.EIPS).toFixed(1)})`;
+            if (stName === "Karnataka") opt.selected = true;
+            distSelect.appendChild(opt);
+        });
+
+        // 2. Populate 36 States & UTs Rankings Table
+        const tbody = document.getElementById("planning-table-body");
+        tbody.innerHTML = "";
+
+        states.forEach(r => {
+            const tr = document.createElement("tr");
+            const rank = parseInt(r.rank);
+            const tierBadgeClass = rank <= 10 ? "badge-danger" : rank <= 22 ? "badge-warning" : "badge-success";
+            const stName = r.state || r.district;
+            tr.innerHTML = `
+                <td><b>#${rank}</b></td>
+                <td><b>${stName}</b></td>
+                <td><span style="font-family:'JetBrains Mono'; font-weight:700;">${parseFloat(r.EIPS).toFixed(2)}</span></td>
+                <td><span class="badge ${tierBadgeClass}">${r.priority_tier.split(":")[0]}</span></td>
+                <td>${parseFloat(r.district_ev_penetration_rate).toFixed(2)}</td>
+                <td><b>${parseFloat(r.infrastructure_gap_index).toFixed(2)}</b></td>
+                <td>${Number(r.fast_stations).toLocaleString()}</td>
+                <td>${r.nh_corridors_crossing_count}</td>
+                <td style="max-width:320px; font-size:0.78rem; color:#9ca3af; white-space:normal;">${r.eips_explanation}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    } catch (e) {
+        console.warn("Planning API error:", e);
+    }
+}
+
+async function fetchMetricsData() {
+    try {
+        const res = await fetch("/api/metrics");
+        if (!res.ok) return;
+        const data = await res.json();
+        const models = data.models || [];
+
+        const tbody = document.getElementById("models-table-body");
+        tbody.innerHTML = "";
+
+        models.forEach(m => {
+            const tr = document.createElement("tr");
+            const isChamp = String(m.is_champion).toLowerCase() === "true" || m.model_name === data.selected_model;
+            const cv_prauc = metricOrDash(m.cv_pr_auc ?? m.development_cv_pr_auc);
+            const outer_prauc = metricOrDash(m.outer_test_pr_auc);
+            const outer_roc = metricOrDash(m.outer_test_roc_auc);
+            const outer_acc_num = Number(m.outer_test_accuracy);
+            const outer_bal_num = Number(m.outer_test_balanced_acc);
+            const outer_f1 = metricOrDash(m.outer_test_macro_f1);
+            const outer_acc = Number.isFinite(outer_acc_num) ? `${(outer_acc_num * 100).toFixed(1)}%` : "—";
+            const outer_bal = Number.isFinite(outer_bal_num) ? `${(outer_bal_num * 100).toFixed(1)}%` : "—";
+
+            tr.innerHTML = `
+                <td><b>${m.model_name.replaceAll("_", " ")}</b> ${isChamp ? '<span class="badge badge-primary">Champion</span>' : ''}</td>
+                <td><span style="font-family:'JetBrains Mono'; font-weight:700;">${cv_prauc}</span></td>
+                <td><span style="font-family:'JetBrains Mono'; font-weight:700;">${outer_prauc}</span></td>
+                <td>${outer_roc}</td>
+                <td>${outer_acc}</td>
+                <td>${outer_bal}</td>
+                <td>${outer_f1}</td>
+                <td><span class="badge badge-success">Evaluated</span></td>
+            `;
+            tbody.appendChild(tr);
+        });
+    } catch (e) {
+        console.warn("Metrics API error:", e);
+    }
+}
+
+async function fetchXaiData() {
+    try {
+        const res = await fetch("/api/xai");
+        if (!res.ok) return;
+        const data = await res.json();
+        const cfList = data.counterfactual_analysis || [];
+
+        const tbody = document.getElementById("cf-table-body");
+        tbody.innerHTML = "";
+
+        if (!cfList.length) {
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center">No persisted counterfactual transition records available.</td></tr>';
+            return;
+        }
+        cfList.forEach(r => {
+            const original = Number(r.original_prob_fast);
+            const counterfactual = Number(r.counterfactual_prob_fast);
+            const originalText = Number.isFinite(original) ? `${(original * 100).toFixed(1)}%` : "—";
+            const cfText = Number.isFinite(counterfactual) ? `${(counterfactual * 100).toFixed(1)}%` : "—";
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td><span style="font-family:'JetBrains Mono'; font-size:0.8rem;">${r.station_id || "—"}</span></td>
+                <td><b>${r.district || r.state || "—"}</b></td>
+                <td>${originalText}</td>
+                <td><b style="color:var(--success);">${cfText}</b></td>
+                <td style="font-size:0.8rem; color:#9ca3af; white-space:normal;">${r.actionable_modifications || "—"}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    } catch (e) {
+        console.warn("XAI API error:", e);
+    }
+}
+
+// ========================= 3. PREDICTION FORM & INFERENCE =========================
+let currentPredictMode = "prospective"; // "prospective" | "existing"
+let allStationRecords = [];
+let selectedStationRecord = null;
+
+async function initPredictionForm() {
+    const form = document.getElementById("prediction-form");
+    const modeBtnProspective = document.getElementById("mode-btn-prospective");
+    const modeBtnExisting = document.getElementById("mode-btn-existing");
+    const formModeTitle = document.getElementById("form-mode-title");
+    const modeIndicatorPill = document.getElementById("mode-indicator-pill");
+    const prospectiveShortcuts = document.getElementById("prospective-shortcuts");
+    const prospectiveNotice = document.getElementById("prospective-note-container");
+    const existingContainer = document.getElementById("existing-station-container");
+    const stationSelect = document.getElementById("existing-station-select");
+    const btnPrefillCorridor = document.getElementById("btn-prefill-corridor");
+    const btnDemoKa = document.getElementById("btn-demo-ka");
+    const btnDemoMh = document.getElementById("btn-demo-mh");
+
+    // Load verified stations from master dataset
+    try {
+        const res = await fetch("/api/stations");
+        if (res.ok) {
+            const stData = await res.json();
+            allStationRecords = stData.stations || [];
+            populateStationDropdown(allStationRecords);
         }
     } catch (err) {
-        console.warn("[INFO] Standalone local data engine active.");
+        console.warn("[WARN] Could not fetch station dataset:", err);
     }
-}
 
-function checkBackendHealth() {
-    fetch("/api/health")
-        .then(r => r.ok ? r.json() : null)
-        .then(data => {
-            const pill = document.getElementById("server-status-pill");
-            if (pill && data) {
-                pill.innerHTML = `<span class="status-dot-live"></span> Live Backend Connected (Port 5001)`;
+    function populateStationDropdown(stations) {
+        if (!stationSelect) return;
+        stationSelect.innerHTML = `<option value="">-- Choose verified station record (${stations.length} available) --</option>`;
+        stations.forEach(s => {
+            const opt = document.createElement("option");
+            opt.value = s.station_id;
+            const name = s.station_name || "Station";
+            const st = s.state || s.district;
+            opt.textContent = `${s.station_id} — ${name} — ${st}`;
+            stationSelect.appendChild(opt);
+        });
+    }
+
+    function setPredictionMode(mode) {
+        currentPredictMode = mode;
+        if (mode === "prospective") {
+            modeBtnProspective.classList.add("active");
+            modeBtnExisting.classList.remove("active");
+            if (prospectiveShortcuts) prospectiveShortcuts.style.display = "flex";
+            if (prospectiveNotice) prospectiveNotice.style.display = "flex";
+            if (existingContainer) existingContainer.style.display = "none";
+            if (formModeTitle) formModeTitle.textContent = "Prospective Candidate Attributes";
+            if (modeIndicatorPill) {
+                modeIndicatorPill.textContent = "Input Mode: Prospective Site";
+                modeIndicatorPill.style.background = "rgba(59, 130, 246, 0.15)";
+                modeIndicatorPill.style.color = "#93c5fd";
+                modeIndicatorPill.style.borderColor = "rgba(59, 130, 246, 0.3)";
             }
-        })
-        .catch(() => {
-            const pill = document.getElementById("server-status-pill");
-            if (pill) {
-                pill.innerHTML = `<span class="status-dot-live" style="background:#06b6d4; box-shadow:0 0 8px #06b6d4;"></span> Client-Side Interactive Engine`;
+            selectedStationRecord = null;
+        } else {
+            modeBtnExisting.classList.add("active");
+            modeBtnProspective.classList.remove("active");
+            if (prospectiveShortcuts) prospectiveShortcuts.style.display = "none";
+            if (prospectiveNotice) prospectiveNotice.style.display = "none";
+            if (existingContainer) existingContainer.style.display = "block";
+            if (formModeTitle) formModeTitle.textContent = "Existing Station Site Attributes";
+            if (modeIndicatorPill) {
+                modeIndicatorPill.textContent = "Input Mode: Existing Station Record";
+                modeIndicatorPill.style.background = "rgba(16, 185, 129, 0.15)";
+                modeIndicatorPill.style.color = "#6ee7b7";
+                modeIndicatorPill.style.borderColor = "rgba(16, 185, 129, 0.3)";
+            }
+            if (!selectedStationRecord && allStationRecords.length > 0) {
+                loadStationById(allStationRecords[0].station_id);
+            }
+        }
+    }
+
+    function loadStationById(stationId) {
+        const found = allStationRecords.find(s => s.station_id === stationId);
+        if (!found) return;
+        selectedStationRecord = found;
+        if (stationSelect) stationSelect.value = stationId;
+
+        // Populate legitimate pre-prediction inputs ONLY (target/leakage fields strictly excluded)
+        document.getElementById("st-id").value = found.station_id || "";
+        document.getElementById("st-station-name").value = found.station_name || "";
+        document.getElementById("st-district").value = found.state || found.district || "";
+        document.getElementById("st-lat").value = Number(found.latitude).toFixed(6);
+        document.getElementById("st-lon").value = Number(found.longitude).toFixed(6);
+        if (found.road_type) {
+            document.getElementById("st-road").value = found.road_type.toLowerCase();
+        }
+        document.getElementById("st-hwy-dist").value = Number(found.distance_to_highway_km || 1.0).toFixed(2);
+        document.getElementById("st-city-dist").value = Number(found.distance_to_city_center_km || 5.0).toFixed(2);
+        document.getElementById("st-poi-count").value = Math.round(Number(found.nearby_poi_count) || 12);
+        document.getElementById("st-poi-div").value = Number(found.poi_diversity_index || 0.75).toFixed(2);
+    }
+
+    function loadProspectiveCorridor() {
+        selectedStationRecord = null;
+        document.getElementById("st-id").value = "IN_PROSPECTIVE_CORRIDOR_01";
+        document.getElementById("st-station-name").value = "Illustrative National Highway Commercial Corridor Hub";
+        document.getElementById("st-district").value = "Karnataka";
+        document.getElementById("st-lat").value = 12.9716;
+        document.getElementById("st-lon").value = 77.5946;
+        document.getElementById("st-road").value = "primary";
+        document.getElementById("st-hwy-dist").value = 0.75;
+        document.getElementById("st-city-dist").value = 4.8;
+        document.getElementById("st-poi-count").value = 16;
+        document.getElementById("st-poi-div").value = 0.82;
+    }
+
+    if (modeBtnProspective) {
+        modeBtnProspective.addEventListener("click", () => {
+            setPredictionMode("prospective");
+            loadProspectiveCorridor();
+        });
+    }
+
+    if (modeBtnExisting) {
+        modeBtnExisting.addEventListener("click", () => {
+            setPredictionMode("existing");
+        });
+    }
+
+    if (stationSelect) {
+        stationSelect.addEventListener("change", (e) => {
+            if (e.target.value) {
+                loadStationById(e.target.value);
             }
         });
-}
-
-function populateOverviewFromData(s) {
-    if (!s) return;
-    document.getElementById("kpi-stations").textContent = s.total_stations ? s.total_stations.toLocaleString() : "52,718";
-    document.getElementById("kpi-districts").textContent = s.states_covered ?? "36";
-    document.getElementById("kpi-district-count-inline").textContent = s.states_covered ?? "36";
-    document.getElementById("kpi-fast-count").textContent = s.fast_stations ? s.fast_stations.toLocaleString() : "16,561";
-    document.getElementById("kpi-slow-count").textContent = s.slow_stations ? s.slow_stations.toLocaleString() : "36,157";
-    document.getElementById("kpi-unknown-count").textContent = "0";
-    document.getElementById("kpi-energy").innerHTML = `${Number(s.grid_energy_gwh || 12450).toLocaleString()} <small>GWh</small>`;
-    document.getElementById("kpi-prauc").textContent = "0.3118";
-    document.getElementById("kpi-tier1").innerHTML = `${s.tier1_critical_states ?? "10"} <small>States</small>`;
-    document.getElementById("kpi-features").textContent = s.predictors_count ?? "21";
-}
-
-function populateStateDropdowns(states) {
-    const distSelect = document.getElementById("st-district");
-    const gisSelect = document.getElementById("gis-state-select");
-    if (!distSelect || !states) return;
-
-    distSelect.innerHTML = "";
-    if (gisSelect) gisSelect.innerHTML = '<option value="">-- Jump to State / UT Coordinates --</option>';
-
-    states.forEach(d => {
-        const stName = d.state || d.district;
-        const opt = document.createElement("option");
-        opt.value = stName;
-        opt.textContent = `${stName} (Rank #${d.rank}, EIPS: ${parseFloat(d.EIPS).toFixed(1)})`;
-        if (stName === "Karnataka") opt.selected = true;
-        distSelect.appendChild(opt);
-
-        if (gisSelect) {
-            const gisOpt = document.createElement("option");
-            gisOpt.value = stName;
-            gisOpt.textContent = `📍 ${stName} (${d.total_stations || d.fast_stations} EVCS)`;
-            gisSelect.appendChild(gisOpt);
-        }
-    });
-}
-
-function populatePlanningTable(states) {
-    const tbody = document.getElementById("planning-table-body");
-    if (!tbody || !states) return;
-    tbody.innerHTML = "";
-
-    states.forEach(r => {
-        const tr = document.createElement("tr");
-        tr.style.cursor = "pointer";
-        tr.title = `Click to load ${r.state || r.district} into Station Simulator`;
-        tr.onclick = () => selectStateFromTable(r.state || r.district);
-
-        const rank = parseInt(r.rank);
-        const tierBadgeClass = rank <= 10 ? "badge-danger" : rank <= 22 ? "badge-warning" : "badge-success";
-        const stName = r.state || r.district;
-        tr.innerHTML = `
-            <td><b>#${rank}</b></td>
-            <td><b style="color:#f1f5f9;">${stName}</b></td>
-            <td><span style="font-family:'JetBrains Mono'; font-weight:700; color:#38bdf8;">${parseFloat(r.EIPS).toFixed(1)}</span></td>
-            <td><span class="badge ${tierBadgeClass}">${r.priority_tier.split(":")[0]}</span></td>
-            <td>${parseFloat(r.district_ev_penetration_rate).toFixed(1)}</td>
-            <td><b>${parseFloat(r.infrastructure_gap_index).toFixed(2)}</b></td>
-            <td><b style="color:#10b981;">${Number(r.fast_stations).toLocaleString()}</b></td>
-            <td>${r.total_stations ? Number(r.total_stations).toLocaleString() : "—"}</td>
-            <td>${r.nh_corridors_crossing_count}</td>
-            <td style="max-width:300px; font-size:0.76rem; color:#94a3b8; white-space:normal;">${r.eips_explanation}</td>
-        `;
-        tbody.appendChild(tr);
-    });
-}
-
-function populateModelTable(models) {
-    const tbody = document.getElementById("models-table-body");
-    if (!tbody || !models) return;
-    tbody.innerHTML = "";
-
-    models.forEach(m => {
-        const tr = document.createElement("tr");
-        const isChamp = m.is_champion === true;
-        const cv_prauc = Number(m.cv_pr_auc).toFixed(4);
-        const outer_prauc = Number(m.outer_test_pr_auc).toFixed(4);
-        const outer_roc = Number(m.outer_test_roc_auc).toFixed(4);
-        const outer_acc = `${(Number(m.outer_test_accuracy) * 100).toFixed(1)}%`;
-        const outer_bal = `${(Number(m.outer_test_balanced_acc) * 100).toFixed(1)}%`;
-        const outer_f1 = Number(m.outer_test_macro_f1).toFixed(4);
-
-        tr.innerHTML = `
-            <td><b>${m.model_name}</b> ${isChamp ? '<span class="badge badge-primary">Champion</span>' : ''}</td>
-            <td><span style="font-family:'JetBrains Mono'; font-weight:700; color:#38bdf8;">${cv_prauc}</span></td>
-            <td><span style="font-family:'JetBrains Mono'; font-weight:700;">${outer_prauc}</span></td>
-            <td>${outer_roc}</td>
-            <td>${outer_acc}</td>
-            <td>${outer_bal}</td>
-            <td>${outer_f1}</td>
-            <td><span class="badge badge-success">Evaluated</span></td>
-        `;
-        tbody.appendChild(tr);
-    });
-}
-
-function populateCounterfactualTable(cfList) {
-    const tbody = document.getElementById("cf-table-body");
-    if (!tbody || !cfList) return;
-    tbody.innerHTML = "";
-
-    cfList.forEach(r => {
-        const orig = Number(r.original_prob_fast);
-        const cf = Number(r.counterfactual_prob_fast);
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-            <td><span style="font-family:'JetBrains Mono'; font-size:0.8rem;">${r.station_id || "—"}</span></td>
-            <td><b>${r.district || r.state || "—"}</b></td>
-            <td>${(orig * 100).toFixed(1)}%</td>
-            <td><b style="color:var(--success); font-family:'JetBrains Mono';">${(cf * 100).toFixed(1)}%</b></td>
-            <td style="font-size:0.78rem; color:#94a3b8; white-space:normal;">${r.actionable_modifications || "—"}</td>
-        `;
-        tbody.appendChild(tr);
-    });
-}
-
-function populateSampleStations(stations) {
-    const select = document.getElementById("existing-station-select");
-    if (!select || !stations) return;
-    select.innerHTML = `<option value="">-- Choose verified station record (${stations.length} records available) --</option>`;
-    stations.forEach(s => {
-        const opt = document.createElement("option");
-        opt.value = s.station_id;
-        opt.textContent = `${s.station_id} — ${s.station_name} (${s.state}) [${s.fast_charging_desc}]`;
-        select.appendChild(opt);
-    });
-}
-
-// ========================= 3. INTERACTIVE SLIDERS & REAL-TIME PREDICTION =========================
-function initSliders() {
-    // Initial calculation
-    triggerLiveInference();
-}
-
-function syncSlider(id, val, unit) {
-    document.getElementById(id).value = val;
-    const label = document.getElementById(`${id}-val`);
-    if (label) {
-        if (id === "st-poi-div") {
-            label.textContent = Number(val).toFixed(2);
-        } else {
-            label.textContent = `${Number(val).toFixed(2)}${unit}`;
-        }
     }
-    // Live Real-Time Dynamic Inference Calculation!
-    triggerLiveInference();
+
+    if (btnPrefillCorridor) {
+        btnPrefillCorridor.addEventListener("click", () => {
+            setPredictionMode("prospective");
+            loadProspectiveCorridor();
+        });
+    }
+
+    if (btnDemoKa) {
+        btnDemoKa.addEventListener("click", () => {
+            setPredictionMode("existing");
+            const st = allStationRecords.find(s => (s.state === "Karnataka") || s.station_id.includes("KA"));
+            if (st) loadStationById(st.station_id);
+        });
+    }
+
+    if (btnDemoMh) {
+        btnDemoMh.addEventListener("click", () => {
+            setPredictionMode("existing");
+            const st = allStationRecords.find(s => (s.state === "Maharashtra") || s.station_id.includes("MH"));
+            if (st) loadStationById(st.station_id);
+        });
+    }
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const btn = document.getElementById("btn-submit-predict");
+        const spinner = document.getElementById("predict-spinner");
+        btn.disabled = true;
+        spinner.style.display = "inline-block";
+
+        // ONLY legitimate site features are passed. Target fields are strictly omitted.
+        const payload = {
+            station_id: document.getElementById("st-id").value,
+            station_name: document.getElementById("st-station-name").value,
+            district: document.getElementById("st-district").value,
+            latitude: parseFloat(document.getElementById("st-lat").value),
+            longitude: parseFloat(document.getElementById("st-lon").value),
+            road_type: document.getElementById("st-road").value,
+            distance_to_highway_km: parseFloat(document.getElementById("st-hwy-dist").value),
+            distance_to_city_center_km: parseFloat(document.getElementById("st-city-dist").value),
+            nearby_poi_count: parseFloat(document.getElementById("st-poi-count").value),
+            poi_diversity_index: parseFloat(document.getElementById("st-poi-div").value)
+        };
+
+        try {
+            const res = await fetch("/api/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            if (!res.ok) {
+                const errData = await res.json();
+                throw new Error(errData.message || "Prediction error");
+            }
+
+            const data = await res.json();
+            renderPredictionResults(data, selectedStationRecord, currentPredictMode);
+        } catch (err) {
+            console.error("[ERROR] Inference Failure:", err);
+            const empty = document.getElementById("res-empty-state");
+            if (empty) {
+                empty.innerHTML = `<div class="empty-state-icon">⚠️</div><h4>Inference Failed</h4><p>${String(err.message).replace(/</g, "&lt;")}</p>`;
+            }
+            alert(`Inference Failure: ${err.message}`);
+        } finally {
+            btn.disabled = false;
+            spinner.style.display = "none";
+        }
+    });
 }
 
-function triggerLiveInference() {
-    const hDist = parseFloat(document.getElementById("st-hwy-dist").value) || 0.75;
-    const cDist = parseFloat(document.getElementById("st-city-dist").value) || 4.80;
-    const poiCnt = parseInt(document.getElementById("st-poi-count").value) || 16;
-    const poiDiv = parseFloat(document.getElementById("st-poi-div").value) || 0.82;
-    const roadType = document.getElementById("st-road").value || "primary";
-    const stateName = document.getElementById("st-district").value || "Karnataka";
+function renderPredictionResults(data, observedMeta, mode) {
+    const emptyCard = document.getElementById("res-empty-state-card");
+    if (emptyCard) emptyCard.style.display = "none";
 
-    // Calibrated spatial logistic response modeling the National Random Forest Champion
-    // Feature weights derived from Gini feature importances
-    const hProximity = Math.exp(-0.25 * Math.min(hDist, 30.0));
-    const cProximity = 1.0 / (1.0 + 0.08 * Math.min(cDist, 50.0));
-    const poiDensity = Math.min(poiCnt / 30.0, 1.0);
-    const roadBonus = (roadType === "motorway") ? 0.35 : (roadType === "primary") ? 0.25 : (roadType === "trunk") ? 0.20 : 0.05;
+    const resContent = document.getElementById("res-content");
+    if (resContent) resContent.style.display = "flex";
 
-    // Linear score & logistic transformation calibrated to decision threshold 24.88%
-    const logit = -1.60 + (2.40 * hProximity) + (0.85 * cProximity) + (1.20 * poiDensity) + (1.10 * poiDiv) + (1.30 * roadBonus);
-    const pFast = 1.0 / (1.0 + Math.exp(-logit));
-    const pSlow = 1.0 - pFast;
+    const pred = data.prediction;
+    const pFast = Number(pred.probability_dc_fast);
+    const pSlow = Number(pred.probability_ac_slow);
+    const threshold = Number(pred.threshold_applied) || 0.2488;
 
-    const threshold = 0.2488;
     const isFast = pFast >= threshold;
+    const conf = Number(pred.predicted_class_probability) || (isFast ? pFast : pSlow);
 
-    // Update Card 1 UI
+    // ==================== CARD 1: MODEL INFERENCE & OBSERVED DATASET REFERENCE ====================
     document.getElementById("res-p-fast").textContent = `${(pFast * 100).toFixed(1)}%`;
     document.getElementById("res-p-slow").textContent = `${(pSlow * 100).toFixed(1)}%`;
-    document.getElementById("res-pred-confidence").textContent = `${((isFast ? pFast : pSlow) * 100).toFixed(1)}%`;
+    document.getElementById("res-pred-confidence").textContent = `${(conf * 100).toFixed(1)}%`;
+    document.getElementById("res-thresh-val").textContent = `${(threshold * 100).toFixed(1)}%`;
 
     const meterFill = document.getElementById("res-meter-fill");
     if (meterFill) {
@@ -326,7 +465,7 @@ function triggerLiveInference() {
     if (classNameEl) {
         classNameEl.textContent = isFast
             ? "DC Fast-Charging Infrastructure (>= 50 kW)"
-            : "AC Slow / Destination Infrastructure (< 50 kW)";
+            : "AC Slow / Destination Charging Infrastructure (< 50 kW)";
     }
 
     const statusBadge = document.getElementById("res-status-badge");
@@ -335,481 +474,177 @@ function triggerLiveInference() {
         statusBadge.className = `badge badge-sm ${isFast ? 'badge-success' : 'badge-warning'}`;
     }
 
-    // Baseline Transfer Check
-    const tgComp = document.getElementById("res-tg-comp-badge");
-    if (tgComp) {
-        const pTg = Math.min(0.95, pFast * 0.92);
-        const tgFast = pTg >= 0.76;
-        tgComp.textContent = `Telangana Baseline P(Fast): ${(pTg * 100).toFixed(1)}% (${tgFast ? 'Fast' : 'Slow'})`;
-        tgComp.className = `badge badge-sm ${tgFast === isFast ? 'badge-info' : 'badge-warning'}`;
-    }
+    // Section 2: Observed Dataset Reference
+    const observedBadge = document.getElementById("res-observed-badge");
+    const observedNote = document.getElementById("res-observed-note");
 
-    // Update Regional State Card
-    if (APP_DATA && APP_DATA.states) {
-        const found = APP_DATA.states.find(s => (s.state || s.district).toLowerCase() === stateName.toLowerCase());
-        if (found) {
-            document.getElementById("res-dist-name").textContent = found.state;
-            document.getElementById("res-dist-eips").textContent = `${Number(found.EIPS).toFixed(1)} / 100`;
-            document.getElementById("res-dist-rank").textContent = `#${found.rank} of 36`;
-            document.getElementById("res-dist-tier").textContent = found.priority_tier.split(":")[0];
-            document.getElementById("res-dist-gap").textContent = Number(found.infrastructure_gap_index).toFixed(2);
-            document.getElementById("res-dist-fast-stns").textContent = Number(found.fast_stations).toLocaleString();
-        }
-    }
-}
-
-// Quick Demo Presets
-const DEMO_PRESETS = {
-    ka: {
-        id: "DEMO_KA_BLR_ORR",
-        name: "Bengaluru Outer Ring Road Commercial EV Hub",
-        state: "Karnataka",
-        hDist: 0.40, cDist: 6.2, poiCnt: 28, poiDiv: 0.88, road: "motorway"
-    },
-    mh: {
-        id: "DEMO_MH_MUM_EXP",
-        name: "Mumbai-Pune Expressway Gateway Fast Hub",
-        state: "Maharashtra",
-        hDist: 0.30, cDist: 14.5, poiCnt: 22, poiDiv: 0.85, road: "motorway"
-    },
-    dl: {
-        id: "DEMO_DL_RING_RD",
-        name: "Delhi Ring Road Multimodal Transport Hub",
-        state: "Delhi",
-        hDist: 0.50, cDist: 3.2, poiCnt: 35, poiDiv: 0.92, road: "primary"
-    },
-    ts: {
-        id: "TS-MED-0001",
-        name: "Medchal Commercial Corridor Baseline Station",
-        state: "Telangana",
-        hDist: 0.85, cDist: 6.2, poiCnt: 9, poiDiv: 0.78, road: "primary"
-    },
-    tn: {
-        id: "DEMO_TN_CHN_IND",
-        name: "Chennai-Sriperumbudur Industrial Highway Hub",
-        state: "Tamil Nadu",
-        hDist: 0.60, cDist: 18.0, poiCnt: 18, poiDiv: 0.80, road: "trunk"
-    },
-    gj: {
-        id: "DEMO_GJ_AHM_EXP",
-        name: "Ahmedabad-Vadodara Expressway Plaza Station",
-        state: "Gujarat",
-        hDist: 0.45, cDist: 12.0, poiCnt: 20, poiDiv: 0.84, road: "motorway"
-    }
-};
-
-function loadDemoPreset(key) {
-    const p = DEMO_PRESETS[key];
-    if (!p) return;
-
-    document.getElementById("st-id").value = p.id;
-    document.getElementById("st-station-name").value = p.name;
-    document.getElementById("st-district").value = p.state;
-    document.getElementById("st-road").value = p.road;
-
-    document.getElementById("st-hwy-dist-slider").value = p.hDist;
-    document.getElementById("st-city-dist-slider").value = p.cDist;
-    document.getElementById("st-poi-count-slider").value = p.poiCnt;
-    document.getElementById("st-poi-div-slider").value = p.poiDiv;
-
-    syncSlider("st-hwy-dist", p.hDist, " km");
-    syncSlider("st-city-dist", p.cDist, " km");
-    syncSlider("st-poi-count", p.poiCnt, " POIs");
-    syncSlider("st-poi-div", p.poiDiv, "");
-
-    // Set observed reference card
-    const obsBadge = document.getElementById("res-observed-badge");
-    const obsNote = document.getElementById("res-observed-note");
-    if (obsBadge) {
-        obsBadge.textContent = "DC Fast (>= 50 kW)";
-        obsBadge.className = "observed-badge badge-success";
-        obsNote.innerHTML = `Loaded high-capacity corridor hub preset: <strong>${p.name}</strong>. Evaluated dynamically against national optimal decision gate.`;
-    }
-}
-
-// Mode Selector: Prospective vs Existing
-function initPredictionForm() {
-    const modeBtnProspective = document.getElementById("mode-btn-prospective");
-    const modeBtnExisting = document.getElementById("mode-btn-existing");
-    const existingContainer = document.getElementById("existing-station-container");
-    const stationSelect = document.getElementById("existing-station-select");
-    const formModeTitle = document.getElementById("form-mode-title");
-    const modeIndicatorPill = document.getElementById("mode-indicator-pill");
-
-    if (modeBtnProspective) {
-        modeBtnProspective.addEventListener("click", () => {
-            currentPredictMode = "prospective";
-            modeBtnProspective.classList.add("active");
-            modeBtnExisting.classList.remove("active");
-            existingContainer.style.display = "none";
-            formModeTitle.textContent = "Interactive Planning Levers";
-            modeIndicatorPill.textContent = "Live Simulator Active";
-            triggerLiveInference();
-        });
-    }
-
-    if (modeBtnExisting) {
-        modeBtnExisting.addEventListener("click", () => {
-            currentPredictMode = "existing";
-            modeBtnExisting.classList.add("active");
-            modeBtnProspective.classList.remove("active");
-            existingContainer.style.display = "block";
-            formModeTitle.textContent = "Existing Station Site Attributes";
-            modeIndicatorPill.textContent = "Verified Record Mode";
-            if (stationSelect && stationSelect.options.length > 1 && !stationSelect.value) {
-                stationSelect.selectedIndex = 1;
-                stationSelect.dispatchEvent(new Event("change"));
-            }
-        });
-    }
-
-    if (stationSelect) {
-        stationSelect.addEventListener("change", (e) => {
-            const stId = e.target.value;
-            if (!stId || !APP_DATA || !APP_DATA.sample_stations) return;
-            const found = APP_DATA.sample_stations.find(s => s.station_id === stId);
-            if (!found) return;
-
-            document.getElementById("st-id").value = found.station_id;
-            document.getElementById("st-station-name").value = found.station_name;
-            document.getElementById("st-district").value = found.state;
-            document.getElementById("st-road").value = found.road_type.toLowerCase();
-
-            document.getElementById("st-hwy-dist-slider").value = found.distance_to_highway_km;
-            document.getElementById("st-city-dist-slider").value = found.distance_to_city_center_km;
-            document.getElementById("st-poi-count-slider").value = found.nearby_poi_count;
-            document.getElementById("st-poi-div-slider").value = found.poi_diversity_index;
-
-            syncSlider("st-hwy-dist", found.distance_to_highway_km, " km");
-            syncSlider("st-city-dist", found.distance_to_city_center_km, " km");
-            syncSlider("st-poi-count", found.nearby_poi_count, " POIs");
-            syncSlider("st-poi-div", found.poi_diversity_index, "");
-
-            // Update Observed badge
-            const obsBadge = document.getElementById("res-observed-badge");
-            const obsNote = document.getElementById("res-observed-note");
-            if (obsBadge) {
-                const isObsFast = found.fast_charging_flag === 1;
-                obsBadge.textContent = isObsFast ? "DC Fast (>= 50 kW)" : "AC Slow (< 50 kW)";
-                obsBadge.className = `observed-badge ${isObsFast ? 'badge-success' : 'badge-amber'}`;
-                obsNote.innerHTML = `Ground truth record from master dataset: <strong>${found.station_id}</strong> (${found.operator}). Pre-prediction features only; target strictly omitted.`;
-            }
-        });
-    }
-
-    const form = document.getElementById("prediction-form");
-    if (form) {
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            triggerLiveInference();
-            // Scroll to results on mobile
-            document.getElementById("card-model-inference").scrollIntoView({ behavior: "smooth", block: "nearest" });
-        });
-    }
-}
-
-// ========================= 4. INTERACTIVE DYNAMIC CHART.JS CHARTS =========================
-function initInteractiveCharts() {
-    if (typeof Chart === "undefined" || !APP_DATA) return;
-
-    // Chart A: Top 10 States Fast vs Slow Infrastructure (Stacked Horizontal Bar)
-    const ctxTop = document.getElementById("chart-top-states");
-    if (ctxTop && APP_DATA.states) {
-        const top10 = APP_DATA.states.slice(0, 10);
-        const labels = top10.map(s => s.state);
-        const fastData = top10.map(s => s.fast_stations);
-        const slowData = top10.map(s => (s.total_stations || (s.fast_stations * 2)) - s.fast_stations);
-
-        charts.topStates = new Chart(ctxTop, {
-            type: "bar",
-            data: {
-                labels: labels,
-                datasets: [
-                    {
-                        label: "⚡ DC Fast Chargers (≥50 kW)",
-                        data: fastData,
-                        backgroundColor: "#10b981",
-                        borderColor: "#059669",
-                        borderWidth: 1,
-                        borderRadius: 4
-                    },
-                    {
-                        label: "🔌 AC Slow Chargers (<50 kW)",
-                        data: slowData,
-                        backgroundColor: "#6366f1",
-                        borderColor: "#4f46e5",
-                        borderWidth: 1,
-                        borderRadius: 4
-                    }
-                ]
-            },
-            options: {
-                indexAxis: "y",
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: { color: "#cbd5e1", font: { family: "Inter", weight: 600 } }
-                    },
-                    tooltip: {
-                        backgroundColor: "rgba(15, 23, 42, 0.9)",
-                        titleColor: "#38bdf8",
-                        bodyColor: "#f8fafc",
-                        borderColor: "#334155",
-                        borderWidth: 1
-                    }
-                },
-                scales: {
-                    x: {
-                        stacked: true,
-                        grid: { color: "rgba(255, 255, 255, 0.06)" },
-                        ticks: { color: "#94a3b8" }
-                    },
-                    y: {
-                        stacked: true,
-                        grid: { display: false },
-                        ticks: { color: "#e2e8f0", font: { weight: 600 } }
-                    }
-                }
-            }
-        });
-    }
-
-    // Chart B: Tier Distribution Doughnut
-    const ctxTier = document.getElementById("chart-tier-distribution");
-    if (ctxTier) {
-        charts.tierDist = new Chart(ctxTier, {
-            type: "doughnut",
-            data: {
-                labels: ["Tier 1: Critical Priority (Top 10)", "Tier 2: High Priority (11-22)", "Tier 3: Moderate Priority (23-36)"],
-                datasets: [{
-                    data: [10, 12, 14],
-                    backgroundColor: ["#ef4444", "#f59e0b", "#10b981"],
-                    borderColor: "#0f172a",
-                    borderWidth: 3
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: "bottom",
-                        labels: { color: "#cbd5e1", boxWidth: 14 }
-                    }
-                }
-            }
-        });
-    }
-
-    // Chart C: Model Comparison Multi-Bar
-    const ctxModel = document.getElementById("chart-model-comparison");
-    if (ctxModel && APP_DATA.models) {
-        const mNames = APP_DATA.models.map(m => m.model_name);
-        const prAucs = APP_DATA.models.map(m => m.outer_test_pr_auc);
-        const rocAucs = APP_DATA.models.map(m => m.outer_test_roc_auc);
-        const f1s = APP_DATA.models.map(m => m.outer_test_macro_f1);
-
-        charts.modelComp = new Chart(ctxModel, {
-            type: "bar",
-            data: {
-                labels: mNames,
-                datasets: [
-                    {
-                        label: "Outer PR-AUC",
-                        data: prAucs,
-                        backgroundColor: "#38bdf8"
-                    },
-                    {
-                        label: "Outer ROC-AUC",
-                        data: rocAucs,
-                        backgroundColor: "#a855f7"
-                    },
-                    {
-                        label: "Macro F1-Score",
-                        data: f1s,
-                        backgroundColor: "#10b981"
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { labels: { color: "#cbd5e1" } }
-                },
-                scales: {
-                    x: { ticks: { color: "#e2e8f0", font: { weight: 600 } } },
-                    y: { max: 1.0, ticks: { color: "#94a3b8" }, grid: { color: "rgba(255, 255, 255, 0.06)" } }
-                }
-            }
-        });
-    }
-
-    // Chart D: Feature Importances
-    const ctxFeat = document.getElementById("chart-feature-importance");
-    if (ctxFeat && APP_DATA.features) {
-        charts.featImp = new Chart(ctxFeat, {
-            type: "bar",
-            data: {
-                labels: APP_DATA.features.map(f => f.name),
-                datasets: [{
-                    label: "Mean Gini Impurity Reduction (52,718 Stations)",
-                    data: APP_DATA.features.map(f => f.importance),
-                    backgroundColor: "#06b6d4",
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                indexAxis: "y",
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            afterLabel: (ctx) => `Category: ${APP_DATA.features[ctx.dataIndex].category}`
-                        }
-                    }
-                },
-                scales: {
-                    x: { grid: { color: "rgba(255, 255, 255, 0.06)" }, ticks: { color: "#94a3b8" } },
-                    y: { ticks: { color: "#e2e8f0", font: { weight: 600 } } }
-                }
-            }
-        });
-    }
-
-    // Chart E: EIPS Top 15 States
-    const ctxEips = document.getElementById("chart-eips-top");
-    if (ctxEips && APP_DATA.states) {
-        const top15 = APP_DATA.states.slice(0, 15);
-        charts.eipsTop = new Chart(ctxEips, {
-            type: "bar",
-            data: {
-                labels: top15.map(s => s.state),
-                datasets: [{
-                    label: "EIPS Composite Score (0-100)",
-                    data: top15.map(s => s.EIPS),
-                    backgroundColor: top15.map(s => s.rank <= 10 ? "#ef4444" : "#f59e0b"),
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { ticks: { color: "#e2e8f0", font: { weight: 600 } } },
-                    y: { max: 100, ticks: { color: "#94a3b8" }, grid: { color: "rgba(255, 255, 255, 0.06)" } }
-                }
-            }
-        });
-    }
-}
-
-// ========================= 5. INTERACTIVE TABLE SORTING & FILTERING =========================
-function filterByTier(tier, btn) {
-    document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
-    if (btn) btn.classList.add("active");
-
-    const rows = document.querySelectorAll("#planning-table-body tr");
-    rows.forEach(r => {
-        if (tier === "all") {
-            r.style.display = "";
+    if (mode === "existing" && observedMeta) {
+        const flag = observedMeta.fast_charging_flag;
+        if (flag === 1 || flag === 1.0 || flag === "1") {
+            observedBadge.textContent = "DC Fast (>= 50 kW)";
+            observedBadge.className = "observed-badge badge-success";
+            observedNote.innerHTML = `Observed label from verified station record <strong>${observedMeta.station_id}</strong> in master dataset. Not used as a model input.`;
+        } else if (flag === 0 || flag === 0.0 || flag === "0") {
+            observedBadge.textContent = "AC / Non-Fast (observed)";
+            observedBadge.className = "observed-badge badge-amber";
+            observedNote.innerHTML = `Observed label from verified station record <strong>${observedMeta.station_id}</strong> in master dataset. Not used as a model input.`;
         } else {
-            const rowTier = r.children[3]?.textContent || "";
-            r.style.display = rowTier.includes(tier) ? "" : "none";
+            observedBadge.textContent = "Unlabeled / Unknown";
+            observedBadge.className = "observed-badge badge-neutral";
+            observedNote.innerHTML = `Observed classification: <strong>Unlabeled / Unknown</strong> in master dataset. Not evaluated as ground truth or used as model input.`;
         }
-    });
+    } else {
+        observedBadge.textContent = "N/A (Prospective Site)";
+        observedBadge.className = "observed-badge badge-neutral";
+        observedNote.textContent = "User-defined planning scenario — not an observed station record.";
+    }
+
+    // ==================== CARD 2: WHY? — LOCAL TREESHAP ====================
+    const posDiv = document.getElementById("res-positive-drivers");
+    if (posDiv) {
+        posDiv.innerHTML = "";
+        const posDrivers = data.explainable_ai?.top_positive_drivers || [];
+        if (posDrivers.length === 0) {
+            posDiv.innerHTML = '<span style="font-size:0.75rem; color:#9ca3af;">None identified</span>';
+        } else {
+            posDrivers.forEach(d => {
+                const item = document.createElement("div");
+                item.className = "driver-bar-item";
+                item.innerHTML = `
+                    <span class="driver-name">${d.feature} (= ${d.value})</span>
+                    <span class="driver-shap text-success">+${d.shap_impact.toFixed(4)}</span>
+                `;
+                posDiv.appendChild(item);
+            });
+        }
+    }
+
+    const negDiv = document.getElementById("res-negative-drivers");
+    if (negDiv) {
+        negDiv.innerHTML = "";
+        const negDrivers = data.explainable_ai?.top_negative_drivers || [];
+        if (negDrivers.length === 0) {
+            negDiv.innerHTML = '<span style="font-size:0.75rem; color:#9ca3af;">None identified</span>';
+        } else {
+            negDrivers.forEach(d => {
+                const item = document.createElement("div");
+                item.className = "driver-bar-item";
+                item.innerHTML = `
+                    <span class="driver-name">${d.feature} (= ${d.value})</span>
+                    <span class="driver-shap text-danger">${d.shap_impact.toFixed(4)}</span>
+                `;
+                negDiv.appendChild(item);
+            });
+        }
+    }
+
+    // ==================== CARD 3: WHAT-IF PLANNING ====================
+    const cfContainer = document.getElementById("res-cf-simulation-content");
+    if (cfContainer) {
+        const cf = data.actionable_counterfactual || {};
+        if (cf.status === "already_above_threshold") {
+            cfContainer.innerHTML = `
+                <div class="cf-card-box">
+                    <div class="cf-meta-row">
+                        <span>Current P(DC Fast): <b class="text-cyan">${(pFast * 100).toFixed(1)}%</b></span>
+                        <span class="cf-badge-crossed">Above Threshold (&ge; ${(threshold * 100).toFixed(1)}%)</span>
+                    </div>
+                    <p style="font-size:0.76rem; color:#9ca3af; margin:4px 0 0 0; line-height:1.4;">
+                        Current physical site attributes already satisfy the decision threshold for DC Fast infrastructure classification. No site-lever counterfactual adjustment required.
+                    </p>
+                </div>
+            `;
+        } else if (cf.best_scenario) {
+            const best = cf.best_scenario;
+            const lever = best.changed_lever;
+            let origVal = "Current";
+            if (data.feature_vector && data.feature_vector[lever] !== undefined) {
+                origVal = data.feature_vector[lever];
+            } else if (lever === "distance_to_highway_km") {
+                origVal = document.getElementById("st-hwy-dist").value;
+            } else if (lever === "distance_to_city_center_km") {
+                origVal = document.getElementById("st-city-dist").value;
+            } else if (lever === "nearby_poi_count") {
+                origVal = document.getElementById("st-poi-count").value;
+            } else if (lever === "poi_diversity_index") {
+                origVal = document.getElementById("st-poi-div").value;
+            }
+
+            const newVal = typeof best.new_value === 'object' ? JSON.stringify(best.new_value) : best.new_value;
+            const resProb = (best.probability_dc_fast * 100).toFixed(1);
+            const crossed = best.crosses_threshold;
+
+            let html = `
+                <div class="cf-card-box">
+                    <div class="cf-meta-row">
+                        <span class="cf-lever-name">Simulated Lever: <b>${lever}</b></span>
+                        <span class="cf-result-prob ${crossed ? 'text-success' : 'text-amber'}">${resProb}% P(DC Fast)</span>
+                    </div>
+                    <div class="cf-vals-row">
+                        <span>Original: <b>${origVal}</b> &rarr; Modified: <b>${newVal}</b></span>
+                        <span class="${crossed ? 'cf-badge-crossed' : 'cf-badge-not-crossed'}">${crossed ? 'Crosses Decision Threshold' : 'Below Decision Threshold'}</span>
+                    </div>
+                </div>
+            `;
+
+            if (cf.scenarios && cf.scenarios.length > 1) {
+                html += '<div style="margin-top:8px;"><span style="font-size:0.72rem; color:#9ca3af; text-transform:uppercase; font-weight:600;">Alternative Model Scenarios:</span></div>';
+                cf.scenarios.slice(1, 4).forEach(sc => {
+                    const scNew = typeof sc.new_value === 'object' ? JSON.stringify(sc.new_value) : sc.new_value;
+                    const scP = (sc.probability_dc_fast * 100).toFixed(1);
+                    html += `
+                        <div class="cf-card-box" style="padding:6px 10px; margin-top:4px;">
+                            <div class="cf-meta-row" style="margin-bottom:0;">
+                                <span style="font-size:0.75rem; font-family:'JetBrains Mono';">${sc.changed_lever} &rarr; ${scNew}</span>
+                                <span style="font-size:0.75rem; font-weight:700;" class="${sc.crosses_threshold ? 'text-success' : 'text-amber'}">${scP}%</span>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            if (cf.key_recommendations && cf.key_recommendations.length) {
+                html += '<ul class="cf-recs-list">';
+                cf.key_recommendations.forEach(rec => {
+                    html += `<li>${rec}</li>`;
+                });
+                html += '</ul>';
+            }
+
+            cfContainer.innerHTML = html;
+        } else {
+            cfContainer.innerHTML = '<div style="font-size:0.78rem; color:#9ca3af;">No counterfactual scenarios available for this configuration.</div>';
+        }
+    }
+
+    // ==================== CARD 4: REGIONAL STATE PLANNING CONTEXT ====================
+    const rc = data.regional_planning_context;
+    if (rc && (rc.district || rc.state)) {
+        document.getElementById("res-dist-name").textContent = rc.state || rc.district;
+        document.getElementById("res-dist-eips").textContent = `${Number(rc.eips_score).toFixed(1)} / 100`;
+        document.getElementById("res-dist-rank").textContent = `#${rc.eips_rank} of 36`;
+        document.getElementById("res-dist-tier").textContent = rc.priority_tier ? rc.priority_tier.split(":")[0] : "—";
+        document.getElementById("res-dist-gap").textContent = Number(rc.infrastructure_gap_index).toFixed(2);
+        document.getElementById("res-dist-fast-stns").textContent = Number(rc.existing_fast_stations).toLocaleString() ?? "0";
+    }
 }
 
+// ========================= 4. PLANNING TABLE FILTER =========================
 function initPlanningSearch() {
     const searchInput = document.getElementById("planning-search");
     if (!searchInput) return;
 
     searchInput.addEventListener("input", () => {
-        const q = searchInput.value.toLowerCase().trim();
+        const q = searchInput.value.toLowerCase();
         const rows = document.querySelectorAll("#planning-table-body tr");
-        rows.forEach(r => {
-            const text = r.textContent.toLowerCase();
-            r.style.display = text.includes(q) ? "" : "none";
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(q) ? "" : "none";
         });
     });
 }
 
-function sortPlanningTable(colIndex) {
-    const table = document.getElementById("planning-table");
-    const tbody = document.getElementById("planning-table-body");
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-    const dir = sortDirections[colIndex] === "asc" ? "desc" : "asc";
-    sortDirections[colIndex] = dir;
-
-    // Reset headers
-    table.querySelectorAll("th.sortable").forEach(th => th.classList.remove("sort-asc", "sort-desc"));
-    const currentTh = table.querySelectorAll("th.sortable")[colIndex];
-    if (currentTh) currentTh.classList.add(`sort-${dir}`);
-
-    rows.sort((a, b) => {
-        let valA = a.children[colIndex].textContent.trim().replace("#", "").replace(/,/g, "");
-        let valB = b.children[colIndex].textContent.trim().replace("#", "").replace(/,/g, "");
-
-        const numA = parseFloat(valA);
-        const numB = parseFloat(valB);
-
-        if (!isNaN(numA) && !isNaN(numB)) {
-            return dir === "asc" ? numA - numB : numB - numA;
-        }
-        return dir === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
-    });
-
-    tbody.innerHTML = "";
-    rows.forEach(r => tbody.appendChild(r));
-}
-
-function sortModelTable(colIndex) {
-    const table = document.getElementById("models-table");
-    const tbody = document.getElementById("models-table-body");
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-    const dir = sortDirections[`m_${colIndex}`] === "asc" ? "desc" : "asc";
-    sortDirections[`m_${colIndex}`] = dir;
-
-    rows.sort((a, b) => {
-        let valA = a.children[colIndex].textContent.trim().replace(/%/g, "");
-        let valB = b.children[colIndex].textContent.trim().replace(/%/g, "");
-        const numA = parseFloat(valA);
-        const numB = parseFloat(valB);
-        if (!isNaN(numA) && !isNaN(numB)) {
-            return dir === "asc" ? numA - numB : numB - numA;
-        }
-        return dir === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
-    });
-
-    tbody.innerHTML = "";
-    rows.forEach(r => tbody.appendChild(r));
-}
-
-function selectStateFromTable(stName) {
-    // Switch to predict tab and select state
-    switchTab("predict");
-    const distSelect = document.getElementById("st-district");
-    if (distSelect) {
-        distSelect.value = stName;
-        triggerLiveInference();
-    }
-}
-
-// ========================= 6. GIS STATE JUMP & POPUPS =========================
-function jumpGisToState(stName) {
-    if (!stName || !APP_DATA || !APP_DATA.states) return;
-    const found = APP_DATA.states.find(s => (s.state || s.district).toLowerCase() === stName.toLowerCase());
-    if (!found) return;
-
-    // Post message to Folium iframe if supported, or provide state summary banner
-    alert(`📍 Focused State: ${found.state}\n• Total Public EVCS: ${found.total_stations ? found.total_stations.toLocaleString() : 'N/A'}\n• DC Fast: ${found.fast_stations.toLocaleString()}\n• Priority Tier: ${found.priority_tier}\n• Nodal Agency: ${found.state_nodal_agency}`);
-}
-
-// ========================= 7. MODALS =========================
+// ========================= 5. IMAGE MODAL =========================
 function openModal(src) {
     const modal = document.getElementById("image-modal");
     const modalImg = document.getElementById("modal-img");
@@ -820,15 +655,5 @@ function openModal(src) {
 function closeModal() {
     document.getElementById("image-modal").style.display = "none";
 }
-
-// Global window attachments for inline HTML handlers
-window.syncSlider = syncSlider;
-window.triggerLiveInference = triggerLiveInference;
-window.loadDemoPreset = loadDemoPreset;
-window.filterByTier = filterByTier;
-window.sortPlanningTable = sortPlanningTable;
-window.sortModelTable = sortModelTable;
-window.jumpGisToState = jumpGisToState;
 window.openModal = openModal;
 window.closeModal = closeModal;
-window.selectStateFromTable = selectStateFromTable;

@@ -1,0 +1,16 @@
+feature,importance
+district_ev_penetration_rate,0.17570229411853264
+latitude,0.16865084108683032
+longitude,0.12215171274116184
+district_nh_crossing_count,0.11300848003692804
+distance_to_city_center_km,0.07404483770690709
+distance_to_highway_km,0.0680682972507566
+nearby_poi_count,0.04853147121968472
+highway_proximity_score,0.044483490626988226
+poi_diversity_index,0.04042020137685689
+district_urban_population_pct,0.0396752298693668
+city_center_proximity_score,0.030526512275625427
+district_projected_density_fy24,0.025745222103813487
+district_population_density_2011,0.023345148159427766
+discom_utility_data_available_flag,0.017836507717815264
+road_type_trunk,0.002080728960590295
