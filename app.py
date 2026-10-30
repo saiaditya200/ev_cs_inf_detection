@@ -707,8 +707,28 @@ def api_predict():
 initialize_backend()
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "5000"))
-    print("\n[INFO] Starting EV Infrastructure Planning Web Application")
-    print("[INFO] Open: http://127.0.0.1:{}".format(port))
-    print("[INFO] Recommended runtime: py -3.8 app.py")
-    app.run(host="0.0.0.0", port=port, debug=False)
+    import argparse
+    parser = argparse.ArgumentParser(description="EV Infrastructure Planning Web Application")
+    parser.add_argument("--dataset", choices=["telangana", "india"], default="telangana",
+                        help="Dataset/Model scope: 'telangana' (Port 5000) or 'india' (Port 5001)")
+    parser.add_argument("--india", action="store_true", help="Launch Pan-India 52K dataset dashboard on Port 5001")
+    parser.add_argument("--port", type=int, default=None, help="Port to run server on")
+    args, _ = parser.parse_known_args()
+
+    if args.india or args.dataset == "india" or os.environ.get("DATASET", "").lower() == "india":
+        port = args.port or int(os.environ.get("PORT", "5001"))
+        print("\n" + "=" * 80)
+        print(f"[INFO] LAUNCHING PAN-INDIA 52,718 STATIONS WEB APPLICATION")
+        print(f"[INFO] Domain: All 36 States & Union Territories of India")
+        print(f"[INFO] Open: http://127.0.0.1:{port}")
+        print("=" * 80)
+        import app_india_wide
+        app_india_wide.app.run(host="0.0.0.0", port=port, debug=False)
+    else:
+        port = args.port or int(os.environ.get("PORT", "5000"))
+        print("\n" + "=" * 80)
+        print(f"[INFO] LAUNCHING TELANGANA 33 DISTRICTS BASELINE WEB APPLICATION")
+        print(f"[INFO] Domain: Telangana State (166 Verified Public Stations)")
+        print(f"[INFO] Open: http://127.0.0.1:{port}")
+        print("=" * 80)
+        app.run(host="0.0.0.0", port=port, debug=False)

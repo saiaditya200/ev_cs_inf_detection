@@ -11,6 +11,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+            document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
+            const targetTab = document.querySelector(`.nav-tab[data-tab="${tabId}"]`);
+            const targetPane = document.getElementById(`pane-${tabId}`);
+            if (targetTab && targetPane) {
+                targetTab.classList.add("active");
+                targetPane.classList.add("active");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        }
+        window.switchTab = switchTab;
+    </script>
 </head>
 
 <body>
@@ -27,26 +41,27 @@
                         <span class="badge badge-primary">B.Tech Major Project</span>
                         <span class="badge badge-success">Telangana State (33 Districts)</span>
                         <span class="badge badge-info" id="model-status-badge">Model: Random Forest</span>
+                        <a href="http://127.0.0.1:5001" target="_blank" class="badge" style="background:#1e293b; color:#10b981; border:1px solid #059669; text-decoration:none; cursor:pointer;" title="Switch to Pan-India Master Dashboard on Port 5001">🇮🇳 Open Pan-India Master (Port 5001) ↗</a>
                     </div>
                 </div>
             </div>
             <nav class="nav-tabs" id="nav-tabs">
-                <button class="nav-tab active" data-tab="overview">
+                <button class="nav-tab active" data-tab="overview" onclick="switchTab('overview')">
                     <span class="tab-icon">📊</span> Overview
                 </button>
-                <button class="nav-tab" data-tab="predict">
+                <button class="nav-tab" data-tab="predict" onclick="switchTab('predict')">
                     <span class="tab-icon">🔍</span> Station Prediction
                 </button>
-                <button class="nav-tab" data-tab="models">
+                <button class="nav-tab" data-tab="models" onclick="switchTab('models')">
                     <span class="tab-icon">🎯</span> Model Evaluation
                 </button>
-                <button class="nav-tab" data-tab="xai">
+                <button class="nav-tab" data-tab="xai" onclick="switchTab('xai')">
                     <span class="tab-icon">💡</span> Explainability (SHAP)
                 </button>
-                <button class="nav-tab" data-tab="planning">
+                <button class="nav-tab" data-tab="planning" onclick="switchTab('planning')">
                     <span class="tab-icon">📈</span> EIPS Planning
                 </button>
-                <button class="nav-tab" data-tab="gis">
+                <button class="nav-tab" data-tab="gis" onclick="switchTab('gis')">
                     <span class="tab-icon">🗺️</span> GIS Map
                 </button>
             </nav>
@@ -734,7 +749,7 @@
             Certified Datasets & Scientific Pipeline</p>
     </footer>
 
-    <script src="script.js?v=36"></script>
+    <script src="script.js?v=final_v2"></script>
 </body>
 
 </html>
