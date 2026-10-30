@@ -182,7 +182,7 @@
   <rect x="8" y="8" width="1584" height="1584" rx="14" fill="url(#bgGrad)" stroke="#b8d3eb" stroke-width="2"/>
 
   <!-- ================= HEADER SECTION ================= -->
-  <text x="800" y="48" text-anchor="middle" font-family="'Times New Roman', Times, Georgia, serif" font-size="34" font-weight="bold" fill="#0f172a" letter-spacing="2">SYSTEM ARCHITECTURE — PAN-INDIA MASTER FRAMEWORK</text>
+  <text x="800" y="48" text-anchor="middle" font-family="'Times New Roman', Times, Georgia, serif" font-size="34" font-weight="bold" fill="#0f172a" letter-spacing="2">SYSTEM ARCHITECTURE</text>
   <text x="800" y="74" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="600" fill="#475569" letter-spacing="0.5">Explainable AI Framework for Smart EV Charging Infrastructure Planning — 52,718 Stations Across 36 States &amp; UTs</text>
 
   <!-- ================= LEFT COLUMN: DATA INPUTS (FORMAL SPECIFICATION CARDS) ================= -->
