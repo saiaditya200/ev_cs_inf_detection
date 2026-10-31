@@ -32,3 +32,4 @@ with open(readme_india_path, "w", encoding="utf-8") as f:
     f.write(text)
 
 print("Updated both README files with JPG references!")
+

@@ -54,3 +54,4 @@ if png_out.exists():
     print("Re-generated high-resolution JPGs successfully!")
 else:
     print("Failed to generate PNG screenshot:", res.stderr)
+
