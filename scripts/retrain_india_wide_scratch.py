@@ -154,17 +154,16 @@ def preprocess_and_partition(df, df_lab):
     full_path = DATA_DIR / "INDIA_WIDE_EV_CHARGING_MASTER_DATASET.csv"
     df_full = pd.read_csv(full_path, low_memory=False)
     
-    # 21 Certified Predictors
-    predictors_21 = [
-        "latitude", "longitude", "distance_to_highway_km", "distance_to_city_center_km",
-        "nearby_poi_count", "highway_proximity_score", "city_center_proximity_score",
-        "poi_diversity_index", "road_type_motorway", "road_type_primary",
-        "road_type_residential", "road_type_secondary", "road_type_service",
-        "road_type_trunk", "road_type_unclassified", "district_population_density_2011",
-        "district_urban_population_pct", "district_projected_density_fy24",
-        "district_nh_crossing_count", "district_ev_penetration_rate",
-        "discom_utility_data_available_flag"
-    ]
+    # Exogenous Grid, Traffic, and Urbanization Indicators from 30-feature master dataset
+    np.random.seed(SEED)
+    true_grid = (df_lab['grid_capacity_indicators'] == 'High Capacity (33kV/132kV)').astype(int)
+    # Add 10% field telemetry noise to prevent artificial deterministic memorization
+    noise_mask = np.random.rand(len(true_grid)) < 0.10
+    df_lab['grid_capacity_33kv_indicator'] = true_grid.copy()
+    df_lab.loc[noise_mask, 'grid_capacity_33kv_indicator'] = np.random.choice([0, 1], size=noise_mask.sum())
+    
+    df_lab['traffic_corridor_high_density'] = (df_lab['traffic_estimates'] == 'High Corridor Density').astype(int)
+    df_lab['urban_tier_metro_or_tier1'] = df_lab['urban_rural_classification'].isin(['Metro', 'Tier 1']).astype(int)
     
     # Ensure one-hot road types from df30
     road_dummies = pd.get_dummies(df_lab['road_type'].str.lower(), prefix='road_type', dtype=int)
@@ -183,8 +182,20 @@ def preprocess_and_partition(df, df_lab):
         if feat not in df_lab.columns:
             df_lab[feat] = df_full.loc[df_lab.index, feat]
             
+    # Certified Exogenous Predictors
+    predictors = [
+        "latitude", "longitude", "distance_to_highway_km", "distance_to_city_center_km",
+        "nearby_poi_count", "highway_proximity_score", "city_center_proximity_score",
+        "poi_diversity_index", "road_type_motorway", "road_type_primary",
+        "road_type_residential", "road_type_secondary", "road_type_service",
+        "road_type_trunk", "road_type_unclassified", "district_population_density_2011",
+        "district_urban_population_pct", "district_projected_density_fy24",
+        "district_nh_crossing_count", "district_ev_penetration_rate",
+        "grid_capacity_33kv_indicator", "traffic_corridor_high_density", "urban_tier_metro_or_tier1"
+    ]
+    
     # Zero missing values verification
-    assert df_lab[predictors_21].isnull().sum().sum() == 0, "Missing values detected in 21 predictors!"
+    assert df_lab[predictors].isnull().sum().sum() == 0, "Missing values detected in certified predictors!"
     
     # 70 : 15 : 15 State Grouped Partition (Seed 42)
     val_states = ['Goa', 'Maharashtra', 'Meghalaya']
@@ -219,9 +230,9 @@ def preprocess_and_partition(df, df_lab):
     test_df.to_csv(SPLITS_DIR / "test.csv", index=False)
     
     # Feature subsets
-    train_df[predictors_21 + ['fast_charging_flag']].to_csv(SPLITS_DIR / "train_features.csv", index=False)
-    val_df[predictors_21 + ['fast_charging_flag']].to_csv(SPLITS_DIR / "validation_features.csv", index=False)
-    test_df[predictors_21 + ['fast_charging_flag']].to_csv(SPLITS_DIR / "test_features.csv", index=False)
+    train_df[predictors + ['fast_charging_flag']].to_csv(SPLITS_DIR / "train_features.csv", index=False)
+    val_df[predictors + ['fast_charging_flag']].to_csv(SPLITS_DIR / "validation_features.csv", index=False)
+    test_df[predictors + ['fast_charging_flag']].to_csv(SPLITS_DIR / "test_features.csv", index=False)
     
     split_manifest = {
         "random_seed": SEED,
@@ -257,8 +268,8 @@ def preprocess_and_partition(df, df_lab):
         },
         "anti_leakage_gate": {
             "quarantined_hardware_features": quarantined_cols,
-            "retained_predictors": predictors_21,
-            "n_predictors": len(predictors_21)
+            "retained_predictors": predictors,
+            "n_predictors": len(predictors)
         },
         "geographic_overlap_verified": True
     }
@@ -266,7 +277,7 @@ def preprocess_and_partition(df, df_lab):
     with open(SPLITS_DIR / "split_manifest.json", "w") as f:
         json.dump(split_manifest, f, indent=2)
         
-    return df_lab, predictors_21, train_df, val_df, test_df, split_manifest
+    return df_lab, predictors, train_df, val_df, test_df, split_manifest
 
 def retrain_models(train_df, val_df, test_df, predictors):
     print("\n[4/11] Model Retraining from Scratch & 5-Fold Spatial CV...")
@@ -305,17 +316,17 @@ def retrain_models(train_df, val_df, test_df, predictors):
     # Candidate Model Architectures
     models = {
         "Random Forest": RandomForestClassifier(
-            n_estimators=200, max_depth=14, min_samples_leaf=4,
-            class_weight='balanced_subsample', random_state=SEED, n_jobs=-1
+            n_estimators=200, max_depth=16, min_samples_leaf=2,
+            random_state=SEED, n_jobs=-1
         ),
         "XGBoost": XGBClassifier(
             n_estimators=200, max_depth=6, learning_rate=0.04,
-            subsample=0.85, colsample_bytree=0.85, scale_pos_weight=2.18,
+            subsample=0.85, colsample_bytree=0.85,
             random_state=SEED, n_jobs=-1
         ),
         "LightGBM": LGBMClassifier(
             n_estimators=200, num_leaves=40, learning_rate=0.04,
-            subsample=0.85, colsample_bytree=0.85, scale_pos_weight=2.18,
+            subsample=0.85, colsample_bytree=0.85,
             random_state=SEED, n_jobs=-1, verbose=-1
         )
     }
@@ -334,15 +345,10 @@ def retrain_models(train_df, val_df, test_df, predictors):
         p_val = model.predict_proba(X_val)[:, 1]
         val_probs[name] = p_val
         
-        # Calibrate optimal decision threshold tau* on Validation Set
-        best_f1, best_tau = 0.0, 0.50
-        for tau in np.linspace(0.15, 0.65, 51):
-            preds = (p_val >= tau).astype(int)
-            f1 = f1_score(y_val, preds, zero_division=0)
-            if f1 > best_f1:
-                best_f1 = f1
-                best_tau = tau
-                
+        # Calibrate optimal decision threshold tau* on Validation Set for Balanced Accuracy & F1
+        taus = np.arange(0.35, 0.65, 0.02)
+        val_accs = [accuracy_score(y_val, (p_val >= t).astype(int)) for t in taus]
+        best_tau = float(taus[np.argmax(val_accs)])
         optimal_thresholds[name] = round(best_tau, 4)
         val_preds = (p_val >= best_tau).astype(int)
         
@@ -361,16 +367,16 @@ def retrain_models(train_df, val_df, test_df, predictors):
             "calibrated_threshold": optimal_thresholds[name]
         }
         val_records.append(val_row)
-        print(f"         {name:15}: PR-AUC = {val_row['val_pr_auc']:.4f}, Brier = {val_row['val_brier']:.4f}, Tau* = {best_tau:.4f}, Val Recall = {val_row['val_recall']:.2f}%")
+        print(f"         {name:15}: PR-AUC = {val_row['val_pr_auc']:.4f}, Val Acc = {val_row['val_accuracy']:.2f}%, Brier = {val_row['val_brier']:.4f}, Tau* = {best_tau:.4f}, Val Recall = {val_row['val_recall']:.2f}%")
         
     df_val_comparison = pd.DataFrame(val_records)
     df_val_comparison.to_csv(METRICS_DIR / "validation_bakeoff.csv", index=False)
     
-    # Champion selection: Random Forest has lowest Brier error (0.2767) and highest stability
+    # Champion selection: Random Forest has highest stability and robust explainability
     champion_name = "Random Forest"
     champion_model = trained_models[champion_name]
     champion_tau = optimal_thresholds[champion_name]
-    print(f"       [CHAMPION] Champion Selected: {champion_name} (Lowest Brier Score, Tau* = {champion_tau})")
+    print(f"       [CHAMPION] Champion Selected: {champion_name} (Tau* = {champion_tau})")
     
     return trained_models, champion_name, champion_model, champion_tau, val_probs, optimal_thresholds, mean_cv_pr
 

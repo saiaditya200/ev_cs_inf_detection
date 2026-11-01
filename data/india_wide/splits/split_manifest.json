@@ -102,9 +102,11 @@
       "district_projected_density_fy24",
       "district_nh_crossing_count",
       "district_ev_penetration_rate",
-      "discom_utility_data_available_flag"
+      "grid_capacity_33kv_indicator",
+      "traffic_corridor_high_density",
+      "urban_tier_metro_or_tier1"
     ],
-    "n_predictors": 21
+    "n_predictors": 23
   },
   "geographic_overlap_verified": true
 }

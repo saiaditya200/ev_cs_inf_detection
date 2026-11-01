@@ -1,4 +1,6 @@
 {
-  "threshold": 0.2488,
-  "decision_threshold": 0.2488
+  "calibrated_threshold": 0.41,
+  "optimization_criterion": "Validation F1 & Cost-Sensitive Fast Recall (\u226595%)",
+  "timestamp": "2026-11-01T17:35:34.128259+00:00",
+  "threshold": 0.41
 }

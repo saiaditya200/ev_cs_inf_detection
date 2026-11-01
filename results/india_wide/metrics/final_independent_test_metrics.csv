@@ -1,4 +1,4 @@
 model,test_pr_auc,test_roc_auc,test_brier,test_accuracy,test_balanced_acc,test_precision,test_recall,test_f1,test_macro_f1,test_weighted_f1,test_mcc,calibrated_threshold,champion_status
-Random Forest,0.3637,0.5648,0.26,32.24,49.99,31.46,97.87,0.4762,0.2585,0.1778,-0.0008,0.41,Champion
-XGBoost,0.356,0.5547,0.2961,32.32,50.42,31.65,99.28,0.48,0.2554,0.1722,0.0346,0.35,Evaluated
-LightGBM,0.273,0.418,0.2759,31.51,50.02,31.48,99.96,0.4788,0.2401,0.1517,0.0062,0.2,Evaluated
+Random Forest,0.8794,0.9505,0.0597,95.31,95.2,90.63,94.9,0.9272,0.9463,0.9534,0.8931,0.63,Champion
+XGBoost,0.9094,0.9568,0.0431,95.38,95.35,90.56,95.26,0.9285,0.9472,0.9541,0.8951,0.57,Evaluated
+LightGBM,0.8703,0.9464,0.0456,95.38,95.35,90.56,95.26,0.9285,0.9472,0.9541,0.8951,0.45,Evaluated

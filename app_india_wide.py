@@ -101,7 +101,8 @@ def initialize_backend():
         thresh_path = MODELS_DIR / "selected_threshold.json"
         if thresh_path.exists():
             with open(thresh_path) as f:
-                THRESHOLD = float(json.load(f).get("threshold", 0.2488))
+                t_data = json.load(f)
+                THRESHOLD = float(t_data.get("calibrated_threshold", t_data.get("threshold", 0.6300)))
 
         # 3. Load Trained Champion Model
         model_path = MODELS_DIR / "champion_model.joblib"
@@ -348,6 +349,12 @@ def api_predict():
     ev_pen = float(state_row.get("ev_pen", state_row.get("district_ev_penetration_rate", 4.5))) if state_row is not None else 4.5
     nh_count = int(state_row.get("nh_count", state_row.get("district_nh_crossing_count", 15))) if state_row is not None else 15
 
+    grid_cap_kw = float(data.get("grid_capacity_kw", 250.0))
+    grid_33kv = 1 if grid_cap_kw >= 150.0 else 0
+
+    traffic_idx = float(data.get("traffic_density_index", 65.0))
+    traffic_high = 1 if traffic_idx >= 70.0 else 0
+
     feat_row = {
         "latitude": lat,
         "longitude": lon,
@@ -369,7 +376,10 @@ def api_predict():
         "district_projected_density_fy24": pop_dens * 1.15,
         "district_nh_crossing_count": nh_count,
         "district_ev_penetration_rate": ev_pen,
-        "discom_utility_data_available_flag": 1
+        "discom_utility_data_available_flag": 1,
+        "grid_capacity_33kv_indicator": grid_33kv,
+        "traffic_corridor_high_density": traffic_high,
+        "urban_tier_metro_or_tier1": 1
     }
 
     df_feat = pd.DataFrame([feat_row])[PREDICTORS_21]

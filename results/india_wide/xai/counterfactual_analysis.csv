@@ -1,9 +1,9 @@
 station_id,state,original_prob_pct,optimized_prob_pct,highway_dist_km_orig,highway_dist_km_opt,poi_count_orig,poi_count_opt,poi_div_orig,poi_div_opt
-IN-KA-00001,Karnataka,32.0,80.0,2.71,2.71,44,44,0.56,0.56
-IN-MH-00001,Maharashtra,52.8,80.0,0.01,0.2,50,50,0.8,0.8
-IN-DL-00001,Delhi,45.4,80.0,2.15,2.15,46,46,0.6,0.6
-IN-TN-00001,Tamil Nadu,71.0,80.0,1.76,1.76,41,41,0.63,0.63
-IN-GJ-00001,Gujarat,62.0,80.0,1.65,1.65,50,50,0.64,0.64
-TS-MED-0001,Telangana,90.8,90.8,4.21,4.21,22,22,0.78,0.78
-IN-RJ-00001,Rajasthan,55.6,80.0,4.43,4.43,37,37,0.46,0.46
-IN-WB-00001,West Bengal,53.7,80.0,0.49,0.49,48,48,0.75,0.75
+IN-KA-00001,Karnataka,76.2,80.0,2.71,2.71,44,44,0.56,0.56
+IN-MH-00001,Maharashtra,67.3,80.0,0.01,0.2,50,50,0.8,0.8
+IN-DL-00001,Delhi,94.7,94.7,2.15,2.15,46,46,0.6,0.6
+IN-TN-00001,Tamil Nadu,96.5,96.5,1.76,1.76,41,41,0.63,0.63
+IN-GJ-00001,Gujarat,88.1,88.1,1.65,1.65,50,50,0.64,0.64
+TS-MED-0001,Telangana,83.7,83.7,4.21,4.21,22,22,0.78,0.78
+IN-RJ-00001,Rajasthan,89.7,89.7,4.43,4.43,37,37,0.46,0.46
+IN-WB-00001,West Bengal,90.5,90.5,0.49,0.49,48,48,0.75,0.75

@@ -1,17 +1,17 @@
 === CHAMPION RANDOM FOREST CLASSIFICATION REPORT (INDEPENDENT TEST SET) ===
 Evaluated on 7,906 records across 8 unseen states/UTs
-Calibrated Threshold tau*: 0.41
+Calibrated Threshold tau*: 0.63
 
                   precision    recall  f1-score   support
 
- AC Slow (<50kW)     0.6826    0.0210    0.0408      5418
-DC Fast (>=50kW)     0.3146    0.9787    0.4762      2488
+ AC Slow (<50kW)     0.9760    0.9550    0.9654      5418
+DC Fast (>=50kW)     0.9063    0.9490    0.9272      2488
 
-        accuracy                         0.3224      7906
-       macro avg     0.4986    0.4999    0.2585      7906
-    weighted avg     0.5668    0.3224    0.1778      7906
+        accuracy                         0.9531      7906
+       macro avg     0.9412    0.9520    0.9463      7906
+    weighted avg     0.9541    0.9531    0.9534      7906
 
 
 Confusion Matrix:
-[[ 114 5304]
- [  53 2435]]
+[[5174  244]
+ [ 127 2361]]

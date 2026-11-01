@@ -22,5 +22,10 @@
     "district_ev_penetration_rate",
     "discom_utility_data_available_flag"
   ],
-  "n_predictors": 21
+  "n_predictors": 21,
+  "target_variable": "fast_charging_flag",
+  "classes": [
+    "AC Slow (<50kW)",
+    "DC Fast (>=50kW)"
+  ]
 }

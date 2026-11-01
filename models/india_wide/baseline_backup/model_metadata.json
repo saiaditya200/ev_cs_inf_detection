@@ -1,14 +1,17 @@
 {
-  "selected_champion_model": "Random_Forest",
-  "decision_threshold": 0.2488,
-  "training_samples": 52706,
-  "training_states": 36,
-  "n_predictors": 21,
-  "metrics": {
-    "outer_test_pr_auc": 0.3118,
-    "outer_test_roc_auc": 0.4911,
-    "outer_test_accuracy": 0.3164,
-    "outer_test_macro_f1": 0.2432
-  },
-  "timestamp": "2026-10-30T05:57:50.045530+00:00"
+  "model_name": "Random Forest",
+  "status": "Champion",
+  "n_estimators": 200,
+  "max_depth": 14,
+  "min_samples_leaf": 4,
+  "class_weight": "balanced_subsample",
+  "calibrated_threshold": 0.41,
+  "dev_cv_pr_auc": 0.341,
+  "test_pr_auc": 0.3637,
+  "test_roc_auc": 0.5648,
+  "test_accuracy": 32.24,
+  "test_recall": 97.87,
+  "test_precision": 31.46,
+  "test_brier": 0.26,
+  "retrained_at": "2026-11-01T17:35:34.132153+00:00"
 }
