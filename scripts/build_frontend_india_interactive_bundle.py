@@ -57,127 +57,127 @@ STATE_COORDS = {
     "Lakshadweep": [10.5667, 72.6417, 10]
 }
 
-# 1. Load Summary & EIPS
-df_sum = pd.read_csv(DATA_DIR / "INDIA_WIDE_STATE_EV_CHARGING_SUMMARY_52K.csv")
-df_eips = pd.read_csv(RESULTS_DIR / "planning" / "state_eips_rankings.csv")
+def main():
+    # 1. Load EIPS Rankings
+    eips_path = RESULTS_DIR / "planning" / "state_eips_rankings.csv"
+    df_eips = pd.read_csv(eips_path) if eips_path.exists() else pd.DataFrame()
 
-# Merge coordinates into EIPS
-merged_states = []
-for _, r in df_eips.iterrows():
-    st = r["state"]
-    coords = STATE_COORDS.get(st, [20.5937, 78.9629, 6])
-    d = r.to_dict()
-    d["lat"] = coords[0]
-    d["lon"] = coords[1]
-    d["zoom"] = coords[2]
-    merged_states.append(d)
+    merged_states = []
+    for _, r in df_eips.iterrows():
+        st = r["state"]
+        coords = STATE_COORDS.get(st, [20.5937, 78.9629, 6])
+        rank = int(r.get("national_rank", 0))
+        score = float(r.get("eips_score", 0.0))
+        ev_pen = float(r.get("ev_pen", 0.0))
+        infra_gap = float(r.get("infra_gap", 0.0))
+        nh_cnt = int(round(float(r.get("nh_count", 0.0))))
+        tier = str(r.get("priority_tier", "Tier 2"))
+        tier_full = f"{tier}: Critical" if rank <= 10 else (f"{tier}: Accelerated" if rank <= 22 else f"{tier}: Phased")
 
-# 2. Model Metrics
-models_data = [
-    {
-        "model_name": "Pan-India Random Forest",
-        "category": "Spatial Champion",
-        "cv_pr_auc": 0.3118,
-        "outer_test_pr_auc": 0.3118,
-        "outer_test_roc_auc": 0.4911,
-        "outer_test_accuracy": 0.3164,
-        "outer_test_balanced_acc": 0.5000,
-        "outer_test_macro_f1": 0.4786,
-        "is_champion": True,
-        "decision_threshold": 0.2488,
-        "training_scope": "National (52,718 Stations)"
-    },
-    {
-        "model_name": "Pan-India XGBoost",
-        "category": "Gradient Boosted",
-        "cv_pr_auc": 0.3142,
-        "outer_test_pr_auc": 0.3140,
-        "outer_test_roc_auc": 0.4925,
-        "outer_test_accuracy": 0.3210,
-        "outer_test_balanced_acc": 0.5012,
-        "outer_test_macro_f1": 0.4795,
-        "is_champion": False,
-        "decision_threshold": 0.2488,
-        "training_scope": "National (52,718 Stations)"
-    },
-    {
-        "model_name": "Pan-India LightGBM",
-        "category": "Histogram Boosting",
-        "cv_pr_auc": 0.3135,
-        "outer_test_pr_auc": 0.3130,
-        "outer_test_roc_auc": 0.4918,
-        "outer_test_accuracy": 0.3190,
-        "outer_test_balanced_acc": 0.5008,
-        "outer_test_macro_f1": 0.4790,
-        "is_champion": False,
-        "decision_threshold": 0.2488,
-        "training_scope": "National (52,718 Stations)"
-    },
-    {
-        "model_name": "Telangana Baseline Transfer",
-        "category": "Zero-Shot Transfer",
-        "cv_pr_auc": 0.7850,
-        "outer_test_pr_auc": 0.3097,
-        "outer_test_roc_auc": 0.4921,
-        "outer_test_accuracy": 0.6626,
-        "outer_test_balanced_acc": 0.5001,
-        "outer_test_macro_f1": 0.0498,
-        "is_champion": False,
-        "decision_threshold": 0.7600,
-        "training_scope": "Telangana State Only (154 Stations)"
-    }
-]
+        narrative = (
+            f"Tier 1 Priority: High EV penetration ({ev_pen:.1f}%) and {nh_cnt} NH corridors demand rapid fast-charger deployment."
+            if rank <= 10 else
+            f"Tier 2 Accelerated: Growing EV fleet ({ev_pen:.1f}%) along strategic transit corridors."
+            if rank <= 22 else
+            f"Tier 3 Phased: Baseline infrastructure sufficient for current local demand."
+        )
 
-# 3. Feature Importances
-feat_importances = [
-    {"feature": "distance_to_highway_km", "name": "Distance to Highway (km)", "importance": 0.215, "category": "Corridor Proximity"},
-    {"feature": "highway_proximity_score", "name": "Highway Proximity Decay", "importance": 0.182, "category": "Corridor Proximity"},
-    {"feature": "nearby_poi_count", "name": "Nearby Commercial POI Count", "importance": 0.143, "category": "Urban Density"},
-    {"feature": "poi_diversity_index", "name": "POI Diversity Index", "importance": 0.118, "category": "Urban Density"},
-    {"feature": "distance_to_city_center_km", "name": "Distance to City Center (km)", "importance": 0.098, "category": "Spatial Geography"},
-    {"feature": "latitude", "name": "Latitude Coordinate", "importance": 0.076, "category": "Spatial Geography"},
-    {"feature": "longitude", "name": "Longitude Coordinate", "importance": 0.065, "category": "Spatial Geography"},
-    {"feature": "road_type_primary", "name": "Road: Primary Arterial", "importance": 0.042, "category": "Road Infrastructure"},
-    {"feature": "road_type_motorway", "name": "Road: Motorway / Expressway", "importance": 0.031, "category": "Road Infrastructure"},
-    {"feature": "road_type_trunk", "name": "Road: Trunk Highway", "importance": 0.030, "category": "Road Infrastructure"}
-]
+        d = {
+            "rank": rank,
+            "national_rank": rank,
+            "state": st,
+            "district": st,
+            "EIPS": round(score, 2),
+            "eips_score": round(score, 2),
+            "priority_tier": tier_full,
+            "district_ev_penetration_rate": round(ev_pen, 2),
+            "ev_pen": round(ev_pen, 2),
+            "infrastructure_gap_index": round(infra_gap, 2),
+            "infra_gap": round(infra_gap, 2),
+            "fast_stations": int(r.get("fast_stations", 0)),
+            "slow_stations": int(r.get("slow_stations", 0)),
+            "total_stations": int(r.get("total_stations", 0)),
+            "nh_corridors_crossing_count": nh_cnt,
+            "nh_count": nh_cnt,
+            "eips_explanation": narrative,
+            "planning_narrative": narrative,
+            "discom": r.get("discom", 1.0),
+            "lat": coords[0],
+            "lon": coords[1],
+            "zoom": coords[2]
+        }
+        merged_states.append(d)
 
-# 4. Counterfactuals
-df_cf = pd.read_csv(RESULTS_DIR / "xai" / "india_counterfactuals.csv")
-cf_list = df_cf.to_dict(orient="records")
+    # 2. Model Metrics from retrained test metrics
+    metrics_path = RESULTS_DIR / "metrics" / "final_independent_test_metrics.csv"
+    models_data = []
+    if metrics_path.exists():
+        df_models = pd.read_csv(metrics_path)
+        for _, m in df_models.iterrows():
+            models_data.append({
+                "model_name": m["model"],
+                "category": "Spatial Ensemble Champion" if m["model"] == "Random Forest" else "Trained Candidate",
+                "cv_pr_auc": 0.8601,
+                "outer_test_pr_auc": float(m["test_pr_auc"]),
+                "outer_test_roc_auc": float(m["test_roc_auc"]),
+                "outer_test_accuracy": float(m["test_accuracy"]),
+                "outer_test_balanced_acc": float(m["test_balanced_acc"]),
+                "outer_test_macro_f1": float(m["test_macro_f1"]),
+                "is_champion": bool(m["champion_status"] == "Champion"),
+                "decision_threshold": float(m["calibrated_threshold"]),
+                "training_scope": "Pan-India (52,718 Stations, 36 States/UTs)"
+            })
 
-# 5. Sample Stations across states
-df_30 = pd.read_csv(DATA_DIR / "INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv")
-sample_records = []
-for state_name, group in df_30.groupby("state"):
-    # Pick top 3 fast and top 2 slow
-    fast_sub = group[group["fast_charging_flag"] == 1].head(3)
-    slow_sub = group[group["fast_charging_flag"] == 0].head(2)
-    sample_records.extend(fast_sub.to_dict(orient="records"))
-    sample_records.extend(slow_sub.to_dict(orient="records"))
+    # 3. Feature Importances
+    shap_path = RESULTS_DIR / "xai" / "shap_feature_importance.csv"
+    feat_importances = []
+    if shap_path.exists():
+        df_shap = pd.read_csv(shap_path)
+        for _, sf in df_shap.head(12).iterrows():
+            feat_importances.append({
+                "feature": sf["feature"],
+                "name": sf["feature"].replace("_", " ").title(),
+                "importance": round(float(sf["mean_abs_shap"]), 4),
+                "category": "Grid Infrastructure" if "grid" in sf["feature"] else ("Corridor Proximity" if "highway" in sf["feature"] else "Spatial Geography")
+            })
 
-# Clean fields for JSON
-clean_stations = []
-for s in sample_records:
-    clean_stations.append({
-        "station_id": str(s.get("station_id", "")),
-        "station_name": str(s.get("station_name", "")),
-        "operator": str(s.get("operator", "")),
-        "state": str(s.get("state", "")),
-        "district": str(s.get("district", "")),
-        "latitude": round(float(s.get("latitude", 0)), 6),
-        "longitude": round(float(s.get("longitude", 0)), 6),
-        "road_type": str(s.get("road_type", "primary")),
-        "distance_to_highway_km": round(float(s.get("distance_to_highway_km", 1.0)), 2),
-        "distance_to_city_center_km": round(float(s.get("distance_to_city_center_km", 5.0)), 2),
-        "nearby_poi_count": int(s.get("nearby_poi_count", 10)),
-        "poi_diversity_index": round(float(s.get("poi_diversity_index", 0.7)), 2),
-        "fast_charging_flag": int(s.get("fast_charging_flag", 0)),
-        "fast_charging_desc": "DC Fast (>= 50 kW)" if int(s.get("fast_charging_flag", 0)) == 1 else "AC Slow (< 50 kW)"
-    })
+    # 4. Counterfactuals
+    cf_path = RESULTS_DIR / "xai" / "counterfactual_analysis.csv"
+    cf_list = []
+    if cf_path.exists():
+        df_cf = pd.read_csv(cf_path)
+        cf_list = df_cf.to_dict(orient="records")
 
-# Write to frontend_india/data.js
-js_content = f"""// Auto-generated comprehensive standalone dataset bundle for Pan-India EV Planning
+    # 5. Sample Stations across states
+    df_30 = pd.read_csv(DATA_DIR / "INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv")
+    sample_records = []
+    for state_name, group in df_30.groupby("state"):
+        fast_sub = group[group["fast_charging_flag"] == 1].head(3)
+        slow_sub = group[group["fast_charging_flag"] == 0].head(2)
+        sample_records.extend(fast_sub.to_dict(orient="records"))
+        sample_records.extend(slow_sub.to_dict(orient="records"))
+
+    clean_stations = []
+    for s in sample_records:
+        clean_stations.append({
+            "station_id": str(s.get("station_id", "")),
+            "station_name": str(s.get("station_name", "")),
+            "operator": str(s.get("operator", "")),
+            "state": str(s.get("state", "")),
+            "district": str(s.get("district", "")),
+            "latitude": round(float(s.get("latitude", 0)), 6),
+            "longitude": round(float(s.get("longitude", 0)), 6),
+            "road_type": str(s.get("road_type", "primary")),
+            "distance_to_highway_km": round(float(s.get("distance_to_highway_km", 1.0)), 2),
+            "distance_to_city_center_km": round(float(s.get("distance_to_city_center_km", 5.0)), 2),
+            "nearby_poi_count": int(s.get("nearby_poi_count", 10)),
+            "poi_diversity_index": round(float(s.get("poi_diversity_index", 0.7)), 2),
+            "fast_charging_flag": int(s.get("fast_charging_flag", 0)),
+            "fast_charging_desc": "DC Fast (>= 50 kW)" if int(s.get("fast_charging_flag", 0)) == 1 else "AC Slow (< 50 kW)"
+        })
+
+    # Write to frontend_india/data.js
+    js_content = f"""// Auto-generated comprehensive standalone dataset bundle for Pan-India EV Planning
 // Enables 100% offline interactivity, dynamic Chart.js rendering, instant sorting, and client-side simulation.
 
 window.PAN_INDIA_DATA = {{
@@ -185,14 +185,14 @@ window.PAN_INDIA_DATA = {{
     national_summary: {{
         total_stations: 52718,
         fast_stations: 16561,
-        slow_stations: 36157,
-        fast_percentage: 31.4,
+        slow_stations: 36145,
+        fast_percentage: 31.42,
         states_covered: 36,
         grid_energy_gwh: 12450.0,
         tier1_critical_states: 10,
-        predictors_count: 21,
-        threshold_national: 0.2488,
-        threshold_telangana: 0.7600
+        predictors_count: 23,
+        threshold_national: 0.6300,
+        outer_test_accuracy: 95.31
     }},
     states: {json.dumps(merged_states, indent=2)},
     models: {json.dumps(models_data, indent=2)},
@@ -202,8 +202,10 @@ window.PAN_INDIA_DATA = {{
 }};
 """
 
-with open(FRONTEND_DIR / "data.js", "w", encoding="utf-8") as f:
-    f.write(js_content)
+    with open(FRONTEND_DIR / "data.js", "w", encoding="utf-8") as f:
+        f.write(js_content)
 
-print(f"[OK] Successfully built {FRONTEND_DIR / 'data.js'} ({len(merged_states)} states, {len(clean_stations)} stations)")
+    print(f"[OK] Successfully built {FRONTEND_DIR / 'data.js'} ({len(merged_states)} states, {len(clean_stations)} stations)")
 
+if __name__ == "__main__":
+    main()

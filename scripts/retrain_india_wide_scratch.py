@@ -718,7 +718,12 @@ def generate_gis_visualizations(df_lab):
     
     # Interactive Folium Map
     print("       Generating Interactive Folium GIS Map (Sample of 2,000 points)...")
-    m = folium.Map(location=[22.5, 79.5], zoom_start=5, tiles="CartoDB positron")
+    m = folium.Map(
+        location=[22.5, 79.5],
+        zoom_start=5,
+        tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    )
     
     sample_df = df_lab.sample(n=min(2500, len(df_lab)), random_state=SEED)
     cluster = MarkerCluster().add_to(m)

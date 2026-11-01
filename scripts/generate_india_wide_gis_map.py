@@ -60,21 +60,15 @@ def main():
     for _, r in df_summary.iterrows():
         state_meta_map[r["state_or_ut"].strip().lower()] = r.to_dict()
 
-    # 2. Initialize Folium Map centered on India
+    # 2. Initialize Folium Map centered on India (100% Free OpenStreetMap Base, No API Key Required)
     india_map = folium.Map(
         location=[22.50, 82.50],
         zoom_start=5,
-        tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-        attr="&copy; <a href='https://carto.com/'>CARTO</a>",
-        name="CARTO Dark Matter (High Contrast GIS)",
+        tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attr="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
+        name="OpenStreetMap Standard (National Grid)",
         control_scale=True
     )
-
-    folium.TileLayer(
-        tiles="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        attr="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
-        name="OpenStreetMap Standard"
-    ).add_to(india_map)
 
     # Feature Groups
     fg_boundaries = folium.FeatureGroup(name="🇮🇳 Indian State Outlines (36 States & UTs)", show=True)

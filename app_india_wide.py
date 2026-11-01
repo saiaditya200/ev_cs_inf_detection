@@ -223,8 +223,62 @@ def api_health():
     }))
 
 @app.route("/api/planning", methods=["GET"])
+@app.route("/api/planning/rankings", methods=["GET"])
 def api_planning():
-    eips_list = DF_EIPS.to_dict(orient="records") if DF_EIPS is not None else []
+    eips_list = []
+    if DF_EIPS is not None:
+        for r in DF_EIPS.to_dict(orient="records"):
+            rank = int(r.get("national_rank", r.get("rank", 0)))
+            score = float(r.get("eips_score", r.get("EIPS", 0.0)))
+            ev_pen = float(r.get("ev_pen", r.get("district_ev_penetration_rate", 0.0)))
+            infra_gap = float(r.get("infra_gap", r.get("infrastructure_gap_index", 0.0)))
+            nh_cnt = int(round(float(r.get("nh_count", r.get("nh_corridors_crossing_count", 0.0)))))
+            tier = str(r.get("priority_tier", "Tier 2"))
+            if ":" not in tier:
+                if rank <= 10:
+                    tier_full = f"{tier}: Critical"
+                elif rank <= 22:
+                    tier_full = f"{tier}: Accelerated"
+                else:
+                    tier_full = f"{tier}: Phased"
+            else:
+                tier_full = tier
+                
+            state_name = r.get("state", r.get("district", "Unknown"))
+            fast_st = int(r.get("fast_stations", 0))
+            total_st = int(r.get("total_stations", 0))
+            slow_st = int(r.get("slow_stations", total_st - fast_st))
+            
+            if rank <= 10:
+                narrative = f"Tier 1 Critical: Elevated EV adoption intensity ({ev_pen:.1f}%) and {nh_cnt} major highway corridors mandate priority DC Fast infrastructure deployment."
+            elif rank <= 22:
+                narrative = f"Tier 2 Accelerated: Growing EV fleet ({ev_pen:.1f}%) along national transit corridors requires accelerated high-throughput charging hub expansion."
+            else:
+                narrative = f"Tier 3 Phased: Baseline charging network ({slow_st} slow stations) satisfies current local EV density ({ev_pen:.1f}%)."
+                
+            enriched_row = {
+                "rank": rank,
+                "national_rank": rank,
+                "state": state_name,
+                "district": state_name,
+                "EIPS": round(score, 2),
+                "eips_score": round(score, 2),
+                "priority_tier": tier_full,
+                "district_ev_penetration_rate": round(ev_pen, 2),
+                "ev_pen": round(ev_pen, 2),
+                "infrastructure_gap_index": round(infra_gap, 2),
+                "infra_gap": round(infra_gap, 2),
+                "fast_stations": fast_st,
+                "slow_stations": slow_st,
+                "total_stations": total_st,
+                "nh_corridors_crossing_count": nh_cnt,
+                "nh_count": nh_cnt,
+                "eips_explanation": narrative,
+                "planning_narrative": narrative,
+                "discom": r.get("discom", 1.0)
+            }
+            eips_list.append(enriched_row)
+            
     ahp_path = PLANNING_DIR / "ahp_weights.csv"
     ahp_weights = pd.read_csv(ahp_path).to_dict(orient="records") if ahp_path.exists() else []
     return jsonify(_json_safe({

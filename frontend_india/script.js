@@ -108,13 +108,15 @@ async function fetchPlanningData() {
         // 1. Populate State dropdown in form
         const distSelect = document.getElementById("st-district");
         distSelect.innerHTML = "";
-        const states = data.district_rankings || [];
+        const states = data.district_rankings || data.eips_rankings || [];
 
         states.forEach(d => {
             const opt = document.createElement("option");
-            const stName = d.state || d.district;
+            const stName = d.state || d.district || "Unknown";
+            const rank = parseInt(d.national_rank || d.rank || 0);
+            const eips = parseFloat(d.eips_score !== undefined ? d.eips_score : (d.EIPS || 0)).toFixed(1);
             opt.value = stName;
-            opt.textContent = `${stName} (Rank #${d.rank}, EIPS: ${parseFloat(d.EIPS).toFixed(1)})`;
+            opt.textContent = `${stName} (Rank #${rank}, EIPS: ${eips})`;
             if (stName === "Karnataka") opt.selected = true;
             distSelect.appendChild(opt);
         });
@@ -125,19 +127,27 @@ async function fetchPlanningData() {
 
         states.forEach(r => {
             const tr = document.createElement("tr");
-            const rank = parseInt(r.rank);
+            const rank = parseInt(r.national_rank !== undefined ? r.national_rank : (r.rank || 0));
             const tierBadgeClass = rank <= 10 ? "badge-danger" : rank <= 22 ? "badge-warning" : "badge-success";
-            const stName = r.state || r.district;
+            const stName = r.state || r.district || "Unknown";
+            const eipsVal = parseFloat(r.eips_score !== undefined ? r.eips_score : (r.EIPS || 0)).toFixed(2);
+            const tierStr = (r.priority_tier || (rank <= 10 ? "Tier 1" : rank <= 22 ? "Tier 2" : "Tier 3")).split(":")[0];
+            const evPen = parseFloat(r.ev_pen !== undefined ? r.ev_pen : (r.district_ev_penetration_rate || 0)).toFixed(2);
+            const infraGap = parseFloat(r.infra_gap !== undefined ? r.infra_gap : (r.infrastructure_gap_index || 0)).toFixed(2);
+            const fastStations = Number(r.fast_stations || 0).toLocaleString();
+            const nhCount = r.nh_count !== undefined ? r.nh_count : (r.nh_corridors_crossing_count !== undefined ? r.nh_corridors_crossing_count : 0);
+            const narrative = r.planning_narrative || r.eips_explanation || (rank <= 10 ? "Tier 1 Critical infrastructure deployment priority." : "Sufficient baseline charging network.");
+
             tr.innerHTML = `
                 <td><b>#${rank}</b></td>
                 <td><b>${stName}</b></td>
-                <td><span style="font-family:'JetBrains Mono'; font-weight:700;">${parseFloat(r.EIPS).toFixed(2)}</span></td>
-                <td><span class="badge ${tierBadgeClass}">${r.priority_tier.split(":")[0]}</span></td>
-                <td>${parseFloat(r.district_ev_penetration_rate).toFixed(2)}</td>
-                <td><b>${parseFloat(r.infrastructure_gap_index).toFixed(2)}</b></td>
-                <td>${Number(r.fast_stations).toLocaleString()}</td>
-                <td>${r.nh_corridors_crossing_count}</td>
-                <td style="max-width:320px; font-size:0.78rem; color:#9ca3af; white-space:normal;">${r.eips_explanation}</td>
+                <td><span style="font-family:'JetBrains Mono'; font-weight:700;">${eipsVal}</span></td>
+                <td><span class="badge ${tierBadgeClass}">${tierStr}</span></td>
+                <td>${evPen}%</td>
+                <td><b>${infraGap}</b></td>
+                <td>${fastStations}</td>
+                <td>${nhCount}</td>
+                <td style="max-width:320px; font-size:0.78rem; color:#9ca3af; white-space:normal;">${narrative}</td>
             `;
             tbody.appendChild(tr);
         });
