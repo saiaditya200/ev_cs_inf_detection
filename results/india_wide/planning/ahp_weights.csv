@@ -1,5 +1,5 @@
-Criterion,Weight,Method
-EV Volume & Infrastructure Density,0.35,AHP Priority Vector
-Adoption & EV Penetration Rate,0.25,AHP Priority Vector
-Highway Corridor Accessibility,0.2,AHP Priority Vector
-Fast-Charging Infrastructure Gap,0.2,AHP Priority Vector
+criterion,weight,saaty_cr
+Spatial EV Adoption Context,0.3,0.000891
+Electrical Grid Readiness,0.25,0.000891
+National Highway Connectivity,0.25,0.000891
+Infrastructure Deficit Gap,0.2,0.000891

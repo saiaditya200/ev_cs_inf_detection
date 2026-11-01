@@ -178,6 +178,22 @@ def api_health():
     if DF_EIPS is not None and "priority_tier" in DF_EIPS.columns:
         tier1_count = int(DF_EIPS["priority_tier"].str.contains("Tier 1").sum())
 
+    meta_path = MODELS_DIR / "model_metadata.json"
+    cv_pr = 0.3410
+    test_pr = 0.3637
+    test_roc = 0.5648
+    test_acc = 32.24
+    if meta_path.exists():
+        try:
+            with open(meta_path) as mf:
+                mdata = json.load(mf)
+                cv_pr = mdata.get("dev_cv_pr_auc", cv_pr)
+                test_pr = mdata.get("test_pr_auc", test_pr)
+                test_roc = mdata.get("test_roc_auc", test_roc)
+                test_acc = mdata.get("test_accuracy", test_acc)
+        except Exception:
+            pass
+
     return jsonify(_json_safe({
         "status": "healthy" if BACKEND_ERROR is None and CHAMPION_MODEL is not None else "degraded",
         "project_title": PROJECT_TITLE,
@@ -197,10 +213,10 @@ def api_health():
         "n_predictors": len(PREDICTORS_21),
         "decision_threshold": THRESHOLD,
         "selected_model": "Random_Forest",
-        "cv_pr_auc": 0.3416,
-        "outer_test_pr_auc": 0.3118,
-        "outer_test_roc_auc": 0.4911,
-        "outer_test_accuracy": 0.3164,
+        "cv_pr_auc": cv_pr,
+        "outer_test_pr_auc": test_pr,
+        "outer_test_roc_auc": test_roc,
+        "outer_test_accuracy": test_acc,
         "tier1_districts_count": tier1_count,
         "backend_error": BACKEND_ERROR
     }))
@@ -223,16 +239,17 @@ def api_metrics():
     model_records = []
     if DF_METRICS is not None:
         for _, r in DF_METRICS.iterrows():
+            m_name = r.get("model_name", r.get("model", "Unknown"))
             model_records.append({
-                "model_name": r["model_name"],
-                "cv_pr_auc": r.get("development_cv_pr_auc", 0.3416),
-                "outer_test_pr_auc": r.get("outer_test_pr_auc", 0.3118),
-                "outer_test_roc_auc": r.get("outer_test_roc_auc", 0.4911),
-                "outer_test_accuracy": r.get("outer_test_accuracy", 0.3164),
-                "outer_test_balanced_acc": r.get("outer_test_balanced_acc", 0.5012),
-                "outer_test_macro_f1": r.get("outer_test_macro_f1", 0.4786),
-                "decision_threshold": r.get("decision_threshold", THRESHOLD),
-                "is_champion": bool(r.get("is_champion", False))
+                "model_name": m_name,
+                "cv_pr_auc": r.get("development_cv_pr_auc", r.get("cv_pr_auc", 0.3410)),
+                "outer_test_pr_auc": r.get("outer_test_pr_auc", r.get("test_pr_auc", 0.3637)),
+                "outer_test_roc_auc": r.get("outer_test_roc_auc", r.get("test_roc_auc", 0.5648)),
+                "outer_test_accuracy": r.get("outer_test_accuracy", r.get("test_accuracy", 32.24)),
+                "outer_test_balanced_acc": r.get("outer_test_balanced_acc", r.get("test_balanced_acc", 49.99)),
+                "outer_test_macro_f1": r.get("outer_test_macro_f1", r.get("test_macro_f1", 0.2585)),
+                "decision_threshold": r.get("decision_threshold", r.get("calibrated_threshold", THRESHOLD)),
+                "is_champion": bool(r.get("is_champion", r.get("champion_status") == "Champion"))
             })
     else:
         model_records = [
@@ -328,8 +345,8 @@ def api_predict():
 
     pop_dens = 1100.0
     urban_pct = 60.0
-    ev_pen = float(state_row["district_ev_penetration_rate"]) if state_row is not None else 4.5
-    nh_count = int(state_row["nh_corridors_crossing_count"]) if state_row is not None else 15
+    ev_pen = float(state_row.get("ev_pen", state_row.get("district_ev_penetration_rate", 4.5))) if state_row is not None else 4.5
+    nh_count = int(state_row.get("nh_count", state_row.get("district_nh_crossing_count", 15))) if state_row is not None else 15
 
     feat_row = {
         "latitude": lat,
@@ -421,11 +438,11 @@ def api_predict():
     reg_context = {
         "district": st_name,
         "state": st_name,
-        "eips_score": float(state_row["EIPS"]) if state_row is not None else 65.0,
-        "eips_rank": int(state_row["rank"]) if state_row is not None else 10,
-        "priority_tier": str(state_row["priority_tier"]) if state_row is not None else "Tier 1: Critical",
-        "infrastructure_gap_index": float(state_row["infrastructure_gap_index"]) if state_row is not None else 6.5,
-        "existing_fast_stations": int(state_row["fast_stations"]) if state_row is not None else 500
+        "eips_score": float(state_row.get("eips_score", state_row.get("EIPS", 65.0))) if state_row is not None else 65.0,
+        "eips_rank": int(state_row.get("national_rank", state_row.get("rank", 10))) if state_row is not None else 10,
+        "priority_tier": str(state_row.get("priority_tier", "Tier 1")) if state_row is not None else "Tier 1: Critical",
+        "infrastructure_gap_index": float(state_row.get("infra_gap", state_row.get("infrastructure_gap_index", 6.5))) if state_row is not None else 6.5,
+        "existing_fast_stations": int(state_row.get("fast_stations", 500)) if state_row is not None else 500
     }
 
     response_payload = {

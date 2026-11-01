@@ -1,0 +1,14 @@
+{
+  "selected_champion_model": "Random_Forest",
+  "decision_threshold": 0.2488,
+  "training_samples": 52706,
+  "training_states": 36,
+  "n_predictors": 21,
+  "metrics": {
+    "outer_test_pr_auc": 0.3118,
+    "outer_test_roc_auc": 0.4911,
+    "outer_test_accuracy": 0.3164,
+    "outer_test_macro_f1": 0.2432
+  },
+  "timestamp": "2026-10-30T05:57:50.045530+00:00"
+}

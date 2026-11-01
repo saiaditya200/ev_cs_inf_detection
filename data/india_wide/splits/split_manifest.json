@@ -1,0 +1,110 @@
+{
+  "random_seed": 42,
+  "total_records": 52706,
+  "splits": {
+    "training": {
+      "records": 36873,
+      "percentage": 69.96,
+      "fast_charging_count": 11591,
+      "slow_charging_count": 25282,
+      "fast_charging_pct": 31.43,
+      "state_count": 25,
+      "states": [
+        "Andhra Pradesh",
+        "Assam",
+        "Bihar",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi",
+        "Gujarat",
+        "Haryana",
+        "Himachal Pradesh",
+        "Jammu and Kashmir",
+        "Jharkhand",
+        "Karnataka",
+        "Ladakh",
+        "Lakshadweep",
+        "Madhya Pradesh",
+        "Manipur",
+        "Mizoram",
+        "Odisha",
+        "Puducherry",
+        "Punjab",
+        "Rajasthan",
+        "Sikkim",
+        "Tamil Nadu",
+        "Telangana",
+        "Tripura",
+        "West Bengal"
+      ]
+    },
+    "validation": {
+      "records": 7927,
+      "percentage": 15.04,
+      "fast_charging_count": 2482,
+      "slow_charging_count": 5445,
+      "fast_charging_pct": 31.31,
+      "state_count": 3,
+      "states": [
+        "Goa",
+        "Maharashtra",
+        "Meghalaya"
+      ]
+    },
+    "testing": {
+      "records": 7906,
+      "percentage": 15.0,
+      "fast_charging_count": 2488,
+      "slow_charging_count": 5418,
+      "fast_charging_pct": 31.47,
+      "state_count": 8,
+      "states": [
+        "Andaman and Nicobar Islands",
+        "Arunachal Pradesh",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Kerala",
+        "Nagaland",
+        "Uttar Pradesh",
+        "Uttarakhand"
+      ]
+    }
+  },
+  "anti_leakage_gate": {
+    "quarantined_hardware_features": [
+      "charger_type",
+      "connector_type",
+      "charger_count",
+      "rated_power_kw",
+      "charging_speed",
+      "availability_status",
+      "operating_hours",
+      "access_type",
+      "commissioning_date"
+    ],
+    "retained_predictors": [
+      "latitude",
+      "longitude",
+      "distance_to_highway_km",
+      "distance_to_city_center_km",
+      "nearby_poi_count",
+      "highway_proximity_score",
+      "city_center_proximity_score",
+      "poi_diversity_index",
+      "road_type_motorway",
+      "road_type_primary",
+      "road_type_residential",
+      "road_type_secondary",
+      "road_type_service",
+      "road_type_trunk",
+      "road_type_unclassified",
+      "district_population_density_2011",
+      "district_urban_population_pct",
+      "district_projected_density_fy24",
+      "district_nh_crossing_count",
+      "district_ev_penetration_rate",
+      "discom_utility_data_available_flag"
+    ],
+    "n_predictors": 21
+  },
+  "geographic_overlap_verified": true
+}
