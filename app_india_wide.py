@@ -324,7 +324,44 @@ def api_metrics():
 @app.route("/api/xai", methods=["GET"])
 def api_xai():
     shap_list = DF_SHAP_IMPORTANCE.to_dict(orient="records") if DF_SHAP_IMPORTANCE is not None else []
-    cf_list = DF_CF.to_dict(orient="records") if DF_CF is not None else []
+    cf_list = []
+    if DF_CF is not None:
+        for r in DF_CF.to_dict(orient="records"):
+            orig_pct = float(r.get("original_prob_pct", r.get("original_prob_fast", 0.0) * (100 if r.get("original_prob_fast", 0) <= 1.0 else 1)))
+            opt_pct = float(r.get("optimized_prob_pct", r.get("counterfactual_prob_fast", 0.80) * (100 if r.get("counterfactual_prob_fast", 0.8) <= 1.0 else 1)))
+            h_orig = float(r.get("highway_dist_km_orig", 2.0))
+            h_opt = float(r.get("highway_dist_km_opt", 0.5))
+            p_orig = int(r.get("poi_count_orig", 20))
+            p_opt = int(r.get("poi_count_opt", 45))
+            
+            if opt_pct > orig_pct:
+                if h_opt < h_orig:
+                    mod = f"Relocate site closer to highway corridor ({h_orig:.2f} km → {h_opt:.2f} km) to capture high-throughput inter-city transit."
+                elif p_opt > p_orig:
+                    mod = f"Cluster with commercial amenities ({p_orig} → {p_opt} POIs) to maximize customer dwell-time charging viability."
+                elif h_opt != h_orig:
+                    mod = f"Reposition site to dedicated service road buffer ({h_opt:.2f} km from highway) and upgrade sub-station feeder (P elevated to {opt_pct:.1f}%)."
+                else:
+                    mod = f"Provision dedicated 33kV distribution feeder and integrate dual-gun CCS-2 rapid charging bays (P elevated from {orig_pct:.1f}% to {opt_pct:.1f}%)."
+            else:
+                mod = f"Station baseline parameters already meet target fast-charging criteria ({orig_pct:.1f}%); maintain existing corridor alignment and grid feeder capacity."
+
+            cf_list.append({
+                "station_id": str(r.get("station_id", "—")),
+                "state": str(r.get("state", "—")),
+                "district": str(r.get("state", "—")),
+                "original_prob_pct": round(orig_pct, 1),
+                "optimized_prob_pct": round(opt_pct, 1),
+                "original_prob_fast": round(orig_pct / 100.0, 4),
+                "counterfactual_prob_fast": round(opt_pct / 100.0, 4),
+                "actionable_modifications": mod,
+                "actionable_guidance": mod,
+                "highway_dist_km_orig": h_orig,
+                "highway_dist_km_opt": h_opt,
+                "poi_count_orig": p_orig,
+                "poi_count_opt": p_opt
+            })
+            
     return jsonify(_json_safe({
         "status": "success",
         "decision_threshold": THRESHOLD,

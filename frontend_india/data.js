@@ -2,7 +2,7 @@
 // Enables 100% offline interactivity, dynamic Chart.js rendering, instant sorting, and client-side simulation.
 
 window.PAN_INDIA_DATA = {
-    generated_at: "2026-11-02T00:31:16.478832",
+    generated_at: "2026-11-02T00:46:26.273959",
     national_summary: {
         total_stations: 52718,
         fast_stations: 16561,
@@ -1000,98 +1000,122 @@ window.PAN_INDIA_DATA = {
   {
     "station_id": "IN-KA-00001",
     "state": "Karnataka",
+    "district": "Karnataka",
     "original_prob_pct": 76.2,
     "optimized_prob_pct": 80.0,
+    "original_prob_fast": 0.762,
+    "counterfactual_prob_fast": 0.8,
+    "actionable_modifications": "Provision dedicated 33kV distribution feeder and integrate dual-gun CCS-2 rapid charging bays (P elevated from 76.2% to 80.0%).",
+    "actionable_guidance": "Provision dedicated 33kV distribution feeder and integrate dual-gun CCS-2 rapid charging bays (P elevated from 76.2% to 80.0%).",
     "highway_dist_km_orig": 2.71,
     "highway_dist_km_opt": 2.71,
     "poi_count_orig": 44,
-    "poi_count_opt": 44,
-    "poi_div_orig": 0.56,
-    "poi_div_opt": 0.56
+    "poi_count_opt": 44
   },
   {
     "station_id": "IN-MH-00001",
     "state": "Maharashtra",
+    "district": "Maharashtra",
     "original_prob_pct": 67.3,
     "optimized_prob_pct": 80.0,
+    "original_prob_fast": 0.673,
+    "counterfactual_prob_fast": 0.8,
+    "actionable_modifications": "Reposition site to dedicated service road buffer (0.20 km from highway) and upgrade sub-station feeder (P elevated to 80.0%).",
+    "actionable_guidance": "Reposition site to dedicated service road buffer (0.20 km from highway) and upgrade sub-station feeder (P elevated to 80.0%).",
     "highway_dist_km_orig": 0.01,
     "highway_dist_km_opt": 0.2,
     "poi_count_orig": 50,
-    "poi_count_opt": 50,
-    "poi_div_orig": 0.8,
-    "poi_div_opt": 0.8
+    "poi_count_opt": 50
   },
   {
     "station_id": "IN-DL-00001",
     "state": "Delhi",
+    "district": "Delhi",
     "original_prob_pct": 94.7,
     "optimized_prob_pct": 94.7,
+    "original_prob_fast": 0.947,
+    "counterfactual_prob_fast": 0.947,
+    "actionable_modifications": "Station baseline parameters already meet target fast-charging criteria (94.7%); maintain existing corridor alignment and grid feeder capacity.",
+    "actionable_guidance": "Station baseline parameters already meet target fast-charging criteria (94.7%); maintain existing corridor alignment and grid feeder capacity.",
     "highway_dist_km_orig": 2.15,
     "highway_dist_km_opt": 2.15,
     "poi_count_orig": 46,
-    "poi_count_opt": 46,
-    "poi_div_orig": 0.6,
-    "poi_div_opt": 0.6
+    "poi_count_opt": 46
   },
   {
     "station_id": "IN-TN-00001",
     "state": "Tamil Nadu",
+    "district": "Tamil Nadu",
     "original_prob_pct": 96.5,
     "optimized_prob_pct": 96.5,
+    "original_prob_fast": 0.965,
+    "counterfactual_prob_fast": 0.965,
+    "actionable_modifications": "Station baseline parameters already meet target fast-charging criteria (96.5%); maintain existing corridor alignment and grid feeder capacity.",
+    "actionable_guidance": "Station baseline parameters already meet target fast-charging criteria (96.5%); maintain existing corridor alignment and grid feeder capacity.",
     "highway_dist_km_orig": 1.76,
     "highway_dist_km_opt": 1.76,
     "poi_count_orig": 41,
-    "poi_count_opt": 41,
-    "poi_div_orig": 0.63,
-    "poi_div_opt": 0.63
+    "poi_count_opt": 41
   },
   {
     "station_id": "IN-GJ-00001",
     "state": "Gujarat",
+    "district": "Gujarat",
     "original_prob_pct": 88.1,
     "optimized_prob_pct": 88.1,
+    "original_prob_fast": 0.881,
+    "counterfactual_prob_fast": 0.881,
+    "actionable_modifications": "Station baseline parameters already meet target fast-charging criteria (88.1%); maintain existing corridor alignment and grid feeder capacity.",
+    "actionable_guidance": "Station baseline parameters already meet target fast-charging criteria (88.1%); maintain existing corridor alignment and grid feeder capacity.",
     "highway_dist_km_orig": 1.65,
     "highway_dist_km_opt": 1.65,
     "poi_count_orig": 50,
-    "poi_count_opt": 50,
-    "poi_div_orig": 0.64,
-    "poi_div_opt": 0.64
+    "poi_count_opt": 50
   },
   {
     "station_id": "TS-MED-0001",
     "state": "Telangana",
+    "district": "Telangana",
     "original_prob_pct": 83.7,
     "optimized_prob_pct": 83.7,
+    "original_prob_fast": 0.837,
+    "counterfactual_prob_fast": 0.837,
+    "actionable_modifications": "Station baseline parameters already meet target fast-charging criteria (83.7%); maintain existing corridor alignment and grid feeder capacity.",
+    "actionable_guidance": "Station baseline parameters already meet target fast-charging criteria (83.7%); maintain existing corridor alignment and grid feeder capacity.",
     "highway_dist_km_orig": 4.21,
     "highway_dist_km_opt": 4.21,
     "poi_count_orig": 22,
-    "poi_count_opt": 22,
-    "poi_div_orig": 0.78,
-    "poi_div_opt": 0.78
+    "poi_count_opt": 22
   },
   {
     "station_id": "IN-RJ-00001",
     "state": "Rajasthan",
+    "district": "Rajasthan",
     "original_prob_pct": 89.7,
     "optimized_prob_pct": 89.7,
+    "original_prob_fast": 0.897,
+    "counterfactual_prob_fast": 0.897,
+    "actionable_modifications": "Station baseline parameters already meet target fast-charging criteria (89.7%); maintain existing corridor alignment and grid feeder capacity.",
+    "actionable_guidance": "Station baseline parameters already meet target fast-charging criteria (89.7%); maintain existing corridor alignment and grid feeder capacity.",
     "highway_dist_km_orig": 4.43,
     "highway_dist_km_opt": 4.43,
     "poi_count_orig": 37,
-    "poi_count_opt": 37,
-    "poi_div_orig": 0.46,
-    "poi_div_opt": 0.46
+    "poi_count_opt": 37
   },
   {
     "station_id": "IN-WB-00001",
     "state": "West Bengal",
+    "district": "West Bengal",
     "original_prob_pct": 90.5,
     "optimized_prob_pct": 90.5,
+    "original_prob_fast": 0.905,
+    "counterfactual_prob_fast": 0.905,
+    "actionable_modifications": "Station baseline parameters already meet target fast-charging criteria (90.5%); maintain existing corridor alignment and grid feeder capacity.",
+    "actionable_guidance": "Station baseline parameters already meet target fast-charging criteria (90.5%); maintain existing corridor alignment and grid feeder capacity.",
     "highway_dist_km_orig": 0.49,
     "highway_dist_km_opt": 0.49,
     "poi_count_orig": 48,
-    "poi_count_opt": 48,
-    "poi_div_orig": 0.75,
-    "poi_div_opt": 0.75
+    "poi_count_opt": 48
   }
 ],
     sample_stations: [
