@@ -27,7 +27,7 @@ import joblib
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_INDIA_DIR = BASE_DIR / "frontend_india"
 DATA_DIR = BASE_DIR / "data" / "india_wide"
 RESULTS_DIR = BASE_DIR / "results" / "india_wide"

@@ -22,7 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from PIL import Image
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 RESULTS_DIR = BASE_DIR / "results" / "india_wide"
 FIG_DIR = RESULTS_DIR / "figures"
 XAI_DIR = RESULTS_DIR / "xai"

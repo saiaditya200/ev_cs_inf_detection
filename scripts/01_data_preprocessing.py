@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data" / "india_wide"
 MASTER_CSV = DATA_DIR / "INDIA_WIDE_EV_CHARGING_MASTER_DATASET_52K_30FEAT.csv"
 SUMMARY_CSV = DATA_DIR / "INDIA_WIDE_STATE_EV_CHARGING_SUMMARY_52K.csv"

@@ -25,7 +25,7 @@ from sklearn.metrics import (
     brier_score_loss, f1_score
 )
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data" / "india_wide"
 SPLITS_DIR = DATA_DIR / "splits"
 MODELS_DIR = BASE_DIR / "models" / "india_wide"

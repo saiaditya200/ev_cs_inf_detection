@@ -90,7 +90,7 @@
 [8] INTERACTIVE FULL-STACK WEB GIS DASHBOARD
 ----------------------------------------------------------------------------------------
   To launch the real-time GIS dashboard with interactive map, run:
-      python app.py
+      python scripts/app.py
   Then open your web browser at:
       http://127.0.0.1:5000  (or http://127.0.0.1:5001)
 ========================================================================================

@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data" / "india_wide"
 SPLITS_DIR = DATA_DIR / "splits"
 MODELS_DIR = BASE_DIR / "models" / "india_wide"

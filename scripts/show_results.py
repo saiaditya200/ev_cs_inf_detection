@@ -17,7 +17,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 RESULTS_DIR = BASE_DIR / "results" / "india_wide"
 FIG_DIR = RESULTS_DIR / "figures"
 METRICS_DIR = RESULTS_DIR / "metrics"
@@ -152,7 +152,7 @@ def display_results():
     p("\n[8] INTERACTIVE FULL-STACK WEB GIS DASHBOARD")
     p("-" * 88)
     p("  To launch the real-time GIS dashboard with interactive map, run:")
-    p("      python app.py")
+    p("      python scripts/app.py")
     p("  Then open your web browser at:")
     p("      http://127.0.0.1:5000  (or http://127.0.0.1:5001)")
     p("=" * 88)
