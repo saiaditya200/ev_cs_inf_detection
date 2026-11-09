@@ -34,3 +34,4 @@ if __name__ == "__main__":
         print(f"[WARN] Port {port} in use. Launching on fallback port {fallback_port}...")
         print(f"Local Server URL: http://127.0.0.1:{fallback_port}")
         app.run(host="0.0.0.0", port=fallback_port, debug=False)
+

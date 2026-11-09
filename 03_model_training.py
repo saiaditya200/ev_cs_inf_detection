@@ -133,3 +133,4 @@ if __name__ == "__main__":
     parser.add_argument("--retrain", action="store_true", help="Force retrain champion model from scratch")
     args = parser.parse_args()
     train_or_validate_model(retrain=args.retrain)
+
