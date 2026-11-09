@@ -490,27 +490,52 @@ The full-stack web application running on Port 5001 provides 6 interactive modul
 
 ## Execution & Deployment Guide
 
-### Web Application Startup (Port 5001)
+### Quick Start: One-Click Results & Web Dashboard
 
-To launch the Pan-India Master Web Application:
+To instantly print all model performance metrics, confusion matrix, TreeSHAP attributions, and EIPS state rankings:
 
 ```bash
-python app_india_wide.py
+python show_results.py
 ```
 
-> **Access URL:** Open **[http://localhost:5001](http://localhost:5001)** in your browser.
+> **Captured Output:** See [`show_results_output.txt`](show_results_output.txt) for the complete terminal output.
+
+To launch the full-stack interactive GIS Web Dashboard:
+
+```bash
+python app.py
+```
+
+> **Access URL:** Open **[http://localhost:5000](http://localhost:5000)** (or **[http://localhost:5001](http://localhost:5001)**) in your web browser.
 
 ---
 
-### Standalone Model Retraining Pipeline
+### End-to-End Sequential Pipeline Execution Order
 
-To retrain the Pan-India models from scratch using 5-Fold State-Grouped Spatial Cross-Validation:
+To run the complete pipeline step-by-step from raw ingestion to real-time candidate siting:
 
 ```bash
-python scripts/train_india_wide_standalone.py
-```
+# Step 1: Ingest, clean, audit, and validate national 52,718-station dataset
+python 01_data_preprocessing.py
 
-This updates all model weights in `models/india_wide/` and regenerates all figures in `results/india_wide/figures/`.
+# Step 2: Enforce Anti-Leakage Feature Gate & generate 70:15:15 spatial partitions
+python 02_feature_extraction.py
+
+# Step 3: Train & calibrate Champion Random Forest, XGBoost, and LightGBM models
+python 03_model_training.py
+
+# Step 4: Evaluate Champion on 15% independent holdout test set (95.31% Accuracy)
+python 04_evaluation.py
+
+# Step 5: Compute TreeSHAP attributions, L1 counterfactuals, & AHP EIPS rankings
+python 05_xai_explainability.py
+
+# Step 6: Perform real-time candidate location suitability inference
+python 06_predict.py
+
+# Step 7: Launch the interactive Leaflet GIS web dashboard
+python app.py
+```
 
 ---
 

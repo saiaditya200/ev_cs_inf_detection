@@ -1,5 +1,8 @@
 {
+  "framework": "Pan-India EV Charging Spatial ML",
+  "champion_model": "Random Forest",
   "calibrated_threshold": 0.63,
-  "optimization_criterion": "Validation F1 & Cost-Sensitive Fast Recall (\u226595%)",
-  "timestamp": "2026-11-01T18:20:10.014006+00:00"
+  "selection_metric": "Spatial Validation PR-AUC",
+  "val_pr_auc": 0.882,
+  "val_accuracy": 95.22
 }

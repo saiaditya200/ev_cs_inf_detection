@@ -1,4 +1,6 @@
 {
+  "framework": "Pan-India EV Charging Spatial ML Pipeline",
+  "n_predictors": 23,
   "predictors": [
     "latitude",
     "longitude",
@@ -24,10 +26,17 @@
     "traffic_corridor_high_density",
     "urban_tier_metro_or_tier1"
   ],
-  "n_predictors": 23,
-  "target_variable": "fast_charging_flag",
-  "classes": [
-    "AC Slow (<50kW)",
-    "DC Fast (>=50kW)"
-  ]
+  "quarantined_features": [
+    "charger_type",
+    "connector_type",
+    "charger_count",
+    "rated_power_kw",
+    "charging_speed",
+    "availability_status",
+    "operating_hours",
+    "access_type",
+    "commissioning_date"
+  ],
+  "target": "fast_charging_flag",
+  "spatial_division": "70:15:15 State-Grouped Partitioning"
 }
